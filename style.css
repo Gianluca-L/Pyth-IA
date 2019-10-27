@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'BLADRMF_';
+  src: url('assets/BLADRMF_.ttf')  format('opentype');
+;
+}
+@font-face {
+  font-family: 'Neoneon';
+  src: url('assets/Neoneon.otf')  format('opentype');
+}
+#myInput {
+  background-color: black;
+  border-color: black;
+  border-bottom-color: white;
+  padding-bottom: 15px;
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  transform: translate(-50%,-50%);
+}
+#askButton {
+  background-color: black;
+  border-color: white;
+  color: white;
+  font-size: 22px;
+  padding : 10px;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+canvas {
+  display: block;
+}

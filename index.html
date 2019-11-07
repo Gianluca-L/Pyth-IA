@@ -7,12 +7,18 @@
     <script src="p5.min.js"></script>
     <script src="p5.dom.min.js"></script>
     <script src="p5.sound.min.js"></script>
+    <script src="p5.speech.js"></script>
     <script src="sketch.js"></script>
     </style> <link rel = "stylesheet" href = "style.css">
     <title>Pyth-IA</title>
   </head>
   <body>
-    <input type="text" placeholder="Type something..." id="myInput">
+    <div id = "checkboxesContainer">
+    <div id ="writeCheckboxContainer"><input type="checkbox" id="writeCheckbox"> Domanda scritta</div>
+    <div id ="voiceCheckboxContainer"><input type="checkbox" id="voiceCheckbox"> Riconoscimento vocale</div>
+    </div>
+    <input type="text" placeholder="Poni la tua domanda..." id="myInput">
+    <div id="myVoiceInput">Pronuncia la tua domanda...</div>
     <button type="button" onclick="getInputValue();" id ="askButton">Chiedi a Pyth-IA</button>
   <script src = "script.js"></script>
   </body>

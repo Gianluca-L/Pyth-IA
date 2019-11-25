@@ -23,6 +23,10 @@ const keywords = ["terra", "piatta", "tonda", "sfer"];
 //
 // }
 
+////////////////////////////////////////////////////////////////////////////////////////// START PYTHIA
+
+
+
 
 ////////////////////////////////////////////// LEGAMI
 
@@ -104,7 +108,7 @@ var separazione_cits = ['La verità è che tutto il mondo ti ferirà. L\'idea è
 
 
 // 06 ESSERE SE STESSI
-const amicizia_Cat_keywords = ['amicizia', 'amic', 'compagn'];
+
 const se_stessi_keywords = ['essere se stessi', 'essere me stesso', 'essere me stessa', 'piacersi', 'piacermi', 'piacere a se stessi', 'piacere a me stesso', 'piacere a me stessa', 'piacere se stesso', 'piacere se stessa', 'piacere agli altri', 'piacere alla gente', 'piacere alle persone', 'piacere a'];
 
 var se_stessi_cits = ['Ero stanco di far finta di essere qualcun’altro solo per andare d’accordo con le persone, solo per avere degli amici. (Kurt Cobain)'];
@@ -113,6 +117,7 @@ var se_stessi_cits = ['Ero stanco di far finta di essere qualcun’altro solo pe
 ////////// AMICIZIA
 
 /// ESSERE AMICI/VERA amicizia
+const amicizia_Cat_keywords = ['amicizia', 'amic', 'compagn'];
 
 const vera_amicizia_keywords = ['vero', 'vera', 'vere', 'veri', 'verit', 'veramente', 'genuin', 'sincer', 'autentic', 'schiett', 'dissimul', 'miglior', 'puro', 'pura', 'pure', 'puri', 'purezza', 'saldo', 'salda', 'salde', 'saldi', 'degn', 'solid', 'spontan',
   'signific', 'senso', 'sensi', 'valore', 'valori', 'import',
@@ -165,7 +170,7 @@ var sep_feriti_cits = ['A volte essere un amico significa padroneggiare l\'arte 
 /// FALSA AMICIZIA/RELAZIONE NEGATIVA
 
 const falsa_amicizia_keywords = ['peggior nemico', 'peggior nemica', 'peggiore nemico', 'peggiore nemica', 'peggiori nemici', 'peggiori nemiche','nemic',
-     'fals', 'menzogn', 'illusione', 'illusor', 'illus', 'sbaglia', 'fint', 'scorrett', 'fasull', 'ipocri', 'bugiard', 'sleal', 'doppiogiochista', 'doppiogioco', 'doppi', 'ingann', 'negat'];
+     'fals', 'menzogn', 'illusione', 'illusor', 'illus', 'sbaglia', 'fint', 'scorrett', 'fasull', 'ipocri', 'bugiard', 'bugi', 'sleal', 'doppiogiochista', 'doppiogioco', 'doppi', 'ingann', 'negat'];
 
 var falsa_amicizia_cits = ['Alla fine, ci ricorderemo non le parole dei nostri nemici, ma il silenzio dei nostri amici. (Martin Luther King)',
       'La peggiore solitudine è essere privi di sincera amicizia. (Francis Bacon)',
@@ -195,13 +200,25 @@ const lasciare_keywords = ['lasciare', 'lasciat', 'abband', 'finire', 'fine', 'f
 var lasciare_cits = ['I venti che a volte portano via qualcosa che amiamo sono gli stessi che ci portano qualcosa da imparare ad amare. Quindi non dovremmo piangere per qualcosa che ci è stato portato via ma, sì, amare ciò che ci è stato offerto. Perché ciò che è veramente nostro ci appartiene per sempre. (Bob Marley)',
        'Non ci può essere profonda delusione dove non c\'è un amore profondo. (Martin Luther King)',
        'Tu e io non siamo che una cosa sola. Non posso farti del male senza ferirmi. (Mahatma Gandhi)',
-       'L’amore è una promessa, l’amore è un ricordo, una volta donato non può essere dimenticato, non può mai scomparire. (John Lennon)',
+       'L\'amore è una promessa, l’amore è un ricordo, una volta donato non può essere dimenticato, non può mai scomparire. (John Lennon)',
        'Quando un amore finisce, uno dei due soffre. Se non soffre nessuno, non è mai iniziato. Se soffrono entrambi, non è mai finito. (Marilyn Monroe)',
        'Non si ama qualcuno per tutta la vita; da questa speranza impossibile nascono adulterio, matricidio, tradimento dell\'amico. (Umberto Eco)',
        'Smettere di amare è come perdere peso. è molto più semplice metterne su che perderlo. (Aretha Franklin)',
        'Non ti rimpiangerò mai o non dirò che avrei voluto non averti mai conosciuto, perché tanto tempo fa eri esattamente ciò di cui avevo bisogno. (Bob Marley)',
        'Alcune persone non meritano il nostro sorriso, figuriamoci le nostre lacrime. (Charles Bukowski)',
-     ]
+       'Non siamo mai così indifesi verso la sofferenza, come nel momento in cui amiamo. (Sigmund Freud)'];
+
+
+/// FALSO AMORE/RELAZIONE NEGATIVA
+
+const falso_amore_keywords = ['falso', 'fals', 'menzogn', 'illus', 'sbagl', 'fint', 'fing', 'finz', 'scorrett', 'fasull', 'ipocri', 'bugiard', 'bugi', 'sleal', 'doppiogiochista', 'doppio', 'doppi', 'ingann', 'negat', 'inadatt',
+       'infelic', 'trist', 'possess', 'possed', 'possi', 'gelos', 'opprim', 'soffoc'];
+var falso_amore_cits = ['Un codardo è un uomo che risveglia l’amore di una donna senza l’intenzione di amarla. (Bob Marley)',
+       'Se riesci ad amare così tanto la persona sbagliata, immagina quanto puoi amare quella giusta. (Bob Marley)',
+       'L\'amore porta molta felicità, molto più di quanto struggersi per qualcuno porti dolore. (Albert Einstein)',
+       'Non confondere l\'amore col delirio del possesso, che causa le sofferenze più atroci. Perché contrariamente a quanto comunemente si pensa, l\'amore non fa soffrire. Quello che fa soffrire è l\'istinto della proprietà, che è il contrario dell\'amore. (Antoine de Saint-Exupéry)',
+       'Quando un amore finisce, uno dei due soffre. Se non soffre nessuno, non è mai iniziato. Se soffrono entrambi, non è mai finito.',
+       'Alcune persone non meritano il nostro sorriso, figuriamoci le nostre lacrime. (Charles Bukowski)'];
 
 /// INNAMORARSI/AMORE VERO
 
@@ -226,14 +243,39 @@ var amore_vero_cits = ['L\'amore è reale, la realtà è amore | l\'amore è sen
       'Colui che l\'amore tocca non cammina nell’oscurità. (Platone)',
       'Non confondere l\'amore col delirio del possesso, che causa le sofferenze più atroci. Perché contrariamente a quanto comunemente si pensa, l\'amore non fa soffrire. Quello che fa soffrire è l\'istinto della proprietà, che è il contrario dell\'amore. (Antoine de Saint-Exupéry)'];
 
-/// INNAMORARSI/AMORE VERO
+/// AMORE NON CORRISPOSTO
+
+const non_corrisposto_keywords = ['non corrisposto', 'corris', 'non ricambiato', 'ricamb', 'non contraccambiato', 'contracc', 'respingere', 'respin', 'rifiut', 'non mi ama'];
+
+var non_corrisposto_cits = ['L\'amore porta molta felicità, molto più di quanto struggersi per qualcuno porti dolore. (Albert Einstein)',
+       'Conosce l’amore solo chi ama senza speranza. (Friedrich Schiller)',
+       'L\'amore fugge come un’ombra l\'amore reale che l\'insegue, inseguendo chi lo fugge, fuggendo chi l\'insegue.(William Shakespeare)',
+       'Il peggior modo di sentire la mancanza di qualcuno è esserci seduto accanto e sapere che non l’avrai mai. (Gabriel Garcia Marquez)',
+       'Se infelice è l’innamorato che invoca baci di cui non sa il sapore, mille volte più infelice è chi questo sapore gustò appena e poi gli fu negato. (Italo Calvino)',
+       'E non era una stupida, sapeva quel che voleva. Solamente, voleva delle cose impossibili. (Cesare Pavese)',
+       'Non siamo mai così indifesi verso la sofferenza, come nel momento in cui amiamo. (Sigmund Freud)',
+       'Solo chi ama senza speranza conosce il vero amore. (Pablo Neruda)',
+       'Non essere amati è una semplice sventura; la vera disgrazia è non saper amare. (Albert Camus)',
+       'Se amate senza suscitare amore, vale a dire, se il vostro amore non produce amore, se attraverso l\'espressione di vita di persona amante voi non diventate una persona amata, allora il vostro amore è impotente, è sfortunato. (Erich Fromm)',
+       'Perché la mancanza d’amore è la mia pestilenza. (Alda Merini)'];
+
+
+////////////////////////////////////////////// SUCCESSO/AUTOREALIZZAZIONE
+
+/// FORZA D'ANIMO/FALLIMENTO
+
+const forza_animo_fallimento_keywords = ['successo', 'success', 'insuccess', 'vittoria', 'vittorie', 'vittorios', 'vincere', 'vinc', 'vinto', 'vinto', 'vint', 'risultat', 'fortun', 'ascesa', 'ascend', 'ascen', 'conquist', 'vetta', 'vette', 'riusci', 'raggiun', 'arriv',
+        'definitiv', 'decisiv', 'ultim', 'risolutiv', 'risol', 'final', 'conclusiv', 'insindicabil', 'esaurient', 'ultimativ',
+        'falliment', 'fallir', 'fallis', 'fallit', 'falliv', 'sconfi', 'perdit', 'perder', 'perd', 'non vincere', 'non vinco', 'non riuscire', 'non riesco', 'non raggiungere',
+        'fatale', 'mortal', 'inevitabil'];
+
 
 function getInputValue() {
   // Selecting the input element and get its value
   var textFromInput = document.getElementById("myInput").value;
   var text_From_Voice = document.getElementById("myVoiceInput").innerHTML;
-  //var inputVal = text_From_Voice.toLowerCase();
-  var inputVal = textFromInput.toLowerCase();
+  var inputVal = text_From_Voice.toLowerCase();
+  //var inputVal = textFromInput.toLowerCase();
   console.log(inputVal);
   var check = document.getElementById("writeCheckbox").value;
   console.log(check);
@@ -313,12 +355,33 @@ function getInputValue() {
     alert(falsa_amicizia_cit);
   }
   if (amore_Cat_keywords.some(keyword => inputVal.includes(keyword))) {
-    if (amore_vero_keywords.some(keyword => inputVal.includes(keyword))) {
+    if (lasciare_keywords.some(keyword => inputVal.includes(keyword))) {
+      console.log("Found")
+      // audio.src = a_music;
+      // audio.play();
+      var lasciare_cit = lasciare_cits[Math.floor(Math.random() *lasciare_cits.length)];
+      alert(lasciare_cit);
+    }
+    else if (falso_amore_keywords.some(keyword => inputVal.includes(keyword))) {
+      console.log("Found")
+      // audio.src = a_music;
+      // audio.play();
+      var falso_amore_cit = falso_amore_cits[Math.floor(Math.random() * falso_amore_cits.length)];
+      alert(falso_amore_cit);
+    }
+    else if (amore_vero_keywords.some(keyword => inputVal.includes(keyword))) {
       console.log("Found")
       // audio.src = a_music;
       // audio.play();
       var amore_vero_cit = amore_vero_cits[Math.floor(Math.random() * amore_vero_cits.length)];
       alert(amore_vero_cit);
+    }
+    else if (non_corrisposto_keywords.some(keyword => inputVal.includes(keyword))) {
+      console.log("Found")
+      // audio.src = a_music;
+      // audio.play();
+      var non_corrisposto_cit = non_corrisposto_cits[Math.floor(Math.random() * non_corrisposto_cits.length)];
+      alert(non_corrisposto_cit);
     }
   }
 

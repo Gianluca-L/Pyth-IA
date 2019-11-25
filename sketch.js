@@ -6,6 +6,7 @@ var s = 0;
 
 var categoria;
 var una_sola_domanda;
+var frase_finale;
 
 ///// variables to trigger sections
 
@@ -50,6 +51,7 @@ function preload() {
   benvenuto = loadSound("./assets/audio/benvenuto.mp3");
   categoria = loadSound("./assets/audio/categoria.mp3");
   una_sola_domanda = loadSound("./assets/audio/una_sola_domanda.mp3");
+  frase_finale = loadSound("./assets/audio/frase_finale.mp3");
 }
 
 function setup() {
@@ -75,7 +77,8 @@ function setup() {
   voiceInput = select('#myVoiceInput');
 
   // speech recognition to start pyth-IA
-  startSentence.start();
+  //startSentence.start();
+  createSpeechRec_1();
 
   /// AUDIO
 
@@ -92,6 +95,12 @@ function draw() {
   //   speech.onResult = showResult;
   //   speech.start();
   // }
+}
+function createSpeechRec_1() {
+  if (step_1 == true) {
+    startSentence.onResult = startPythia;
+    startSentence.start();
+  }
 }
 
 function startPythia() {
@@ -343,6 +352,18 @@ function userAskQuestion() {
          final_sentence = true;
        }
      }
+
+     if (final_sentence == true) {
+       frase_finale.play();
+       frase_finale.onended(reset);
+
+       function reset() {
+         //frase_finale.stop();
+         step_1 = true;
+         createSpeechRec_1();
+       }
+   }
+
    }
 }
 

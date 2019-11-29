@@ -25,19 +25,15 @@ var textCheckbox;
 var textInput;
 var voiceInput;
 var k = 0;
-var startSentence = new p5.SpeechRec('it-IT', startPythia);
-startSentence.continuous = true;
-startSentence.interimResults = false;
+var allSpeech = new p5.SpeechRec('it-IT');
+allSpeech.continuous = false;
+allSpeech.interimResults = false;
+
+var sentence;
 
 var step_2 = false;
-var tag_speech = new p5.SpeechRec('it-IT');
-tag_speech.continuous = true;
-tag_speech.interimResults = false;
 
 var step_3 = false;
-var question_speech = new p5.SpeechRec('it-IT');
-question_speech.continuous = true;
-question_speech.interimResults = false;
 
 ////////// SINTESI VOCALE (PROVVISORIO)
 
@@ -78,7 +74,8 @@ function setup() {
 
   // speech recognition to start pyth-IA
   //startSentence.start();
-  createSpeechRec_1();
+  createAllSpeech();
+  //createSpeechRec_1();
 
   /// AUDIO
 
@@ -91,282 +88,273 @@ function setup() {
 
 function draw() {
   background(0);
-  // if (mouseIsPressed == true) {
-  //   speech.onResult = showResult;
-  //   speech.start();
-  // }
+  console.log(step_2);
 }
-function createSpeechRec_1() {
-  if (step_1 == true) {
-    startSentence.onResult = startPythia;
-    startSentence.start();
-  }
+function createAllSpeech() {
+    allSpeech.onResult = startPythia;
+    allSpeech.start();
+    allSpeech.onEnd = restartAllSpeech;
+}
+function restartAllSpeech(){
+  allSpeech.start();
 }
 
 function startPythia() {
-  if (startSentence.resultValue == true && step_1 == true) {
-    console.log('time: ' + timer);
-    var start_Sentence = startSentence.resultString;
-    console.log(startSentence);
-    console.log(start_Sentence.toLowerCase());
+  if (allSpeech.resultValue == true) {
+    if (step_1 == true) {
+      console.log('step 1 ok');
+      console.log('time: ' + timer);
+      sentence = allSpeech.resultString;
+      // console.log(startSentence);
+      console.log(sentence.toLowerCase());
 
-    first_keyword_got = false;
-    second_keyword_got = false;
-    third_keyword_got = false;
+      first_keyword_got = false;
+      second_keyword_got = false;
+      third_keyword_got = false;
 
-    const first_keyword = ['donami', 'dona', 'don', 'do'];
+      const first_keyword = ['donami'];
 
-    const second_keyword = ['sapienz', 'sapien', 'sapie', 'sapi', 'sap'];
+      const second_keyword = ['sapienz', 'sapien', 'sapie', 'sapi', 'sap'];
 
-    const third_keyword = ['dati', 'dat', 'da'];
+      const third_keyword = ['dati'];
 
-    if (first_keyword.some(keyword => start_Sentence.includes(keyword))) {
-      first_keyword_got = true;
-      console.log('1 = ok');
-    }
-    if (second_keyword.some(keyword => start_Sentence.includes(keyword))) {
-      second_keyword_got = true;
-      console.log('2 = ok');
-    }
-    if (third_keyword.some(keyword => start_Sentence.includes(keyword))) {
-      third_keyword_got = true;
-      console.log('3 = ok');
-    }
+      if (first_keyword.some(keyword => sentence.includes(keyword))) {
+        first_keyword_got = true;
+        console.log('1 = ok');
+      }
+      if (second_keyword.some(keyword => sentence.includes(keyword))) {
+        second_keyword_got = true;
+        console.log('2 = ok');
+      }
+      if (third_keyword.some(keyword => sentence.includes(keyword))) {
+        third_keyword_got = true;
+        console.log('3 = ok');
+      }
 
-    if (first_keyword_got == true || second_keyword_got == true || third_keyword_got == true) {
-      step_1 = false;
-      benvenuto.play();
-      benvenuto.onended(startStep_2);
+      if (first_keyword_got == true && third_keyword_got == true) {
+        step_1 = false;
+        benvenuto.play();
+        benvenuto.onended(startStep_2);
 
-      function startStep_2() {
-        categoria.play();
-        //alert('finito');
-        categoria.onended(createSpeechRec_2)
-        step_2 = true;
-
-        function createSpeechRec_2() {
-          tag_speech.onResult = pythiaAsksTag;
-          tag_speech.start();
+        function startStep_2() {
+          categoria.play();
+          categoria.onended(createSpeechRec_2);
+          //alert('finito');
+          function createSpeechRec_2() {
+            alert('finito');
+            step_2 = true;
+          }
         }
-
       }
 
+
     }
-  }
-  console.log('time: ' + timer);
-  console.log(step_1);
-}
+    if (step_2 == true) {
+      console.log('step 2 ok');
+      const tag_keyword = ['relazioni sociali', 'amicizia', 'amore'];
 
-function pythiaAsksTag() {
+      console.log(allSpeech.resultString);
+      sentence = allSpeech.resultString;
+      console.log(sentence);
 
-  const tag_keyword = ['relazioni sociali', 'amicizia', 'amore'];
+      if (tag_keyword.some(keyword => sentence.includes('relazioni sociali'))) {
+        relazioni_sociali_var = true;
+        console.log('ok relazioni sociali');
+        // step_2 = false;
+        // una_sola_domanda.play();
+        // una_sola_domanda.onended(relazioni_sociali_Section);
+      } else if (tag_keyword.some(keyword => sentence.includes('amicizia'))) {
+        amicizia_var = true;
+        console.log('ok amicizia');
+        // step_2 = false;
+        // una_sola_domanda.play();
+      } else if (tag_keyword.some(keyword => sentence.includes('amore'))) {
+        amore_var = true;
+        console.log('ok amore');
+        // step_2 = false;
+        // una_sola_domanda.play();
+      }
 
-  if (tag_speech.resultValue == true && step_2 == true) {
+      if (relazioni_sociali_var == true || amicizia_var == true || amore_var == true) {
+        step_2 = false;
+        una_sola_domanda.play();
+        una_sola_domanda.onended(createSpeechRec_3);
 
-    console.log(tag_speech.resultString);
-    tag_Sentence = tag_speech.resultString;
-
-    if (tag_keyword.some(keyword => tag_Sentence.includes('relazioni sociali'))) {
-      relazioni_sociali_var = true;
-      console.log('ok relazioni sociali');
-      // step_2 = false;
-      // una_sola_domanda.play();
-      // una_sola_domanda.onended(relazioni_sociali_Section);
-    } else if (tag_keyword.some(keyword => tag_Sentence.includes('amicizia'))) {
-      amicizia_var = true;
-      console.log('ok amicizia');
-      // step_2 = false;
-      // una_sola_domanda.play();
-    } else if (tag_keyword.some(keyword => tag_Sentence.includes('amore'))) {
-      amore_var = true;
-      console.log('ok amore');
-      // step_2 = false;
-      // una_sola_domanda.play();
-    }
-
-    if (relazioni_sociali_var == true || amicizia_var == true || amore_var == true) {
-      step_2 = false;
-      una_sola_domanda.play();
-      una_sola_domanda.onended(createSpeechRec_3)
-      step_3 = true;
-
-      function createSpeechRec_3() {
-        question_speech.onResult = userAskQuestion;
-        question_speech.start();
+        function createSpeechRec_3() {
+          step_3 = true;
+        }
       }
     }
+    if (step_3 == true) {
+      console.log('step 3 ok');
+      sentence = allSpeech.resultString;
+      console.log(allSpeech.resultString);
+
+      speech.setVoice("Google italiano");
+
+      if (relazioni_sociali_var == true) {
+        if (odio_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          console.log("Found");
+          // audio.src = a_music;
+          // audio.play();
+          var odio_cit = odio_cits[Math.floor(Math.random() * odio_cits.length)];
+          alert(odio_cit);
+          //speech.speak(odio_cit);
+          final_sentence = true;
+        }
+        else if (bravo_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          console.log("Found")
+          // audio.src = a_music;
+          // audio.play();
+          var bravo_cit = bravo_cits[Math.floor(Math.random() * bravo_cits.length)];
+          alert(bravo_cit);
+          //speech.speak(bravo_cit);
+          final_sentence = true;
+        }
+        else if (aiuto_supp_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          console.log("Found")
+          // audio.src = a_music;
+          // audio.play();
+          var aiuto_supp_cit = aiuto_supp_cits[Math.floor(Math.random() * aiuto_supp_cits.length)];
+          alert(aiuto_supp_cit);
+          //speech.speak(aiuto_supp_cit);
+          final_sentence = true;
+        }
+        else if (solitudine_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          console.log("Found")
+          // audio.src = a_music;
+          // audio.play();
+          var solitudine_cit = solitudine_cits[Math.floor(Math.random() * solitudine_cits.length)];
+          alert(solitudine_cit);
+          //speech.speak(solitudine_cit);
+          final_sentence = true;
+        }
+        else if (emp_emoz_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          console.log("Found")
+          // audio.src = a_music;
+          // audio.play();
+          var emp_emoz_cit = emp_emoz_cits[Math.floor(Math.random() * emp_emoz_cits.length)];
+          alert(emp_emoz_cit);
+          //speech.speak(emp_emoz_cit);
+          final_sentence = true;
+        }
+        else if (separazione_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          console.log("Found")
+          // audio.src = a_music;
+          // audio.play();
+          var separazione_cit = separazione_cits[Math.floor(Math.random() * separazione_cits.length)];
+          alert(separazione_cit);
+          //speech.speak(separazione_cit);
+          final_sentence = true;
+        }
+        else if (se_stessi_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          console.log("Found")
+          // audio.src = a_music;
+          // audio.play();
+          var se_stessi_cit = se_stessi_cits[Math.floor(Math.random() * se_stessi_cits.length)];
+          alert(se_stessi_cit);
+          //speech.speak(se_stessi_cit);
+          final_sentence = true;
+        }
+      }
+      else if (amicizia_var == true) {
+        if (vera_amicizia_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          console.log("Found")
+          // audio.src = a_music;
+          // audio.play();
+          var vera_amicizia_cit = vera_amicizia_cits[Math.floor(Math.random() * vera_amicizia_cits.length)];
+          alert(vera_amicizia_cit);
+          //speech.speak(vera_amicizia_cit);
+          final_sentence = true;
+        }
+        else if (sep_feriti_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          console.log("Found")
+          // audio.src = a_music;
+          // audio.play();
+          var sep_feriti_cit = sep_feriti_cits[Math.floor(Math.random() * sep_feriti_cits.length)];
+          alert(sep_feriti_cit);
+          //speech.speak(sep_feriti_cit);
+          final_sentence = true;
+        }
+        else if (falsa_amicizia_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          console.log("Found")
+          // audio.src = a_music;
+          // audio.play();
+          var falsa_amicizia_cit = falsa_amicizia_cits[Math.floor(Math.random() * falsa_amicizia_cits.length)];
+          alert(falsa_amicizia_cit);
+          //speech.speak(falsa_amicizia_cit);
+          final_sentence = true;
+        }
+      }
+      else if (amore_var == true) {
+        if (lasciare_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          console.log("Found")
+          // audio.src = a_music;
+          // audio.play();
+          var lasciare_cit = lasciare_cits[Math.floor(Math.random() *lasciare_cits.length)];
+          alert(lasciare_cit);
+          //speech.speak(lasciare_cit);
+          final_sentence = true;
+        }
+        else if (falso_amore_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          console.log("Found")
+          // audio.src = a_music;
+          // audio.play();
+          var falso_amore_cit = falso_amore_cits[Math.floor(Math.random() * falso_amore_cits.length)];
+          alert(falso_amore_cit);
+          //speech.speak(falso_amore_cit);
+          final_sentence = true;
+        }
+        else if (amore_vero_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          console.log("Found")
+          // audio.src = a_music;
+          // audio.play();
+          var amore_vero_cit = amore_vero_cits[Math.floor(Math.random() * amore_vero_cits.length)];
+          alert(amore_vero_cit);
+          //speech.speak(amore_vero_cit);
+          final_sentence = true;
+        }
+        else if (non_corrisposto_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          console.log("Found")
+          // audio.src = a_music;
+          // audio.play();
+          var non_corrisposto_cit = non_corrisposto_cits[Math.floor(Math.random() * non_corrisposto_cits.length)];
+          alert(non_corrisposto_cit);
+          //speech.speak(non_corrisposto_cit);
+          final_sentence = true;
+        }
+      }
+
+      if (final_sentence == true) {
+        frase_finale.play();
+        frase_finale.onended(reset);
+
+        function reset() {
+          //frase_finale.stop();
+          step_1 = true;
+          //createSpeechRec_1();
+        }
+    }
+    }
+
   }
+  // console.log('time: ' + timer);
+  // console.log(step_1);
 }
-
-function userAskQuestion() {
-   if (question_speech.resultValue == true && step_3 == true) {
-
-     console.log(question_speech.resultString);
-     question_Sentence = question_speech.resultString;
-
-     speech.setVoice("Google italiano");
-
-     if (relazioni_sociali_var == true) {
-       if (odio_keywords.some(keyword => question_Sentence.includes(keyword))) {
-         step_3 = false;
-         console.log("Found")
-         // audio.src = a_music;
-         // audio.play();
-         var odio_cit = odio_cits[Math.floor(Math.random() * odio_cits.length)];
-         alert(odio_cit);
-         speech.speak(odio_cit);
-         final_sentence = true;
-       }
-       else if (bravo_keywords.some(keyword => question_Sentence.includes(keyword))) {
-         step_3 = false;
-         console.log("Found")
-         // audio.src = a_music;
-         // audio.play();
-         var bravo_cit = bravo_cits[Math.floor(Math.random() * bravo_cits.length)];
-         alert(bravo_cit);
-         speech.speak(bravo_cit);
-         final_sentence = true;
-       }
-       else if (aiuto_supp_keywords.some(keyword => question_Sentence.includes(keyword))) {
-         step_3 = false;
-         console.log("Found")
-         // audio.src = a_music;
-         // audio.play();
-         var aiuto_supp_cit = aiuto_supp_cits[Math.floor(Math.random() * aiuto_supp_cits.length)];
-         alert(aiuto_supp_cit);
-         speech.speak(aiuto_supp_cit);
-         final_sentence = true;
-       }
-       else if (solitudine_keywords.some(keyword => question_Sentence.includes(keyword))) {
-         step_3 = false;
-         console.log("Found")
-         // audio.src = a_music;
-         // audio.play();
-         var solitudine_cit = solitudine_cits[Math.floor(Math.random() * solitudine_cits.length)];
-         alert(solitudine_cit);
-         speech.speak(solitudine_cit);
-         final_sentence = true;
-       }
-       else if (emp_emoz_keywords.some(keyword => question_Sentence.includes(keyword))) {
-         step_3 = false;
-         console.log("Found")
-         // audio.src = a_music;
-         // audio.play();
-         var emp_emoz_cit = emp_emoz_cits[Math.floor(Math.random() * emp_emoz_cits.length)];
-         alert(emp_emoz_cit);
-         speech.speak(emp_emoz_cit);
-         final_sentence = true;
-       }
-       else if (separazione_keywords.some(keyword => question_Sentence.includes(keyword))) {
-         step_3 = false;
-         console.log("Found")
-         // audio.src = a_music;
-         // audio.play();
-         var separazione_cit = separazione_cits[Math.floor(Math.random() * separazione_cits.length)];
-         alert(separazione_cit);
-         speech.speak(separazione_cit);
-         final_sentence = true;
-       }
-       else if (se_stessi_keywords.some(keyword => question_Sentence.includes(keyword))) {
-         step_3 = false;
-         console.log("Found")
-         // audio.src = a_music;
-         // audio.play();
-         var se_stessi_cit = se_stessi_cits[Math.floor(Math.random() * se_stessi_cits.length)];
-         alert(se_stessi_cit);
-         speech.speak(se_stessi_cit);
-         final_sentence = true;
-       }
-     }
-     else if (amicizia_var == true) {
-       if (vera_amicizia_keywords.some(keyword => question_Sentence.includes(keyword))) {
-         step_3 = false;
-         console.log("Found")
-         // audio.src = a_music;
-         // audio.play();
-         var vera_amicizia_cit = vera_amicizia_cits[Math.floor(Math.random() * vera_amicizia_cits.length)];
-         alert(vera_amicizia_cit);
-         speech.speak(vera_amicizia_cit);
-         final_sentence = true;
-       }
-       else if (sep_feriti_keywords.some(keyword => question_Sentence.includes(keyword))) {
-         step_3 = false;
-         console.log("Found")
-         // audio.src = a_music;
-         // audio.play();
-         var sep_feriti_cit = sep_feriti_cits[Math.floor(Math.random() * sep_feriti_cits.length)];
-         alert(sep_feriti_cit);
-         speech.speak(sep_feriti_cit);
-         final_sentence = true;
-       }
-       else if (falsa_amicizia_keywords.some(keyword => question_Sentence.includes(keyword))) {
-         step_3 = false;
-         console.log("Found")
-         // audio.src = a_music;
-         // audio.play();
-         var falsa_amicizia_cit = falsa_amicizia_cits[Math.floor(Math.random() * falsa_amicizia_cits.length)];
-         alert(falsa_amicizia_cit);
-         speech.speak(falsa_amicizia_cit);
-         final_sentence = true;
-       }
-     }
-     else if (amore_var == true) {
-       if (lasciare_keywords.some(keyword => question_Sentence.includes(keyword))) {
-         step_3 = false;
-         console.log("Found")
-         // audio.src = a_music;
-         // audio.play();
-         var lasciare_cit = lasciare_cits[Math.floor(Math.random() *lasciare_cits.length)];
-         alert(lasciare_cit);
-         speech.speak(lasciare_cit);
-         final_sentence = true;
-       }
-       else if (falso_amore_keywords.some(keyword => question_Sentence.includes(keyword))) {
-         step_3 = false;
-         console.log("Found")
-         // audio.src = a_music;
-         // audio.play();
-         var falso_amore_cit = falso_amore_cits[Math.floor(Math.random() * falso_amore_cits.length)];
-         alert(falso_amore_cit);
-         speech.speak(falso_amore_cit);
-         final_sentence = true;
-       }
-       else if (amore_vero_keywords.some(keyword => question_Sentence.includes(keyword))) {
-         step_3 = false;
-         console.log("Found")
-         // audio.src = a_music;
-         // audio.play();
-         var amore_vero_cit = amore_vero_cits[Math.floor(Math.random() * amore_vero_cits.length)];
-         alert(amore_vero_cit);
-         speech.speak(amore_vero_cit);
-         final_sentence = true;
-       }
-       else if (non_corrisposto_keywords.some(keyword => question_Sentence.includes(keyword))) {
-         step_3 = false;
-         console.log("Found")
-         // audio.src = a_music;
-         // audio.play();
-         var non_corrisposto_cit = non_corrisposto_cits[Math.floor(Math.random() * non_corrisposto_cits.length)];
-         alert(non_corrisposto_cit);
-         speech.speak(non_corrisposto_cit);
-         final_sentence = true;
-       }
-     }
-
-     if (final_sentence == true) {
-       frase_finale.play();
-       frase_finale.onended(reset);
-
-       function reset() {
-         //frase_finale.stop();
-         step_1 = true;
-         createSpeechRec_1();
-       }
-   }
-
-   }
-}
-
 
 function keyReleased() {
   k++;

@@ -17,13 +17,13 @@ var amore_var = false;
 var final_sentence = false;
 
 
-var myFont;
-var logoX = 2;
-var decagon;
-var eye;
-var textCheckbox;
-var textInput;
-var voiceInput;
+// var myFont;
+// var logoX = 2;
+// var decagon;
+// var eye;
+// var textCheckbox;
+// var textInput;
+// var voiceInput;
 var k = 0;
 var allSpeech = new p5.SpeechRec('it-IT');
 allSpeech.continuous = false;
@@ -39,7 +39,7 @@ var step_3 = false;
 
 var speech;
 
-var textFromVoice;
+// var textFromVoice;
 
 function preload() {
   myFont = loadFont('assets/Neoneon.otf');
@@ -54,23 +54,23 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0);
   frameRate(60);
-  textFont(myFont);
-  textSize(100);
-  fill(245, 173, 66);
-  textAlign(CENTER);
-  text("Pyth-IA", width / 2, height / 3);
+  // textFont(myFont);
+  // textSize(100);
+  // fill(245, 173, 66);
+  // textAlign(CENTER);
+  // text("Pyth-IA", width / 2, height / 3);
 
   // choosing between text or voice
-  textCheckbox = select('#writeCheckbox');
-  textCheckbox.mouseClicked(clickTextCheckbox);
-  console.log(textCheckbox.value());
-
-  textInput = select('#myInput');
-
-  var voiceCheckbox = select('#voiceCheckbox');
-  voiceCheckbox.mouseClicked(clickVoiceCheckbox);
-
-  voiceInput = select('#myVoiceInput');
+  // textCheckbox = select('#writeCheckbox');
+  // textCheckbox.mouseClicked(clickTextCheckbox);
+  // console.log(textCheckbox.value());
+  //
+  // textInput = select('#myInput');
+  //
+  // var voiceCheckbox = select('#voiceCheckbox');
+  // voiceCheckbox.mouseClicked(clickVoiceCheckbox);
+  //
+  // voiceInput = select('#myVoiceInput');
 
   // speech recognition to start pyth-IA
   //startSentence.start();
@@ -141,7 +141,7 @@ function startPythia() {
           categoria.onended(createSpeechRec_2);
           //alert('finito');
           function createSpeechRec_2() {
-            alert('finito');
+            //alert('finito');
             step_2 = true;
           }
         }
@@ -356,52 +356,52 @@ function startPythia() {
   // console.log(step_1);
 }
 
-function keyReleased() {
-  k++;
-  if (key === 'Enter') {
-    if (k == 1) {
-      console.log('ok');
-      tag_speech.onResult = showResult;
-      tag_speech.start();
-      console.log(tag_speech);
-    } else if (k == 2) {
-      speech_2.onResult = showResult;
-      speech_2.start();
-    }
-  }
-  s++;
-  if (key === 's') {
-    if (s == 1) {
-      // console.log('s1');
-      // step_1 = true;
-      startSentence.start();
-    } else if (s == 2) {
-      // console.log('s2');
-      // step_1 = false;
-      // s = 0;
-    }
-  }
-  return false;
-}
-
-function clickTextCheckbox() {
-  voiceInput.hide();
-  textInput.show();
-  console.log(textCheckbox.value());
-}
-
-function clickVoiceCheckbox() {
-  textInput.hide();
-  voiceInput.show();
-}
-
-function showResult() {
-  if (tag_speech.resultValue == true) {
-
-    var textFromVoice = select('#myVoiceInput');
-    textFromVoice.html(tag_speech.resultString + "?");
-    //textFromVoice.style('color: white; font-size: 20px; font-family: Verdana; position: absolute; top: 50%; left: 50%; width: 500px; transform: translate(-50%,-165%)');
-    // console.log(tag_speech.resultString);
-    // console.log(textFromVoice.html());
-  }
-}
+// function keyReleased() {
+//   k++;
+//   if (key === 'Enter') {
+//     if (k == 1) {
+//       console.log('ok');
+//       tag_speech.onResult = showResult;
+//       tag_speech.start();
+//       console.log(tag_speech);
+//     } else if (k == 2) {
+//       speech_2.onResult = showResult;
+//       speech_2.start();
+//     }
+//   }
+//   s++;
+//   if (key === 's') {
+//     if (s == 1) {
+//       // console.log('s1');
+//       // step_1 = true;
+//       startSentence.start();
+//     } else if (s == 2) {
+//       // console.log('s2');
+//       // step_1 = false;
+//       // s = 0;
+//     }
+//   }
+//   return false;
+// }
+//
+// function clickTextCheckbox() {
+//   voiceInput.hide();
+//   textInput.show();
+//   console.log(textCheckbox.value());
+// }
+//
+// function clickVoiceCheckbox() {
+//   textInput.hide();
+//   voiceInput.show();
+// }
+//
+// function showResult() {
+//   if (tag_speech.resultValue == true) {
+//
+//     var textFromVoice = select('#myVoiceInput');
+//     textFromVoice.html(tag_speech.resultString + "?");
+//     //textFromVoice.style('color: white; font-size: 20px; font-family: Verdana; position: absolute; top: 50%; left: 50%; width: 500px; transform: translate(-50%,-165%)');
+//     // console.log(tag_speech.resultString);
+//     // console.log(textFromVoice.html());
+//   }
+// }

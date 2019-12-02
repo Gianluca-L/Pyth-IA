@@ -1,1 +1,1 @@
-# Pith-IA
+# Pyth-IA

@@ -1,12 +1,23 @@
+///////////////////////////////////////// Pyth-IA PC
+
+///////////////////////////// ARDUINO
+var serial; // variable to hold an instance of the serialport library
+var portName = 'COM5'; // fill in your serial port name here
+var inData; // for incoming serial data
+var outByte = 0; // for outgoing data
 ///////////// AUDIO
+var fft;
+var spectrum;
+var envelope;
 var step_1 = true;
-var benvenuto;
+
 var timer = 1;
 var s = 0;
 
-var categoria;
-var una_sola_domanda;
-var frase_finale;
+// var benvenuto;
+// var categoria;
+// var una_sola_domanda;
+// var frase_finale;
 
 ///// variables to trigger sections
 
@@ -41,13 +52,21 @@ var speech;
 
 // var textFromVoice;
 
+const FOLDER = 'assets/audio/', EXT = '.mp3',
+      INDEX_START = 1, INDEX_END = 4,
+      INDEX_TOTAL = 1 + INDEX_END - INDEX_START,
+      audios = Array(INDEX_TOTAL);
+
 function preload() {
   myFont = loadFont('assets/Neoneon.otf');
 
-  benvenuto = loadSound("./assets/audio/benvenuto.mp3");
-  categoria = loadSound("./assets/audio/categoria.mp3");
-  una_sola_domanda = loadSound("./assets/audio/una_sola_domanda.mp3");
-  frase_finale = loadSound("./assets/audio/frase_finale.mp3");
+  // benvenuto = loadSound("./assets/audio/benvenuto.mp3");
+  // categoria = loadSound("./assets/audio/categoria.mp3");
+  // una_sola_domanda = loadSound("./assets/audio/una_sola_domanda.mp3");
+  // frase_finale = loadSound("./assets/audio/frase_finale.mp3");
+
+  for (var i = 0; i < INDEX_TOTAL; ++i)
+  audios[i] = loadSound(FOLDER + (i + INDEX_START) + EXT);
 }
 
 function setup() {
@@ -79,16 +98,89 @@ function setup() {
 
   /// AUDIO
 
-  // analyzer = new p5.Amplitude();
-  // analyzer.setInput(benvenuto);
+  analyzer = new p5.Amplitude();
+  for (var i = 0; i < INDEX_TOTAL; ++i) {
+  analyzer.setInput(audios[i]);
+}
+
+
+  //envelope = new p5.Env();
+
+  fft = new p5.FFT();
 
   speech = new p5.Speech();
 
+  ////////////////////////////// ARDUINO
+
+  serial = new p5.SerialPort(); // make a new instance of the serialport library
+  serial.on('list', printList); // set a callback function for the serialport list event
+
+  serial.list(); // list the serial ports
+
+  //serial.on('data', serialEvent); // callback for when new data arrives
+  serial.on('error', serialError); // callback for errors
+  serial.open(portName);
+
+}
+// get the list of ports:
+function printList(portList) {
+  // portList is an array of serial port names
+  for (var i = 0; i < portList.length; i++) {
+    // Display the list the console:
+    console.log(i + " " + portList[i]);
+  }
+}
+
+function serialEvent() {
+  // read a byte from the serial port:
+  var inByte = serial.read();
+  // store it in a global variable:
+  inData = inByte;
+}
+
+function serialError(err) {
+  println('Something went wrong with the serial port. ' + err);
 }
 
 function draw() {
-  background(0);
-  console.log('step_1: ' + step_1 + ',', 'step_2: ' + step_2 + ',', 'step_3: ' + step_3, 'amore_var: ' + amore_var);
+  background(255);
+
+  volume = analyzer.getLevel();
+  volumeRemap = map(volume, 0, 1, 0, 255);
+  outByte = int(map(volume*80, 0, 1, 0, 255));
+  serial.write(outByte);
+  spectrum = fft.analyze();
+
+
+  console.log('step_1: ' + step_1 + ',', 'step_2: ' + step_2 + ',', 'step_3: ' + step_3, 'outByte: ' + outByte);
+  fill(0);
+  // display the incoming serial data as a string:
+  text("incoming value: " + inData, 30, 30);
+  push();
+  fill(212, 175, 55);
+  stroke(255, 248, 184);
+  strokeWeight(5);
+  ellipseMode(RADIUS);
+  ellipse(width/2, height/2, width/6);
+  fill(212, 175, 55, 50);
+  noStroke();
+  ellipse(width/2, height/2, width/5*volumeRemap*0.3);
+
+  pop();
+}
+
+function mouseDragged() {
+  // map the mouseY to a range from 0 to 255:
+  outByte = int(map(mouseY, 0, height, 0, 255));
+  // send it out the serial port:
+  serial.write(outByte);
+}
+
+function keyPressed() {
+  if (key >= 0 && key <= 9) { // if the user presses 0 through 9
+    outByte = byte(key * 25); // map the key to a range from 0 to 225
+  }
+  serial.write(outByte); // send it out the serial port
 }
 
 function createAllSpeech() {
@@ -134,37 +226,27 @@ function startPythia() {
       }
       if (first_keyword_got == true && second_keyword_got == true && third_keyword_got == true) {
         step_1 = false;
-        benvenuto.play();
+        //var benvenuto = Math.round(random(0,3));
+        audios[0].play();
         first_keyword_got = false;
         second_keyword_got = false;
         third_keyword_got = false;
-        benvenuto.onended(startStep_2);
+        audios[0].onended(startStep_2);
 
         function startStep_2() {
-          categoria.play();
-          categoria.onended(createSpeechRec_2);
-          //alert('finito');
-
+          audios[1].play();
+          audios[1].onended(createSpeechRec_2);
         }
-
-
-        //alert('finito');
-        if (categoria.isPlaying() == false) {
+        if (audios[1].isPlaying() == false) {
           function createSpeechRec_2() {
             step_2 = true;
           }
         }
       }
-
     }
-
-
-
   }
   if (step_2 == true) {
     if (allSpeech.resultValue == true) {
-      //console.log('step 2 ok');
-
 
       console.log(allSpeech.resultString + "222");
       sentence = allSpeech.resultString.toLowerCase();
@@ -192,21 +274,19 @@ function startPythia() {
     }
     if (relazioni_sociali_var == true || amicizia_var == true || amore_var == true) {
       step_2 = false;
-      una_sola_domanda.play();
-      una_sola_domanda.onended(createSpeechRec_3);
+      audios[2].play();
+      audios[2].onended(createSpeechRec_3);
 
       function createSpeechRec_3() {
         step_3 = true;
       }
     }
-
   }
-
   if (step_3 == true) {
     if (allSpeech.resultValue == true) {
       //console.log('step 3 ok');
       sentence = allSpeech.resultString.toLowerCase();
-      console.log(allSpeech.resultString);
+      console.log(allSpeech.resultString.toLowerCase());
 
       speech.setVoice("Google italiano");
 
@@ -351,10 +431,9 @@ function startPythia() {
           final_sentence = true;
         }
       }
-
       if (final_sentence == true) {
-        frase_finale.play();
-        frase_finale.onended(reset);
+        audios[3].play();
+        audios[3].onended(reset);
 
         function reset() {
           //frase_finale.stop();

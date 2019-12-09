@@ -5,6 +5,9 @@ var serial; // variable to hold an instance of the serialport library
 var portName = 'COM5'; // fill in your serial port name here
 var inData; // for incoming serial data
 var outByte = 0; // for outgoing data
+var outVolume = 0;
+var outColor = 0;
+var stringToRead = 0;
 ///////////// AUDIO
 var fft;
 var spectrum;
@@ -27,6 +30,8 @@ var amore_var = false;
 
 var final_sentence = false;
 
+var stopArduinoLEDS = true;
+
 
 // var myFont;
 // var logoX = 2;
@@ -46,15 +51,17 @@ var step_2 = false;
 
 var step_3 = false;
 
+var stopRec = false;
+
 ////////// SINTESI VOCALE (PROVVISORIO)
 
 var speech;
 
 // var textFromVoice;
 
-const FOLDER = 'assets/audio/', EXT = '.mp3',
-      INDEX_START = 1, INDEX_END = 4,
-      INDEX_TOTAL = 1 + INDEX_END - INDEX_START,
+const FOLDER = 'assets/audio/', EXT = '.wav',
+      INDEX_START = 0, INDEX_END = 5,
+      INDEX_TOTAL = 0 + INDEX_END - INDEX_START,
       audios = Array(INDEX_TOTAL);
 
 function preload() {
@@ -65,8 +72,10 @@ function preload() {
   // una_sola_domanda = loadSound("./assets/audio/una_sola_domanda.mp3");
   // frase_finale = loadSound("./assets/audio/frase_finale.mp3");
 
-  for (var i = 0; i < INDEX_TOTAL; ++i)
-  audios[i] = loadSound(FOLDER + (i + INDEX_START) + EXT);
+  for (var i = 0; i < INDEX_TOTAL; ++i) {
+    audios[i] = loadSound(FOLDER + (i + INDEX_START) + EXT);
+  }
+
 }
 
 function setup() {
@@ -147,15 +156,30 @@ function draw() {
 
   volume = analyzer.getLevel();
   volumeRemap = map(volume, 0, 1, 0, 255);
-  outByte = int(map(volume*80, 0, 1, 0, 255));
+
+  if (stopArduinoLEDS == true) {
+    outByte = 25500/100;
+    //outVolume = 25500/100;
+  } else {
+    outByte = int(map(volume*10, 0, 1, 0, 255));
+    //outVolume = int(map(volume*80, 0, 1, 0, 255));
+  }
+  //stringToRead = "V" + outVolume.toString() + "," + "C" + outColor.toString() + ",";
+  // stringToRead = outVolume.toString() + "," + outColor.toString() + "*";
+  // serial.write(stringToRead);
   serial.write(outByte);
-  spectrum = fft.analyze();
+  //serial.write(140, 200, 100);
+  //spectrum = fft.analyze();
 
 
-  console.log('step_1: ' + step_1 + ',', 'step_2: ' + step_2 + ',', 'step_3: ' + step_3, 'outByte: ' + outByte);
+
+  //console.log('step_1: ' + step_1 + ',', 'step_2: ' + step_2 + ',', 'step_3: ' + step_3, 'outByte: ' + outByte);
+  console.log('step_1: ' + step_1 + ',', 'step_2: ' + step_2 + ',', 'step_3: ' + step_3);
   fill(0);
   // display the incoming serial data as a string:
   text("incoming value: " + inData, 30, 30);
+  text("stringToRead: " + stringToRead, 30, 60);
+  text("outByte: " + outByte, 30, 90);
   push();
   fill(212, 175, 55);
   stroke(255, 248, 184);
@@ -164,24 +188,37 @@ function draw() {
   ellipse(width/2, height/2, width/6);
   fill(212, 175, 55, 50);
   noStroke();
-  ellipse(width/2, height/2, width/5*volumeRemap*0.3);
+  ellipse(width/2, height/2, width/5*volume);
 
   pop();
+
+
+
+    if (audios[0].isPlaying() == true || audios[1].isPlaying() == true  || audios[2].isPlaying() == true || audios[3].isPlaying() == true ) {
+
+      stopRec == true;
+      console.log(stopRec);
+    } //else {
+    //   stopRec == false;
+    // }
+
+  text("stopRec: " + stopRec, 30, 150);
+  //console.log(stopRec);
 }
 
-function mouseDragged() {
-  // map the mouseY to a range from 0 to 255:
-  outByte = int(map(mouseY, 0, height, 0, 255));
-  // send it out the serial port:
-  serial.write(outByte);
-}
+// function mouseDragged() {
+//   // map the mouseY to a range from 0 to 255:
+//   outByte = int(map(mouseY, 0, height, 0, 255));
+//   // send it out the serial port:
+//   serial.write(outByte);
+// }
 
-function keyPressed() {
-  if (key >= 0 && key <= 9) { // if the user presses 0 through 9
-    outByte = byte(key * 25); // map the key to a range from 0 to 225
-  }
-  serial.write(outByte); // send it out the serial port
-}
+// function keyPressed() {
+//   if (key >= 0 && key <= 9) { // if the user presses 0 through 9
+//     outByte = byte(key * 25); // map the key to a range from 0 to 225
+//   }
+//   serial.write(outByte); // send it out the serial port
+// }
 
 function createAllSpeech() {
   allSpeech.onResult = startPythia;
@@ -194,7 +231,8 @@ function restartAllSpeech() {
 }
 
 function startPythia() {
-  if (step_1 == true) {
+  stopArduinoLEDS = false;
+  if (step_1 == true && stopRec == false) {
     if (allSpeech.resultValue == true) {
       //console.log('step 1 ok');
       //console.log('time: ' + timer);
@@ -231,21 +269,16 @@ function startPythia() {
         first_keyword_got = false;
         second_keyword_got = false;
         third_keyword_got = false;
-        audios[0].onended(startStep_2);
+        audios[0].onended(createSpeechRec_2);
 
-        function startStep_2() {
-          audios[1].play();
-          audios[1].onended(createSpeechRec_2);
-        }
-        if (audios[1].isPlaying() == false) {
+
           function createSpeechRec_2() {
             step_2 = true;
           }
         }
       }
     }
-  }
-  if (step_2 == true) {
+  if (step_2 == true && stopRec == false) {
     if (allSpeech.resultValue == true) {
 
       console.log(allSpeech.resultString + "222");
@@ -274,15 +307,15 @@ function startPythia() {
     }
     if (relazioni_sociali_var == true || amicizia_var == true || amore_var == true) {
       step_2 = false;
-      audios[2].play();
-      audios[2].onended(createSpeechRec_3);
+      audios[1].play();
+      audios[1].onended(createSpeechRec_3);
 
       function createSpeechRec_3() {
         step_3 = true;
       }
     }
   }
-  if (step_3 == true) {
+  if (step_3 == true && stopRec == false) {
     if (allSpeech.resultValue == true) {
       //console.log('step 3 ok');
       sentence = allSpeech.resultString.toLowerCase();
@@ -293,14 +326,35 @@ function startPythia() {
       if (relazioni_sociali_var == true) {
         if (odio_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
+          audios[2].play();
           console.log("Found");
-          // audio.src = a_music;
-          // audio.play();
           var odio_cit = odio_cits[Math.floor(Math.random() * odio_cits.length)];
-          alert(odio_cit);
+          audios[2].onended(function () {
+            setTimeout(playCit, 3000);
+            function playCit() {
+              var odio_audio = Math.round(random(4,5));
+              audios[odio_audio].play();
+              //alert(odio_cit);
+              relazioni_sociali_var = false;
+              audios[odio_audio].onended(farewell);
+
+              final_sentence = true;};
+            });
+          // var odio_audio = Math.round(random(4,6));
+          // audios[odio_audio].play();
           //speech.speak(odio_cit)
-          relazioni_sociali_var = false;
-          final_sentence = true;
+
+          //audios[odio_audio].onended(farewell);
+          // if (audios[4].isPlaying() == true) {
+          //   //outByte = 30000;
+          // }
+          // else if (audios[5].isPlaying() == true) {
+          //   //outByte = 40000;
+          // }
+          // else if (audios[6].isPlaying() == true) {
+          //   //outByte = 50000;
+          // }
+
         } else if (bravo_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           console.log("Found")
@@ -431,7 +485,8 @@ function startPythia() {
           final_sentence = true;
         }
       }
-      if (final_sentence == true) {
+      //if (final_sentence == true) {
+      function farewell() {
         audios[3].play();
         audios[3].onended(reset);
 
@@ -439,14 +494,17 @@ function startPythia() {
           //frase_finale.stop();
           step_1 = true;
           final_sentence = false;
+          stopArduinoLEDS = true;
           //createSpeechRec_1();
         }
+      //}
+    }
       }
     }
   }
   // console.log('time: ' + timer);
   // console.log(step_1);
-}
+
 
 // function keyReleased() {
 //   k++;

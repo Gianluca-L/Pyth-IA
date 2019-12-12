@@ -17,6 +17,8 @@ var step_1 = true;
 var timer = 1;
 var s = 0;
 
+var errorCounter = 0;
+
 // var benvenuto;
 // var categoria;
 // var una_sola_domanda;
@@ -170,10 +172,10 @@ function draw() {
 
   if (stopArduinoLEDS == true) {
     //outByte = 25500 / 100;
-    outVolume = 25500/100;
+    outVolume = 25500 / 100;
   } else {
     //outByte = int(map(volume * 10, 0, 1, 0, 255));
-    outVolume = int(map(volume*10, 0, 1, 0, 255));
+    outVolume = int(map(volume * 10, 0, 1, 0, 255));
   }
 
   stringToRead = "V" + outVolume.toString() + "," + "C" + outColor.toString() + ",";
@@ -263,7 +265,30 @@ function reset() {
   }, 2000);
   final_sentence = false;
   stopArduinoLEDS = true;
+  errorCounter = 0;
   //createSpeechRec_1();
+}
+
+function errorCase() {
+  step_3 = false;
+  errorCounter++;
+  if (errorCounter == 1) {
+    audios[5].play();
+    audios[5].onended(function () {
+      setTimeout(function() {
+        step_3 = true;
+      }, 1000);
+    })
+  }
+  else if (errorCounter == 2) {
+    audios[4].play();
+    audios[4].onended(farewell);
+  }
+}
+
+function farewell() {
+  audios[3].play();
+  audios[3].onended(reset);
 }
 
 function startPythia() {
@@ -354,6 +379,7 @@ function startPythia() {
 
     }
   }
+  ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// RISPOSTE
   if (step_3 == true && stopRec == false) {
     if (allSpeech.resultValue == true) {
       //console.log('step 3 ok');
@@ -361,7 +387,7 @@ function startPythia() {
       console.log(allSpeech.resultString.toLowerCase());
 
       speech.setVoice("Google italiano");
-
+      ////////////////////////////////////////////////////////////////////////////////////// AMICIZIA E RELAZIONI INTERPERSONALI
       if (amicizia_relInter_var == true) {
         if (odio_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
@@ -372,7 +398,7 @@ function startPythia() {
             setTimeout(playCit, 3000);
 
             function playCit() {
-              var odio_audio = Math.round(random(4, 6));
+              var odio_audio = Math.round(random([4, 5]));
               audios[odio_audio].play();
               //alert(odio_cit);
               amicizia_relInter_var = false;
@@ -456,44 +482,45 @@ function startPythia() {
           amicizia_relInter_var = false;
           final_sentence = true;
         } //else if (se_stessi_keywords.some(keyword => sentence.includes(keyword))) {
+        //     step_3 = false;
+        //     console.log("Found")
+        //     // audio.src = a_music;
+        //     // audio.play();
+        //     var se_stessi_cit = se_stessi_cits[Math.floor(Math.random() * se_stessi_cits.length)];
+        //     alert(se_stessi_cit);
+        //     //speech.speak(se_stessi_cit)
+        //     amicizia_relInter_var = false;
+        //     final_sentence = true;
+        //   }
+      // } else if (amicizia_var == true) {
+      //   if (vera_amicizia_keywords.some(keyword => sentence.includes(keyword))) {
       //     step_3 = false;
       //     console.log("Found")
-      //     // audio.src = a_music;
-      //     // audio.play();
-      //     var se_stessi_cit = se_stessi_cits[Math.floor(Math.random() * se_stessi_cits.length)];
-      //     alert(se_stessi_cit);
-      //     //speech.speak(se_stessi_cit)
-      //     amicizia_relInter_var = false;
+      //     var vera_amicizia_cit = vera_amicizia_cits[Math.floor(Math.random() * vera_amicizia_cits.length)];
+      //     alert(vera_amicizia_cit);
+      //     //speech.speak(vera_amicizia_cit);
+      //     amicizia_var = false;
+      //     final_sentence = true;
+      //   } else if (sep_feriti_keywords.some(keyword => sentence.includes(keyword))) {
+      //     step_3 = false;
+      //     console.log("Found")
+      //     var sep_feriti_cit = sep_feriti_cits[Math.floor(Math.random() * sep_feriti_cits.length)];
+      //     alert(sep_feriti_cit);
+      //     //speech.speak(sep_feriti_cit);
+      //     amicizia_var = false;
+      //     final_sentence = true;
+      //   } else if (falsa_amicizia_keywords.some(keyword => sentence.includes(keyword))) {
+      //     step_3 = false;
+      //     console.log("Found")
+      //     var falsa_amicizia_cit = falsa_amicizia_cits[Math.floor(Math.random() * falsa_amicizia_cits.length)];
+      //     alert(falsa_amicizia_cit);
+      //     //speech.speak(falsa_amicizia_cit);
+      //     amicizia_var = false;
       //     final_sentence = true;
       //   }
       }
-      else if (amicizia_var == true) {
-        if (vera_amicizia_keywords.some(keyword => sentence.includes(keyword))) {
-          step_3 = false;
-          console.log("Found")
-          var vera_amicizia_cit = vera_amicizia_cits[Math.floor(Math.random() * vera_amicizia_cits.length)];
-          alert(vera_amicizia_cit);
-          //speech.speak(vera_amicizia_cit);
-          amicizia_var = false;
-          final_sentence = true;
-        } else if (sep_feriti_keywords.some(keyword => sentence.includes(keyword))) {
-          step_3 = false;
-          console.log("Found")
-          var sep_feriti_cit = sep_feriti_cits[Math.floor(Math.random() * sep_feriti_cits.length)];
-          alert(sep_feriti_cit);
-          //speech.speak(sep_feriti_cit);
-          amicizia_var = false;
-          final_sentence = true;
-        } else if (falsa_amicizia_keywords.some(keyword => sentence.includes(keyword))) {
-          step_3 = false;
-          console.log("Found")
-          var falsa_amicizia_cit = falsa_amicizia_cits[Math.floor(Math.random() * falsa_amicizia_cits.length)];
-          alert(falsa_amicizia_cit);
-          //speech.speak(falsa_amicizia_cit);
-          amicizia_var = false;
-          final_sentence = true;
-        }
-      } else if (amore_var == true) {
+      ////////////////////////////////////////////////////////////////////////////////////// AMORE
+      else if (amore_var == true) {
         if (lasciare_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           console.log("Found")
@@ -536,67 +563,96 @@ function startPythia() {
           final_sentence = true;
         }
       }
-      //if (final_sentence == true) {
-      function farewell() {
-        audios[3].play();
-        audios[3].onended(reset);
+      ////////////////////////////////////////////////////////////////////////////////////// MORTE
+      else if (vita_morte_var == true) {
+        if (paura_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          var paura_cit = paura_cits[Math.floor(Math.random() * paura_cits.length)];
+
+          audios[2].onended(function() {
+            setTimeout(playCit, 3000);
+
+            function playCit() {
+
+              //var paura_audio = Math.round(random([4, 5]));
+              //audios[paura_audio].play();
+              vita_morte_var = false;
+              //audios[odio_audio].onended(farewell);
+              alert(paura_cit);
+              farewell();
+              final_sentence = true;
+            }
+          });
+        }
+        else {
+          errorCase();
+        }
+      }
 
 
-        //}
+
+        // if (final_sentence == true) {
+        //   audios[3].play();
+        //   audios[3].onended(reset);
+        //   }
+//////////////////////////////////////// PER AUDIO
+
+////////////////////////////////////////////////
       }
     }
   }
-}
-// console.log('time: ' + timer);
-// console.log(step_1);
+  // console.log('time: ' + timer);
+  // console.log(step_1);
 
 
-// function keyReleased() {
-//   k++;
-//   if (key === 'Enter') {
-//     if (k == 1) {
-//       console.log('ok');
-//       tag_speech.onResult = showResult;
-//       tag_speech.start();
-//       console.log(tag_speech);
-//     } else if (k == 2) {
-//       speech_2.onResult = showResult;
-//       speech_2.start();
-//     }
-//   }
-//   s++;
-//   if (key === 's') {
-//     if (s == 1) {
-//       // console.log('s1');
-//       // step_1 = true;
-//       startSentence.start();
-//     } else if (s == 2) {
-//       // console.log('s2');
-//       // step_1 = false;
-//       // s = 0;
-//     }
-//   }
-//   return false;
-// }
-//
-// function clickTextCheckbox() {
-//   voiceInput.hide();
-//   textInput.show();
-//   console.log(textCheckbox.value());
-// }
-//
-// function clickVoiceCheckbox() {
-//   textInput.hide();
-//   voiceInput.show();
-// }
-//
-// function showResult() {
-//   if (tag_speech.resultValue == true) {
-//
-//     var textFromVoice = select('#myVoiceInput');
-//     textFromVoice.html(tag_speech.resultString + "?");
-//     //textFromVoice.style('color: white; font-size: 20px; font-family: Verdana; position: absolute; top: 50%; left: 50%; width: 500px; transform: translate(-50%,-165%)');
-//     // console.log(tag_speech.resultString);
-//     // console.log(textFromVoice.html());
-//   }
-// }
+  // function keyReleased() {
+  //   k++;
+  //   if (key === 'Enter') {
+  //     if (k == 1) {
+  //       console.log('ok');
+  //       tag_speech.onResult = showResult;
+  //       tag_speech.start();
+  //       console.log(tag_speech);
+  //     } else if (k == 2) {
+  //       speech_2.onResult = showResult;
+  //       speech_2.start();
+  //     }
+  //   }
+  //   s++;
+  //   if (key === 's') {
+  //     if (s == 1) {
+  //       // console.log('s1');
+  //       // step_1 = true;
+  //       startSentence.start();
+  //     } else if (s == 2) {
+  //       // console.log('s2');
+  //       // step_1 = false;
+  //       // s = 0;
+  //     }
+  //   }
+  //   return false;
+  // }
+  //
+  // function clickTextCheckbox() {
+  //   voiceInput.hide();
+  //   textInput.show();
+  //   console.log(textCheckbox.value());
+  // }
+  //
+  // function clickVoiceCheckbox() {
+  //   textInput.hide();
+  //   voiceInput.show();
+  // }
+  //
+  // function showResult() {
+  //   if (tag_speech.resultValue == true) {
+  //
+  //     var textFromVoice = select('#myVoiceInput');
+  //     textFromVoice.html(tag_speech.resultString + "?");
+  //     //textFromVoice.style('color: white; font-size: 20px; font-family: Verdana; position: absolute; top: 50%; left: 50%; width: 500px; transform: translate(-50%,-165%)');
+  //     // console.log(tag_speech.resultString);
+  //     // console.log(textFromVoice.html());
+  //   }
+  // }

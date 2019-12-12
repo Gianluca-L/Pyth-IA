@@ -330,7 +330,7 @@ const forza_animo_fallimento_keywords = ['successo', 'success', 'insuccess', 'vi
 
 const paura_keywords = [ 'paura', 'timore', 'temo', 'temi', 'temiamo', 'temet', 'temer', 'temev', 'terrore', 'terrorizzat', 'preoccuparsi', 'preoccupat', 'preoccup', 'preoccupazion', 'precipizio', 'precipiz', 'precipit', 'abisso', 'abissi', 'abiss', 'precipitare', 'abissale', 'abissal', 'buio', 'luce', 'luminos', 'abbuiare', 'rabbuiare', 'bui', 'grigiore', 'angoscia', 'panico', 'sgomento','ansia', 'apprensione', 'batticuore', 'inquietudine', 'pensiero', 'preoccupazione', 'inquiet',      'impanic', 'ansios', 'apprensiv', 'trepidant', 'trepidar', 'impaurit', 'impaurirsi', 'impaurisc', 'impaurir', 'intimidit', 'intimidisc', 'intimidir', 'intimorit', 'intimorisc', 'intimori', 'spaventat', 'terrorizzat', 'atterrit', 'terrorizz', 'atterrisc', 'trepidazione','impaurire', 'intimidire', 'intimorire', 'spaventare', 'angosciare', 'atterrire', 'sgomentare', 'terrorizzare', 'orrore', 'spavento', 'cup', 'fosc', 'funebr', 'funere', 'funest', 'lugubr', 'tetr',
 'dolor', 'afflizion', 'cordogli', 'afflitt', 'addolorat', 'male', 'malattia', 'malat', 'malattie', 'ammalarsi', 'ammalat', 'mali', 'malign', 'maledizion', 'maledett', 'malefic', 'crudeltà', 'crudel', 'regg', 'sopport', 'toller', 'pati', 'peno', 'peni', 'pena', 'peniamo', 'penate', 'penano', 'tribol', 'stent', 'subir', 'subisc', 'subiamo', 'subite', 'subiscon', 'dolor', 'penar', 'affliggersi', 'angustiarsi', 'angustiat', 'tormentat', 'perdut', 'florid', 'inferm', 'dolersi', 'struggersi', 'tormentarsi', 'torturarsi', 'morbo', 'malessere', 'malore', 'patologia', 'sindrome', 'salute', 'bene', 'male', 'perdizion', 'rovin', 'benessere', 'floridezza', 'sanità', 'egritudine', 'infermità', 'insanità', 'in forma', 'san', 'inferm', 'malat', 'condizioni fisiche', 'peggiora', 'essere in buona', 'essere in cattiva', 'condizion', 'stat', 'ospedal', 'cur',  'clinic', 'angosci', 'pena', 'strazi', 'torment',
-'assist', 'accudi', 'badar', 'custod', 'confortare', 'mettere a proprio agio', 'rassicurare', 'confortat', 'tranquillizz', 'confort', 'tranquillizzare', 'conforto', 'confortare', 'confortat', 'confortarsi', 'rimedio', 'rimediare', 'rimedi', 'support', 'sosten', 'consolar', 'consolo', 'consoli', 'consoliamo', 'consolate', 'consolano', 'sopport', 'incoragg', 'solliev', 'sollevat', 'avvilit', 'amaregg', 'supporto', 'supportare', 'sostenere', 'sopportare', 'sostegno', 'consolazione', 'incoraggiamento', 'sollievo', 'abbattimento', 'avvilimento', 'sconfort', 'scoraggiamento', 'scoragg', 'appoggio', 'amarezza', 'demoralizz','depress', 'desolazione', 'desolat', 'scoraggiamento', 'scoramento', 'sfiducia', 'disperazione', 'disperat', 'consolazione', 'fiducia', 'consolare', 'incoraggiare', 'rasserenare', 'rassicurare', 'rianimare', 'rincuorare', 'rinfrancare', 'risollevare', 'sostenere', 'abbattere', 'avvilire', 'demoralizzare', 'deprimere', 'sconfortare', 'scoraggiare', 'abbattut', 'avvilit', 'afflitt', 'amareggiat', 'avvilit', 'sconsolat', 'scoraggiat', 'scorat', 'sfiduciat', 'disperat', 'fiducios', 'rassicurat', 'risollev', 'sollev', 'speranz', 'rasseren','tranquillizzant', 'allarm', 'conturbant', 'inquiet', 'preoccup', 'angosciant', 'spaventos', 'terrorizzant', 'allarmant', 'grav', 'inquietant', 'angosciant', 'drammatic', 'spaventos', 'terrificant', 'dare forza', 'incoragg', 'rassicur', 'rianim', 'riconfort', 'riconsol', 'rincoragg', 'rinfranc', 'risollev', 'tirare su', 'sosten', 'abbatt', 'avvili', 'buttare giù', 'demoralizz', 'sconfort', 'scoragg', 'disanim', 'perdersi d\'animo', 'mi perdo d\'animo', 'perso d\'animo', 'vincere', 'rimediare', 'rimedio', 'rimedi', 'vinc', 'sconfigg', 'battere', 'sconfigg', 'superare', 'super', 'annient', 'debell', 'sbaragli', 'sgomin', 'sopraff', 'vincit', 'vincent', 'vittorioso', 'perdent', 'perd', 'sconfitt', 'vint', 'pers', 'affermazione', 'successo', 'vittori', 'perdit', 'sconfitt', 'soccomb', 'elimin', 'caccia', 'allontan', 'cancell'
+'assist', 'accudi', 'badar', 'custod', 'confortare', 'mettere a proprio agio', 'rassicurare', 'confortat', 'tranquillizz', 'confort', 'tranquillizzare', 'conforto', 'confortare', 'confortat', 'confortarsi', 'rimedio', 'rimediare', 'rimedi', 'support', 'sosten', 'consolar', 'consolo', 'consoli', 'consoliamo', 'consolate', 'consolano', 'sopport', 'incoragg', 'solliev', 'sollevat', 'avvilit', 'amaregg', 'supporto', 'supportare', 'sostenere', 'sopportare', 'sostegno', 'consolazione', 'incoraggiamento', 'sollievo', 'abbattimento', 'avvilimento', 'sconfort', 'scoraggiamento', 'scoragg', 'appoggio', 'amarezza', 'demoralizz','depress', 'desolazione', 'desolat', 'scoraggiamento', 'scoramento', 'sfiducia', 'disperazione', 'disperat', 'consolazione', 'fiducia', 'consolare', 'incoraggiare', 'rasserenare', 'rassicurare', 'rianimare', 'rincuorare', 'rinfrancare', 'risollevare', 'sostenere', 'abbattere', 'avvilire', 'demoralizzare', 'deprimere', 'sconfortare', 'scoraggiare', 'abbattut', 'avvilit', 'afflitt', 'amareggiat', 'avvilit', 'sconsolat', 'scoraggiat', 'scorat', 'sfiduciat', 'disperat', 'fiducios', 'rassicurat', 'risollev', 'sollev', 'speranz', 'rasseren','tranquillizzant', 'allarm', 'conturbant', 'inquiet', 'preoccup', 'angosciant', 'spaventos', 'terrorizzant', 'allarmant', 'grav', 'inquietant', 'angosciant', 'drammatic', 'spaventos', 'terrificant', 'dare forza', 'incoragg', 'rassicur', 'rianim', 'riconfort', 'riconsol', 'rincoragg', 'rinfranc', 'risollev', 'tirare su', 'sosten', 'abbatt', 'avvili', 'buttare giù', 'demoralizz', 'sconfort', 'scoragg', 'disanim', 'perdersi d\'animo', 'mi perdo d\'animo', 'perso d\'animo', 'vincere', 'rimediare', 'rimedio', 'rimedi', 'vinc', 'sconfigg', 'battere', 'sconfigg', 'superare', 'super', 'annient', 'debell', 'sbaragli', 'sgomin', 'sopraff', 'vincit', 'vincent', 'vittorioso', 'perdent', 'sconfitt', 'vint', 'pers', 'affermazione', 'successo', 'vittori', 'sconfitt', 'soccomb', 'elimin', 'caccia', 'allontan', 'cancell'
 ];
 
 var paura_cits = ['10A Blu | Qualunque sia la sua forma, la sua modalità, qualunque sia il suo aspetto, il suo nome, ogni paura è orientata verso la morte. Se vai in profondità, scoprirai di aver paura della morte. (Osho)',
@@ -358,6 +358,151 @@ var paura_cits = ['10A Blu | Qualunque sia la sua forma, la sua modalità, qualu
 '61A Rosa | Morire per dormire. Nient’altro. E con quel sonno poter calmare i dolorosi battiti del cuore, e le mille offese naturali di cui è erede la carne! Quest’è una conclusione da desiderarsi devotamente. Morire per dormire. Dormire, forse sognare. (William Shakespeare)',
 '19A Rosso | Noi eravamo come voi, voi sarete come noi (Sull’ingresso di molti cimiteri) Mi disturba la morte, è vero. Credo che sia un errore del padreterno. Non mi ritengo per niente indispensabile, ma immaginare il mondo senza di me: che farete da soli? (Vittorio Alfieri)'
 ];
+
+////// DIO
+
+const dio_keywords = ['dio', 'salvezza', 'salv', 'dannat', 'dannazione', 'altissimo', 'creatore', 'domineddio', 'onnipotente', 'padreterno', 'signore', 'chies', 'cristo', 'gesù', 'madonna', 'maria', 'confession', 'cred', 'fede', 'religion', 'santo', 'santi', 'santa', 'santif', 'sacr', 'religios', 'adorazion', 'cult', 'venerazion', 'deferenz', 'devozion', 'devot', 'ossequi', 'riverenz', 'atei', 'ateo', 'irreligios', 'miscredenz', 'sacr', 'profan', 'civil', 'laic', 'precett', 'credent', 'devot', 'fedel', 'osservant', 'pio', 'pia', 'pii', 'areligios', 'ateo', 'atei', 'irreligios', 'miscredent', 'blasfem', 'empi', 'ecclesiastic', 'esiste', 'odio', 'rifiut', 'intolleran'
+];
+
+var dio_cits = ['31A Verde | La morte è orribile solo per colui che non crede in Dio, oppure crede in un Dio malvagio, il che è la stessa cosa. Per colui che crede in Dio, nella sua bontà e vive in questa vita secondo la sua legge ed ha sperimentato questa sua bontà, per costui la morte è solo un passaggio. (Lev Tolstoj)',
+'35A | Arancione Dio è l’unico essere che, per regnare, non ha nemmeno bisogno di esistere. (Charles Baudelaire)',
+'68A | Rosso Nella vita la cosa più audace è odiare la morte; sono disprezzabili e disperate le religioni che ottundono questo odio. (Elias Canetti)'
+];
+
+///// IMMORTALITA'
+
+const immortalità_keywords = ['dopo la morte', 'dopo che muoio', 'dopo che sarò morto', 'dopo che sarò morta', 'dopo che saremo morti', 'dopo che sono morto', 'dopo che sono morta', 'quando morirò', 'quando sarò morto', 'quando sarò morta', 'quando saremo morti', 'quando saremo morte', 'quando moriremo', 'immortal', 'immortalità', 'infinit', 'etern', 'aldilà', 'paradiso', 'inferno', 'purgatorio', 'purificazione', 'purificarsi', 'purific', 'purificat', 'reincarnazion', 'reincarnarsi', 'reincarn', 'altro mondo', 'oltretomba', 'acheronte', 'ade', 'inferi', 'esist', 'regno dei morti', 'vita terrena', 'decomposiz', 'decomporsi', 'decompongo', 'decomponi', 'decompone', 'decompost', 'disfatto', 'disfarsi', 'disfare', 'putrefaz', 'putrefarsi', 'putrefa', 'putrefatt', 'corrompere', 'corrompersi', 'imputridire', 'imputridit', 'imputridir', 'imputridisc', 'corrott', ' marcir', 'marcio', 'marci', 'deteriorarsi', 'deteriorare', 'deterior', 'estinzion', 'estinguersi', 'estingu', 'estint', 'scomparir', 'dissolversi', 'scompars', 'dissolt', 'disgregarsi', 'scindersi', 'scission', 'sciss', 'sciogliersi', 'sciolt', 'carne', 'spirit', 'carnal', 'ceneri', 'cenere', 'concim', 'fertilizzante per piante', 'fertilizz', 'tra la vita e la morte', 'stasi','anima'
+];
+
+var immortalità_cits = ['24A Blu | Il fatto che siano tutti votati alla scomparsa, produce in noi un sentimento insopportabile. Ma lo sarebbe ancora di più se fosse la morte a scomparire. (Jean Baudrillard)',
+'36A Rosa | Di fronte a se stesso ognuno è immortale; può sapere che sta per morire, ma non potrà mai sapere che è morto. (Samuel Butler)',
+'51A Rosa | Dal mio corpo in putrefazione cresceranno dei fiori, e io sarò dentro di loro: questa è l’eternità. (Edvard Munch)',
+'57A Rosa | Giù, giù, in fondo al cuore, non crediamo alla nostra estinzione; in qualche modo ci aspettiamo di essere presenti, a osservare quello che succederà ai posteri. (Bernard Berenson)',
+'45A Blu | Tutte le nostre conoscenze ci aiutano solo a morire di una morte un po’ più dolorosa di quella degli animali che nulla sanno. (Maurice Maeterlinck)',
+'77A Arancione | Essere immortale è cosa da poco, tutte le creature lo sono, giacché ignorano la morte. (Jorge Luis Borges)',
+'63A Arancione | Non c’è nessuno che in fondo creda alla propria morte, o, ciò che equivale, che nel suo inconscio ognuno di noi è convinto della propria immortalità. (Sigmund Freud)',
+'67A Arancione | Non temere la morte: prima moriamo, prima saremo immortali. (Benjamin Franklin)',
+'33A Rosa | Le persone non muoiono immediatamente, ma rimangono immerse in una sorta di aura di vita che non ha alcuna relazione con la vera immortalità, ma attraverso le quali continuano ad occupare i nostri pensieri nello stesso modo di quando erano vivi. (Marcel Proust)',
+'74A Rosso | L’aldilà è ovunque! Noi siamo circondati dall’aldilà. Quell’aldilà è l’essenza del divino, ed è lì che dobbiamo penetrare. E’ dentro di noi, è fuori di noi, è sempre presente. Se lo dimenticate… questo è ciò che fate normalmente, poiché guardare all’aldilà è molto scomodo e non vi piace. E’ come guardare dentro un abisso: vi assale un tremito, vi sentite male. (Osho)',
+'49A Blu | Considero il cervello come un computer che smetterà di funzionare quando i suoi componenti si guastano. Non c’è paradiso né aldilà per i computer rotti. È una fiaba per persone che hanno paura del buio. (Stephen Hawking)',
+'65A Arancione | Ho un solo desiderio per l’aldilà, che non vengano a cercarmi i rompiballe. (Alda Merini)',
+'9A Rosso | Dopo la tua morte, sarai quello che eri prima della nascita. (Arthur Schopenhauer)',
+'81A Rosa | Dopo la morte attendono gli uomini cose che non sperano e neppure immaginano. (Eraclito)'
+];
+
+///// SENSO_VITA
+
+const senso_vita_keywords = ['viviamo per morire', 'che senso ha vivere', 'che senso ha la vita', 'significat', 'morire senza aver vissuto', 'vivere per morire', 'senso', 'sens', 'signif', 'vita', 'vivere', 'vivo', 'viva', 'vivi', 'vivr', 'vissut', 'illogic', 'incoerent', 'incoerenz', 'incongruent', 'incongruenz', 'insensat', 'irragionevol', 'irrazional', 'sconness', 'senza capo né coda', 'assurd', 'dissennat', 'sconsiderat', 'logic', 'ragionevol', 'razional', 'sensat',
+'perchè dobbiamo morire', 'perchè si vive', 'cosa vuol dire vivere'
+];
+
+var senso_vita_cits = ['4A Viola | Viviamo tra cose destinate a morire – Intra peritura vivimus. (Lucio Anneo Seneca)',
+'16A Viola | Vita e morte non sono due estremi lontani l’uno dall’altro. Sono come due gambe che camminano insieme, ed entrambe ti appartengono. In questo stesso istante stai vivendo e morendo allo stesso tempo. Qualcosa in te muore a ogni istante. (Osho)',
+'72A Rosso | Non è vero che la morte ci giunge come un’esperienza in cui siamo tutti novellini, come dice Montaigne. Tutti prima di nascere eravamo morti. (Cesare Pavese)',
+'34A Viola |La vita fa l’analisi, la morte si incarica della sintesi. (Robert Sabatier)',
+'8A Arancione | La morte con tutta probabilità è la più grande invenzione della vita. Spazza via il vecchio per far spazio al nuovo. (Steve Jobs)',
+'23A Rosa | Morire è tremendo, ma l’idea di morire senza aver vissuto è insopportabile. Erich Fromm',
+'18A Arancione | Ogni volta che trascorro del tempo con una persona che sta morendo trovo in effetti una persona che vive. Morire è il processo che inizia pochi minuti prima della morte, quando il cervello viene privato dell’ossigeno; tutto il resto è vivere. (Patch Adams)',
+'16A Viola | Vita e morte non sono due estremi lontani l’uno dall’altro. Sono come due gambe che camminano insieme, ed entrambe ti appartengono. In questo stesso istante stai vivendo e morendo allo stesso tempo. Qualcosa in te muore a ogni istante. (Osho)',
+'46A Viola | Molte persone hanno così tanta paura di morire da non riuscire a vivere. (Henry van Dyke)',
+'73A Viola |Ci vuole tutta la vita per imparare a vivere e, quel che forse sembrerà più strano, ci vuole tutta la vita per imparare a morire. (Lucio Anneo Seneca)'
+];
+
+////// MORTE INTERIORE
+
+const morte_interiore_keywords = ['morire dentro','morire interiormente', 'morte dell’animo', 'morte dell’anima', 'morto dentro',
+'animo', 'interiormente', 'sentirsi male con se stessi', 'disagio'];
+
+var morte_interiore_cits = ['6A Viola | Molte persone muoiono a venticinque anni e non vengono sepolti fino a quando non ne hanno settantacinque. (Benjamin Franklin)'];
+
+///// RICORDO
+
+const ricordo_keywords = ['ricord', 'ricordat', 'memoria', 'memorie', 'ricordare', 'ricordarsi', 'dimenticare', 'dimenticat', 'dimenticarsi', 'scordarsi', 'scordat', 'rimembrare', 'rimembro', 'rimembri', 'rimembrat', 'memorizz', 'memorizzat', 'richiamare alla mente', 'richiamato alla mente', 'richiamo alla mente', 'richiamiamo alla mente', 'richiami alla mente', 'richiama alla mente', 'richiamate alla mente', 'richiamano alla mente', 'oblio', 'obliar', 'obliterar', 'obliter', 'archiv', 'sovvenir', 'sovvenut', 'sovviene', 'rinvenir', 'rinvengo', 'rinvieni', 'rinvenite', 'rinviene', 'rinvenut', 'mi sfugge', 'sfuggit', 'resti', 'resto', 'orme', 'resterà', 'rimarrà', 'monument', 'testimonianz', 'testimone', 'testimon', 'reminescenz', 'segno', 'traccia', 'tracce', 'rimembranz', 'ricordanz', 'posteri', 'postero', 'dimenticatoio', 'farò la storia', 'rimarrà',  'rimarrò', 'resterà', 'restar', 'pensiero', 'avere a mente', 'pensar', 'giorno dei morti', 'rimaner', 'fare la storia',
+'rimanere nella storia', 'oscurità'
+];
+
+var ricordo_cits = ['80A Rosso | Essere ricordati dopo morti non è che una magra ricompensa per essere stati trattati con disprezzo quando eravamo in vita. (William Hazlitt)',
+'25A Rosso | Tutto è insignificante, fluttuante, illusorio e fallace, come un miraggio. Puoi essere orgoglioso, saggio, e bello, ma la morte ti strapperà via dalla faccia della terra esattamente come se tu fossi stato un topo nascosto sotto il pavimento, e i tuoi posteri, la tua storia, i tuoi geni immortali bruceranno o geleranno insieme con il globo terrestre. (Anton Cechov)',
+'57A Rosa | Giù, giù, in fondo al cuore, non crediamo alla nostra estinzione; in qualche modo ci aspettiamo di essere presenti, a osservare quello che succederà ai posteri. (Bernard Berenson)',
+'33A Rosa | Le persone non muoiono immediatamente, ma rimangono immerse in una sorta di aura di vita che non ha alcuna relazione con la vera immortalità, ma attraverso le quali continuano ad occupare i nostri pensieri nello stesso modo di quando erano vivi. (Marcel Proust)'
+];
+
+///// MORTE DI UN CARO/ LUTTO
+
+const lutto_keywords = ['lutto', 'lutti', 'scomparsa', 'caro', 'cari', 'mancanza', 'perdita', 'morte di un caro', 'morte famigliare', 'familiar', 'famigliar', 'famigli', 'amic', 'genitor', 'figli', 'affett', 'marito', 'moglie', 'compagn', 'conoscent', 'corale', 'collettiv', 'rar', 'mostrare', 'esporre', 'nascondere', 'imbarazz', 'produttiv', 'coral', 'collettiv', 'mostrar', 'esporr', 'mostrat', 'espost', 'nasconder', 'nascond', 'nascost', 'vedova', 'vedovo', 'vedovi', 'vedove', 'pena', 'strazi', 'torment', 'disgrazi', 'sventur', 'tragedi', 'compiant', 'compiang', 'pianto', 'piango', 'piangere', 'pianti', 'piangi', 'piang', 'nonn', 'zio', 'zii', 'zie', 'zia', 'parente', 'parenti', 'prozi', 'nipot', 'pronipot', 'mancare', 'mi manca', 'ci manca', 'mancat', 'separaz', 'separarsi', 'dividersi', 'separat', 'divis', 'antenat', 'sorell', 'fratell', 'scompars', 'declin', 'tramont', 'defunt', 'decedere', 'decess', 'decedut', 'deced', 'volare in cielo', 'volato in cielo',
+'volata in cielo', 'volati in cielo', 'volate in cielo', 'volerà in cielo', 'voleranno in cielo', 'volerò in cielo', 'volerai in cielo', 'voleremo in cielo', 'volerete in cielo', 'vola in cielo', 'volare in cielo', 'andare in cielo', 'andrà in cielo', 'andranno in cielo', 'andremo in cielo', 'andrete in cielo', 'andrò in cielo', 'andrai in cielo', 'andato in paradiso', 'andata in paradiso', 'andati in paradiso', 'andate in paradiso', 'spegnersi', 'spento', 'spegnerà', 'spegnerò', 'spegneremo', 'spegnerete', 'spegneranno', 'orfan'
+];
+
+var lutto_cits = ['39A Viola | L’idea che si morirà è più crudele del morire, ma meno dell’idea che un altro sia morto. (Marcel Proust)',
+'22A Viola | Quand’ero ragazzo era un fatto corale. Moriva un vicino di casa e tutti assistevano, aiutavano. La morte veniva mostrata. Si apriva la casa, il morto veniva esposto e ciascuno faceva così la sua conoscenza con la morte. Oggi è il contrario: la morte è un imbarazzo, viene nascosta. Nessuno sa più gestirla. Nessuno sa più cosa fare con un morto. L’esperienza della morte si fa sempre più rara e uno può arrivare alla propria senza mai aver visto quella di un altro. (Tiziano Terzani)',
+'62A Viola | Arriviamo a comprendere fino in fondo gli esseri umani ai quali siamo uniti da un vincolo indissolubile soltanto nell’attimo della loro morte. (Sándor Márai)',
+'31A Verde | La morte è orribile solo per colui che non crede in Dio, oppure crede in un Dio malvagio, il che è la stessa cosa. Per colui che crede in Dio, nella sua bontà e vive in questa vita secondo la sua legge ed ha sperimentato questa sua bontà, per costui la morte è solo un passaggio. (Lev Tolstoj)',
+'27A Rosso | Nessuno sa se per l’uomo la morte non sia per caso il più grande dei beni, eppure la temono come se sapessero bene che è il più grande dei mali. E credere di sapere quello che non si sa non è veramente la più vergognosa forma di ignoranza? (Socrate)',
+'24A Blu | Il fatto che siano tutti votati alla scomparsa, produce in noi un sentimento insopportabile. Ma lo sarebbe ancora di più se fosse la morte a scomparire. (Jean Baudrillard)',
+'3A Arancione | Quando un uomo muore, un capitolo non viene strappato dal libro, ma viene tradotto in una lingua migliore. (John Donne)',
+'33A Rosa | Le persone non muoiono immediatamente, ma rimangono immerse in una sorta di aura di vita che non ha alcuna relazione con la vera immortalità, ma attraverso le quali continuano ad occupare i nostri pensieri nello stesso modo di quando erano vivi. (Marcel Proust)'
+];
+
+///// QUANDO MORIRO'/COS SUCCEDE
+
+const quando_morirò_keywords = ['quando morirò', 'quando moriremo', 'quando avverrà la mia fine', 'ci sarà la mia fine', 'la mia ora', 'la nostra ora', 'giungerà la mia ora', 'giungerà la mia morte', 'giungerà la nostra morte', 'quando finirà il mondo', 'finirà il mondo', 'fine del mondo', 'collasso del mondo', 'mondo collasserà', 'mondo finirà', 'collasserà il mondo', 'terminerà il mondo', 'mondo terminerà', 'mondo avrà una fine', 'finirà', 'quando', 'in che momento', 'in che istante', 'avrà fine', 'avrò fine', 'avremo fine', 'verrò sepolto', 'verremo sepolti', 'verrò seppellito', 'verremo seppelliti', 'il mio ultimo giorno', 'il nostro ultimo giorno', 'il nostro termine', 'il mio termine', 'termine della nostra vita', 'termine della mia vita', 'fine della nostra esistenza', 'fine della mia esistenza', 'fine dell’esistenza', 'termine dell’esistenza', 'la propria ora', 'giunti a termine', 'giungere a termine', 'giunto a termine', 'giunta a termine',
+'quanto tempo mi resta', 'tempo', 'resta', 'rimane', 'scadere', 'scade', 'scadrà', 'sarà scaduto', 'vivrò ancora', 'vivremo ancora', 'vivrà ancora', 'vivranno ancora'
+];
+
+var quando_morirò_cits = ['71A Rosa | Quando verrà l’ora di morire non voglio perderne neanche un attimo: si muore una volta sola. (Antonio Amurri)',
+'50A Viola | Quando morirò, sarò niente di niente e nulla di me sopravvivrà. Non sono più giovane e amo la vita. Ma mi rifiuto di vivere tremando di terrore al pensiero del nulla, la felicità non è meno vera perché deve finire, né il pensiero e l’amore perdono il loro valore perché non sono immortali. (Bertrand Russell)',
+'58A Blu | Ecco il nostro errore: vediamo la morte davanti a noi e invece gran parte di essa è già alle nostre spalle: appartiene alla morte la vita passata. (Lucio Anneo Seneca)',
+'82A rosa | Non sono gli anni che contano nella vita, è la vita che metti in quegli anni. (Abraham Lincoln)'
+];
+
+///// MORTE DEGLI OGGETTI
+
+const morte_oggetti_keywords = ['morte degli oggetti', 'oggett', 'cose', 'inanimat', 'element',
+'obsole', 'romper', 'rott', 'pezz', 'secc', 'rami secc', 'andare a male', 'rovina'
+];
+
+var morte_oggetti_cits = ['4A Viola | Viviamo tra cose destinate a morire – Intra peritura vivimus. (Lucio Anneo Seneca)'];
+
+///// MORIRE DI NOIA
+
+const morte_noia_keywords = ['noia', 'annoiarsi', 'annoiat', 'monotonia', 'monoton', 'noios',
+'tedio', 'piattezza', 'piatto', 'piatta', 'divan', 'non far niente', 'ripetitività', 'ripetitiv', 'uniform', 'dorm'
+];
+
+var morte_noia_cits = ['21A Viola | Sento che la monotonia e la morte sono più o meno la stessa cosa. (Charlotte Brontë)'];
+
+////// EUTANASIA
+
+const eutanasia_keywords = ['suicidio assistito', 'eutanasia', 'dolce morte', 'buona morte',
+'suicidio', 'suicidarsi', 'farsi fuori', 'fin di vita', 'malato terminale', 'malati terminali', 'malat', 'guarig', 'mettere fine alla vita di', 'mettere fine alla mia vita', 'mettere fine alla sua vita', 'mettere fine alla loro vita', 'conservare la vita'
+];
+
+var eutanasia_cits = ['20A Rosso | Ho combattuto con la morte. È la sfida meno eccitante che tu possa immaginare. Si svolge in un impalpabile grigiore, niente sotto i piedi, niente intorno, senza spettatori, senza clamore, senza gloria, senza il grande desiderio della vittoria, senza la grande paura per la sconfitta, in una atmosfera insalubre di di tiepido scetticismo, senza molto sollievo nelle nostre stesse ragioni e ancor meno in quelle del tuo avversario. (Joseph Conrad)',
+'61A Rosa | Morire per dormire. Nient’altro. E con quel sonno poter calmare i dolorosi battiti del cuore, e le mille offese naturali di cui è erede la carne! Quest’è una conclusione da desiderarsi devotamente. Morire per dormire. Dormire, forse sognare. (William Shakespeare)',
+'68A Rosso | Nella vita la cosa più audace è odiare la morte; sono disprezzabili e disperate le religioni che ottundono questo odio. (Elias Canetti)',
+'7A Viola | Molte persone muoiono a venticinque anni e non vengono sepolti fino a quando non ne hanno settantacinque. (Benjamin Franklin)',
+'78A Rosso | La morte risolve tutti i problemi – niente uomini, niente problemi. (Stalin)',
+'27A Rosso | Nessuno sa se per l’uomo la morte non sia per caso il più grande dei beni, eppure la temono come se sapessero bene che è il più grande dei mali. E credere di sapere quello che non si sa non è veramente la più vergognosa forma di ignoranza? (Socrate)',
+'7A Viola | La morte è un’usanza che tutti, prima o poi, dobbiamo rispettare. Jorge Louis Borges',
+'21eti Viola | Proprio come sceglierò la mia nave quando mi accingerò ad un viaggio, o la mia casa quando intenderò prendere una residenza, così sceglierò la mia morte quando mi accingerò ad abbandonare la vita. (Lucio Annea Seneca) ',
+'22eti Rosa | Non sempre la vita va conservata: il bene non consiste nel vivere, ma nel vivere bene. (Lucio Annea Seneca)',
+'23eti Verde | Io ho il diritto di scegliere la mia morte per il bene degli altri. [Umberto Eco]',
+'24eti viola | Nessuno vive perché lo vuole. Ma una volta che vive lo deve volere. (Ernst Bloch)'
+];
+
+////// ABORTO
+
+const aborto_keywords = ['abort', 'uccid', 'ammazz', 'omicid', 'annient', 'fare fuori', 'annient', 'bambin', 'infanticidi', 'feto', 'feti', 'interrruzione di gravidanza', 'bebè', 'lattante', 'neonat', 'pargolo', 'poppante', 'embrion'];
+
+var aborto_cits = ['20eti azzurro L\'aborto viene sostenuto solo da persone che sono nate esse stesse. [Ronald Reagan]',
+'19eti viola L\'aborto è il più grande distruttore della pace perché, se una madre può uccidere il suo stesso figlio, cosa impedisce che io uccida te e tu uccida me? Non c\'è più nessun ostacolo. [Madre Teresa di Calcutta]',
+'18eti azzurro I cattolici, e lo ero anch\'io finché non ho raggiunto l\'età della ragione, i cattolici e altri cristiani sono contro l\'aborto e sono contro gli omosessuali. Ma chi ha meno aborti degli omosessuali?”[George Carlin]',
+'17eti rosa L\'abolizione del diritto di abortire per una donna, quando e se lo vuole, equivale a una maternità obbligatoria, una forma di stupro da parte dello Stato.” [Edward Abbey]',
+'16eti rosa “Come mai quando si tratta di noi, è un aborto, e quando si tratta di polli, è un\'omelette?” [George Carlin]',
+'15eti rosso “Se gli uomini potessero restare incinti, l\'aborto diventerebbe un sacramento.” [Flo Kennedy]'
+];
+
+
 
 
 function getInputValue() {

@@ -274,13 +274,12 @@ function errorCase() {
   errorCounter++;
   if (errorCounter == 1) {
     audios[5].play();
-    audios[5].onended(function () {
+    audios[5].onended(function() {
       setTimeout(function() {
         step_3 = true;
       }, 1000);
     })
-  }
-  else if (errorCounter == 2) {
+  } else if (errorCounter == 2) {
     audios[4].play();
     audios[4].onended(farewell);
   }
@@ -492,32 +491,32 @@ function startPythia() {
         //     amicizia_relInter_var = false;
         //     final_sentence = true;
         //   }
-      // } else if (amicizia_var == true) {
-      //   if (vera_amicizia_keywords.some(keyword => sentence.includes(keyword))) {
-      //     step_3 = false;
-      //     console.log("Found")
-      //     var vera_amicizia_cit = vera_amicizia_cits[Math.floor(Math.random() * vera_amicizia_cits.length)];
-      //     alert(vera_amicizia_cit);
-      //     //speech.speak(vera_amicizia_cit);
-      //     amicizia_var = false;
-      //     final_sentence = true;
-      //   } else if (sep_feriti_keywords.some(keyword => sentence.includes(keyword))) {
-      //     step_3 = false;
-      //     console.log("Found")
-      //     var sep_feriti_cit = sep_feriti_cits[Math.floor(Math.random() * sep_feriti_cits.length)];
-      //     alert(sep_feriti_cit);
-      //     //speech.speak(sep_feriti_cit);
-      //     amicizia_var = false;
-      //     final_sentence = true;
-      //   } else if (falsa_amicizia_keywords.some(keyword => sentence.includes(keyword))) {
-      //     step_3 = false;
-      //     console.log("Found")
-      //     var falsa_amicizia_cit = falsa_amicizia_cits[Math.floor(Math.random() * falsa_amicizia_cits.length)];
-      //     alert(falsa_amicizia_cit);
-      //     //speech.speak(falsa_amicizia_cit);
-      //     amicizia_var = false;
-      //     final_sentence = true;
-      //   }
+        // } else if (amicizia_var == true) {
+        //   if (vera_amicizia_keywords.some(keyword => sentence.includes(keyword))) {
+        //     step_3 = false;
+        //     console.log("Found")
+        //     var vera_amicizia_cit = vera_amicizia_cits[Math.floor(Math.random() * vera_amicizia_cits.length)];
+        //     alert(vera_amicizia_cit);
+        //     //speech.speak(vera_amicizia_cit);
+        //     amicizia_var = false;
+        //     final_sentence = true;
+        //   } else if (sep_feriti_keywords.some(keyword => sentence.includes(keyword))) {
+        //     step_3 = false;
+        //     console.log("Found")
+        //     var sep_feriti_cit = sep_feriti_cits[Math.floor(Math.random() * sep_feriti_cits.length)];
+        //     alert(sep_feriti_cit);
+        //     //speech.speak(sep_feriti_cit);
+        //     amicizia_var = false;
+        //     final_sentence = true;
+        //   } else if (falsa_amicizia_keywords.some(keyword => sentence.includes(keyword))) {
+        //     step_3 = false;
+        //     console.log("Found")
+        //     var falsa_amicizia_cit = falsa_amicizia_cits[Math.floor(Math.random() * falsa_amicizia_cits.length)];
+        //     alert(falsa_amicizia_cit);
+        //     //speech.speak(falsa_amicizia_cit);
+        //     amicizia_var = false;
+        //     final_sentence = true;
+        //   }
       }
       ////////////////////////////////////////////////////////////////////////////////////// AMORE
       else if (amore_var == true) {
@@ -563,24 +562,230 @@ function startPythia() {
           final_sentence = true;
         }
       }
-      ////////////////////////////////////////////////////////////////////////////////////// MORTE
+      ////////////////////////////////////////////////////////////////////////////////////// VITA E MORTE
       else if (vita_morte_var == true) {
         if (paura_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           audios[2].play();
           console.log("Found");
           var paura_cit = paura_cits[Math.floor(Math.random() * paura_cits.length)];
-
           audios[2].onended(function() {
             setTimeout(playCit, 3000);
 
             function playCit() {
-
               //var paura_audio = Math.round(random([4, 5]));
               //audios[paura_audio].play();
               vita_morte_var = false;
-              //audios[odio_audio].onended(farewell);
+              //audios[paura_audio].onended(farewell);
               alert(paura_cit);
+              farewell();
+              final_sentence = true;
+            }
+          });
+        } else if (dio_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          var dio_cit = dio_cits[Math.floor(Math.random() * dio_cits.length)];
+          audios[2].onended(function() {
+            setTimeout(playCit, 3000);
+
+            function playCit() {
+              //var dio_audio = Math.round(random([4, 5]));
+              //audios[dio_audio].play();
+              vita_morte_var = false;
+              //audios[dio_audio].onended(farewell);
+              alert(dio_cit);
+              farewell();
+              final_sentence = true;
+            }
+          });
+        }
+        else if (immortalità_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          var immortalità_cit = immortalità_cits[Math.floor(Math.random() * immortalità_cits.length)];
+          audios[2].onended(function() {
+            setTimeout(playCit, 3000);
+
+            function playCit() {
+              //var immortalità_audio = Math.round(random([4, 5]));
+              //audios[immortalità_audio].play();
+              vita_morte_var = false;
+              //audios[immortalità_audio].onended(farewell);
+              alert(immortalità_cit);
+              farewell();
+              final_sentence = true;
+            }
+          });
+        }
+        else if (senso_vita_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          var senso_vita_cit = senso_vita_cits[Math.floor(Math.random() * senso_vita_cits.length)];
+          audios[2].onended(function() {
+            setTimeout(playCit, 3000);
+
+            function playCit() {
+              //var senso_vita_audio = Math.round(random([4, 5]));
+              //audios[senso_vita_audio].play();
+              vita_morte_var = false;
+              //audios[senso_vita_audio].onended(farewell);
+              alert(senso_vita_cit);
+              farewell();
+              final_sentence = true;
+            }
+          });
+        }
+        else if (morte_interiore_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          var morte_interiore_cit = morte_interiore_cits[Math.floor(Math.random() * morte_interiore_cits.length)];
+          audios[2].onended(function() {
+            setTimeout(playCit, 3000);
+
+            function playCit() {
+              //var morte_interiore_audio = Math.round(random([4, 5]));
+              //audios[morte_interiore_audio].play();
+              vita_morte_var = false;
+              //audios[morte_interiore_audio].onended(farewell);
+              alert(morte_interiore_cit);
+              farewell();
+              final_sentence = true;
+            }
+          });
+        }
+        else if (ricordo_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          var ricordo_cit = ricordo_cits[Math.floor(Math.random() * ricordo_cits.length)];
+          audios[2].onended(function() {
+            setTimeout(playCit, 3000);
+
+            function playCit() {
+              //var ricordo_audio = Math.round(random([4, 5]));
+              //audios[ricordo_audio].play();
+              vita_morte_var = false;
+              //audios[ricordo_audio].onended(farewell);
+              alert(ricordo_cit);
+              farewell();
+              final_sentence = true;
+            }
+          });
+        }
+        else if (lutto_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          var lutto_cit = lutto_cits[Math.floor(Math.random() * lutto_cits.length)];
+          audios[2].onended(function() {
+            setTimeout(playCit, 3000);
+
+            function playCit() {
+              //var lutto_audio = Math.round(random([4, 5]));
+              //audios[lutto_audio].play();
+              vita_morte_var = false;
+              //audios[lutto_audio].onended(farewell);
+              alert(lutto_cit);
+              farewell();
+              final_sentence = true;
+            }
+          });
+        }
+        else if (quando_morirò_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          var quando_morirò_cit = quando_morirò_cits[Math.floor(Math.random() * quando_morirò_cits.length)];
+          audios[2].onended(function() {
+            setTimeout(playCit, 3000);
+
+            function playCit() {
+              //var quando_morirò_audio = Math.round(random([4, 5]));
+              //audios[quando_morirò_audio].play();
+              vita_morte_var = false;
+              //audios[quando_morirò_audio].onended(farewell);
+              alert(quando_morirò_cit);
+              farewell();
+              final_sentence = true;
+            }
+          });
+        }
+        else if (morte_oggetti_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          var morte_oggetti_cit = morte_oggetti_cits[Math.floor(Math.random() * morte_oggetti_cits.length)];
+          audios[2].onended(function() {
+            setTimeout(playCit, 3000);
+
+            function playCit() {
+              //var morte_oggetti_audio = Math.round(random([4, 5]));
+              //audios[morte_oggetti_audio].play();
+              vita_morte_var = false;
+              //audios[morte_oggetti_audio].onended(farewell);
+              alert(morte_oggetti_cit);
+              farewell();
+              final_sentence = true;
+            }
+          });
+        }
+        else if (morte_noia_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          var morte_noia_cit = morte_noia_cits[Math.floor(Math.random() * morte_noia_cits.length)];
+          audios[2].onended(function() {
+            setTimeout(playCit, 3000);
+
+            function playCit() {
+              //var morte_noia_audio = Math.round(random([4, 5]));
+              //audios[morte_noia_audio].play();
+              vita_morte_var = false;
+              //audios[morte_noia_audio].onended(farewell);
+              alert(morte_noia_cit);
+              farewell();
+              final_sentence = true;
+            }
+          });
+        }
+        else if (eutanasia_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          var eutanasia_cit = eutanasia_cits[Math.floor(Math.random() * eutanasia_cits.length)];
+          audios[2].onended(function() {
+            setTimeout(playCit, 3000);
+
+            function playCit() {
+              //var eutanasia_audio = Math.round(random([4, 5]));
+              //audios[eutanasia_audio].play();
+              vita_morte_var = false;
+              //audios[eutanasia_audio].onended(farewell);
+              alert(eutanasia_cit);
+              farewell();
+              final_sentence = true;
+            }
+          });
+        }
+        else if (aborto_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          var aborto_cit = aborto_cits[Math.floor(Math.random() * aborto_cits.length)];
+          audios[2].onended(function() {
+            setTimeout(playCit, 3000);
+
+            function playCit() {
+              //var aborto_audio = Math.round(random([4, 5]));
+              //audios[aborto_audio].play();
+              vita_morte_var = false;
+              //audios[aborto_audio].onended(farewell);
+              alert(aborto_cit);
               farewell();
               final_sentence = true;
             }
@@ -590,69 +795,66 @@ function startPythia() {
           errorCase();
         }
       }
+      // if (final_sentence == true) {
+      //   audios[3].play();
+      //   audios[3].onended(reset);
+      //   }
+      //////////////////////////////////////// PER AUDIO
 
-
-
-        // if (final_sentence == true) {
-        //   audios[3].play();
-        //   audios[3].onended(reset);
-        //   }
-//////////////////////////////////////// PER AUDIO
-
-////////////////////////////////////////////////
-      }
+      ////////////////////////////////////////////////
     }
   }
-  // console.log('time: ' + timer);
-  // console.log(step_1);
+}
+// console.log('time: ' + timer);
+// console.log(step_1);
 
 
-  // function keyReleased() {
-  //   k++;
-  //   if (key === 'Enter') {
-  //     if (k == 1) {
-  //       console.log('ok');
-  //       tag_speech.onResult = showResult;
-  //       tag_speech.start();
-  //       console.log(tag_speech);
-  //     } else if (k == 2) {
-  //       speech_2.onResult = showResult;
-  //       speech_2.start();
-  //     }
-  //   }
-  //   s++;
-  //   if (key === 's') {
-  //     if (s == 1) {
-  //       // console.log('s1');
-  //       // step_1 = true;
-  //       startSentence.start();
-  //     } else if (s == 2) {
-  //       // console.log('s2');
-  //       // step_1 = false;
-  //       // s = 0;
-  //     }
-  //   }
-  //   return false;
-  // }
-  //
-  // function clickTextCheckbox() {
-  //   voiceInput.hide();
-  //   textInput.show();
-  //   console.log(textCheckbox.value());
-  // }
-  //
-  // function clickVoiceCheckbox() {
-  //   textInput.hide();
-  //   voiceInput.show();
-  // }
-  //
-  // function showResult() {
-  //   if (tag_speech.resultValue == true) {
-  //
-  //     var textFromVoice = select('#myVoiceInput');
-  //     textFromVoice.html(tag_speech.resultString + "?");
-  //     //textFromVoice.style('color: white; font-size: 20px; font-family: Verdana; position: absolute; top: 50%; left: 50%; width: 500px; transform: translate(-50%,-165%)');
-  //     // console.log(tag_speech.resultString);
-  //     // console.log(textFromVoice.html());
-  //   }
-  // }
+// function keyReleased() {
+//   k++;
+//   if (key === 'Enter') {
+//     if (k == 1) {
+//       console.log('ok');
+//       tag_speech.onResult = showResult;
+//       tag_speech.start();
+//       console.log(tag_speech);
+//     } else if (k == 2) {
+//       speech_2.onResult = showResult;
+//       speech_2.start();
+//     }
+//   }
+//   s++;
+//   if (key === 's') {
+//     if (s == 1) {
+//       // console.log('s1');
+//       // step_1 = true;
+//       startSentence.start();
+//     } else if (s == 2) {
+//       // console.log('s2');
+//       // step_1 = false;
+//       // s = 0;
+//     }
+//   }
+//   return false;
+// }
+//
+// function clickTextCheckbox() {
+//   voiceInput.hide();
+//   textInput.show();
+//   console.log(textCheckbox.value());
+// }
+//
+// function clickVoiceCheckbox() {
+//   textInput.hide();
+//   voiceInput.show();
+// }
+//
+// function showResult() {
+//   if (tag_speech.resultValue == true) {
+//
+//     var textFromVoice = select('#myVoiceInput');
+//     textFromVoice.html(tag_speech.resultString + "?");
+//     //textFromVoice.style('color: white; font-size: 20px; font-family: Verdana; position: absolute; top: 50%; left: 50%; width: 500px; transform: translate(-50%,-165%)');
+//     // console.log(tag_speech.resultString);
+//     // console.log(textFromVoice.html());
+//   }
+// }

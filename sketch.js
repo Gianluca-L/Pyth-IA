@@ -24,9 +24,12 @@ var s = 0;
 
 ///// variables to trigger sections
 
-var relazioni_sociali_var = false;
-var amicizia_var = false;
+var lavoro_var = false;
+var amicizia_relInter_var = false;
 var amore_var = false;
+var ispirazione_var = false;
+var vita_morte_var = false;
+var etica_morale_var = false;
 
 var final_sentence = false;
 
@@ -59,10 +62,12 @@ var speech;
 
 // var textFromVoice;
 
-const FOLDER = 'assets/audio/', EXT = '.wav',
-      INDEX_START = 0, INDEX_END = 5,
-      INDEX_TOTAL = 0 + INDEX_END - INDEX_START,
-      audios = Array(INDEX_TOTAL);
+const FOLDER = 'assets/audio/',
+  EXT = '.wav',
+  INDEX_START = 0,
+  INDEX_END = 5,
+  INDEX_TOTAL = 1 + INDEX_END - INDEX_START,
+  audios = Array(INDEX_TOTAL);
 
 function preload() {
   myFont = loadFont('assets/Neoneon.otf');
@@ -76,6 +81,12 @@ function preload() {
     audios[i] = loadSound(FOLDER + (i + INDEX_START) + EXT);
   }
 
+}
+
+function mouseClicked() {
+  var colorHex = Math.round(random(0, 1));
+  outColor = colorHex;
+  console.log(outColor);
 }
 
 function setup() {
@@ -109,8 +120,8 @@ function setup() {
 
   analyzer = new p5.Amplitude();
   for (var i = 0; i < INDEX_TOTAL; ++i) {
-  analyzer.setInput(audios[i]);
-}
+    analyzer.setInput(audios[i]);
+  }
 
 
   //envelope = new p5.Env();
@@ -158,15 +169,16 @@ function draw() {
   volumeRemap = map(volume, 0, 1, 0, 255);
 
   if (stopArduinoLEDS == true) {
-    outByte = 25500/100;
-    //outVolume = 25500/100;
+    //outByte = 25500 / 100;
+    outVolume = 25500/100;
   } else {
-    outByte = int(map(volume*10, 0, 1, 0, 255));
-    //outVolume = int(map(volume*80, 0, 1, 0, 255));
+    //outByte = int(map(volume * 10, 0, 1, 0, 255));
+    outVolume = int(map(volume*10, 0, 1, 0, 255));
   }
-  //stringToRead = "V" + outVolume.toString() + "," + "C" + outColor.toString() + ",";
-  // stringToRead = outVolume.toString() + "," + outColor.toString() + "*";
-  // serial.write(stringToRead);
+
+  stringToRead = "V" + outVolume.toString() + "," + "C" + outColor.toString() + ",";
+  //stringToRead = outVolume.toString() + "," + outColor.toString() + "*";
+  serial.write(stringToRead);
   serial.write(outByte);
   //serial.write(140, 200, 100);
   //spectrum = fft.analyze();
@@ -185,25 +197,26 @@ function draw() {
   stroke(255, 248, 184);
   strokeWeight(5);
   ellipseMode(RADIUS);
-  ellipse(width/2, height/2, width/6);
+  ellipse(width / 2, height / 2, width / 6);
   fill(212, 175, 55, 50);
   noStroke();
-  ellipse(width/2, height/2, width/5*volume);
+  ellipse(width / 2, height / 2, width / 5 * volume);
 
   pop();
 
 
 
-    if (audios[0].isPlaying() == true || audios[1].isPlaying() == true  || audios[2].isPlaying() == true || audios[3].isPlaying() == true ) {
+  // if (audios[0].isPlaying() == true || audios[1].isPlaying() == true || audios[2].isPlaying() == true || audios[3].isPlaying() == true) {
+  //
+  //   //stopRec == true;
+  //   preventRec();
+  //   //console.log(stopRec);
+  // } //else {
+  //   stopRec == false;
+  // }
 
-      stopRec == true;
-      console.log(stopRec);
-    } //else {
-    //   stopRec == false;
-    // }
+  //text("stopRec: " + stopRec, 30, 150);
 
-  text("stopRec: " + stopRec, 30, 150);
-  //console.log(stopRec);
 }
 
 // function mouseDragged() {
@@ -221,13 +234,36 @@ function draw() {
 // }
 
 function createAllSpeech() {
-  allSpeech.onResult = startPythia;
+  if (audios[0].isPlaying() == false || audios[1].isPlaying() == false || audios[2].isPlaying() == false || audios[3].isPlaying() == false) {
+    allSpeech.onResult = startPythia;
+  }
   allSpeech.start();
   allSpeech.onEnd = restartAllSpeech;
 }
 
 function restartAllSpeech() {
   allSpeech.start();
+}
+
+function preventRec() {
+  stopRec == true;
+  //console.log('trigger');
+}
+
+function createSpeechRec_3() {
+  setTimeout(function() {
+    step_3 = true;
+  }, 2000);
+}
+
+function reset() {
+  //frase_finale.stop();
+  setTimeout(function() {
+    step_1 = true;
+  }, 2000);
+  final_sentence = false;
+  stopArduinoLEDS = true;
+  //createSpeechRec_1();
 }
 
 function startPythia() {
@@ -266,18 +302,21 @@ function startPythia() {
         step_1 = false;
         //var benvenuto = Math.round(random(0,3));
         audios[0].play();
+        // if (audios[0].isPlaying() == true) {
+        //   preventRec();
+        // }
         first_keyword_got = false;
         second_keyword_got = false;
         third_keyword_got = false;
         audios[0].onended(createSpeechRec_2);
 
 
-          function createSpeechRec_2() {
-            step_2 = true;
-          }
+        function createSpeechRec_2() {
+          step_2 = true;
         }
       }
     }
+  }
   if (step_2 == true && stopRec == false) {
     if (allSpeech.resultValue == true) {
 
@@ -285,34 +324,34 @@ function startPythia() {
       sentence = allSpeech.resultString.toLowerCase();
       console.log(sentence);
 
-      const tag_keyword = ['relazioni sociali', 'amicizia', 'amore'];
+      const tag_keyword = ['lavoro', 'amicizia', 'relazioni interpersonali', 'amore', 'ispirazione', 'vita', 'morte', 'etica', 'morale'];
 
-      if (tag_keyword.some(keyword => sentence.includes('relazioni sociali'))) {
-        relazioni_sociali_var = true;
-        console.log('ok relazioni sociali');
-        // step_2 = false;
-        // una_sola_domanda.play();
-        // una_sola_domanda.onended(relazioni_sociali_Section);
-      } else if (tag_keyword.some(keyword => sentence.includes('amicizia'))) {
-        amicizia_var = true;
-        console.log('ok amicizia');
-        // step_2 = false;
-        // una_sola_domanda.play();
+      if (tag_keyword.some(keyword => sentence.includes('lavoro'))) {
+        lavoro_var = true;
+        console.log('ok lavoro');
+      } else if (tag_keyword.some(keyword => sentence.includes('amicizia') && sentence.includes('relazioni interpersonali'))) {
+        amicizia_relInter_var = true;
+        console.log('ok amicizia_relInter');
       } else if (tag_keyword.some(keyword => sentence.includes('amore'))) {
         amore_var = true;
         console.log('ok amore');
-        // step_2 = false;
-        // una_sola_domanda.play();
+      } else if (tag_keyword.some(keyword => sentence.includes('ispirazione'))) {
+        ispirazione_var = true;
+        console.log('ok ispirazione');
+      } else if (tag_keyword.some(keyword => sentence.includes('vita') && sentence.includes('morte'))) {
+        vita_morte_var = true;
+        console.log('ok vita_morte');
+      } else if (tag_keyword.some(keyword => sentence.includes('etica') && sentence.includes('morale'))) {
+        etica_morale_var = true;
+        console.log('ok etica_morale');
       }
     }
-    if (relazioni_sociali_var == true || amicizia_var == true || amore_var == true) {
+    if (lavoro_var == true || amicizia_relInter_var == true || amore_var == true || ispirazione_var == true || vita_morte_var == true || etica_morale_var == true) {
       step_2 = false;
       audios[1].play();
       audios[1].onended(createSpeechRec_3);
 
-      function createSpeechRec_3() {
-        step_3 = true;
-      }
+
     }
   }
   if (step_3 == true && stopRec == false) {
@@ -323,23 +362,24 @@ function startPythia() {
 
       speech.setVoice("Google italiano");
 
-      if (relazioni_sociali_var == true) {
+      if (amicizia_relInter_var == true) {
         if (odio_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           audios[2].play();
           console.log("Found");
           var odio_cit = odio_cits[Math.floor(Math.random() * odio_cits.length)];
-          audios[2].onended(function () {
+          audios[2].onended(function() {
             setTimeout(playCit, 3000);
+
             function playCit() {
-              var odio_audio = Math.round(random(4,5));
+              var odio_audio = Math.round(random(4, 6));
               audios[odio_audio].play();
               //alert(odio_cit);
-              relazioni_sociali_var = false;
+              amicizia_relInter_var = false;
               audios[odio_audio].onended(farewell);
-
-              final_sentence = true;};
-            });
+              final_sentence = true;
+            }
+          });
           // var odio_audio = Math.round(random(4,6));
           // audios[odio_audio].play();
           //speech.speak(odio_cit)
@@ -363,7 +403,7 @@ function startPythia() {
           var bravo_cit = bravo_cits[Math.floor(Math.random() * bravo_cits.length)];
           alert(bravo_cit);
           //speech.speak(bravo_cit)
-          relazioni_sociali_var = false;
+          amicizia_relInter_var = false;
           final_sentence = true;
         } else if (aiuto_supp_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
@@ -373,7 +413,7 @@ function startPythia() {
           var aiuto_supp_cit = aiuto_supp_cits[Math.floor(Math.random() * aiuto_supp_cits.length)];
           alert(aiuto_supp_cit);
           //speech.speak(aiuto_supp_cit)
-          relazioni_sociali_var = false;
+          amicizia_relInter_var = false;
           final_sentence = true;
         } else if (solitudine_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
@@ -383,7 +423,7 @@ function startPythia() {
           var solitudine_cit = solitudine_cits[Math.floor(Math.random() * solitudine_cits.length)];
           alert(solitudine_cit);
           //speech.speak(solitudine_cit)
-          relazioni_sociali_var = false;
+          amicizia_relInter_var = false;
           final_sentence = true;
         } else if (emp_emoz_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
@@ -393,7 +433,7 @@ function startPythia() {
           var emp_emoz_cit = emp_emoz_cits[Math.floor(Math.random() * emp_emoz_cits.length)];
           alert(emp_emoz_cit);
           //speech.speak(emp_emoz_cit)
-          relazioni_sociali_var = false;
+          amicizia_relInter_var = false;
           final_sentence = true;
         } else if (separazione_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
@@ -403,20 +443,31 @@ function startPythia() {
           var separazione_cit = separazione_cits[Math.floor(Math.random() * separazione_cits.length)];
           alert(separazione_cit);
           //speech.speak(separazione_cit)
-          relazioni_sociali_var = false;
+          amicizia_relInter_var = false;
           final_sentence = true;
-        } else if (se_stessi_keywords.some(keyword => sentence.includes(keyword))) {
+        } else if (perdono_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           console.log("Found")
           // audio.src = a_music;
           // audio.play();
-          var se_stessi_cit = se_stessi_cits[Math.floor(Math.random() * se_stessi_cits.length)];
-          alert(se_stessi_cit);
-          //speech.speak(se_stessi_cit)
-          relazioni_sociali_var = false;
+          var perdono_cit = perdono_cits[Math.floor(Math.random() * perdono_cits.length)];
+          alert(perdono_cit);
+          //speech.speak(separazione_cit)
+          amicizia_relInter_var = false;
           final_sentence = true;
-        }
-      } else if (amicizia_var == true) {
+        } //else if (se_stessi_keywords.some(keyword => sentence.includes(keyword))) {
+      //     step_3 = false;
+      //     console.log("Found")
+      //     // audio.src = a_music;
+      //     // audio.play();
+      //     var se_stessi_cit = se_stessi_cits[Math.floor(Math.random() * se_stessi_cits.length)];
+      //     alert(se_stessi_cit);
+      //     //speech.speak(se_stessi_cit)
+      //     amicizia_relInter_var = false;
+      //     final_sentence = true;
+      //   }
+      }
+      else if (amicizia_var == true) {
         if (vera_amicizia_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           console.log("Found")
@@ -490,20 +541,14 @@ function startPythia() {
         audios[3].play();
         audios[3].onended(reset);
 
-        function reset() {
-          //frase_finale.stop();
-          step_1 = true;
-          final_sentence = false;
-          stopArduinoLEDS = true;
-          //createSpeechRec_1();
-        }
-      //}
-    }
+
+        //}
       }
     }
   }
-  // console.log('time: ' + timer);
-  // console.log(step_1);
+}
+// console.log('time: ' + timer);
+// console.log(step_1);
 
 
 // function keyReleased() {

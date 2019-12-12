@@ -33,85 +33,139 @@ const keywords = ["terra", "piatta", "tonda", "sfer"];
 ////////// RELAZIONI SOCIALI
 
 const odio_keywords = ['onest', 'leal', 'rettitudine', 'corrett', 'retto', 'retta', 'rette', 'retti', 'degn', 'giust', 'serio', 'seri',
-  'amor', 'bene', 'voler bene', 'voglio bene', 'vuoi bene', 'vuole bene', 'vogliamo bene', 'volete bene', 'vogliono bene', 'solidarietà', 'solidale', 'cur', 'interess', 'tolleran', 'affetto', 'affetti',
+  'bene', 'voler bene', 'voglio bene', 'vuoi bene', 'vuole bene', 'vogliamo bene', 'volete bene', 'vogliono bene', 'benevolenza', 'solidarietà', 'solidale', 'cura', 'interesse', 'tolleran', 'affetto', 'affetti',
   'odio', 'odi', 'avversione', 'ostilità', 'ostil', 'disprezz', 'mal volere', 'malevol', 'risent', 'rancor', 'astio', 'intolleran', 'antipati', 'rifiut',
   'fingere', 'fing', 'finzione', 'far credere', 'ingann', 'mentire', 'mentito', 'ment', 'menzogn', 'alle spalle', 'di nascosto',
-  'simile', 'simili', 'prossimo', 'prossim',
+  'simile', 'simili', 'prossimo',
   'gli altri', 'l\'altro', 'altrui',
   'razzis', 'antisemit', 'discrimin', 'fanat', 'pregiudiz', 'xenofob', 'sessis', 'diversità', 'divers', 'paur',
-  'pace', 'pacifi', 'equità', 'equ', 'libertà', 'liber'
+  'pace', 'pacifi', 'equità', 'equo', 'equa', 'eque', 'equi', 'libertà', 'liber'
 ];
-
-var odio_cits = ['Ciò che è importante è che un uomo dovrebbe vivere nell\'onestà, nell\'amore naturale per l\'umanità. (Bob Marley)',
-  'Qualcuno ti odierà, fingerà di amarti e poi cercherà di eliminarti alle tue spalle. (Bob MArley)',
-  'Ci vuole sempre qualcuno da odiare per sentirsi giustificati nella propria miseria. (Umberto Eco)',
-  'Nessuno nasce odiando i propri simili a causa della razza, della religione o della classe alla quale appartengono. Gli uomini imparano ad odiare, e se possono imparare a odiare, possono anche imparare ad amare, perchè l\'amore, per il cuore umano, è più naturale dell\'odio. (Nelson Mandela)',
-  'Sii educato con tutti; socievole con molti; intimo con pochi; amico con uno soltanto; nemico con nessuno. (Benjamin Franklin)',
-  'Sono lieto di vedere che siamo diversi. Che insieme si possa diventare più grandi della somma di entrambi. (Leonard Nimoy)',
-  'La pace richiede quattro condizioni essenziali: verità, giustizia, amore e libertà. (Papa Giovanni Paolo I)'
+var odio_cits = ['1 Ciò che è importante è che un uomo dovrebbe vivere nell\'onestà, nell\'amore naturale per l\'umanità. (Bob Marley)',
+  '2 Qualcuno ti odierà, fingerà di amarti e poi cercherà di eliminarti alle tue spalle. (Bob MArley)',
+  '3 Ci vuole sempre qualcuno da odiare per sentirsi giustificati nella propria miseria. (Umberto Eco)',
+  '4 Nessuno nasce odiando i propri simili a causa della razza, della religione o della classe alla quale appartengono. Gli uomini imparano ad odiare, e se possono imparare a odiare, possono anche imparare ad amare, perchè l\'amore, per il cuore umano, è più naturale dell\'odio. (Nelson Mandela)',
+  '5 Sii educato con tutti; socievole con molti; intimo con pochi; amico con uno soltanto; nemico con nessuno. (Benjamin Franklin)',
+  '6 Sono lieto di vedere che siamo diversi. Che insieme si possa diventare più grandi della somma di entrambi. (Leonard Nimoy)',
+  '7 La pace richiede quattro condizioni essenziali: verità, giustizia, amore e libertà. (Papa Giovanni Paolo I)'
 ];
 
 
 /// 01 ESSERE BRAVE PERSONE
 
-const bravo_keywords = ['miglior', 'più brav', 'brav', 'ottim',
-  'educazione', 'educ', 'cortes', 'scortes',
+const bravo_keywords = ['miglior', 'più bravo', 'più brava', 'più brave', 'più bravi', 'brav', 'ottim',
+  'educazione', 'educat', 'beneducat', 'cortese', 'cortesi', 'scortes', 'maleduca',
   'buone maniere', 'gentilezza', 'gentile', 'gentili', 'per bene', 'cattiv',
   'parlare bene', 'parlo bene', 'parli bene', 'parla bene', 'parliamo bene', 'parlate bene', 'parlano bene', 'parlino bene', 'sparl', 'parlo male', 'parli male', 'parla male', 'parliamo male', 'parlate male', 'parlano male', 'parlino male',
+  'elogi', 'fare complimenti', 'complimenti', 'congratularsi', 'riconoscere', 'insult'
 ];
 
-var bravo_cits = ['Ciò che è importante è che un uomo dovrebbe vivere nell\'onestà, nell\'amore naturale per l\'umanità. (Bob Marley)',
-  'Sii educato con tutti; socievole con molti; intimo con pochi; amico con uno soltanto; nemico con nessuno. (Benjamin Franklin)',
-  'Sono lieto di vedere che siamo diversi. Che insieme si possa diventare più grandi della somma di entrambi. (Leonard Nimoy)',
-  'La pace richiede quattro condizioni essenziali: verità, giustizia, amore e libertà. (Papa Giovanni Paolo I)',
-  'Puoi capire molto di più di una persona da ciò che dice sugli altri che da ciò che gli altri dicono su di lei. (Audrey Hepburn)'
+var bravo_cits = ['1 Ciò che è importante è che un uomo dovrebbe vivere nell\'onestà, nell\'amore naturale per l\'umanità. (Bob Marley)',
+  '5 Sii educato con tutti; socievole con molti; intimo con pochi; amico con uno soltanto; nemico con nessuno. (Benjamin Franklin)',
+  '6 Sono lieto di vedere che siamo diversi. Che insieme si possa diventare più grandi della somma di entrambi. (Leonard Nimoy)',
+  '7 La pace richiede quattro condizioni essenziali: verità, giustizia, amore e libertà. (Papa Giovanni Paolo I)',
+  '8 Puoi capire molto di più di una persona da ciò che dice sugli altri che da ciò che gli altri dicono su di lei. (Audrey Hepburn)'
 ];
 
 
 /// 02 AIUTO/SUPPORTO
 
 const aiuto_supp_keywords = ['aiuto', 'aiut', 'chiedere aiuto', 'soccor', 'dare una mano', 'darmi una mano', 'dai una mano', 'da una mano', 'danno una mano', 'chiedere una mano', 'chiedo una mano', 'chiedi una mano', 'chiede una mano', 'chiedono una mano', 'mano', 'appogg', 'assist', 'support',
-  'bisogno', 'bisogn', 'necessità', 'necess', 'esigenza', 'esig', 'abbisogn', 'serv'
+  'bisogno', 'bisogn', 'necessità', 'necess', 'esigenza', 'abbisogn', 'serv', 'sostegno'
 ];
 
-var aiuto_supp_cits = ['Ricorda: se mai avessi bisogno di una mano, è alla fine del tuo braccio. Invecchiando, ricorda di avere un’altra mano: la prima serve ad aiutare te stesso, la seconda ad aiutare gli altri. (Audrey Hepburn)',
-  'Essere nella stessa stanza con delle persone e creare qualcosa insieme è una bella cosa. (Robin Williams)',
-  'Se ti dovesse mai servire qualcosa, per favore non esitare a chiedere prima a qualcun altro. (Kurt Cobain)'
+var aiuto_supp_cits = ['9 Ricorda: se mai avessi bisogno di una mano, è alla fine del tuo braccio. Invecchiando, ricorda di avere un’altra mano: la prima serve ad aiutare te stesso, la seconda ad aiutare gli altri. (Audrey Hepburn)',
+  '10 Essere nella stessa stanza con delle persone e creare qualcosa insieme è una bella cosa. (Robin Williams)',
+  '11 Se ti dovesse mai servire qualcosa, per favore non esitare a chiedere prima a qualcun altro. (Kurt Cobain)'
 ];
 
 /// 03 SOLITUDINE
 
-const solitudine_keywords = ['solitudine', 'sol', 'isolamento', 'isolat', 'rimanere solo', 'rimanere sola', 'rimanere soli', 'restare solo', 'restare sola', 'sento solo', 'sento sola', 'sentirmi solo', 'sentirmi sola', 'sentirsi soli', 'senza compagnia', 'senza nessuno', 'senza persone'];
+const solitudine_keywords = ['solitudine', 'sol', 'isolamento', 'isolat', 'rimanere solo', 'rimanere sola', 'rimanere soli', 'restare solo', 'restare sola', 'sento solo', 'sento sola', 'sentirmi solo', 'sentirmi sola', 'sentirsi soli', 'senza compagnia', 'senza nessuno', 'senza persone', 'allontanamento', 'allontana'];
 
-var solitudine_cits = ['“Pensavo che la cosa peggiore nella vita fosse rimanere da solo. Non lo è. La cosa peggiore nella vita è di finire con persone che ti fanno sentire solo. (Robin Williams)',
-  'Non c\'importa tanto di non arrivare da nessuna parte quanto di non avere compagnia durante il tragitto. (Anna Frank)',
-  'La peggiore solitudine è essere privi di sincera amicizia. (Francis Bacon)'
+var solitudine_cits = ['12 Pensavo che la cosa peggiore nella vita fosse rimanere da solo. Non lo è. La cosa peggiore nella vita è di finire con persone che ti fanno sentire solo. (Robin Williams)',
+  '13 Non c\'importa tanto di non arrivare da nessuna parte quanto di non avere compagnia durante il tragitto. (Anna Frank)',
+  '14 La peggiore solitudine è essere privi di sincera amicizia. (Francis Bacon)'
 ];
 
 /// 04 EMPATIA/ESPRIMERE EMOZIONI
 
-const emp_emoz_keywords = ['empatia', 'empatic', 'emozion', 'emotiv', 'sensibil', 'sentiment', 'cuor',
+const emp_emoz_keywords = ['empatia', 'empatic', 'emozion', 'emotiv', 'sensibil', 'sentiment', 'cuor', 'simpatia', 'simpatet',
   'piangere', 'piang', 'pianto', 'pianti', 'lacrim'
 ];
 
-var emp_emoz_cits = ['A me ha sempre fatto pena la gente che ha paura dei sentimenti, delle emozioni, e nasconde quello che prova e non sa piangere con tutto il cuore. Perché chi non sa piangere con tutto il cuore non sa nemmeno ridere a gola spiegata. (Golda Meir)'];
+var emp_emoz_cits = ['15 A me ha sempre fatto pena la gente che ha paura dei sentimenti, delle emozioni, e nasconde quello che prova e non sa piangere con tutto il cuore. Perché chi non sa piangere con tutto il cuore non sa nemmeno ridere a gola spiegata. (Golda Meir)'];
 
 
 /// 05 SEPARAZIONE/ESSERE FERITI/NEGATIVITA'
 
-const separazione_keywords = ['ferire', 'ferit', 'soffrire', 'soffr', 'soffer', 'dolore', 'dolor', 'perdere', 'perdit', 'perd', 'lasciare', 'lasciat', 'lasci', 'separazione', 'separarsi', 'separ'];
+const separazione_keywords = ['ferire', 'ferit', 'soffrire', 'soffr', 'soffer', 'dolore', 'dolor', 'perdere', 'perdit', 'lasciare', 'lasciat', 'lasci', 'separazione', 'separarsi', 'separ', 'abbandon'];
 
-var separazione_cits = ['La verità è che tutto il mondo ti ferirà. L\'idea è circondarsi di persone per cui valga la pena soffrire. (Bob Marley)',
-  'Le persone capitano per caso nella nostra vita, ma non a caso. Spesso ci riempiono di insegnamenti. A volte ci fanno volare alto, altre ci schiantano a terra insegnandoci il dolore… donandoci tutto, portandosi via tutto, lasciandoci niente. (Alda Merini)',
-  'Alcune persone non meritano il nostro sorriso, figuriamoci le nostre lacrime. (Charles Bukowski)'
+var separazione_cits = ['16 La verità è che tutto il mondo ti ferirà. L\'idea è circondarsi di persone per cui valga la pena soffrire. (Bob Marley)',
+  '17 Le persone capitano per caso nella nostra vita, ma non a caso. Spesso ci riempiono di insegnamenti. A volte ci fanno volare alto, altre ci schiantano a terra insegnandoci il dolore… donandoci tutto, portandosi via tutto, lasciandoci niente. (Alda Merini)',
+  '18 Alcune persone non meritano il nostro sorriso, figuriamoci le nostre lacrime. (Charles Bukowski)'
 ];
 
+/// 06 PERDONO
+
+const perdono_keywords = ['perdono', 'perdonare', 'perdon', 'chiedere scusa', 'scusa', 'scuse', 'scusarsi', 'chiedere perdono', 'dimenticare', 'passare oltre', 'lasciar correre', 'tollerare', 'assolvere', 'riconciliarsi',
+   'punire', 'castigare', 'castig', 'punizione', 'punit', 'vendetta', 'vendicare', 'vendicarsi', 'vendic',
+   'dispiacere', 'dispiacersi', 'mi dispiace', 'sentirsi in colpa'
+ ];
+
+var perdono_cits = ['20 Il perdono libera l\'anima, rimuove la paura. È per questo che il perdono è un\'arma potente. (Nelson Mandela)',
+   '21 Sappiamo che, se vogliamo veramente amare, dobbiamo imparare a perdonare. (Madre Teresa di Calcutta)',
+   '22 Io non parlo di vendette né di perdoni; la dimenticanza è l\'unica vendetta e l\'unico perdono. (Jorge Luis Borges)',
+   '23 Il perdono è la qualità del coraggioso, non del codardo. (Mahatma Gandhi)',
+   '24 Il perdono è la fragranza che la violetta lascia sul calcagno che l\'ha schiacciata. (Mark Twain)',
+   '25 Nel perdono c\'è sempre un\'inclinazione dall\'alto verso il basso, che impedisce una relazione alla pari. Ma se tu dici: "mi dispiace", stai di fronte. Allora conservi la tua tua dignità, e così l\'altro può avvicinarsi a te più facilmente. (Bert Hellinger)',
+   '26 È più facile perdonare un nemico che un amico. (William Blake)',
+   '27 Il perdono è la chiave che sblocca la porta del risentimento e le manette dell\'odio. È un potere che spezza le catene dell\'amarezza e i ceppi dell\'egoismo (William Arthur Ward)',
+   '28 Perdonare non significa ignorare ciò che è stato fatto contro di noi. Significa piuttosto che quella cattiveria cessa di essere un ostacolo ai rapporti. (Martin Luther King)',
+   '29 Occhio per occhio… e il mondo diventa cieco. (Mahatma Gandhi)',
+   '30 Perdonare sempre, ma dimenticare mai. (Giovanni Giolitti)',
+   '31 Dimenticato è perdonato. (Francis Scott Fitzgerald)',
+   '32 Gli errori sono sempre perdonabili, se si ha il coraggio di ammetterli. (Bruce Lee)'];
+
+/// 07 GELOSIA
+
+const gelosia_keywords = ['gelosia', 'geloso', 'gelosa', 'gelos', 'invidia', 'invidios', 'invidiar', 'antagonismo', 'antagonist', 'rivalità', 'rivale', 'risentimento', 'astio', 'contrasto', 'contrasti'];
+
+var gelosia_cits = ['33 La gelosia è l\'itterizia dell\'anima. (John Dryden)',
+   '34 La memoria è la tormentatrice dei gelosi. (Victor Hugo)',
+   '35 La gelosia non ha bisogno di motivi. (Mahatma Gandhi)',
+   '36 Ci sono molte forme di gelosia, ma la più terribile è la gelosia del passato. (Vittorio Gassman)',
+   '37 La gelosia è un\'equazione a tre termini permutabili (indecidibili). Si è sempre gelosi di due persone contemporaneamente: io sono geloso di chi amo e di chi lo ama. L\'odiosamato" (il "rivale") è "anche" amato da me: esso m\'interessa, m\'incuriosisce, mi affascina. (Roland Barthes)',
+   '38 L\'indignazione morale è in molti casi al 2 per cento morale, al 48 per cento indignazione, e al 50 per cento invidia. (Vittorio de Sica)',
+   '39 Non appena nasce la virtù, nasce contro di lei l\'invidia, e farà prima il corpo a perdere la sua ombra che la virtù la sua invidia. (Leonardo Da Vinci)',
+   '40 L\'invidia è il più stupido dei vizi, poiché non c’è alcun vantaggio da ottenere da essa. (Honore de Balzac)',
+   '41 Una persona competente e sicura di sé è incapace di essere gelosa. La gelosia è inevitabilmente un sintomo dell’insicurezza nevrotica. (Robert A. Heinlein)',
+   '42 L’invidia è ignoranza.” (Ralph Waldo Emerson)',
+   '43 Il risentimento è come bere del veleno e aspettare che l’altra persona muoia.― Carrie Fisher  (azzurro'
+ ];
+
+/// 08 TRADIMENTO
+
+const tradimento_keywords = ['tradire','tradit','tradiment','tradisc','ingannare','ingann','infedel','voltafaccia','voltagabbana','imbrogli','imbrogliare','imbrogliat','doppiezza','doppio gioco','fregare','freg'];
+
+var gelosia_cits = ['44 Se qualcuno ti tradisce una volta, è un suo errore, se qualcuno ti tradisce due volte è un tuo errore. (Eleanor Anna Roosvelt)',
+   '45 Non tradire chi ti sorride: potrebbe avere la morte nel cuore e regalarti ugualmente un po\' di vita (Jim Morrison)',
+   '46 La violenza e il tradimento sono armi a doppio taglio: feriscono più gravemente chi le usa, di chi le soffre. (Emily Jane Bronte)',
+   '47 L\'ultima tentazione è il peggiore dei tradimenti: fare la cosa giusta per il motivo sbagliato. (Thomas Stearns Eliot)',
+   '48 Si tradisce più spesso per debolezza che per deliberato disegno di tradire. (François De La Rochefoucauld)',
+   '49 Chiunque sia sospettoso invita al tradimento. (Voltaire)',
+   '50 C\'è più onore in tradire che in esser fedeli a metà. (Giovanni Giudici) ',
+   '51 E badate che è azione indegna lusingare con le parole e uccidere con l\'intenzione: è azione da belva feroce, madre d\'inganno e di tradimento. (Pedro Calderón De La Barca)',
+   '52 La fedeltà è lo sforzo di un\'anima nobile per eguagliarsi a un\'altra anima più grande di lei. (Goethe)',
+   '53 Il tradito potrà anche essere un ingenuo, ma il traditore rimarrà sempre un infame! (Benito Mussolini) ',
+   'È meglio essere tradito davvero, che saperlo sì e no. (William Shakespeare='
+ ];
 
 // 06 ESSERE SE STESSI
 
-const se_stessi_keywords = ['essere se stessi', 'essere me stesso', 'essere me stessa', 'piacersi', 'piacermi', 'piacere a se stessi', 'piacere a me stesso', 'piacere a me stessa', 'piacere se stesso', 'piacere se stessa', 'piacere agli altri', 'piacere alla gente', 'piacere alle persone', 'piacere a'];
-
-var se_stessi_cits = ['Ero stanco di far finta di essere qualcun’altro solo per andare d’accordo con le persone, solo per avere degli amici. (Kurt Cobain)'];
+// const se_stessi_keywords = ['essere se stessi', 'essere me stesso', 'essere me stessa', 'piacersi', 'piacermi', 'piacere a se stessi', 'piacere a me stesso', 'piacere a me stessa', 'piacere se stesso', 'piacere se stessa', 'piacere agli altri', 'piacere alla gente', 'piacere alle persone', 'piacere a'];
+//
+// var se_stessi_cits = ['Ero stanco di far finta di essere qualcun’altro solo per andare d’accordo con le persone, solo per avere degli amici. (Kurt Cobain)'];
 
 
 ////////// AMICIZIA
@@ -268,6 +322,16 @@ const forza_animo_fallimento_keywords = ['successo', 'success', 'insuccess', 'vi
         'definitiv', 'decisiv', 'ultim', 'risolutiv', 'risol', 'final', 'conclusiv', 'insindicabil', 'esaurient', 'ultimativ',
         'falliment', 'fallir', 'fallis', 'fallit', 'falliv', 'sconfi', 'perdit', 'perder', 'perd', 'non vincere', 'non vinco', 'non riuscire', 'non riesco', 'non raggiungere',
         'fatale', 'mortal', 'inevitabil'];
+
+
+//////////////////////////////////////////// MORTE
+
+/// PAURA, DOLORE, CONFORTO
+
+const paura_keywords = [ 'paura', 'timore', 'temo', 'temi', 'temiamo', 'tem', 'temet', 'temer', 'temev', 'terrore', 'terrorizzat', 'preoccuparsi', 'preoccupat', 'preoccup', 'preoccupazion', 'precipizio', 'precipiz', 'precipit', 'abisso', 'abissi', 'abiss', 'precipitare', 'abissale', 'abissal', 'buio', 'luce', 'luminos', 'abbuiare', 'rabbuiare', 'bui', 'grigiore', 'angoscia', 'panico', 'sgomento','ansia', 'apprensione', 'batticuore', 'inquietudine', 'pensiero', 'preoccupazione', 'inquiet',      'impanic', 'ansios', 'apprensiv', 'trepidant', 'trepidar', 'impaurit', 'impaurirsi', 'impaurisc', 'impaurir', 'intimidit', 'intimidisc', 'intimidir', , 'intimorit', 'intimorisc', 'intimori', 'spaventat', 'terrorizzat', 'atterrit', 'terrorizz', 'atterrisc', 'trepidazione','impaurire', 'intimidire', 'intimorire', 'spaventare', 'angosciare', 'atterrire', 'sgomentare', 'terrorizzare', 'orrore', 'spavento', 'cup', 'fosc', 'funebr', 'funere', 'funest', 'lugubr', 'tetr',
+'dolor', 'afflizion', 'cordogli', 'afflitt', 'addolorat', 'male', 'malattia', 'malat', 'malattie', 'ammalarsi', 'ammalat', 'mali', 'malign', 'maledizion', 'maledett', 'malefic', 'crudeltà', 'crudel', 'regg', 'sopport', 'toller', 'pati', 'peno', 'peni', 'pena', 'peniamo', 'penate', 'penano', 'tribol', 'stent', 'subir', 'subisc', 'subiamo', 'subite', 'subiscon', 'dolor', 'penar', 'affliggersi', 'angustiarsi', 'angustiat', 'tormentat', 'perdut', 'florid', 'inferm', 'dolersi', 'struggersi' 'tormentarsi', 'torturarsi', 'morbo', 'malessere', 'malore', 'patologia', 'sindrome', 'salute', 'bene', 'male', 'perdizion', 'rovin', 'benessere', 'floridezza', 'sanità', 'egritudine', 'infermità', 'insanità', 'in forma', 'san', 'inferm', 'malat', 'condizioni fisiche', 'peggiora', 'essere in buona', 'essere in cattiva', 'condizion', 'stat', 'ospedal', 'cur',  'clinic', 'angosci', 'pena', 'strazi', 'torment',
+'assist', 'accudi', 'badar', 'custod', 'confortare', 'mettere a proprio agio', 'rassicurare', 'confortat', 'tranquillizz', 'confort', 'tranquillizzare', 'conforto', 'confortare', 'confortat', 'confortarsi', 'rimedio', 'rimediare', 'rimedi', 'support', 'sosten', 'consolar', 'consolo', 'consoli', 'consoliamo', 'consolate', 'consolano', 'sopport', 'incoragg', 'solliev', 'sollevat', 'avvilit', 'amaregg', 'supporto', 'supportare', 'sostenere', 'sopportare', 'sostegno', 'consolazione', 'incoraggiamento', 'sollievo', 'abbattimento', 'avvilimento', 'sconfort', 'scoraggiamento', 'scoragg', 'appoggio', 'amarezza', 'demoralizz','depress', 'desolazione', 'desolat', 'scoraggiamento', 'scoramento', 'sfiducia', 'disperazione', 'disperat', 'consolazione', 'fiducia', 'consolare', 'incoraggiare', 'rasserenare', 'rassicurare', 'rianimare', 'rincuorare', 'rinfrancare', 'risollevare', 'sostenere', 'abbattere', 'avvilire', 'demoralizzare', 'deprimere', 'sconfortare', 'scoraggiare', 'abbattut', 'avvilit', 'afflitt', 'amareggiat', 'avvilit', 'sconsolat', 'scoraggiat', 'scorat', 'sfiduciat', 'disperat', 'fiducios', 'rassicurat', 'risollev', 'sollev', 'speranz', 'rasseren','tranquillizzant', 'allarm', 'conturbant', 'inquiet', 'preoccup', 'angosciant', 'spaventos', 'terrorizzant', 'allarmant', 'grav', 'inquietant', 'angosciant', 'drammatic', 'spaventos', 'terrificant', 'dare forza', 'incoragg', 'rassicur', 'rianim', 'riconfort', 'riconsol', 'rincoragg', 'rinfranc', 'risollev', 'tirare su', 'sosten', 'abbatt', 'avvili', 'buttare giù', 'demoralizz', 'sconfort', 'scoragg', 'disanim', 'perdersi d\'animo', 'mi perdo d\'animo', 'perso d\'animo', 'vincere', 'rimediare', 'rimedio', 'rimedi', 'vinc', 'sconfigg', 'battere', 'sconfigg', 'superare', 'super', 'annient', 'debell', 'sbaragli', 'sgomin', 'sopraff', 'vincit', 'vincent', 'vittorioso', 'perdent', 'perd', 'sconfitt', 'vint', 'pers', 'affermazione', 'successo', 'vittori', 'perdit', 'sconfitt', 'soccomb', 'elimin', 'caccia', 'allontan', 'cancell'
+];
 
 
 function getInputValue() {

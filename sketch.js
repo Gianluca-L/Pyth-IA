@@ -37,6 +37,15 @@ var final_sentence = false;
 
 var stopArduinoLEDS = true;
 
+var loadEffect = false
+
+var redColor = false;
+var orangeColor = false;
+var greenColor = false;
+var blueColor = false;
+var violetColor = false;
+var pinkColor = false;
+
 
 // var myFont;
 // var logoX = 2;
@@ -85,36 +94,23 @@ function preload() {
 
 }
 
-function mouseClicked() {
-  var colorHex = Math.round(random(0, 1));
-  outColor = colorHex;
-  console.log(outColor);
+// function mouseClicked() {
+//   var colorHex = Math.round(random(0, 6));
+//   outColor = colorHex;
+//   console.log(outColor);
+// }
+function keyPressed() {
+  if (keyCode === LEFT_ARROW) {
+    var colorHex = Math.round(random(0, 6));
+    outColor = colorHex;
+  }
 }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background(0);
   frameRate(60);
-  // textFont(myFont);
-  // textSize(100);
-  // fill(245, 173, 66);
-  // textAlign(CENTER);
-  // text("Pyth-IA", width / 2, height / 3);
 
-  // choosing between text or voice
-  // textCheckbox = select('#writeCheckbox');
-  // textCheckbox.mouseClicked(clickTextCheckbox);
-  // console.log(textCheckbox.value());
-  //
-  // textInput = select('#myInput');
-  //
-  // var voiceCheckbox = select('#voiceCheckbox');
-  // voiceCheckbox.mouseClicked(clickVoiceCheckbox);
-  //
-  // voiceInput = select('#myVoiceInput');
-
-  // speech recognition to start pyth-IA
-  //startSentence.start();
   createAllSpeech();
   //createSpeechRec_1();
 
@@ -172,13 +168,37 @@ function draw() {
 
   if (stopArduinoLEDS == true) {
     //outByte = 25500 / 100;
-    outVolume = 25500 / 100;
-  } else {
+    //outVolume = 25500 / 100;
+    //outVolume = 0;
+    outColor = 7;
+  } else if (step_1 == false || step_2 == false || step_3 == false) {
+    if (redColor == true) {
+      outColor = 1;
+    } else if (orangeColor == true) {
+      outColor = 2;
+    } else if (greenColor == true) {
+      outColor = 3;
+    } else if (blueColor == true) {
+      outColor = 4;
+    } else if (violetColor == true) {
+      outColor = 5;
+    } else if (pinkColor == true) {
+      outColor = 6;
+    } else if (loadEffect == true) {
+      outColor = 8;
+    }
+    else {
+      outColor = 0;
+    }
     //outByte = int(map(volume * 10, 0, 1, 0, 255));
     outVolume = int(map(volume * 10, 0, 1, 0, 255));
   }
 
-  stringToRead = "V" + outVolume.toString() + "," + "C" + outColor.toString() + ",";
+
+
+  stringToRead = "<" + outColor + "," + outVolume + ">";
+  //stringToRead = "<" + 'hello' + "," + outVolume + "," + outColor + ">";
+  //stringToRead = "V" + outVolume.toString() + "," + "C" + outColor.toString() + ",";
   //stringToRead = outVolume.toString() + "," + outColor.toString() + "*";
   serial.write(stringToRead);
   serial.write(outByte);
@@ -205,35 +225,7 @@ function draw() {
   ellipse(width / 2, height / 2, width / 5 * volume);
 
   pop();
-
-
-
-  // if (audios[0].isPlaying() == true || audios[1].isPlaying() == true || audios[2].isPlaying() == true || audios[3].isPlaying() == true) {
-  //
-  //   //stopRec == true;
-  //   preventRec();
-  //   //console.log(stopRec);
-  // } //else {
-  //   stopRec == false;
-  // }
-
-  //text("stopRec: " + stopRec, 30, 150);
-
 }
-
-// function mouseDragged() {
-//   // map the mouseY to a range from 0 to 255:
-//   outByte = int(map(mouseY, 0, height, 0, 255));
-//   // send it out the serial port:
-//   serial.write(outByte);
-// }
-
-// function keyPressed() {
-//   if (key >= 0 && key <= 9) { // if the user presses 0 through 9
-//     outByte = byte(key * 25); // map the key to a range from 0 to 225
-//   }
-//   serial.write(outByte); // send it out the serial port
-// }
 
 function createAllSpeech() {
   if (audios[0].isPlaying() == false || audios[1].isPlaying() == false || audios[2].isPlaying() == false || audios[3].isPlaying() == false) {
@@ -288,6 +280,34 @@ function errorCase() {
 function farewell() {
   audios[3].play();
   audios[3].onended(reset);
+  redColor = false;
+  orangeColor = false;
+  greenColor = false;
+  blueColor = false;
+  violetColor = false;
+  pinkColor = false;
+}
+function loading() {
+  loadEffect = true;
+}
+
+function Red() {
+  redColor = true;
+}
+function Orange() {
+  orangeColor = true;
+}
+function Green() {
+  greenColor = true;
+}
+function Blue() {
+  blueColor = true;
+}
+function Violet() {
+  violetColor = true;
+}
+function Pink() {
+  pinkColor = true;
 }
 
 function startPythia() {
@@ -570,16 +590,24 @@ function startPythia() {
           console.log("Found");
           var paura_cit = paura_cits[Math.floor(Math.random() * paura_cits.length)];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 3000);
 
             function playCit() {
-              //var paura_audio = Math.round(random([4, 5]));
-              //audios[paura_audio].play();
+              loadEffect = false;
+              var paura_audio = Math.round(random([4, 5]));
+              audios[paura_audio].play();
               vita_morte_var = false;
-              //audios[paura_audio].onended(farewell);
-              alert(paura_cit);
-              farewell();
+              audios[paura_audio].onended(farewell);
+              //alert(paura_cit);
+              //farewell();
               final_sentence = true;
+              if (audios[4].isPlaying() == true) {
+                Red();
+              }
+              else if (audios[5].isPlaying() == true) {
+                Blue();
+              }
             }
           });
         } else if (dio_keywords.some(keyword => sentence.includes(keyword))) {

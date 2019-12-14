@@ -30,12 +30,81 @@ const keywords = ["terra", "piatta", "tonda", "sfer"];
 
 ////////////////////////////////////////////// LEGAMI
 
+////////// AMICIZIA
+
+/// ESSERE AMICI/VERA amicizia
+const amicizia_generico_keywords = ['amicizia', 'amico', 'amica', 'amiche', 'amici', 'amic', 'compagnia'];
+
+const vera_amicizia_keywords = ['vero', 'vera', 'vere', 'veri', 'verit', 'veramente', 'genuin', 'sincer', 'autentic', 'schiett', 'dissimul', 'miglior', 'puro', 'pura', 'pure', 'puri', 'purezza', 'saldo', 'salda', 'salde', 'saldi', 'degn', 'solid', 'spontan',
+  'signific', 'senso', 'sensi', 'valore', 'valori', 'importa',
+  'capire', 'capir', 'capirsi', 'capisc', 'capito', 'comprendere', 'comprend', 'nasc',
+  'fiducia', 'fidarsi', 'fid','affid', 'rispett',
+  'volersi bene', 'voler bene', 'voglio bene', 'vuoi bene', 'vuole bene', 'vogliamo bene', 'volete bene', 'vogliono bene', 'bene', 'aver caro', 'ho caro', 'caro', 'cara', 'care', 'cari', 'affezion', 'affett', 'legam', 'legat'
+];
+
+var vera_amicizia_cits = ['55 L\'amicizia è la cosa più difficile al mondo da spiegare. Non è qualcosa che si impara a scuola. Ma se non hai imparato il significato dell\'amicizia, non hai davvero imparato niente. (Muhammad Ali)',
+  '56 Ricordati di chi c\'era quando stavi male, perché saranno quelli che vorrai accanto quando tutto andrà bene. (Marilyn Monroe)',
+  '57 Tra siciliani, un vero amico non deve chiedere all’altro una qualche cosa, perché non c’è bisogno, in quanto sarà preceduto dall’offerta dell’amico, che ha intuito la domanda che sarebbe arrivata. (Andrea Camilleri)',
+  '59 Non possiamo dire in quale preciso momento nasca l\'amicizia. Come nel riempire una caraffa a goccia a goccia, c\'è finalmente una stilla che la fa traboccare, così in una sequela di atti gentili ce n\'è infine uno che fa traboccare il cuore. (Ray Bradbury)',
+  '60 Non camminare dietro a me, potrei non condurti. Non camminarmi davanti, potrei non seguirti. Cammina soltanto accanto a me e sii mio amico. (Albert Camus)',
+  '61 Nessun bene senza un compagno ci dà gioia. (Lucio Anneo Seneca)',
+  '62 Coloro che eliminano dalla vita l\'amicizia, eliminano il sole dal mondo. (Cicerone)',
+  '63 L\'amicizia è sempre una dolce responsabilità ma non è mai un\'opportunità. (Khalil Gibran)',
+  '64 Non c\'è amicizia salda senza fiducia: e non c\'è fiducia senza far passare un certo tempo. (Aristotele)',
+  '65 Amico mio accanto a te non ho nulla di cui scusarmi, nulla da cui difendermi, nulla da dimostrare: trovo la pace... Al di là delle mie parole maldestre tu riesci a vedere in me semplicemente l\'uomo. (Antoine de Saint-Exupéry)',
+  '66 Degno di amicizia è chi ha dentro di sé la ragione di essere amato. (Cicerone)',
+  '67 Conoscere qualcuno, ovunque egli sia, con cui comprendersi nonostante le distanze e le differenze, può trasformare la terra in un giardino. (Goethe)',
+  '68 L\'amicizia, come l\'amore, richiede quasi altrettanta arte di una figura di danza ben riuscita. Ci vuole molto slancio e molto controllo, molti scambi di parole e moltissimi silenzi. Soprattutto molto rispetto. (Rudolf Nureyev)',
+  '69 Ancora oggi non conosco nulla di più prezioso al mondo di una solida e sincera amicizia. (Herman Hesse)',
+  '70 La vera amicizia è una pianta che cresce lentamente e deve passare attraverso i traumi delle avversità perché la si possa chiamare tale. (George Washington)',
+  '71 L\'amicizia verso sé stessi è di fondamentale importanza, perché senza di essa non si può essere amici di nessun altro. (Eleanor Roosevelt)',
+  '72 Troppo spesso togliamo tempo ai nostri amici per dedicarlo ai nostri nemici. (Hermann Hesse)',
+  '73 Chi ti vuole bene non ferisce mai i tuoi sentimenti o non ti fa sentire all’altezza, ma piuttosto ti rimette in piedi e ti mostra ciò che ti rende speciale e ancora più bello. (Bob Marley)',
+  '74 Non c’è mai tensione, gelosia o competizione, ma solo una calma silenziosa quando sei con loro. Puoi essere te stesso e non preoccuparti di ciò che potrebbero pensare di te perché ti amano per ciò che sei. (Bob Marley)',
+  '75 Un amico non è mai un’imposizione. (Frank Sinatra)',
+  '76 Un amico è solo un nemico che conosci. (Kurt Cobain)',
+  '77 Trova qualcuno che ti faccia dimenticare il tuo passato, la tristezza. Trova qualcuno che ti cambi la vita, che la renda migliore, che sostituisca e riempia il vuoto di chi se n\'è andato. Trova qualcuno per cui valga la pena sorridere. (Marilyn Monroe)'
+];
+
+
+/// LASCIARE AMICI/SEPARAZIONE/ FERITI
+
+const sep_feriti_amicizia_keywords = ['separazione', 'separarsi', 'separ', 'lasciare', 'essere lasciato', 'essere lasciata', 'essere lasciate', 'essere lasciati', 'ha lasciato', 'ha lasciato', 'lasciat', 'abbandonare', 'abbandon', 'finire', 'finita', 'finit', 'fine', 'fini', 'finit',
+   'perdere', 'perdit', 'perso', 'persa', 'perse','persi',
+   'dimenticare', 'dimenticat', 'dimentic', 'scordare', 'scordarsi', 'scord', 'mettere una pietra sopra', 'metterci una pietra sopra', 'lasciarsi alle spalle', 'lasciare alle spalle', 'lasciato alle spalle', 'superare',
+   'ferit', 'ferire', 'feri', 'fare male', 'far male', 'fa male', 'farà male', 'offendere', 'offend', 'offes',
+   'deludere', 'delud', 'delusion', 'delus'];
+
+var sep_feriti_amicizia_cits = ['78 Non piangere se un amico ti ha lasciato: solo quando ti avrà dimenticato potrai dire di averlo perso per sempre. (Jim Morrison)',
+    '79 Ci vuole un minuto per notare una persona speciale, un\'ora per apprezzarla, un giorno per volerle bene, tutta una vita per dimenticarla. (Charlie Chaplin)',
+    '80 La stretta di mano è per l’amicizia l’ultima lettera dell’alfabeto, per l’amore è la prima. (Rita Levi-Montalcini)',
+    '81 Non si ama qualcuno per tutta la vita; da questa speranza impossibile nascono adulterio, matricidio, tradimento dell\'amico. (Umberto Eco)',
+    '82 Non ti rimpiangerò mai o non dirò che avrei voluto non averti mai conosciuto, perché tanto tempo fa eri esattamente ciò di cui avevo bisogno. (Bob Marley)'];
+
+/// FALSA AMICIZIA/RELAZIONE NEGATIVA
+
+const falsa_amicizia_keywords = ['peggior nemico', 'peggior nemica', 'peggiore nemico', 'peggiore nemica', 'peggiori nemici', 'peggiori nemiche','nemic',
+     'falso', 'falsa','false', 'falsi', 'falsità', 'menzogn', 'illusione', 'illusor', 'illusor', 'illusio', 'sbaglia', 'fint', 'scorrett', 'fasull', 'ipocri', 'bugiard', 'bugia', 'bugie', 'sleal', 'doppiogiochista', 'doppiogioco', 'doppio', 'ingann', 'negativ',
+      'opportunism', 'opportunist'];
+
+var falsa_amicizia_cits = ['83 Alla fine, ci ricorderemo non le parole dei nostri nemici, ma il silenzio dei nostri amici. (Martin Luther King)',
+      '14 La peggiore solitudine è essere privi di sincera amicizia. (Francis Bacon)',
+      '84 È difficile sapere cosa sia la verità, ma a volte è molto facile riconoscere una falsità. (Albert Einstein)',
+      '85 È più vergognoso non fidarsi dei propri amici che esserne ingannati. (François de la Rochefoucauld)',
+      '72 Troppo spesso togliamo tempo ai nostri amici per dedicarlo ai nostri nemici. (Hermann Hesse)',
+      '86 Il tuo peggior nemico potrebbe essere il tuo migliore amico e il tuo migliore amico potrebbe essere il tuo peggior nemico. (Bob Marley)',
+      '76 Un amico è solo un nemico che conosci. (Kurt Cobain)',
+      '87 O l’amicizia preziosa o l’ostilità durissima. (Benito Mussolini)',
+      '18 Alcune persone non meritano il nostro sorriso, figuriamoci le nostre lacrime. (Charles Bukowski)'
+];
+
+
 ////////// RELAZIONI SOCIALI
 
 const odio_keywords = ['onest', 'leal', 'rettitudine', 'corrett', 'retto', 'retta', 'rette', 'retti', 'degn', 'giust', 'serio', 'seri',
   'bene', 'voler bene', 'voglio bene', 'vuoi bene', 'vuole bene', 'vogliamo bene', 'volete bene', 'vogliono bene', 'benevolenza', 'solidarietà', 'solidale', 'cura', 'interesse', 'tolleran', 'affetto', 'affetti',
   'odio', 'odi', 'avversione', 'ostilità', 'ostil', 'disprezz', 'mal volere', 'malevol', 'risent', 'rancor', 'astio', 'intolleran', 'antipati', 'rifiut',
-  'fingere', 'fing', 'finzione', 'far credere', 'ingann', 'mentire', 'mentito', 'ment', 'menzogn', 'alle spalle', 'di nascosto',
+  'fingere', 'fing', 'finzione', 'far credere', 'ingann', 'mentire', 'mentito', 'menzogn', 'alle spalle', 'di nascosto',
   'simile', 'simili', 'prossimo',
   'gli altri', 'l\'altro', 'altrui',
   'razzis', 'antisemit', 'discrimin', 'fanat', 'pregiudiz', 'xenofob', 'sessis', 'diversità', 'divers', 'paur',
@@ -81,7 +150,7 @@ var aiuto_supp_cits = ['9 Ricorda: se mai avessi bisogno di una mano, è alla fi
 
 /// 03 SOLITUDINE
 
-const solitudine_keywords = ['solitudine', 'sol', 'isolamento', 'isolat', 'rimanere solo', 'rimanere sola', 'rimanere soli', 'restare solo', 'restare sola', 'sento solo', 'sento sola', 'sentirmi solo', 'sentirmi sola', 'sentirsi soli', 'senza compagnia', 'senza nessuno', 'senza persone', 'allontanamento', 'allontana'];
+const solitudine_keywords = ['solitudine', 'solo', 'sola', 'sol', 'isolamento', 'isolat', 'rimanere solo', 'rimanere sola', 'rimanere soli', 'restare solo', 'restare sola', 'sento solo', 'sento sola', 'sentirmi solo', 'sentirmi sola', 'sentirsi soli', 'senza compagnia', 'senza nessuno', 'senza persone', 'allontanamento', 'allontana'];
 
 var solitudine_cits = ['12 Pensavo che la cosa peggiore nella vita fosse rimanere da solo. Non lo è. La cosa peggiore nella vita è di finire con persone che ti fanno sentire solo. (Robin Williams)',
   '13 Non c\'importa tanto di non arrivare da nessuna parte quanto di non avere compagnia durante il tragitto. (Anna Frank)',
@@ -91,7 +160,7 @@ var solitudine_cits = ['12 Pensavo che la cosa peggiore nella vita fosse rimaner
 /// 04 EMPATIA/ESPRIMERE EMOZIONI
 
 const emp_emoz_keywords = ['empatia', 'empatic', 'emozion', 'emotiv', 'sensibil', 'sentiment', 'cuor', 'simpatia', 'simpatet',
-  'piangere', 'piang', 'pianto', 'pianti', 'lacrim'
+  'piangere', 'piang', 'pianto', 'pianti', 'lacrim', 'relazionar', 'relazionarsi', 'relazionarmi', 'relazionarci'
 ];
 
 var emp_emoz_cits = ['15 A me ha sempre fatto pena la gente che ha paura dei sentimenti, delle emozioni, e nasconde quello che prova e non sa piangere con tutto il cuore. Perché chi non sa piangere con tutto il cuore non sa nemmeno ridere a gola spiegata. (Golda Meir)'];
@@ -108,12 +177,12 @@ var separazione_cits = ['16 La verità è che tutto il mondo ti ferirà. L\'idea
 
 /// 06 PERDONO
 
-const perdono_keywords = ['perdono', 'perdonare', 'perdon', 'chiedere scusa', 'scusa', 'scuse', 'scusarsi', 'chiedere perdono', 'dimenticare', 'passare oltre', 'lasciar correre', 'tollerare', 'assolvere', 'riconciliarsi',
+const perdono_rel_keywords = ['perdono', 'perdonare', 'perdon', 'chiedere scusa', 'scusa', 'scuse', 'scusarsi', 'chiedere perdono', 'dimenticare', 'passare oltre', 'lasciar correre', 'tollerare', 'toller', 'assolvere', 'riconciliarsi',
    'punire', 'castigare', 'castig', 'punizione', 'punit', 'vendetta', 'vendicare', 'vendicarsi', 'vendic',
    'dispiacere', 'dispiacersi', 'mi dispiace', 'sentirsi in colpa'
  ];
 
-var perdono_cits = ['20 Il perdono libera l\'anima, rimuove la paura. È per questo che il perdono è un\'arma potente. (Nelson Mandela)',
+var perdono_rel_cits = ['20 Il perdono libera l\'anima, rimuove la paura. È per questo che il perdono è un\'arma potente. (Nelson Mandela)',
    '21 Sappiamo che, se vogliamo veramente amare, dobbiamo imparare a perdonare. (Madre Teresa di Calcutta)',
    '22 Io non parlo di vendette né di perdoni; la dimenticanza è l\'unica vendetta e l\'unico perdono. (Jorge Luis Borges)',
    '23 Il perdono è la qualità del coraggioso, non del codardo. (Mahatma Gandhi)',
@@ -129,9 +198,9 @@ var perdono_cits = ['20 Il perdono libera l\'anima, rimuove la paura. È per que
 
 /// 07 GELOSIA
 
-const gelosia_keywords = ['gelosia', 'geloso', 'gelosa', 'gelos', 'invidia', 'invidios', 'invidiar', 'antagonismo', 'antagonist', 'rivalità', 'rivale', 'risentimento', 'astio', 'contrasto', 'contrasti'];
+const gelosia_rel_keywords = ['gelosia', 'geloso', 'gelosa', 'gelos', 'invidia', 'invidios', 'invidiar', 'antagonismo', 'antagonist', 'rivalità', 'rivale', 'risentimento', 'astio', 'contrasto', 'contrasti'];
 
-var gelosia_cits = ['33 La gelosia è l\'itterizia dell\'anima. (John Dryden)',
+var gelosia_rel_cits = ['33 La gelosia è l\'itterizia dell\'anima. (John Dryden)',
    '34 La memoria è la tormentatrice dei gelosi. (Victor Hugo)',
    '35 La gelosia non ha bisogno di motivi. (Mahatma Gandhi)',
    '36 Ci sono molte forme di gelosia, ma la più terribile è la gelosia del passato. (Vittorio Gassman)',
@@ -146,9 +215,9 @@ var gelosia_cits = ['33 La gelosia è l\'itterizia dell\'anima. (John Dryden)',
 
 /// 08 TRADIMENTO
 
-const tradimento_keywords = ['tradire','tradit','tradiment','tradisc','ingannare','ingann','infedel','voltafaccia','voltagabbana','imbrogli','imbrogliare','imbrogliat','doppiezza','doppio gioco','fregare','freg'];
+const tradimento_rel_keywords = ['tradire','tradit','tradiment','tradisc','ingannare','ingann','infedel','voltafaccia','voltagabbana','imbrogli','imbrogliare','imbrogliat','doppiezza','doppio gioco','fregare','freg'];
 
-var gelosia_cits = ['44 Se qualcuno ti tradisce una volta, è un suo errore, se qualcuno ti tradisce due volte è un tuo errore. (Eleanor Anna Roosvelt)',
+var tradimento_rel_cits = ['44 Se qualcuno ti tradisce una volta, è un suo errore, se qualcuno ti tradisce due volte è un tuo errore. (Eleanor Anna Roosvelt)',
    '45 Non tradire chi ti sorride: potrebbe avere la morte nel cuore e regalarti ugualmente un po\' di vita (Jim Morrison)',
    '46 La violenza e il tradimento sono armi a doppio taglio: feriscono più gravemente chi le usa, di chi le soffre. (Emily Jane Bronte)',
    '47 L\'ultima tentazione è il peggiore dei tradimenti: fare la cosa giusta per il motivo sbagliato. (Thomas Stearns Eliot)',
@@ -158,7 +227,7 @@ var gelosia_cits = ['44 Se qualcuno ti tradisce una volta, è un suo errore, se 
    '51 E badate che è azione indegna lusingare con le parole e uccidere con l\'intenzione: è azione da belva feroce, madre d\'inganno e di tradimento. (Pedro Calderón De La Barca)',
    '52 La fedeltà è lo sforzo di un\'anima nobile per eguagliarsi a un\'altra anima più grande di lei. (Goethe)',
    '53 Il tradito potrà anche essere un ingenuo, ma il traditore rimarrà sempre un infame! (Benito Mussolini) ',
-   'È meglio essere tradito davvero, che saperlo sì e no. (William Shakespeare='
+   '54 È meglio essere tradito davvero, che saperlo sì e no. (William Shakespeare)'
  ];
 
 // 06 ESSERE SE STESSI
@@ -168,151 +237,245 @@ var gelosia_cits = ['44 Se qualcuno ti tradisce una volta, è un suo errore, se 
 // var se_stessi_cits = ['Ero stanco di far finta di essere qualcun’altro solo per andare d’accordo con le persone, solo per avere degli amici. (Kurt Cobain)'];
 
 
-////////// AMICIZIA
-
-/// ESSERE AMICI/VERA amicizia
-const amicizia_Cat_keywords = ['amicizia', 'amic', 'compagn'];
-
-const vera_amicizia_keywords = ['vero', 'vera', 'vere', 'veri', 'verit', 'veramente', 'genuin', 'sincer', 'autentic', 'schiett', 'dissimul', 'miglior', 'puro', 'pura', 'pure', 'puri', 'purezza', 'saldo', 'salda', 'salde', 'saldi', 'degn', 'solid', 'spontan',
-  'signific', 'senso', 'sensi', 'valore', 'valori', 'import',
-  'capire', 'capir', 'capirsi', 'capisc', 'capito', 'comprendere', 'comprend', 'nasc',
-  'fid', 'affid', 'rispett',
-  'volersi bene', 'voler bene', 'voglio bene', 'vuoi bene', 'vuole bene', 'vogliamo bene', 'volete bene', 'vogliono bene', 'bene', 'aver caro', 'ho caro', 'caro', 'cara', 'care', 'cari', 'affezion', 'affett', 'legam', 'legat'
-];
-
-var vera_amicizia_cits = ['L\'amicizia è la cosa più difficile al mondo da spiegare. Non è qualcosa che si impara a scuola. Ma se non hai imparato il significato dell\'amicizia, non hai davvero imparato niente. (Muhammad Ali)',
-  'Ricordati di chi c\'era quando stavi male, perché saranno quelli che vorrai accanto quando tutto andrà bene. (Marilyn Monroe)',
-  'Tra siciliani, un vero amico non deve chiedere all’altro una qualche cosa, perché non c’è bisogno, in quanto sarà preceduto dall’offerta dell’amico, che ha intuito la domanda che sarebbe arrivata. (Andrea Camilleri)',
-  'A volte essere un amico significa padroneggiare l\'arte del tempismo. C\'è un momento per il silenzio. Un momento per lasciarsi andare e consentire alla gente di lanciarsi nel loro proprio destino. E un tempo per prepararsi a raccogliere i pezzi quando tutto è finito. (Octavia Estelle Butler)',
-  'Non possiamo dire in quale preciso momento nasca l\'amicizia. Come nel riempire una caraffa a goccia a goccia, c\'è finalmente una stilla che la fa traboccare, così in una sequela di atti gentili ce n\'è infine uno che fa traboccare il cuore. (Ray Bradbury)',
-  'Non camminare dietro a me, potrei non condurti. Non camminarmi davanti, potrei non seguirti. Cammina soltanto accanto a me e sii mio amico. (Albert Camus)',
-  'Nessun bene senza un compagno ci dà gioia. (Lucio Anneo Seneca)',
-  'Coloro che eliminano dalla vita l\'amicizia, eliminano il sole dal mondo. (Cicerone)',
-  'L\'amicizia è sempre una dolce responsabilità ma non è mai un\'opportunità. (Khalil Gibran)',
-  'Non c\'è amicizia salda senza fiducia: e non c\'è fiducia senza far passare un certo tempo. (Aristotele)',
-  'Amico mio accanto a te non ho nulla di cui scusarmi, nulla da cui difendermi, nulla da dimostrare: trovo la pace... Al di là delle mie parole maldestre tu riesci a vedere in me semplicemente l\'uomo. (Antoine de Saint-Exupéry)',
-  'Degno di amicizia è chi ha dentro di sé la ragione di essere amato. (Cicerone)',
-  'Conoscere qualcuno, ovunque egli sia, con cui comprendersi nonostante le distanze e le differenze, può trasformare la terra in un giardino. (Goethe)',
-  'L\'amicizia, come l\'amore, richiede quasi altrettanta arte di una figura di danza ben riuscita. Ci vuole molto slancio e molto controllo, molti scambi di parole e moltissimi silenzi. Soprattutto molto rispetto. (Rudolf Nureyev)',
-  'Ancora oggi non conosco nulla di più prezioso al mondo di una solida e sincera amicizia. (Herman Hesse)',
-  'La vera amicizia è una pianta che cresce lentamente e deve passare attraverso i traumi delle avversità perché la si possa chiamare tale. (George Washington)',
-  'L\'amicizia verso sé stessi è di fondamentale importanza, perché senza di essa non si può essere amici di nessun altro. (Eleanor Roosevelt)',
-  'Troppo spesso togliamo tempo ai nostri amici per dedicarlo ai nostri nemici. (Hermann Hesse)',
-  'Chi ti vuole bene non ferisce mai i tuoi sentimenti o non ti fa sentire all’altezza, ma piuttosto ti rimette in piedi e ti mostra ciò che ti rende speciale e ancora più bello. (Bob Marley)',
-  'Non c’è mai tensione, gelosia o competizione, ma solo una calma silenziosa quando sei con loro. Puoi essere te stesso e non preoccuparti di ciò che potrebbero pensare di te perché ti amano per ciò che sei. (Bob Marley)',
-  'Un amico non è mai un’imposizione. (Frank Sinatra)',
-  'Un amico è solo un nemico che conosci. (Kurt Cobain)',
-  'Trova qualcuno che ti faccia dimenticare il tuo passato, la tristezza. Trova qualcuno che ti cambi la vita, che la renda migliore, che sostituisca e riempia il vuoto di chi se n\'è andato. Trova qualcuno per cui valga la pena sorridere. (Marilyn Monroe)'
-];
-
-
-/// LASCIARE AMICI/SEPARAZIONE/ FERITI
-
-const sep_feriti_keywords = ['separazione', 'separarsi', 'separ', 'lasciare', 'ha lasciato', 'ha lasciato', 'lasciat', 'abbandonare', 'abbandon', 'finire', 'finita', 'finit', 'fin',
-   'perdere', 'perdit', 'perso', 'persa', 'perse','persi',
-   'dimenticare', 'dimenticat', 'dimentic', 'scordare', 'scordarsi', 'scord', 'mettere una pietra sopra', 'metterci una pietra sopra',
-   'ferit', 'ferire', 'feri', 'fare male', 'far male', 'fa male', 'farà male', 'offendere', 'offend', 'offes',
-   'tradire', 'tradiment', 'tradit', 'deludere', 'delud', 'delusion'];
-
-var sep_feriti_cits = ['A volte essere un amico significa padroneggiare l\'arte del tempismo. C\'è un momento per il silenzio. Un momento per lasciarsi andare e consentire alla gente di lanciarsi nel loro proprio destino. E un tempo per prepararsi a raccogliere i pezzi quando tutto è finito. (Octavia Estelle Butler)',
-    'Non piangere se un amico ti ha lasciato: solo quando ti avrà dimenticato potrai dire di averlo perso per sempre. (Jim Morrison)',
-    'Ci vuole un minuto per notare una persona speciale, un\'ora per apprezzarla, un giorno per volerle bene, tutta una vita per dimenticarla. (Charlie Chaplin)',
-    'La stretta di mano è per l’amicizia l’ultima lettera dell’alfabeto, per l’amore è la prima. (Rita Levi-Montalcini)',
-    'Non si ama qualcuno per tutta la vita; da questa speranza impossibile nascono adulterio, matricidio, tradimento dell\'amico. (Umberto Eco)',
-    'Non ti rimpiangerò mai o non dirò che avrei voluto non averti mai conosciuto, perché tanto tempo fa eri esattamente ciò di cui avevo bisogno. (Bob Marley)'];
-
-/// FALSA AMICIZIA/RELAZIONE NEGATIVA
-
-const falsa_amicizia_keywords = ['peggior nemico', 'peggior nemica', 'peggiore nemico', 'peggiore nemica', 'peggiori nemici', 'peggiori nemiche','nemic',
-     'fals', 'menzogn', 'illusione', 'illusor', 'illus', 'sbaglia', 'fint', 'scorrett', 'fasull', 'ipocri', 'bugiard', 'bugi', 'sleal', 'doppiogiochista', 'doppiogioco', 'doppi', 'ingann', 'negat'];
-
-var falsa_amicizia_cits = ['Alla fine, ci ricorderemo non le parole dei nostri nemici, ma il silenzio dei nostri amici. (Martin Luther King)',
-      'La peggiore solitudine è essere privi di sincera amicizia. (Francis Bacon)',
-      'È difficile sapere cosa sia la verità, ma a volte è molto facile riconoscere una falsità. (Albert Einstein)',
-      'È più vergognoso non fidarsi dei propri amici che esserne ingannati. (François de la Rochefoucauld)',
-      'Troppo spesso togliamo tempo ai nostri amici per dedicarlo ai nostri nemici. (Hermann Hesse)',
-      'Il tuo peggior nemico potrebbe essere il tuo migliore amico e il tuo migliore amico potrebbe essere il tuo peggior nemico. (Bob Marley)',
-      'Un amico è solo un nemico che conosci. (Kurt Cobain)',
-      'O l’amicizia preziosa o l’ostilità durissima. (Benito Mussolini)',
-      'Alcune persone non meritano il nostro sorriso, figuriamoci le nostre lacrime. (Charles Bukowski)',
-      'Non siamo mai così indifesi verso la sofferenza, come nel momento in cui amiamo. (Sigmund Freud)'];
-
 
 ////////// AMORE
 
-const amore_Cat_keywords = ['amore', 'amor', 'amare', 'amo', 'ami','ama','amiamo','amate','amano','innamorarsi', 'innamor',
+const amore_generico_keywords = ['amore', 'amor', 'amare', 'amo', 'ami','ama','amiamo','amate','amano','innamorarsi', 'innamor',
       'mi piace', 'ti piace', 'gli piace', 'piacciono', 'gli piaccio', 'le piaccio', 'piace', 'compagno', 'compagna', 'compagne', 'compagni',
-      'fidanz', 'marit', 'mogli', 'moros', 'mio tipo', 'mia tipa', 'tip'];
+      'fidanz', 'marit', 'mogli', 'moros', 'mio tipo', 'mia tipa', 'tipo', 'tipa','tipe','tipi'];
 
 
 /// LASCIARE/ABBANDONO/ESSERE FERITI
 
-const lasciare_keywords = ['lasciare', 'lasciat', 'abband', 'finire', 'fine', 'finit', 'separ', 'perd', 'perso', 'persa', 'perse', 'persi', 'romp', 'rott', 'moll', 'smett', 'smess',
+const lasciare_keywords = ['lasciare', 'lasciat', 'abband', 'finire', 'fine', 'finit', 'finire', 'separ', 'perder', 'perso', 'persa', 'perse', 'persi', 'rompere', 'rotto', 'rotta', 'rotte', 'rotti', 'mollare', 'mollo', 'mollat', 'smett', 'smess',
        'dimenticare', 'dimentic', 'scordare', 'scordarsi', 'scord', 'mettere una pietra sopra', 'metterci una pietra sopra', 'scomp',
-       'ferit', 'ferir', 'fare male', 'far male', 'fa male', 'male', 'offend', 'offes', 'delus', 'soffr', 'soffer', 'dolor'];
+       'ferit', 'ferir', 'fare male', 'far male', 'fa male', 'male', 'offend', 'offes', 'delus', 'soffr', 'soffer', 'dolor', 'fallimentare', 'senza successo'];
 
-var lasciare_cits = ['I venti che a volte portano via qualcosa che amiamo sono gli stessi che ci portano qualcosa da imparare ad amare. Quindi non dovremmo piangere per qualcosa che ci è stato portato via ma, sì, amare ciò che ci è stato offerto. Perché ciò che è veramente nostro ci appartiene per sempre. (Bob Marley)',
-       'Non ci può essere profonda delusione dove non c\'è un amore profondo. (Martin Luther King)',
-       'Tu e io non siamo che una cosa sola. Non posso farti del male senza ferirmi. (Mahatma Gandhi)',
-       'L\'amore è una promessa, l’amore è un ricordo, una volta donato non può essere dimenticato, non può mai scomparire. (John Lennon)',
-       'Quando un amore finisce, uno dei due soffre. Se non soffre nessuno, non è mai iniziato. Se soffrono entrambi, non è mai finito. (Marilyn Monroe)',
-       'Non si ama qualcuno per tutta la vita; da questa speranza impossibile nascono adulterio, matricidio, tradimento dell\'amico. (Umberto Eco)',
-       'Smettere di amare è come perdere peso. è molto più semplice metterne su che perderlo. (Aretha Franklin)',
-       'Non ti rimpiangerò mai o non dirò che avrei voluto non averti mai conosciuto, perché tanto tempo fa eri esattamente ciò di cui avevo bisogno. (Bob Marley)',
-       'Alcune persone non meritano il nostro sorriso, figuriamoci le nostre lacrime. (Charles Bukowski)',
-       'Non siamo mai così indifesi verso la sofferenza, come nel momento in cui amiamo. (Sigmund Freud)'];
+var lasciare_cits = ['88 arancione | I venti che a volte portano via qualcosa che amiamo sono gli stessi che ci portano qualcosa da imparare ad amare. Quindi non dovremmo piangere per qualcosa che ci è stato portato via ma, sì, amare ciò che ci è stato offerto. Perché ciò che è veramente nostro ci appartiene per sempre. (Bob Marley)',
+       '89 azzurro | Non ci può essere profonda delusione dove non c\'è un amore profondo. (Martin Luther King)',
+       '90 rosa | Tu e io non siamo che una cosa sola. Non posso farti del male senza ferirmi. (Mahatma Gandhi)',
+       '91 verde | L\'amore è una promessa, l’amore è un ricordo, una volta donato non può essere dimenticato, non può mai scomparire. (John Lennon)',
+       '92 viola | Quando un amore finisce, uno dei due soffre. Se non soffre nessuno, non è mai iniziato. Se soffrono entrambi, non è mai finito. (Marilyn Monroe)',
+       '81 azzurro | Non si ama qualcuno per tutta la vita; da questa speranza impossibile nascono adulterio, matricidio, tradimento dell\'amico. (Umberto Eco)',
+       '93 azzurro | Smettere di amare è come perdere peso. è molto più semplice metterne su che perderlo. (Aretha Franklin)',
+       '82 viola | Non ti rimpiangerò mai o non dirò che avrei voluto non averti mai conosciuto, perché tanto tempo fa eri esattamente ciò di cui avevo bisogno. (Bob Marley)',
+       '18 rosso | Alcune persone non meritano il nostro sorriso, figuriamoci le nostre lacrime. (Charles Bukowski)',
+       '94 viola | Non siamo mai così indifesi verso la sofferenza, come nel momento in cui amiamo. (Sigmund Freud)'];
 
 
 /// FALSO AMORE/RELAZIONE NEGATIVA
 
-const falso_amore_keywords = ['falso', 'fals', 'menzogn', 'illus', 'sbagl', 'fint', 'fing', 'finz', 'scorrett', 'fasull', 'ipocri', 'bugiard', 'bugi', 'sleal', 'doppiogiochista', 'doppio', 'doppi', 'ingann', 'negat', 'inadatt',
-       'infelic', 'trist', 'possess', 'possed', 'possi', 'gelos', 'opprim', 'soffoc'];
-var falso_amore_cits = ['Un codardo è un uomo che risveglia l’amore di una donna senza l’intenzione di amarla. (Bob Marley)',
-       'Se riesci ad amare così tanto la persona sbagliata, immagina quanto puoi amare quella giusta. (Bob Marley)',
-       'L\'amore porta molta felicità, molto più di quanto struggersi per qualcuno porti dolore. (Albert Einstein)',
-       'Non confondere l\'amore col delirio del possesso, che causa le sofferenze più atroci. Perché contrariamente a quanto comunemente si pensa, l\'amore non fa soffrire. Quello che fa soffrire è l\'istinto della proprietà, che è il contrario dell\'amore. (Antoine de Saint-Exupéry)',
-       'Quando un amore finisce, uno dei due soffre. Se non soffre nessuno, non è mai iniziato. Se soffrono entrambi, non è mai finito.',
-       'Alcune persone non meritano il nostro sorriso, figuriamoci le nostre lacrime. (Charles Bukowski)'];
+const falso_amore_keywords = ['falso', 'falsa', 'false','falsi', 'menzogn', 'illus', 'sbagl', 'fint', 'fing', 'finz', 'scorrett', 'fasull', 'ipocri', 'bugiard', 'bugi', 'sleal', 'doppiogiochista', 'doppio', 'doppi', 'ingann', 'negat', 'inadatt',
+       'infelic', 'triste', 'tristezza', 'possess', 'possi', 'opprim', 'soffoc'];
+
+var falso_amore_cits = ['95 rosso | Un codardo è un uomo che risveglia l’amore di una donna senza l’intenzione di amarla. (Bob Marley)',
+       '96 verde | Se riesci ad amare così tanto la persona sbagliata, immagina quanto puoi amare quella giusta. (Bob Marley)',
+       '97 arancione | L\'amore porta molta felicità, molto più di quanto struggersi per qualcuno porti dolore. (Albert Einstein)',
+       '98 rosa | Non confondere l\'amore col delirio del possesso, che causa le sofferenze più atroci. Perché contrariamente a quanto comunemente si pensa, l\'amore non fa soffrire. Quello che fa soffrire è l\'istinto della proprietà, che è il contrario dell\'amore. (Antoine de Saint-Exupéry)',
+       '92 viola | Quando un amore finisce, uno dei due soffre. Se non soffre nessuno, non è mai iniziato. Se soffrono entrambi, non è mai finito.',
+       '18 rosso | Alcune persone non meritano il nostro sorriso, figuriamoci le nostre lacrime. (Charles Bukowski)'];
 
 /// INNAMORARSI/AMORE VERO
 
-const amore_vero_keywords = ['vero', 'veramente','ver', 'genuin', 'sincer', 'autenticamente', 'autent', 'schiett', 'dissimul', 'miglior', 'puro', 'pura', 'pure', 'puri', 'purezza', 'saldo', 'salda', 'salde', 'saldi', 'degn', 'solid', 'spontan', 'incondiz',
+const amore_vero_keywords = ['amarsi', 'innamorarsi', 'innamorat', 'vero', 'vera','vere', 'veri', 'veramente','verit', 'genuin', 'sincer', 'autenticamente', 'autent', 'schiett', 'dissimul', 'miglior', 'puro', 'pura', 'pure', 'puri', 'purezza', 'saldo', 'salda', 'salde', 'saldi', 'degn', 'solid', 'spontan', 'incondiz',
       'significat', 'senso', 'sensi', 'valor', 'import',
-      'capir', 'capito', 'capita', 'capite', 'capiti', 'comprend', 'nasc',
-      'fid', 'affid', 'rispett',
-      'complet', 'passione', 'emoz', 'slancio', 'ard', 'trasporto'];
+      'capir', 'capito', 'capita', 'capite', 'capiti', 'comprend', 'nasc', 'sostenere', 'accettare', 'impar',
+      'fidarsi', 'fido', 'fida', 'fiduc', 'affid', 'rispett',
+      'complet', 'passione', 'emoz', 'slancio', 'ard', 'trasporto', 'per sempre'];
 
-var amore_vero_cits = ['L\'amore è reale, la realtà è amore | l\'amore è sentire, sentire l\'amore | l\'amore è voler essere amati. (John Lennon)',
-      'L\'amore vero vuole il bene dell\'amato. (Umberto Eco)',
-      'Se ti attendi qualche forma di ricompensa, non è amore: l\'amore vero è amare senza condizioni e senza aspettative. (Madre Teresa di Calcutta)',
-      'L\'amore è una forma di pregiudizio. Si ama quello di cui si ha bisogno, quello che ci fa star bene, quello che ci fa comodo. Come fai a dire che ami una persona, quando al mondo ci sono migliaia di persone che potresti amare di più, se solo le incontrassi? Il fatto è che non le incontri. (Charles Bukowski)',
-      '“Bimbo mi chiedi cos\'è l\'amore? Cresci e lo saprai. Bimbo mi chiedi cos\'è la felicità? Rimani bimbo e lo vedrai... (Jim Morrison)',
-      'Io non pretendo di sapere cosa sia l’amore per tutti, ma posso dirvi che cosa è per me: l’amore è sapere tutto su qualcuno, è avere la voglia di essere ancora con lui più che con ogni altra persona. L’amore è la fiducia di dirgli tutto su voi stessi, compreso le cose che ci potrebbero far vergognare. L’amore è sentirsi a proprio agio e al sicuro... (Albert Einstein)',
-      'L\'amore non vive di parole, né può essere spiegato a parole. (Madre Teresa di Calcutta)',
-      'L\'Amore non è una passione. L\'Amore non è una emozione. L\'amore è una comprensione profonda del fatto che in qualche modo l\'altro ti completa. Qualcuno ti rende un cerchio perfetto; la presenza dell\'altro rinforza la tua presenza. (Osho)',
-      'Trova qualcuno che ti faccia dimenticare il tuo passato, la tristezza. Trova qualcuno che ti cambi la vita, che la renda migliore, che sostituisca e riempia il vuoto di chi se n\'è andato. Trova qualcuno per cui valga la pena sorridere. (Marilyn Monroe)',
-      'Ho quella disperata sensazione che niente abbia senso. Allora decido di innamorarmi, ma è troppo difficile. Voglio dire, pensi costantemente a una persona ed è soltanto fantasia, non è reale, e poi diventa una cosa così coinvolgente, devi vederla di continuo e va a finire che è un lavoro come un altro. (Andy Warhol)',
-      'Liberate l\'amore oppure liberatevene per sempre. (Jim Morrison)',
-      'L\'amore non chiede mai, dà sempre. (Mahatma Gandhi)',
-      'Colui che l\'amore tocca non cammina nell’oscurità. (Platone)',
-      'Non confondere l\'amore col delirio del possesso, che causa le sofferenze più atroci. Perché contrariamente a quanto comunemente si pensa, l\'amore non fa soffrire. Quello che fa soffrire è l\'istinto della proprietà, che è il contrario dell\'amore. (Antoine de Saint-Exupéry)'];
+var amore_vero_cits = ['99 rosa | L\'amore è reale, la realtà è amore | l\'amore è sentire, sentire l\'amore | l\'amore è voler essere amati. (John Lennon)',
+      '100 azzurro | L\'amore vero vuole il bene dell\'amato. (Umberto Eco)',
+      '101 azzurro | Se ti attendi qualche forma di ricompensa, non è amore: l\'amore vero è amare senza condizioni e senza aspettative. (Madre Teresa di Calcutta)',
+      '102 azzurro | L\'amore è una forma di pregiudizio. Si ama quello di cui si ha bisogno, quello che ci fa star bene, quello che ci fa comodo. Come fai a dire che ami una persona, quando al mondo ci sono migliaia di persone che potresti amare di più, se solo le incontrassi? Il fatto è che non le incontri. (Charles Bukowski)',
+      '103 viola | Bimbo mi chiedi cos\'è l\'amore? Cresci e lo saprai. Bimbo mi chiedi cos\'è la felicità? Rimani bimbo e lo vedrai... (Jim Morrison)',
+      '104 rosa | Io non pretendo di sapere cosa sia l’amore per tutti, ma posso dirvi che cosa è per me: l’amore è sapere tutto su qualcuno, è avere la voglia di essere ancora con lui più che con ogni altra persona. L’amore è la fiducia di dirgli tutto su voi stessi, compreso le cose che ci potrebbero far vergognare. L’amore è sentirsi a proprio agio e al sicuro... (Albert Einstein)',
+      '105 azzurro | L\'amore non vive di parole, né può essere spiegato a parole. (Madre Teresa di Calcutta)',
+      '106 arancione | L\'Amore non è una passione. L\'Amore non è una emozione. L\'amore è una comprensione profonda del fatto che in qualche modo l\'altro ti completa. Qualcuno ti rende un cerchio perfetto; la presenza dell\'altro rinforza la tua presenza. (Osho)',
+      '77 rosa | Trova qualcuno che ti faccia dimenticare il tuo passato, la tristezza. Trova qualcuno che ti cambi la vita, che la renda migliore, che sostituisca e riempia il vuoto di chi se n\'è andato. Trova qualcuno per cui valga la pena sorridere. (Marilyn Monroe)',
+      '107 azzurro | Ho quella disperata sensazione che niente abbia senso. Allora decido di innamorarmi, ma è troppo difficile. Voglio dire, pensi costantemente a una persona ed è soltanto fantasia, non è reale, e poi diventa una cosa così coinvolgente, devi vederla di continuo e va a finire che è un lavoro come un altro. (Andy Warhol)',
+      '108 azzurro | Liberate l\'amore oppure liberatevene per sempre. (Jim Morrison)',
+      '109 rosa | L\'amore non chiede mai, dà sempre. (Mahatma Gandhi)',
+      '110 azzurro | Colui che l\'amore tocca non cammina nell’oscurità. (Platone)',
+      '98 rosa | Non confondere l\'amore col delirio del possesso, che causa le sofferenze più atroci. Perché contrariamente a quanto comunemente si pensa, l\'amore non fa soffrire. Quello che fa soffrire è l\'istinto della proprietà, che è il contrario dell\'amore. (Antoine de Saint-Exupéry)'];
 
 /// AMORE NON CORRISPOSTO
 
-const non_corrisposto_keywords = ['non corrisposto', 'corris', 'non ricambiato', 'ricamb', 'non contraccambiato', 'contracc', 'respingere', 'respin', 'rifiut', 'non mi ama'];
+const non_corrisposto_keywords = ['non corrisposto', 'non ricambiato', 'non ricambia', 'non ricambiato', 'non mi ricambia', 'non contraccambiato', 'contracc', 'respingere', 'respin', 'rifiut', 'non mi ama'];
 
-var non_corrisposto_cits = ['L\'amore porta molta felicità, molto più di quanto struggersi per qualcuno porti dolore. (Albert Einstein)',
-       'Conosce l’amore solo chi ama senza speranza. (Friedrich Schiller)',
-       'L\'amore fugge come un’ombra l\'amore reale che l\'insegue, inseguendo chi lo fugge, fuggendo chi l\'insegue.(William Shakespeare)',
-       'Il peggior modo di sentire la mancanza di qualcuno è esserci seduto accanto e sapere che non l’avrai mai. (Gabriel Garcia Marquez)',
-       'Se infelice è l’innamorato che invoca baci di cui non sa il sapore, mille volte più infelice è chi questo sapore gustò appena e poi gli fu negato. (Italo Calvino)',
-       'E non era una stupida, sapeva quel che voleva. Solamente, voleva delle cose impossibili. (Cesare Pavese)',
-       'Non siamo mai così indifesi verso la sofferenza, come nel momento in cui amiamo. (Sigmund Freud)',
-       'Solo chi ama senza speranza conosce il vero amore. (Pablo Neruda)',
-       'Non essere amati è una semplice sventura; la vera disgrazia è non saper amare. (Albert Camus)',
-       'Se amate senza suscitare amore, vale a dire, se il vostro amore non produce amore, se attraverso l\'espressione di vita di persona amante voi non diventate una persona amata, allora il vostro amore è impotente, è sfortunato. (Erich Fromm)',
-       'Perché la mancanza d’amore è la mia pestilenza. (Alda Merini)'];
+var non_corrisposto_cits = ['97 arancione | L\'amore porta molta felicità, molto più di quanto struggersi per qualcuno porti dolore. (Albert Einstein)',
+       '111 azzurro | Conosce l’amore solo chi ama senza speranza. (Friedrich Schiller)',
+       '112 viola | L\'amore fugge come un’ombra l\'amore reale che l\'insegue, inseguendo chi lo fugge, fuggendo chi l\'insegue.(William Shakespeare)',
+       '113 viola | Il peggior modo di sentire la mancanza di qualcuno è esserci seduto accanto e sapere che non l’avrai mai. (Gabriel Garcia Marquez)',
+       '114 viola | Se infelice è l’innamorato che invoca baci di cui non sa il sapore, mille volte più infelice è chi questo sapore gustò appena e poi gli fu negato. (Italo Calvino)',
+       '115 azzurro | E non era una stupida, sapeva quel che voleva. Solamente, voleva delle cose impossibili. (Cesare Pavese)',
+       '94 viola | Non siamo mai così indifesi verso la sofferenza, come nel momento in cui amiamo. (Sigmund Freud)',
+       '116 azzurro | Solo chi ama senza speranza conosce il vero amore. (Pablo Neruda)',
+       '117 viola | Non essere amati è una semplice sventura; la vera disgrazia è non saper amare. (Albert Camus)',
+       '118 viola | Se amate senza suscitare amore, vale a dire, se il vostro amore non produce amore, se attraverso l\'espressione di vita di persona amante voi non diventate una persona amata, allora il vostro amore è impotente, è sfortunato. (Erich Fromm)',
+       '119 viola | Perché la mancanza d’amore è la mia pestilenza. (Alda Merini)'];
 
+//// GELOSIA
+
+const gelosia_amore_keywords = ['gelosia', 'gelos', 'invidia', 'invidioso', 'invid', 'invidiare', 'antagonis', 'rivalità', 'rival', 'risentimento', 'risent', 'astio'];
+
+var gelosia_amore_cits = ['120 azzurro | Non essere gelosa se vedi il tuo ex con un\'altra... la mamma ci ha insegnato che devi dare i giocattoli usati ai meno fortunati. (Marilyn Monroe)',
+'121 azzurro | Chi non è geloso non ama. SANT\'AGOSTINO',
+'122 azzurro | L\'innamorato geloso sopporta meglio la malattia della sua amante che la sua libertà. MARCEL PROUST',
+'37 azzurro | La gelosia è un\'equazione a tre termini permutabili (indecidibili). Si è sempre gelosi di due persone contemporaneamente: io sono geloso di chi amo e di chi lo ama. L\'"odiosamato" (il "rivale") è "anche" amato da me: esso m\'interessa, m\'incuriosisce, mi affascina. ROLAND BARTHES'];
+
+///// MATRIMONIO DIVORZIO
+
+const matrimonio_divorzio_keywords = ['matrimonio', 'nozze', 'sposa', 'spose', 'sposo', 'sposi', 'sposarsi', 'maritarsi', 'risposarsi', 'divorzio', 'divorziare', 'divorziat'];
+const moglie_marito_keywords = ['marito', 'mariti', 'moglie', 'mogli'];
+const divorzio_keywords = ['separarsi', 'separat', 'separ'];
+
+var matrimonio_divorzio_cits = ['124 azzurro | Si dovrebbe essere sempre innamorati. Ecco perché non bisognerebbe mai sposarsi!” OSCAR WILDE',
+'125 azzurro | “Sposarsi o non sposarsi non è importante. In ogni caso ti pentirai.” SOCRATE',
+'126 azzurro | “Se vuoi essere felice per un\'ora, ubriacati. Se vuoi essere felice per tre giorni, sposati. Se vuoi essere felice per una settimana, uccidi un maiale e dai un banchetto. Se vuoi essere felice per tutta la vita, fatti un giardino.” CARLO SCARPA',
+'127 azzurro | “La cosa brutta dell\'amore è che molti lo confondono con la gastrite e, una volta guariti dalla malattia, si ritrovano che sono sposati.” GROUCHO MARX',
+'128 azzurro | “Non è affatto vero che gli uomini sposati vivano più a lungo. Sembra solo loro che la vita sia più lunga.” PITAGORA',
+'129 azzurro | “È molto stupido per gli innamorati sposarsi.” GEORGE BERNARD SHAW',
+'130 azzurro | “Quando una donna si risposa è perché detestava il primo marito. Quando un uomo si risposa è perché adorava la prima moglie. Le donne tentano la sorte, gli uomini la rischiano.” OSCAR WILDE',
+'131 rosso | “Il matrimonio è solo la scopata santificata, e una scopata santificata finisce sempre, immancabilmente, per venire a noia, per essere un lavoro.” CHARLES BUKOWSKI (rosso)',
+'132 viola | “È meglio essere infelicemente innamorati che essere infelicemente sposati. Alcuni fortunati riescono in tutte e due le faccende.” GUY DE MAUPASSANT',
+'133 azzurro “Il matrimonio è il tentativo fallimentare di trasformare un caso in qualcosa di duraturo.” — Albert Einstein',
+'134 rosa | “Il Matrimonio è l\'anello d\'oro di una catena il cui inizio è dato da uno sguardo, e il cui termine è l\'Eternità” — Khalil Gibra',
+'135 azzurro | “Il problema nella vita pubblica è saper superare la paura, il problema nel matrimonio è saper superare la noia.” — Gabriel García Márquez',
+'136 azzurro | “Il matrimonio può essere la morte o la vita, non ci sono vie di mezzo.“ — Khalil Gibran',
+'137 azzurro | “C\'è almeno un matrimonio che rende un uomo felice: quello di sua figlia.“ — Marcel Achard',
+'138 azzurro | “Sicuramente esistono molte ragioni per i divorzi; però la ragione principale è e sarà il matrimonio.“ — Jerry Lewis',
+'139 rosso | “Così il matrimonio è il comune purgatorio di tutti i temperamenti rigogliosi e potenti. Purgatorio di peccati inesistenti, logorìo di gioventù, tutto in omaggio a un\'assurda mentalità negatrice, deprimente, sopraffattrice che non ammette il trionfale sviluppo della gioia fisiologica e della libertà rischiosa e temeraria.“ — Filippo Tommaso Marinetti ',
+'140 azzurro | “Niente assomiglia tanto all\'inferno quanto un matrimonio felice.“ — Gabriel García Márquez'
+];
+
+/////// PERDONO
+
+const perdono_amore_keywords = ['perdono', 'perdon', 'perdonare', 'scusare', 'chiedere scusa', 'scusa', 'scusarsi', 'scus', 'chiedere perdono', 'dimenticare', 'passare oltre', 'lasciar correre', 'tollerare', 'toller', 'punire', 'pun', 'castigare', 'castig', 'punizione', 'vendetta', 'vendicare', 'vendicarsi', 'vendic', 'dispiacere', 'dispiacersi', 'mi dispiace'];
+
+var perdono_amore_cits = ['19 azzurro | Perdona sempre i tuoi nemici. Nulla li fa arrabbiare di più. (Oscar Wilde)',
+'20 verde | Il perdono libera l\'anima, rimuove la paura. È per questo che il perdono è un\'arma potente. (Nelson MAndela)',
+'21 rosa | Sappiamo che, se vogliamo veramente amare, dobbiamo imparare a perdonare. (Madre Teresa di Calcutta) ',
+'22 azzurro | Io non parlo di vendette né di perdoni; la dimenticanza è l\'unica vendetta e l\'unico perdono. (Jorge Luis Borge) ',
+'23 azzurro | Il perdono è la qualità del coraggioso, non del codardo.(Mahatma Gandhi)',
+'24 azzurro | Il perdono è la fragranza che la violetta lascia sul calcagno che l\'ha schiacciata. (Mark Twain)',
+'25 rosa | Nel perdono c\'è sempre un\'inclinazione dall\'alto verso il basso, che impedisce una relazione alla pari. Ma se tu dici: "mi dispiace", stai di fronte. Allora conservi la tua tua dignità, e così l\'altro può avvicinarsi a te più facilmente. (Bert Hellingher)',
+'27 rosa | Il perdono è la chiave che sblocca la porta del risentimento e le manette dell\'odio. È un potere che spezza le catene dell\'amarezza e i ceppi dell\'egoismo. (William Arthur Ward)',
+'28 azzurro | Perdonare non significa ignorare ciò che è stato fatto contro di noi. Significa piuttosto che quella cattiveria cessa di essere un ostacolo ai rapporti. (Martin Luther King) ',
+'29 azzurro | Occhio per occhio e il mondo diventa cieco. (Mahatma Gandhi)',
+'30 azzurro | Perdonare sempre, ma dimenticare mai. (Giovanni Giolitti) ',
+'31 azzurro | Dimenticato è perdonato. (Francis Scott Fitzgerald)',
+'32 azzurro | Gli errori sono sempre perdonabili, se si ha il coraggio di ammetterli. (Bruce Lee)'
+];
+
+/////// TRADIMENTO
+
+const tradimento_amore_keywords = ['tradire', 'tradito', 'tradita', 'tradite', 'traditi', 'tradit', 'tradisc', 'tradiment',
+'ingannare', 'ingannat', 'ingann', 'ingannevol', 'infedeltà', 'infedel', 'voltafaccia', 'voltagabbana', 'imbrogli', 'imbrogliare', 'imbrogliat',
+'doppiezza', 'doppio gioco', 'fregare', 'freg', 'fregat', 'corna', 'cornut', 'amante', 'amanti',
+'cornificare', 'cornifico', 'cornific', 'cornificat', 'incornare', 'incorno', 'incorn', 'incornat', 'adulterio', 'adulter'];
+
+var tradimento_amore_cits = ['44 rosso | “Se qualcuno ti tradisce una volta, è un suo errore, se qualcuno ti tradisce due volte è un tuo errore.” ELEANOR ANNA ROOSEVELT',
+'45 viola | “Non tradire chi ti sorride: potrebbe avere la morte nel cuore e regalarti ugualmente un po\' di vita.” JIM MORRISON',
+'46 rosso | “La violenza e il tradimento sono armi a doppio taglio: feriscono più gravemente chi le usa, di chi le soffre.” EMILY JANE BRONTE',
+'47 azzurro | “L\'ultima tentazione è il peggiore dei tradimenti: fare la cosa giusta per il motivo sbagliato.” THOMAS STEARNS ELIOT ',
+'48 rosso | Si tradisce più spesso per debolezza che per deliberato disegno di tradire. François De La Rochefoucauld',
+'49 azzurro | Chiunque sia sospettoso invita al tradimento. Voltaire',
+'50 azzurro | C\'è più onore in tradire che in esser fedeli a metà. Giovanni Giudici ',
+'51 rosso | E badate che è azione indegna lusingare con le parole e uccidere con l\'intenzione: è azione da belva feroce, madre d\'inganno e di tradimento. — Pedro Calderón De La Barca',
+'52 verde | “La fedeltà è lo sforzo di un\'anima nobile per eguagliarsi a un\'altra anima più grande di lei.” GOETHE ',
+'53 rosso | Il tradito potrà anche essere un ingenuo, ma il traditore rimarrà sempre un infame! Benito Mussolini',
+'54 azzurro | È meglio essere tradito davvero, che saperlo sì e no. William Shakespeare',
+'141 viola | “Confessare non è tradire. Non importa quello che dici o non dici, ciò che conta sono i sentimenti. Se riuscissero a fare in modo che io non ti ami più… quello sarebbe tradire.” GEORGE ORWELL',
+'142 rosso | È veramente umana la passione perversa di appartenere a una persona soltanto? Mario Puzo',
+'143 azzurro | In fin dei conti si tradisce solo ciò che si ama. Gunter Grass',
+'144 azzurro | Quando l\'essere amato va troppo lontano nel tradimento di se stesso e persevera nell\'inganno di sé, l\'amore non lo segue più.“— Jacques Lacan',
+'145 viola | Si può essere innamorati di diverse persone per volta, e di tutte con lo stesso dolore, senza tradirne nessuna, il cuore ha più stanze di un bordello. GABRIEL GARCIA MARQUEZ'
+];
+
+//////// SUCCESSO IN AMORE
+
+const successo_amore_keywords = ['conquistare', 'conquisto', 'conquist', 'sedurre', 'seduc', 'seduttiv', 'sedutt', 'seducent', 'seduzion', 'attrarre',
+'attrae', 'attraggo', 'attraent', 'affascin', 'affascinant', 'fascino', 'fascini', 'rubacuore', 'rubacuori', 'sex appeal', 'playboy', 'latin lover', 'femme fatale'];
+
+var successo_amore_cits = ['146 azzurro | Conquistare l’anima di una donna è un’arte, sapersene liberare è un capolavoro. (Sören Kierkegaard)',
+'147 azzurro | Non è abbastanza conquistare; uno deve imparare a sedurre. (Voltaire)',
+'148 azzurro | Ancor oggi non so se quella mania di conquista celi una sovrabbondanza di vitalità, il gusto di possedere o il bisogno inconfessato di esser rassicurati su se stessi. (Françoise Sagan)',
+'149 azzurro | Non è il viso che colpisce, ma le espressioni. Non è il corpo che ci piace, ma il modo in cui si muove. Non è spesso l’aspetto fisico che ci attrae, ma sono i modi di fare di una persona. (Marilyn Monroe)',
+'150 azzurro | Non si riesce a sedurle dicendo loro: “Non sei niente male”. Bisogna almeno spingersi a: “Sei l’unica al mondo”. Per loro è il minimo tollerabile. (Louis-Ferdinand Céline)',
+'152 rosa | La seduzione non è il luogo del desiderio. È quello della vertigine, dell’eclissi, dell’apparizione e della sparizione. (Jean Baudrillard)'
+];
+
+//////// SINGLE
+
+const single_keywords = ['single', 'solo', 'sola', 'celibe', 'nubile', 'scapol', 'zitell'];
+
+var single_cits = ['117 viola | “Non essere amati è una semplice sventura; la vera disgrazia è non saper amare.” Albert Camus'];
+
+/////// SEGUIRE CUORE O TESTA
+
+const cuore_testa_keywords = ['cuor', 'testa', 'mente', 'razional', 'impuls', 'pancia'];
+
+var cuore_testa_cits = ['162 azzurro “C\'è sempre un grano di pazzia nell\'amore, così come c\'è sempre un grano di logica nella pazzia.” FRIEDRICH WILHELM NIETZSCHE'];
+
+
+//////// FAMIGLIA
+
+const famiglia_keywords = ['famiglia', 'figlio', 'figlia', 'figlie', 'figli', 'genitore', 'genitore', 'genitor', 'mamma', 'mamme', 'papà', 'madre', 'madri', 'materno', 'paterno', 'padre', 'padri', 'familiari', 'familiare', 'bambino', 'bambina', 'bambine', 'bambini', 'parentel', 'parente', 'parenti'];
+
+var famiglia_cits = ['153 rosso | “Il matrimonio, Dio, i figli, i parenti e il lavoro. Non ti rendi conto che qualsiasi idiota può vivere così e che la maggior parte lo fa?” CHARLES BUKOWSKI',
+'155 arancione | “La forza di una famiglia, come la forza di un\'armata, si basa sulla lealtà reciproca.” MARIO PUZO',
+'156 azzurro | “Si può fare tutto, ma la famiglia non si può lasciare.” GIANNI AGNELLI',
+'158 rosa | “La famiglia, quel caro polipo dai cui tentacoli non sfuggiamo mai abbastanza, e nell\'interno dei nostri cuori nemmeno desideriamo davvero farlo.” DODIE SMITH ',
+'159 azzurro | “Chi ha raccolto le sfide della vita sa che nei momenti decisivi ha dovuto disattendere o disobbedire ai legami della famiglia.” GIORGIO BOCCA',
+'160 azzurro | I tuoi figli non sono tuoi figli. Sono fratelli e sorelle bramosi di vita per se stessi... ti puoi ingegnare per essere come loro, ma non si deve cercare di renderli come noi. KAHLIL GIBRAN'
+];
+
+//////// FRATELLO
+
+const fratello_keywords = ['fratello', 'fratelli', 'gemello', 'gemelli', 'fraterno', 'fraterni', 'fratellastro', 'fratellastri'];
+
+var fratello_cits = ['201 verde | Quando i fratelli vanno d’accordo, nessuna fortezza è così solida come la loro vita in comune. (Antistene)'];
+
+/////// SORELLA
+
+const sorella_keywords = ['sorella', 'sorelle', 'gemella', 'sorellastra', 'sorellastre'];
+
+var sorella_cits = ['157 rosa | “Essere sorelle è probabilmente la parentela più competitiva all\'interno della famiglia, ma una volta che le sorelle sono cresciute, diventa la relazione più forte.” MARGARET MEAD'];
+
+////// FUTURO AMORE
+
+const futuro_keywords = ['presente', 'passato', 'futuro', 'domani', 'ieri', 'oggi', 'destino', 'fato', 'avvenire', 'giovinezza', 'vecchiaia', 'gioventù',
+'succederà', 'sarà', 'accadrà', 'avverrà', 'avventuros', 'rà', 'rò', 'ranno', 'rai', 'remo', 'rete',
+'indietro', 'avanti', 'dietro'];
+
+var futuro_cits = ['1fut verde Il futuro entra in noi, per trasformarsi in noi, molto prima che accada. Rainer Maria Rilke',
+'2fut azzurro Non lasciare che il futuro ti disturbi. Lo incontrerai, se necessario, con le stesse armi della ragione che oggi ti armano contro il presente. Marco Aurelio',
+'3fut arancione Il futuro appartiene a coloro che credono nella bellezza dei loro sogni. Eleanor Roosevelt',
+'4fut azzurro Non possiamo sempre costruire il futuro per la nostra giovinezza, ma possiamo costruire la nostra giovinezza per il futuro. Franklin D. Roosevelt',
+'5fut verde L\'istruzione è il passaporto per il futuro, perché domani appartiene a coloro che si preparano per esso oggi. Malcolm X',
+'6fut viola Mi sono reso conto che il passato e il futuro sono vere illusioni, che esistono nel presente, che è ciò che c\'è e tutto ciò che c\'è. Alan Wilson Watts',
+'7fut azzurro Ogni uomo deve avere ragione nel decidere il proprio destino. Bob Marley',
+'8fut arancione La vera generosità verso il futuro sta nel dare tutto al presente. Albert Camus',
+'9fut verde Non c\'è niente come un sogno per creare il futuro. Victor Hugo',
+'10fut arancione Cambiare è la legge della vita. E quelli che guardano solo al passato o al presente mancheranno sicuramente il futuro. John F. Kennedy',
+'11fut azzurro Chi controlla il presente, controlla il passato. Chi controlla il passato, controlla il futuro. George Orwell',
+'12fut verde Domani appartiene a coloro che possono sentirlo arrivare. David Bowie ',
+'13fut verde L\'unico limite alla nostra realizzazione di domani saranno i nostri dubbi di oggi. Andiamo avanti con fede forte e attiva. Franklin D. Roosevelt',
+'14fut arancione Mi sento molto avventurosa. Ci sono così tante porte da aprire e non ho paura di guardarmi dietro. Elizabeth Taylor',
+'15fut viola Se apriamo una lite tra passato e presente, scopriremo di aver perso il futuro. Winston Churchill',
+'16fut viola La nostra ansia non viene dal pensare al futuro, ma dal voler controllare. Kahlil Gibran',
+'17fut azzuro Bene, dobbiamo aspettare che il futuro si mostri. Virginia Woolf',
+'18fut arancione È una meraviglia ignorare il futuro. Marguerite Duras ',
+'19fut viola Se il presente cerca di giudicare il passato, perderà il futuro. Winston Churchill',
+'20fut azzurro Oggi non è che un giorno qualunque di tutti i giorni che verranno, ma ciò che farai in tutti i giorni che verranno dipende da quello che farai oggi. È stato così tante volte. Ernest Hemingway',
+'21fut rosa Qualunque decisione tu abbia preso per il tuo futuro, sei autorizzato, e direi incoraggiato, a sottoporla ad un continuo esame, pronto a cambiarla, se non risponde più ai tuoi desideri. Rita Levi Montalcini ',
+'22fut azzurro Il futuro influenza il presente tanto quanto il passato. Friedrich Nietzsche',
+'23fut azzurro Non indugiare sul passato; non sognare il futuro, concentra la mente sul momento presente. Buddha',
+'24fut azzurro Il futuro inizia oggi, non domani. Papa Giovanni Paolo II',
+'25fut viola L\'attesa è il futuro che si presenta a mani vuote. Michelangelo ',
+'26fut viola Non vivo per me, ma per la generazione che verrà. Vincent Van Gogh',
+'27fut viola Più di tutto mi ricordo il futuro. Salvador Dalí'
+];
 
 ////////////////////////////////////////////// SUCCESSO/AUTOREALIZZAZIONE
 
@@ -361,7 +524,7 @@ var paura_cits = ['10A Blu | Qualunque sia la sua forma, la sua modalità, qualu
 
 ////// DIO
 
-const dio_keywords = ['dio', 'salvezza', 'salv', 'dannat', 'dannazione', 'altissimo', 'creatore', 'domineddio', 'onnipotente', 'padreterno', 'signore', 'chies', 'cristo', 'gesù', 'madonna', 'maria', 'confession', 'cred', 'fede', 'religion', 'santo', 'santi', 'santa', 'santif', 'sacr', 'religios', 'adorazion', 'cult', 'venerazion', 'deferenz', 'devozion', 'devot', 'ossequi', 'riverenz', 'atei', 'ateo', 'irreligios', 'miscredenz', 'sacr', 'profan', 'civil', 'laic', 'precett', 'credent', 'devot', 'fedel', 'osservant', 'pio', 'pia', 'pii', 'areligios', 'ateo', 'atei', 'irreligios', 'miscredent', 'blasfem', 'empi', 'ecclesiastic', 'esiste', 'odio', 'rifiut', 'intolleran'
+const dio_keywords = ['Dio', 'salvezza', 'salv', 'dannat', 'dannazione', 'altissimo', 'creatore', 'domineddio', 'onnipotente', 'padreterno', 'signore', 'chies', 'cristo', 'gesù', 'madonna', 'maria', 'confession', 'cred', 'fede', 'religion', 'santo', 'santi', 'santa', 'santif', 'sacr', 'religios', 'adorazion', 'cult', 'venerazion', 'deferenz', 'devozion', 'devot', 'ossequi', 'riverenz', 'atei', 'ateo', 'irreligios', 'miscredenz', 'sacr', 'profan', 'civil', 'laic', 'precett', 'credent', 'devot', 'fedel', 'osservant', 'pio', 'pia', 'pii', 'areligios', 'ateo', 'atei', 'irreligios', 'miscredent', 'blasfem', 'empi', 'ecclesiastic', 'esiste', 'odio', 'rifiut', 'intolleran'
 ];
 
 var dio_cits = ['31A Verde | La morte è orribile solo per colui che non crede in Dio, oppure crede in un Dio malvagio, il che è la stessa cosa. Per colui che crede in Dio, nella sua bontà e vive in questa vita secondo la sua legge ed ha sperimentato questa sua bontà, per costui la morte è solo un passaggio. (Lev Tolstoj)',

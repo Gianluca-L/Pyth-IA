@@ -524,7 +524,7 @@ var paura_cits = ['10A Blu | Qualunque sia la sua forma, la sua modalità, qualu
 
 ////// DIO
 
-const dio_keywords = ['Dio', 'salvezza', 'salv', 'dannat', 'dannazione', 'altissimo', 'creatore', 'domineddio', 'onnipotente', 'padreterno', 'signore', 'chies', 'cristo', 'gesù', 'madonna', 'maria', 'confession', 'cred', 'fede', 'religion', 'santo', 'santi', 'santa', 'santif', 'sacr', 'religios', 'adorazion', 'cult', 'venerazion', 'deferenz', 'devozion', 'devot', 'ossequi', 'riverenz', 'atei', 'ateo', 'irreligios', 'miscredenz', 'sacr', 'profan', 'civil', 'laic', 'precett', 'credent', 'devot', 'fedel', 'osservant', 'pio', 'pia', 'pii', 'areligios', 'ateo', 'atei', 'irreligios', 'miscredent', 'blasfem', 'empi', 'ecclesiastic', 'esiste', 'odio', 'rifiut', 'intolleran'
+const dio_keywords = ['Dio', 'salvezza', 'salv', 'dannat', 'dannazione', 'altissimo', 'creatore', 'domineddio', 'onnipotente', 'padreterno', 'signore', 'chies', 'Cristo', 'Gesù', 'Madonna', 'maria', 'confession', 'cred', 'fede', 'religion', 'santo', 'santi', 'santa', 'santif', 'sacr', 'religios', 'adorazion', 'cult', 'venerazion', 'deferenz', 'devozion', 'devot', 'ossequi', 'riverenz', 'atei', 'ateo', 'irreligios', 'miscredenz', 'sacr', 'profan', 'civil', 'laic', 'precett', 'credent', 'devot', 'fedel', 'osservant', 'pio', 'pia', 'pii', 'areligios', 'ateo', 'atei', 'irreligios', 'miscredent', 'blasfem', 'empi', 'ecclesiastic', 'esiste', 'odio', 'rifiut', 'intolleran'
 ];
 
 var dio_cits = ['31A Verde | La morte è orribile solo per colui che non crede in Dio, oppure crede in un Dio malvagio, il che è la stessa cosa. Per colui che crede in Dio, nella sua bontà e vive in questa vita secondo la sua legge ed ha sperimentato questa sua bontà, per costui la morte è solo un passaggio. (Lev Tolstoj)',
@@ -665,9 +665,162 @@ var aborto_cits = ['20eti azzurro L\'aborto viene sostenuto solo da persone che 
 '15eti rosso “Se gli uomini potessero restare incinti, l\'aborto diventerebbe un sacramento.” [Flo Kennedy]'
 ];
 
+/////////////////////////////////////////////////////////////////////////////////// ETICA E MORALE
 
+////// CAMBIAMETO
 
+const cambiamento_keywords = ['moral', 'comportament', 'condotta', 'principi', 'pens', 'opinion', 'etic', 'uman', 'spiegaz', 'scienz', 'a livello morale'];
 
+var cambiamento_cits = ['1eti) “In etica come in altri campi del pensiero umano ci sono due tipi di opinioni: da una parte quelle rette sulla tradizione, dall\'altra quelle che hanno qualche probabilità di essere giuste.”[Bertrand Russell]',
+'2eti) Il mondo così come l’abbiamo creato è un risultato del nostro pensiero. Non possiamo cambiarlo se non cambiamo il nostro modo di pensare [Albert Einstein] arancio',
+'8eti) “E\' la moralità a rendere umani gli uomini.” [Shimon Peres] rosa',
+'9eti) “Non esistono fenomeni morali, ma solamente una spiegazione morale dei fenomeni.” [Friedrich Wilhelm Nietzsche] azzzurro',
+'10eti)“Forse l\'etica è una scienza scomparsa dal mondo intero. Non fa niente, dovremo inventarla un\'altra volta.”[Jorge Luis Borges] viola'
+];
+
+////// ETICA E RELIGIONE
+
+const etica_religio_keywords = ['religio', 'fede', 'valor', 'morte', 'creder', 'laic', 'credenz', 'cred', 'educaz', 'aldilà', 'culto', 'mistic', 'venera', 'adora', 'venero', 'adoro', 'devoz', 'aldilà', 'Gesù', 'Cristo', 'Madonna', 'alla', 'islam', 'cattolic', 'ortodoss', 'musulman', 'ateo', 'atei', 'ateismo', 'monoteis', 'politeis', 'profess', 'messa', 'rito religioso', 'riti religiosi', 'educaz', 'punizion', 'post morte', 'post mortem', 'dopo la morte', 'Dio', 'dei', 'buddha', 'rastafar', 'reincarn'];
+
+var etica_religio_cits = ['3eti) “Il male assoluto del nostro tempo è di non credere nei valori. Non ha importanza che siano religiosi oppure laici. I giovani devono credere in qualcosa di positivo e la vita merita di essere vissuta solo se crediamo nei valori, perché questi rimangono anche dopo la nostra morte.” [Rita Levi Montalcini] viola',
+'4eti) “L’etica di un non credente è piú pura e disinteressata di quella di un credente che si comporta bene perché spera nella ricompensa e teme la punizione nell’aldilà.”  [Margherita Hack] azzurro',
+'5eti) “Il comportamento etico di un uomo dovrebbe essere effettivamente basato sulla simpatia, educazione e legami sociali; non è necessaria alcuna base religiosa. L’uomo sarebbe davvero messo male se dovesse essere trattenuto dalla paura della punizione e dalla speranza di una ricompensa dopo la morte.” [Albert Einstein] rosa'
+];
+
+////// QUANTO VALGO?
+
+const quanto_valgo_keywords = ['valer', 'valg', 'import', 'considera', 'pensano di me', 'ritener', 'chi sono', 'essere me stesso', 'essere me stessa', 'me stesso', 'me stessa'];
+
+var quanto_valgo_cits = ['6eti) “Ognuno vale quanto le cose a cui da importanza.” [Marco Aurelio] azzurro',
+'7eti) “Il valore di una persona dipende dal numero di cose delle quali si vergogna.” [George Bernard Shaw]  rosa'
+];
+
+////// ETICA ECONOMIA
+
+const etica_economia_keywords = ['economi', 'sistem', 'gestione'];
+
+var etica_economia_cits = ['11eti)“Non puoi fare una buona economia con una cattiva etica.” [Ezra Pound] azzurro'];
+
+////// ETICA POLITICA
+
+const etica_politica_keywords = ['politic', 'govern', 'comand', 'cariche', 'incaric'];
+
+var etica_politica_cits = ['12eti) “Il livello di allarme si raggiunge quando lo scadimento etico della politica non è neppure più percepito come dannoso.” [Carlo Maria Martini] viola'];
+
+////// ETICA CULTURA
+
+const etica_cultura_keywords = ['cultur', 'colt', 'intellettual', 'conoscere', 'il sapere', 'sapienza', 'studi'];
+
+var etica_cultura_cits = ['13eti)“Chi ha cari i valori della cultura non può non essere pacifista.” [Albert Einstein] verde',
+'14eti) “Gli intellettuali sono persone che credono che le idee siano più importanti dei valori. Vale a dire, le loro proprie idee e i valori degli altri.”[Gerald Brenan] rosso'
+];
+
+////// ABORTO
+
+const etica_morale_aborto_keywords = ['abort', 'interruzione di gravidanza', 'incint', 'rimanere incinta', 'rimanere incinto', 'rimanere incinti', 'rimanere incinte', 'essere incinta', 'essere incinto', 'essere incinti', 'incint',
+'madr', 'mamm', 'figl', 'nasc', 'venir alla luce', 'partorir', 'uccid', 'mese', 'mesi', 'pancia', 'stato di attesa', 'attend', 'bambin', 'feto', 'feti', 'infanticid', 'neonat', 'bebè', 'lattant', 'embrion', 'pargol'];
+
+var etica_morale_aborto_cits = ['15eti) “Se gli uomini potessero restare incinti, l\'aborto diventerebbe un sacramento.” [Flo Kennedy] rosso',
+'16eti) “Come mai quando si tratta di noi, è un aborto, e quando si tratta di polli, è un\'omelette?” [George Carlin] rosa',
+'17eti) “L\'abolizione del diritto di abortire per una donna, quando e se lo vuole, equivale a una maternità obbligatoria, una forma di stupro da parte dello Stato.” [Edward Abbey] rosa',
+'18eti) “I cattolici, e lo ero anch\'io finché non ho raggiunto l\'età della ragione, i cattolici e altri cristiani sono contro l\'aborto e sono contro gli omosessuali. Ma chi ha meno aborti degli omosessuali?”[George Carlin] azzurro',
+'19eti) “L\'aborto è il più grande distruttore della pace perché, se una madre può uccidere il suo stesso figlio, cosa impedisce che io uccida te e tu uccida me? Non c\'è più nessun ostacolo.”[Madre Teresa di Calcutta] viola',
+'20eti)  “L\'aborto viene sostenuto solo da persone che sono nate esse stesse.” [Ronald Reagan] azzurro'
+];
+
+/////// EUTANASIA
+
+const etica_morale_eutanasia_keywords = ['eutanas', 'dolce morte', 'suicidio assistito', 'ospedale', 'fin di vita', 'malato terminale', 'malati terminali', 'malat', 'guarig', 'morte', 'morir', 'star male', 'stare male', 'soffrir', 'mettere fine', 'metter fine', 'suicid', 'vita', 'vivere', 'viv', 'morente', 'muoio', 'muori', 'muor', 'moriv', 'moriamo', 'morite', 'muoiono', 'porre fine', 'scegliere di morire'];
+
+var etica_morale_eutanasia_cits = ['21eti) “Proprio come sceglierò la mia nave quando mi accingerò ad un viaggio, o la mia casa quando intenderò prendere una residenza, così sceglierò la mia morte quando mi accingerò ad abbandonare la vita.” [Lucio Anneo Seneca] viola',
+'22eti) “Non sempre la vita va conservata: il bene non consiste nel vivere, ma nel vivere bene.”  [Lucio Anneo Seneca] rosa',
+'23eti) “Io ho il diritto di scegliere la mia morte per il bene degli altri.” [Umberto Eco] verde',
+'24eti)  Nessuno vive perché lo vuole. Ma una volta che vive lo deve volere. (Ernst Bloch) viola',
+'25eti) “Siamo di fronte a uno dei sintomi più allarmanti della «cultura di morte», che avanza soprattutto nelle società del benessere, caratterizzate da una mentalità efficientistica che fa apparire troppo oneroso e insopportabile il numero crescente delle persone anziane e debilitate.” [Papa Giovanni Paolo II] rosa'
+];
+
+/////// OMOSESSUALE
+
+const etica_omosessuale_keywords = ['omosess', 'gay', 'amare un altro uomo', 'lesbic', 'amare un altra donna', 'froc', 'mentalità chiusa', 'amare alla luce', 'nascondersi', 'giudizio degli altri', 'guardati male', 'guardato male', 'effusioni in pubblico', 'baciar', 'eterosess', 'esprimersi liberamente', 'confessar', 'dichiarar', 'manifestar', 'amme', 'esternar', 'coppie gay', 'coppie gay nei film', 'coppie gay in giro'];
+
+var etica_omosessuale_cits = ['26eti) C\'è un\'associazione in Francia [...] che auspica, per gli omosessuali, l\'abolizione del ridicolo, e il riconoscimento della "parità dei diritti". Forse hanno ragione, chi lo sa. E forse, un giorno, la spunteranno. Ma vedrete, non ci sarà più nessun gusto a peccare di questo peccato. E non dovendo più nascondersi, tutti capiranno che tanto vale amare le donne. (Mario Soldati) azzurro',
+'27eti) C\'è un\'ultima cosa che vorrei dire: gli omosessuali non trovano un posto nell\'intera società, che possa dar loro una struttura nella quale collocarsi. Non hanno la struttura del matrimonio, o quella della famiglia. La storia può servire per offrire agli omosessuali quelle strutture che non hanno. (George Mosse) azzurro',
+'28eti) Non vorrei un mondo omosessuale. La donna ha una funzione importante. Ama più di chiunque. Ma la dedizione più forte la trovi nell\'uomo. La donna è incostante. (Franco Zeffirelli) azzurro',
+'29eti) “Di per se, l’omosessualità è limitante quanto l’eterosessualità: l’ideale sarebbe essere capaci di amare una donna o un uomo; indifferentemente, un essere umano, senza provare paura, limiti, od obblighi.”  (Simone de Beauvior) rosa',
+'30eti) Per un gay che si dichiara, ce ne sono dieci che non lo fanno, e cento che non l\'hanno mai confessato a se stessi. Yourcenar, Marguerite viola',
+'31eti) Apprezzo più di ogni altro questo piacere più segreto, questo corpo simile al mio che riflette la mia voluttà. (Yourcenar, Marguerite) rosa'
+];
+
+/////// VIOLENZA FISICA
+
+const violenza_fisica_keywords = ['picchiar', 'donna', 'donne', 'sesso debole', 'femm', 'ragazz', 'casa', 'marciapied', 'bambina', 'abus', 'prevaricazio', 'sopraffazion', 'violenza carnale', 'stupr', 'violent', 'non consenziente'];
+
+var violenza_fisica_cits = ['32eti) La violenza contro le donne è una delle più vergognose violazioni dei diritti umani.(Kofi Annan) rosso',
+'37eti) Il genere umano tende a ricordare gli abusi a cui è stato sottoposto, piuttosto che le tenerezze. Che cosa resta dei baci? Solo le ferite lasciano cicatrici. (Bertolt Brecht) viola'
+];
+
+/////// VIOLENZA
+
+const violenza_keywords = ['forza', 'aggress', 'violenz', 'cattiv', 'brutal', 'veeme', 'prepotenz', 'potenz', 'soprus', 'furi', 'impet', 'maltratt'];
+
+var violenza_cits = ['33eti) La violenza è l’ultimo rifugio degli incapaci. (Isaac Asimov) verde',
+'34eti) La violenza non è forza ma debolezza, né mai può essere creatrice di cosa alcuna ma soltanto distruggitrice. (Benedetto Croce) azzurro',
+'35eti) Ciò che mi spaventa non è la violenza dei cattivi; è l’indifferenza dei buoni.(Martin Luther King) rosso',
+'36eti) Le radici della violenza: la ricchezza senza lavoro, il piacere senza coscienza, la conoscenza senza carattere, il commercio senza etica, la scienza senza umanità, il culto senza sacrificio, la politica senza principi. (Mahatma Gandhi) rosa'
+]
+
+//////// ABUSI DI POTERE
+
+const abuso_potere_keywords = ['eccesso', 'smodatezz', 'uso smodato', 'illecito', 'disordin', 'scandal', 'prepotenz', 'media', 'social', 'tv', 'televisione', 'telegiornale', 'deputat', 'president', 'capo', 'prendere la decisione', 'prendere le decisioni', 'discorso', 'carismatic', 'convincer'];
+
+var abuso_potere_cits = ['38eti) Usate, non abusate… né l’astinenza né l’eccesso hanno mai reso l’uomo felice. (Voltaire) verde',
+'39eti) Abbiamo bisogno della libertà per evitare gli abusi del potere dello Stato e abbiamo bisogno dello Stato per evitare l’abuso della libertà (Karl Popper) rosso',
+'40eti) “I media sono un giocattolo in mano ai ricchi. E i ricchi lo usano per diventare ancora più ricchi.”  Ryszard Kapuscinski rosso'
+];
+
+//////// ABUSO DROGA
+
+const abuso_droga_keywords = ['tossic', 'eroin', 'erba', 'drog', 'vizi', 'illegal', 'dipendenz', 'marijuana', 'maria', 'gangia', 'stupefacenti'];
+
+var abuso_droga_cits = ['41eti) L’abuso della droga non è una malattia, ma una decisione, come quella di andare incontro ad una macchina che si muove. Questo non si chiama malattia, ma mancanza di giudizio.(Philip K. Dick) viola',
+'53eti) Se decidi di smettere di bere, fumare e fare l’amore, non è che vivi più a lungo: la vita ti sembra più lunga. (Clement Freud) verde',
+'54eti) Bevo soltanto per far sembrare gli altri più interessanti. (George Jean Nathan) rosa'
+];
+
+//////// RAZZISMO
+
+const razzismo_keywords = ['bianc', 'ner',  'negr', 'cines', 'razz', 'discrimin', 'segreg', 'apartheid', 'intolleranz', 'pregiudizi', 'tradiz', 'immigr', 'altre culture', 'culture diverse', 'insult', 'cori razzisti', 'coro razzista', 'venire da', 'proven', 'color', 'essere diver', 'xenof'];
+
+var razzismo_cits = ['42eti) “Se dici la tua sul Vaticano, sulla Chiesa Cattolica, sui Papa, sulla Madonna, su Gesù, sui Santi, non ti succede nulla. Ma se fai lo stesso con l\'Islam, col Corano, con Maometto, coi figli di Allah, diventi razzista e xenofobo e blasfemo e compi una discriminazione razziale.” (Oriana Fallaci) azzurro',
+'43eti) “Ci sono state occasioni nelle quali l’aggressione fisica non è stata così grave quanto l’oppressione psicologica sofferta dalla popolazione nera durante l’apartheid. È una tortura psicologica impossibile da descrivere a parole.” (Nelson Mandela) viola',
+'44eti) “Se dovessimo svegliarci una mattina e scoprire che tutti sono della stessa razza, credo e colore, troveremmo qualche altra causa di pregiudizio entro mezzogiorno.” (George David Aiken) rosa',
+'45eti) “Dicono ai bambini che Gesù era bianco, così come gli apostoli e gli angeli. Il posto in cui vive il presidente si chiama Casa Bianca. Perfino Tarzan è bianco. Ma come? Bianco uno nato e cresciuto nella giungla?” (muhammad ali) arancio',
+'46eti) “La degradazione della razza e del sangue è il peccato mortale di questo mondo e la fine dell\'umanità che vi si abbandoni.” (Adolf Hitler) rosso',
+'47eti) “Preferirei essere negro piuttosto che gay. Perché se sei negro non lo devi dire a tua madre.” (Charles Pierce) azzurro'
+];
+
+//////// BELLEZZA
+
+const bellezza_keywords = ['bellezza', 'bell', 'estetic', 'esteta', 'fascin', 'attraz', 'corp', 'aspetto fisico'];
+
+var bellezza_cits = ['48eti)  “L\'estetica è madre dell\'etica.”[Joseph Brodsky] verde'];
+
+//////// VEGETARIANI
+
+const vegetariani_keywords = ['vegetarian', 'vegetal', 'vegan', 'aliment', 'cibo', 'salute', 'salutis', 'trattarsi bene', 'trattarmi bene', 'tratto bene', 'cibar', 'sonnolenz', 'digerir', 'digestion'];
+
+var vegetariani_cits = ['49eti)“Sono diventato vegetariano per ragioni etiche, oltre che salutistiche. A parer mio, la scelta di vita vegetariana, anche solo per i suoi effetti fisici sul temperamento umano, avrebbe un\'influenza estremamente benefica sulla maggior parte dell\'umanità.” [Albert Einstein] arancio'];
+
+/////// PRIVACY
+
+const privacy_keywords = ['privacy', 'anonimato', 'anonim', 'raccolta dati', 'trattamento della privacy', 'gdpr', 'in pubblico', 'privato', 'trattamento dei dati', 'trattamento dei miei dati', 'trattamento dei tuoi dati', 'trattamento dati', 'dati', 'cookie', 'cookies', 'informativ'];
+
+var privacy_cits = ['50eti) “La privacy è talvolta collegata all’anonimato, al desiderio di passare inosservati e non farsi riconoscere in pubblico. Solitamente, quando si considera «privato» qualcosa, è perché ciò ha per noi un’importanza intrinsecamente speciale, o ci tocca personalmente.” zygmunt bauman rosa',
+'51eti) Se dopo la mia morte volessero scrivere la mia biografia, non c’è niente di più semplice. Ci sono solo due date – quella della mia nascita e quella della mia morte. Tutti i giorni fra l’una e l’altra sono miei. (Fernando Pessoa) verde',
+'52eti) L’undicesimo comandamento – non farti scoprire – è l’unico a essere praticamente impossibile da rispettare in questi tempi. (Berthe Henry Buxton) viola'
+];
+
+///////////////////////////////////////////////////////////////////////////////////
 function getInputValue() {
   // Selecting the input element and get its value
   var textFromInput = document.getElementById("myInput").value;

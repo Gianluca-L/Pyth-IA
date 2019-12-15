@@ -26,7 +26,60 @@ const keywords = ["terra", "piatta", "tonda", "sfer"];
 ////////////////////////////////////////////////////////////////////////////////////////// START PYTHIA
 
 
+//////////////////////////////////////////////////////////// LAVORO
 
+const lavoro_generico_keywords = ['lavor', 'attività', 'compito', 'impegno', 'faccend', 'operazion', 'responsabilità', 'incaric', 'funzion', 'mansion', 'occupazion', 'profession', 'impieg', 'mestier', 'serviz', 'prestazion'];
+
+//// LAVORARE BENE
+
+const lavoro_bene_keywords = ['contare', 'valut', 'consider', 'prendere in considerazione', 'mettere in conto', 'important', 'interess', 'iniz', 'cominc', 'principi', 'dare inizio', 'avviar', 'aprir', 'inaugur', 'intraprend', 'fondar', 'promuov', 'introdu', 'accing', 'intavol', 'abbozz', 'imbast', 'avere inizio', 'avrà inizio', 'ha inizio', 'fare prima', 'far prima', 'procedur', 'sistem', 'metod', 'norm', 'criteri', 'iter', 'procediment', 'lavoro perfetto', 'far perfettamente',
+'fare perfettamente', 'impar', 'conosc', 'assimil', 'assorb', 'consider', 'afferr', 'assimilare', 'assorbir', 'apprend', 'ottimament', 'con successo', 'con successi', 'alla grande', 'benissimo', 'eccellentemente', 'eccelsamente', 'magnificamente', 'meravigliosamente', 'perfettamente', 'splendidamente', 'stupendamente', 'sublimemente', 'superbamente', 'bene', 'niente male', 'malissimo', 'orrendamente', 'orribilmente', 'pessimamente', 'schifosamente', 'così e così', 'male', 'maluccio', 'mediocremente', 'mediocr', 'avere capacità', 'ho le capacità', 'avrò le capacità', 'capacità', 'essere capace', 'sono capace', 'sarò capace', 'capac', 'sono in grado', 'sarà in grado', 'sarai in grado', 'essere in grado', 'essere all\'altezza', 'all\'altezza', 'farcela', 'andare bene', 'andrò bene', 'andrà bene', 'andremo bene', 'cavarsela', 'cavarmela', 'cavarcela', 'me la caverò', 'ce la caveremo', 'se la caveranno', 'se la caverà', 'te la caverai', 'fare bene', 'farò bene', 'faremo bene', 'faranno bene', 'farete bene', 'farai bene', 'farà bene', 'andare male', 'andrà male', 'andrò male', 'andremo male', 'andranno male', 'andrai male', 'avere esito positivo', 'avrà esito positivo', 'avranno esito positivo', 'andrà a buon fine', 'andranno a buon fine', 'avere successo', 'avrò buon esito', 'avranno buon esito', 'avrà successo', 'avranno successo', 'andare male', 'fallire', 'fallirò', 'falliremo', 'falliranno', 'fallirà', 'falliment', 'success', 'fare fiasco', 'buco nell\'acqua', 'fiasco', 'ottenere un buon esito', 'otterrò un buon esito', 'otterrà un buon esito', 'otterrai un buon esito', 'otterranno un buon esito', 'otterremo un buon esito', 'un successo', 'spuntarla', 'la spunterò', 'la spunteremo', 'mancare l\'obiettivo', 'mancherò l\'obiettivo', 'manco l\'obiettivo', 'mancato l\'obiettivo', 'esito positivo', 'esito negativo', 'buon esito', 'cattivo esito', 'toppare', 'topperò', 'top', 'super', 'avere successo nella professione', 'avrò successo nella professione', 'avremo successo nella professione', 'avere un certo effetto', 'avere un certo esito'];
+
+var lavoro_bene_cits = ['1Lav) Quando cominci un lavoro quello che conta è farlo fino in fondo e bene [Margaret Tatcher] verde',
+'2Lav) L’inizio è la parte più importante del lavoro. [Platone] verde',
+'14Lav) Se il tuo lavoro è mangiare una rana, è meglio mangiarla al mattino. E se il tuo lavoro è quello di mangiare due rane, è meglio mangiare prima la più grande. [Mark Twain] azzurro'
+];
+
+///// COSA SERVE LAVORO
+
+const cosa_serveLav_generico_keywords = ['servir', 'usare', 'obiettiv', 'utile', 'necessar', 'necessit', 'occorre', 'utilizz', 'sfrutt', 'avvalersi', 'mi avvalgo', 'ti avvali', 'si avvale', 'si avvalgono', 'bisogno', 'bisogn', 'funge', 'funzione', 'funzioni', 'assolve', 'assolv', 'impieg', 'adoperar', 'adoper', 'fornir', 'fornisc', 'impiego', 'impiegat', 'fine', 'proposito', 'intento', 'traguard', 'meta', 'finalità', 'il mezzo', 'destinazion', 'compito', 'ruol', 'obiettiv', 'proposit',
+'scopo del lavoro', 'scopo', 'umanit', 'altr', 'genere uman', 'uomini', 'genti', 'collettività', 'società', 'solidarietà', 'fratellanza', 'altruismo', 'carità', 'tolleranza', 'indulgenza', 'scopo', 'senso', 'signific', 'sensat', 'insensat', 'logic', 'illogic', 'razional', 'irrazional', 'illogic', 'incoeren', 'incongruen', 'irragionevol', 'irrazional', 'sconness', 'assurd', 'giudizios', 'logic', 'efficac', 'validità', 'valid', 'comodità', 'funzionalità', 'comod', 'funzional', 'praticità', 'pratic', 'inservibilità', 'inutil', 'inutilità', 'vantaggiosità', 'vantagg', 'opportunità', 'dannosità', 'dannos', 'nocività', 'nociv', 'obblig', 'dover', 'necessità', 'necessari', 'coercizion', 'costrizion', 'costrett', 'obbligat', 'impost', 'imposizion', 'dovere', 'vincol', 'obbligator', 'vincolat', 'limitat', 'obbligatorietà', 'forzat', 'impegno', 'impegni', 'impegnat', 'indott', 'tenut', 'esentat', 'esonerat', 'libero di', 'debitore', 'in debito', 'grato', 'grata', 'grate', 'grati', 'gratitudine', 'riconoscent', 'riconoscen', 'ingrat', 'irriconoscent', 'coatt', 'forzat', 'vincolat', 'predispost', 'prefissat', 'svincolat', 'pension'];
+
+var cosa_serveLav_generico_cits = ['3Lav) Il lavoro allontana tre grandi male: la noia, il vizio e il bisogno [Voltaire] arancio',
+'4Lav) Il lavoro non è più rispettabile dell’alcool, e serve esattamente allo stesso scopo: distrae semplicemente la mente. [Aldous Huxley] viola',
+'5Lav) Il lavoro non mi piace, non piace a nessuno, ma mi piace quello che c’è nel lavoro: la possibilità di trovare se stessi [Joseph Conrad] rosa',
+'6Lav)Il lavoro è il mezzo migliore di far passare la vita [Gustave Flaubert] arancio',
+'7Lav)Tutti lavoriamo per arrivare al riposo: è ancora la pigrizia a renderci laboriosi. [Jean-Jacques Rousseau] verde',
+'8Lav) Lo scopo del lavoro è quello di guadagnarsi il tempo libero. [Aristotele] arancio',
+'9Lav) Il lavoro nobilita l’uomo. [Charles Darwin] azzurro',
+'10Lav) Non è il benessere né lo splendore, ma la tranquillità e il lavoro, che danno la felicità. [Thomas Jefferson] verde',
+'11Lav) Essere l’uomo più ricco del cimitero non mi interessa. Andare a letto sapendo che abbiamo fatto qualcosa di meraviglioso: questo è quello che mi interessa [Steve Jobs] verde'
+];
+
+const cosa_serveLav_1_keywords = ['soluzione', 'fare bene', 'noia', 'problema', 'peso', 'inedia', 'contrattempo', 'grana', 'grane', 'impiccio',
+'rincrescimento', 'scocciatura', 'tediosità', 'briga', 'zuppa', 'mortorio', 'menata', 'soluzione', 'vizio', 'vizi', 'depravazione', 'depravat', 'perversione', 'pervers',
+'malcostume', 'corruzione', 'corrott', 'corromp', 'dissolutezza', 'dissolu', 'cattiva abitudine', 'debolezza', 'debolezz', 'difetto', 'difett', 'soluzione', 'necessità', 'occorrenza', 'occorre', 'urgenza', 'urgen', 'opportunità', 'dovere', 'obbligo', 'povertà', 'pover', 'miseria', 'indigenza', 'indigent', 'stento', 'stenti', 'disagio', 'disagi',
+'mancanza', 'mancanze', 'privazione', 'privazioni', 'ristrettezza', 'ristrettezze', 'fame', 'carestia', 'carestie', 'penuria', 'esigenza', 'esigen', 'desiderio', 'desider', 'afa'];
+
+var cosa_serveLav_1_cits = ['3Lav) Il lavoro allontana tre grandi male: la noia, il vizio e il bisogno [Voltaire] arancio'];
+
+const cosa_serveLav_2_keywords = ['distra', 'alcool', 'alcolic', 'bere', 'bevand', 'ubriac'];
+
+var cosa_serveLav_2_cits = ['4Lav) Il lavoro non è più rispettabile dell’alcool, e serve esattamente allo stesso scopo: distrae semplicemente la mente. [Aldous Huxley] viola'];
+
+
+////// SOLDI
+
+const soldi_keywords = ['strategi', 'vot', 'diventare ricco', 'diventare ricca', 'diventare ricche', 'diventare ricchi', 'ricc', 'soldi', 'denaro', 'danaro', 'quattrini', 'quattrino', 'bezzi', 'conquibus', 'pecunia', 'grana', 'banconot', 'spiccioli', 'spicciolo', 'contante', 'contanti', 'liquido', 'monet', 'valut', 'ricchezz', 'patrimonio', 'averi', 'capital', 'fondi', 'finanze', 'risparmi', 'rendita', 'guadagn', 'ricchezza', 'prosperità', 'agio', 'centesimi', 'milionar', 'miliardar', 'riccone', 'riccona', 'ricconi', 'pagar', 'spender'];
+
+var soldi_cits = ['12Lav) Lavora come se non avessi bisogno di soldi [Satchel Paige] verde',
+'54Lav) Quando un uomo ti dice che è diventato ricco grazie al duro lavoro, chiedigli: “di chi?”.[Don Marquis] rosso',
+'55Lav) “La ricchezza è una condizione relativa: è ricco che guadagna di più di quanto spende e, viceversa, è povero chi ha esigenze superiori al reddito.” (luciano de crescenzo) verde'
+];
+
+////// LAVORO ESSENZIALE PER VITA
+
+// const lavoro_vita_keywords = [scopo, obbligo, pigriz, fannullaggin, indolenza, inerzia, vacanz, noia, noios, ozio, inoperos, sfaticat, tempo libero, passatemp, divertiment, svago, spasso, distrazione, tempo, tempo libero, trovar, se stess, scorger, veder, rivelar, segnal, consegu, ritrov, nobil, fatic, frustrat, frustaz, stress, trovar se stessi,  tempo libero, hobby, passatemp, passion, svago, svagarmi, svagarsi, distrazion, distrarsi, distrarmi, diversiv, divertiment, scacciapensieri, obblig, dover, necessità, necessari, coercizion, costrizion, costrett, obbligat, impost, imposizion, dovere, vincol, obbligator, vincolat, limitat, obbligatorietà, forzat, impegno, impegni, impegnat, indott, tenut, esentat, esonerat, libero di, debitore, in debito, grat, riconoscent, ingrat, irriconoscent, coatt, forzat, vincolat, predispost, prefissat, svincolat, stress, stressat, lavorat];
 
 ////////////////////////////////////////////// LEGAMI
 
@@ -371,7 +424,7 @@ var perdono_amore_cits = ['19 azzurro | Perdona sempre i tuoi nemici. Nulla li f
 
 const tradimento_amore_keywords = ['tradire', 'tradito', 'tradita', 'tradite', 'traditi', 'tradit', 'tradisc', 'tradiment',
 'ingannare', 'ingannat', 'ingann', 'ingannevol', 'infedeltà', 'infedel', 'voltafaccia', 'voltagabbana', 'imbrogli', 'imbrogliare', 'imbrogliat',
-'doppiezza', 'doppio gioco', 'fregare', 'freg', 'fregat', 'corna', 'cornut', 'amante', 'amanti',
+'doppiezza', 'doppio gioco', 'fregare', 'freg', 'fregat', 'corna', 'cornut', 'amante', 'amanti', 'scappatella',
 'cornificare', 'cornifico', 'cornific', 'cornificat', 'incornare', 'incorno', 'incorn', 'incornat', 'adulterio', 'adulter'];
 
 var tradimento_amore_cits = ['44 rosso | “Se qualcuno ti tradisce una volta, è un suo errore, se qualcuno ti tradisce due volte è un tuo errore.” ELEANOR ANNA ROOSEVELT',
@@ -485,6 +538,142 @@ const forza_animo_fallimento_keywords = ['successo', 'success', 'insuccess', 'vi
         'definitiv', 'decisiv', 'ultim', 'risolutiv', 'risol', 'final', 'conclusiv', 'insindicabil', 'esaurient', 'ultimativ',
         'falliment', 'fallir', 'fallis', 'fallit', 'falliv', 'sconfi', 'perdit', 'perder', 'perd', 'non vincere', 'non vinco', 'non riuscire', 'non riesco', 'non raggiungere',
         'fatale', 'mortal', 'inevitabil'];
+//////////////////////////////////////////////// ISPIRAZIONE
+
+const ispirazione_generico_keywords = ['ispirazion', 'progett', 'progettar', 'progettist', 'design', 'designer', 'prototipar', 'user experience', 'experience', 'utent', 'digital', 'service design', 'prodott', 'servizi', 'creativ', 'creativit', 'crear', 'creer', 'creav', 'creazion', 'oper', 'manufatt', 'divin', 'estro', 'fervor', 'inspiraz', 'inspirar', 'inspirat', 'inspirarsi', 'capac', 'incapac', 'capacit', 'incapacità', 'maestria', 'abilità', 'abil', 'abilmente', 'brav', 'bravura', 'male', 'pessimamente', 'ottimamente', 'con successo', 'perfettamente', 'alla perfezione', 'a meraviglia', 'con i piedi', 'virtù', 'talento', 'talentuos', 'inett', 'inettitud', 'mediocrità', 'mediocr', 'astuzi', 'astut', 'stratagemm', 'mezzo', 'modo', 'sistema'];
+
+var ispirazione_generico_cits = ['Rosa 1. “Non ho mai fatto una delle mie scoperte attraverso il processo del pensiero razionale.”Albert Einstein',
+'Rosa 2. ”Il processo creativo è un cocktail di istinto, abilità, cultura e inventiva febbrile. Non è come una droga; è quel particolare stato in cui tutto accade velocemente, un miscuglio di coscienza e incoscienza, di paura e piacere; è un po’ come amare, l’atto fisico dell’amare.” Francis Bacon',
+'Verde 3. “L’ispirazione non è un privilegio dei poeti o degli artisti in genere. C’è, c’è stato e sempre ci sarà un gruppo di individui visitati dall’ispirazione. Sono tutti quelli che coscientemente si scelgono un lavoro e lo svolgono con passione e fantasia.” Wislawa Szymborska',
+'Rosa 4. “Il genio non è riproducibile. L’ispirazione, però, è contagiosa, e multiforme, e anche soltanto vedere, da vicino, la potenza e l’aggressività rese vulnerabili dalla bellezza significa sentirsi ispirati e (in un modo fugace, mortale) riconciliati.” David Foster Wallace',
+'Arancione 5. “È esatto dire che, in mezzo ai bassi interessi del denaro e alla scolorita freddezza dei pensieri volgari che riempiono la nostra vita, le azioni ispirate da una vera passione mancano raramente di produrre il loro effetto, quasi che una divinità propizia si desse premura di condurle per mano.” Stendhal',
+'44AA) L’immaginazione è stata data agli esseri umani per compensarli di ciò che non sono. Il senso dello humor per consolarli di ciò che sono.– Francis Bacon – Viola',
+'Rosso 7. “Non soffocare la tua ispirazione e la tua immaginazione, non diventare lo schiavo del tuo modello.”Van Gogh',
+'Rosa 9. “L\'ispirazione è un risveglio, una fuga da tutte le facoltà umane, e si manifesta in tutte le grandi conquiste artistiche.”Giacomo Puccini',
+'Rosso 13. “L’ispirazione è una farsa che i poeti hanno inventato per darsi importanza.” Jean Anouilh',
+'Arancione L’ispirazione è sempre un visitatore sorprendente. (John O’Donohue)',
+'Blu L’ispirazione viene col lavorare ogni giorno. (Charles Baudelaire)',
+'41AA) Nessuno ha mai scritto, dipinto, scolpito, modellato, costruito o inventato se non per uscire letteralmente dall’inferno. – Antonin Artaud – Rosso',
+'36AA) La creatività scaturisce dalla tensione tra spontaneità e limiti. Questi ultimi, come argini di un fiume, costringono la creatività nelle varie forme che sono essenziali all’opera d’arte o al poema.– Rollo May – Blu (tono esplicativo)',
+'Blu Diffidare dell’ispirazione e confidare nel lavoro, come Baudelaire o Flaubert, non è soccombere all’orgoglio, ma sottomettersi alle condizioni della grazia. Come il mistico alla mortificazione ascetica. (Nicolás Gómez Dávila)',
+'Arancione Un’intuizione è la creatività che cerca di dirti qualcosa. (Frank Capra)',
+'23AA) Non puoi aspettare che arrivi l’ispirazione. Devi andarne in cerca con un bastone.– Jack London – Blu',
+'22AA) Il principale nemico della creatività è il buonsenso.– Pablo Picasso – Rosso',
+'38AA) Più si ragiona meno si crea.– Raymond Chandler – Blu',
+'57AA) Le migliori idee sono quelle nate per scherzo. Rendi il tuo modo di ragionare il più spiritoso e divertente possibile.– David Ogilvy – Arancione'
+];
+
+///////// COME SCRIVERE LIBRO
+
+const libro_keywords = ['libro', 'libr', 'letterat', 'scritt', 'romanz', 'parol', 'sintass', 'legg', 'lettura', 'letto', 'letta', 'letti', 'lette', 'stendere', 'stend', 'stilare', 'stil', 'per iscritto', 'scribacch', 'letter', 'nero su bianco', 'penna', 'penne', 'piuma', 'piume', 'calamai', 'biro', 'scrittoi', 'scrivani', 'taccuin', 'blocco note', 'block notes', 'note', 'annot', 'agend', 'notebook', 'pagin', 'labor limae', 'riscriv', 'riscritt', 'fogli', 'manoscritt', 'rilegar', 'rilegat', 'cucit', 'cucir', 'copertin', 'volum', 'tomo', 'tomi', 'testo', 'testi', 'pubblicar', 'pubblicaz', 'pubblicat', 'batter', 'frase', 'frasi', 'letterari', 'epistol', 'autor', 'narrator', 'filologi', 'filolog', 'lingua', 'lingue'];
+
+var libro_cits = ['Viola 10. “I veri libri devono essere figli non della luce e delle chiacchiere ma dell’oscurità e del silenzio.”Marcel Proust',
+'Rosa 12. “Scrivere non è niente più di un sogno che porta consiglio.”  Jorge Luis Borges'
+];
+
+//////// POESIA
+
+const poesia_keywords = ['poesia', 'poesi', 'poem', 'poet', 'parafras', 'vers', 'strof', 'profet', 'vate', 'leopardi', 'pascoli', 'd\'annunzio', 'sylvia plath', 'rime', 'rima', 'rimar', 'liric', 'parnaso', 'poetic'];
+
+var poesia_cits = ['Rosso 13. “L’ispirazione è una farsa che i poeti hanno inventato per darsi importanza.” Jean Anouilh',
+'Arancione 14. “Il poeta è colui che ispira ben più di colui che è ispirato.” Paul Eluard',
+'Arancione 15. “In questo mestiere di poetare non è la calda ispirazione che crea l’idea felice, ma l’idea felice che crea il calore ispirato.” Cesare Pavese',
+'Viola 17. “Capii ben presto che i poeti componevano le loro opere non facendo uso del cervello ma per una certa disposizione naturale, per una sorta di ispirazione, come gli indovini e i profeti. Anche costoro, infatti, dicono molte e belle cose, ma senza rendersene conto.”Socrate',
+'36AA) La creatività scaturisce dalla tensione tra spontaneità e limiti. Questi ultimi, come argini di un fiume, costringono la creatività nelle varie forme che sono essenziali all’opera d’arte o al poema.– Rollo May – Blu (tono esplicativo)'
+];
+
+//////// ISOLAMENTO
+
+const isolamento_keywords = ['silenzio', 'solitud', 'sol', 'isolam', 'isolat', 'isolare', 'isolarmi', 'isolarci', 'isolarsi', 'isolarvi', 'isolarti', 'compagnia', 'insieme', 'quiete', 'rumore', 'rumoro', 'taciturnità', 'pace', 'folla', 'frastuon', 'disturb', 'casin', 'chiasso', 'baccano', 'cagnara', 'zitt', 'mutism', 'mut', 'clamore', 'fracasso', 'gazzarra', 'pandemonio', 'schiamazzo', 'strepito', 'emarginat', 'emarginazion', 'emarginar', 'isolant'];
+
+var isolamento_cits = ['Viola 10. “I veri libri devono essere figli non della luce e delle chiacchiere ma dell’oscurità e del silenzio.” Marcel Proust',
+'Viola 6. “Quell’istinto ispirato dall\'alto che costituisce il genio non vive che nella indipendenza e nella solitudine.” Ugo Foscolo'
+];
+
+///////  AMORE ISPIRAZIONE
+
+const amore_ispirazione_keywords = ['amar', 'amor', 'amat', 'donn', 'innamor', 'attraz', 'attrarr', 'attratt', 'seduz', 'sedott', 'sedurre', 'cuore', 'anim', 'petto', 'sessualità', 'adorazion', 'ador', 'affetto', 'affetti', 'affezion', 'astio', 'odio', 'avversion', 'avvers', 'odiat', 'ardor', 'concupiscenz', 'desider', 'eccitaz', 'fiamm', 'frenesi', 'fuoco', 'passion', 'voluttà', 'disgusto', 'ostil', 'ribrezz', 'repulsion', 'schif', 'freddezza',
+'amoregg', 'flirt', 'moros', 'fidanzat', 'spasimant', 'avventur', 'stor', 'tresca', 'cupidgia', 'smania', 'antipatia'];
+
+var amore_ispirazione_cits = ['Rosso Le donne ci ispirano il desiderio di creare capolavori e ci impediscono sempre di realizzarli. (Oscar Wilde)',
+'Rosso Diffidiamo del popolo, del buonsenso, del cuore, dell’ispirazione e dell’evidenza. (Charles Baudelaire)'
+];
+
+/////// REGISTA
+
+const regista_keywords = ['regist', 'sceneggiator', 'sceneggiatric', 'sceneggiatur', 'regia', 'video', 'cinema', 'film', 'filmografi', 'cinematografic', 'inquadratur', 'camera', 'videocamera', 'fotocamer'];
+
+var regista_cits = ['32AA) Per fare un film di successo non basta avere un mucchio di idee: è indispensabile presentarle con cura e avere una totale consapevolezza della forma. – Alfred Hitchock – Blu'];
+
+/////// ARTISTA
+
+const artista_keywords = ['artist', 'arte', 'arti', 'artistic', 'artefatt', 'scultur', 'scultor', 'scultric', 'artefar', 'argill', 'modellar', 'modell', 'modellat', 'artigian', 'artific'];
+
+var artista_cits = ['Verde 3. “L’ispirazione non è un privilegio dei poeti o degli artisti in genere. C’è, c’è stato e sempre ci sarà un gruppo di individui visitati dall’ispirazione. Sono tutti quelli che coscientemente si scelgono un lavoro e lo svolgono con passione e fantasia.” Wislawa Szymborska',
+'Rosso 7. “Non soffocare la tua ispirazione e la tua immaginazione, non diventare lo schiavo del tuo modello.” Van Gogh',
+'Rosa 9. “L\'ispirazione è un risveglio, una fuga da tutte le facoltà umane, e si manifesta in tutte le grandi conquiste artistiche.” Giacomo Puccini',
+'Verde La lucidità di un artista è tanto involontaria quanto la sua ispirazione. (Nicolás Gómez Dávila)',
+'36AA) La creatività scaturisce dalla tensione tra spontaneità e limiti. Questi ultimi, come argini di un fiume, costringono la creatività nelle varie forme che sono essenziali all’opera d’arte o al poema.– Rollo May – Blu (tono esplicativo)',
+'20AA) Le regole sono ciò che gli artisti rompono; ciò che è memorabile non è mai nato da una formula.– Bill Bernbach – rosso',
+'43AA) L’arte non è il bello ma vedere le cose in maniera diversa. – Virginia Woolf – Verde'
+];
+
+////// PITTORE
+
+const pittore_keywords = ['pittor', 'pittric', 'pittur', 'pitturar', 'quadr', 'acrilic', 'olio', 'colori a olio', 'acrilici', 'tempere', 'macchi', 'macchiaiol', 'impressionismo', 'impressionist', 'pittoric', 'astratt', 'astrattism'];
+
+var pittore_cits = ['Rosso 7. “Non soffocare la tua ispirazione e la tua immaginazione, non diventare lo schiavo del tuo modello.”Van Gogh',
+'Arancione 16. “Tutti i pittori ispirati sono impressionisti, anche se è vero che alcuni impressionisti non sono ispirati.” Joaquin Sorolla'
+];
+
+////// DISEGNATORE
+
+const disegnatore_keywords = ['disegn', 'disegnar', 'matit', 'disegnator', 'disegnatric', 'pastell'];
+
+var disegnatore_cits = ['40AA) In un altro tempo ero un grande disegnatore, ma ho studiato in un sistema scolastico e con un insegnante che mi hanno fatto perdere del tutto il mio talento – Franz Kafka – Rosso'];
+
+////// RAZIOCINIO
+
+const raziocinio_keywords = ['raziocinio', 'ragione', 'ragionar', 'ragionato', 'razionalizzar', 'razionalizz', 'razional', 'disciplin', 'disciplinat', 'norma', 'norme', 'normat', 'rigidit', 'mente', 'buonsenso', 'metod', 'metodic', 'metodocità', 'istint', 'lucid', 'lucidità', 'schiav', 'repression', 'repress', 'reprimer', 'senso pratico', 'sensat', 'oggettiv', 'praticità', 'pratic', 'pragmatic', 'folgoraz', 'illuminaz', 'illuminat', 'folgorat', 'infervorat', 'infervorar'];
+
+var raziocinio_cits = ['Rosa 1. “Non ho mai fatto una delle mie scoperte attraverso il processo del pensiero razionale.” Albert Einstein',
+'Verde La lucidità di un artista è tanto involontaria quanto la sua ispirazione. (Nicolás Gómez Dávila)',
+'Rosso 7. “Non soffocare la tua ispirazione e la tua immaginazione, non diventare lo schiavo del tuo modello.” Van Gogh',
+'34AA) La creatività non fa a pugni con la disciplina.– Johan Cruijff – Blu',
+'20AA) Le regole sono ciò che gli artisti rompono; ciò che è memorabile non è mai nato da una formula.– Bill Bernbach – rosso',
+'24AA) La ragione non sovrasta mai l’immaginazione, mentre l’immaginazione spodesta frequentemente la ragione.– Blaise Pascal – Arancione',
+'38AA) Più si ragiona meno si crea.– Raymond Chandler – Blu',
+'35AA) Il genio è la punta estrema del senso pratico.– Jean Cocteau – Blu',
+'26AA) Una scoperta è un misto di istinto e di metodo.– Edmund Husserl – Blu',
+'Rosso Diffidiamo del popolo, del buonsenso, del cuore, dell’ispirazione e dell’evidenza.(Charles Baudelaire)'
+];
+
+////// ARCHITETTURA
+
+const architettura_keywords = ['architettur', 'architett', 'casa', 'abitazion', 'pont', 'strad', 'costruir', 'costruit', 'costruzion', 'calatrava', 'renzo piano', 'van der rohe', 'eriger', 'erett', 'innalzar', 'innalzat', 'edificar', 'edificazion', 'edificio', 'edifici', 'edificat', 'edificherò', 'costruirò', 'edificherai', 'edificherà', 'edificheremo', 'edificherete', 'edificheranno', 'edific',' costruirò', 'costruirai', 'costruirà', 'costruiremo', 'costruirete', 'costruiranno', 'costrui', 'innalzerò', 'innalzerai', 'innalzerà', 'costruivo', 'costruivamo', 'edificavamo', 'edificavo', 'innalzeremo', 'innalzerete', 'innalzeranno', 'innalz', 'grattaciel', 'palazzo', 'struttur', 'struttural'];
+
+var architettura_cits = ['Arancione 8. “Volete sapere dove ho trovato la mia ispirazione? In un albero; l\'albero sostiene i grossi rami, questi i rami più piccoli e i rametti sostengono le foglie. E ogni singola parte cresce armoniosa, magnifica.” Antoni Gaudì',
+'Arancione 11. “Meravigliosa ventura quella degli architetti, concessa da Dio: costruire la Sua casa e costruire per gli uomini, nella Sua ispirazione, la loro casa, il tempio della famiglia.” Gio Ponti'
+];
+
+////// SOFFERENZA ISPIRAZIONE
+
+const sofferenza_ispirazione_keywords = ['inferno', 'infernal', 'disperazion', 'disperat', 'dolor', 'doloros', 'dolorant', 'addolorat', 'addolorarmi', 'disperat', 'disperar', 'disperat', 'disperarmi', 'disperarsi', 'disper', 'struggersi', 'struggermi', 'strugg', 'salvezz', 'salvarmi', 'salvarsi', 'salver', 'salvav', 'salvat', 'salv', 'insoddisfaz', 'insoddisfatt', 'soddisfatt', 'soddisfazion', 'tristezz', 'trist', 'malinconic', 'malinconi',
+'mestizia', 'mest', 'sofferent', 'soffert', 'soffer', 'soffrir', 'soffro', 'soffri', 'soffriv', 'soffrir', 'soffr'];
+
+var sofferenza_ispirazione_cits = ['41AA) Nessuno ha mai scritto, dipinto, scolpito, modellato, costruito o inventato se non per uscire letteralmente dall’inferno.– Antonin Artaud – Rosso',
+'51AA) La salvezza umana giace nelle mani dei creativi insoddisfatti. – Martin Luther King – Viola',
+'Verde Noi generalmente cambiamo noi stessi per due ragioni: ispirazione o disperazione. (Jim Rohn)'
+];
+
+////// CAMBIARE MONDO
+
+const cambiare_mondo_keywords = ['fare qualcosa di grande', 'cambiare il mondo', 'rivoluzion', 'rivoluzionar', 'rivoluzionari', 'rivoluzionat', 'cambierò il mondo', 'cambiato il mondo', 'fare qualcosa di magnifico', 'fare qualcosa di meraviglioso', 'fare qualcosa di grandioso', 'qualcosa di importante', 'cosa grandiosa', 'cose grandiose', 'cose importanti', 'cose magnifiche', 'cosa magnifica', 'cosa meravigliosa', 'cose meravigliose'];
+
+var cambiare_mondo_cits = ['29AA) Chi vuole cambiare il mondo cambi prima se stesso.– Socrate – Rosso'];
+
+///// IDEE
+
 
 
 //////////////////////////////////////////// MORTE
@@ -680,7 +869,7 @@ var cambiamento_cits = ['1eti) “In etica come in altri campi del pensiero uman
 
 ////// ETICA E RELIGIONE
 
-const etica_religio_keywords = ['religio', 'fede', 'valor', 'morte', 'creder', 'laic', 'credenz', 'cred', 'educaz', 'aldilà', 'culto', 'mistic', 'venera', 'adora', 'venero', 'adoro', 'devoz', 'aldilà', 'Gesù', 'Cristo', 'Madonna', 'alla', 'islam', 'cattolic', 'ortodoss', 'musulman', 'ateo', 'atei', 'ateismo', 'monoteis', 'politeis', 'profess', 'messa', 'rito religioso', 'riti religiosi', 'educaz', 'punizion', 'post morte', 'post mortem', 'dopo la morte', 'Dio', 'dei', 'buddha', 'rastafar', 'reincarn'];
+const etica_religio_keywords = ['religio', 'fede', 'valor', 'morte', 'creder', 'laic', 'credenz', 'cred', 'educaz', 'aldilà', 'culto', 'mistic', 'venera', 'adora', 'venero', 'adoro', 'devoz', 'aldilà', 'Gesù', 'Cristo', 'Madonna', 'allah akbar', 'allah akhbar', 'akhbar', 'islam', 'maometto', 'cattolic', 'ortodoss', 'musulman', 'ateo', 'atei', 'ateismo', 'monoteis', 'politeis', 'profess', 'messa', 'rito religioso', 'riti religiosi', 'educaz', 'punizion', 'post morte', 'post mortem', 'dopo la morte', 'Dio', 'dei', 'buddha', 'rastafar', 'reincarn'];
 
 var etica_religio_cits = ['3eti) “Il male assoluto del nostro tempo è di non credere nei valori. Non ha importanza che siano religiosi oppure laici. I giovani devono credere in qualcosa di positivo e la vita merita di essere vissuta solo se crediamo nei valori, perché questi rimangono anche dopo la nostra morte.” [Rita Levi Montalcini] viola',
 '4eti) “L’etica di un non credente è piú pura e disinteressata di quella di un credente che si comporta bene perché spera nella ricompensa e teme la punizione nell’aldilà.”  [Margherita Hack] azzurro',
@@ -718,7 +907,7 @@ var etica_cultura_cits = ['13eti)“Chi ha cari i valori della cultura non può 
 ////// ABORTO
 
 const etica_morale_aborto_keywords = ['abort', 'interruzione di gravidanza', 'incint', 'rimanere incinta', 'rimanere incinto', 'rimanere incinti', 'rimanere incinte', 'essere incinta', 'essere incinto', 'essere incinti', 'incint',
-'madr', 'mamm', 'figl', 'nasc', 'venir alla luce', 'partorir', 'uccid', 'mese', 'mesi', 'pancia', 'stato di attesa', 'attend', 'bambin', 'feto', 'feti', 'infanticid', 'neonat', 'bebè', 'lattant', 'embrion', 'pargol'];
+'madr', 'mamm', 'figl', 'nasc', 'venir alla luce', 'venire alla luce', 'partorir', 'uccid', 'mese', 'mesi', 'pancia', 'stato di attesa', 'attendo', 'attende', 'bambin', 'feto', 'feti', 'infanticid', 'neonat', 'bebè', 'lattant', 'embrion', 'pargol'];
 
 var etica_morale_aborto_cits = ['15eti) “Se gli uomini potessero restare incinti, l\'aborto diventerebbe un sacramento.” [Flo Kennedy] rosso',
 '16eti) “Come mai quando si tratta di noi, è un aborto, e quando si tratta di polli, è un\'omelette?” [George Carlin] rosa',
@@ -741,7 +930,7 @@ var etica_morale_eutanasia_cits = ['21eti) “Proprio come sceglierò la mia nav
 
 /////// OMOSESSUALE
 
-const etica_omosessuale_keywords = ['omosess', 'gay', 'amare un altro uomo', 'lesbic', 'amare un altra donna', 'froc', 'mentalità chiusa', 'amare alla luce', 'nascondersi', 'giudizio degli altri', 'guardati male', 'guardato male', 'effusioni in pubblico', 'baciar', 'eterosess', 'esprimersi liberamente', 'confessar', 'dichiarar', 'manifestar', 'amme', 'esternar', 'coppie gay', 'coppie gay nei film', 'coppie gay in giro'];
+const etica_omosessuale_keywords = ['omosess', 'gay', 'amare un altro uomo', 'lesbic', 'amare un altra donna', 'froc', 'mentalità chiusa', 'amare alla luce', 'nascondersi', 'giudizio degli altri', 'guardati male', 'guardato male', 'effusioni in pubblico', 'baciar', 'eterosess', 'esprimersi liberamente', 'confessar', 'dichiarar', 'manifestar', 'amme', 'esternar', 'coppie gay', 'coppie gay nei film', 'coppie gay in giro', 'omofob'];
 
 var etica_omosessuale_cits = ['26eti) C\'è un\'associazione in Francia [...] che auspica, per gli omosessuali, l\'abolizione del ridicolo, e il riconoscimento della "parità dei diritti". Forse hanno ragione, chi lo sa. E forse, un giorno, la spunteranno. Ma vedrete, non ci sarà più nessun gusto a peccare di questo peccato. E non dovendo più nascondersi, tutti capiranno che tanto vale amare le donne. (Mario Soldati) azzurro',
 '27eti) C\'è un\'ultima cosa che vorrei dire: gli omosessuali non trovano un posto nell\'intera società, che possa dar loro una struttura nella quale collocarsi. Non hanno la struttura del matrimonio, o quella della famiglia. La storia può servire per offrire agli omosessuali quelle strutture che non hanno. (George Mosse) azzurro',
@@ -771,7 +960,7 @@ var violenza_cits = ['33eti) La violenza è l’ultimo rifugio degli incapaci. (
 
 //////// ABUSI DI POTERE
 
-const abuso_potere_keywords = ['eccesso', 'smodatezz', 'uso smodato', 'illecito', 'disordin', 'scandal', 'prepotenz', 'media', 'social', 'tv', 'televisione', 'telegiornale', 'deputat', 'president', 'capo', 'prendere la decisione', 'prendere le decisioni', 'discorso', 'carismatic', 'convincer'];
+const abuso_potere_keywords = ['eccesso', 'smodatezz', 'uso smodato', 'illecito', 'disordin', 'scandal', 'prepotenz', 'media', 'social', 'tv', 'televisione', 'telegiornale', 'deputat', 'president', 'capo', 'prendere la decisione', 'prendere le decisioni', 'discorso', 'carismatic', 'convincer', 'abuso di potere', 'abuso di poteri'];
 
 var abuso_potere_cits = ['38eti) Usate, non abusate… né l’astinenza né l’eccesso hanno mai reso l’uomo felice. (Voltaire) verde',
 '39eti) Abbiamo bisogno della libertà per evitare gli abusi del potere dello Stato e abbiamo bisogno dello Stato per evitare l’abuso della libertà (Karl Popper) rosso',
@@ -780,7 +969,7 @@ var abuso_potere_cits = ['38eti) Usate, non abusate… né l’astinenza né l�
 
 //////// ABUSO DROGA
 
-const abuso_droga_keywords = ['tossic', 'eroin', 'erba', 'drog', 'vizi', 'illegal', 'dipendenz', 'marijuana', 'maria', 'gangia', 'stupefacenti'];
+const abuso_droga_keywords = ['tossic', 'eroin', 'erba', 'drog', 'vizi', 'illegal', 'dipendenz', 'marijuana', 'maria', 'gangia', 'stupefacenti', 'bere', 'bev', 'alcool', 'alcolici', 'vino', 'vini', 'liquor', 'fumo', 'fumi', 'fuma', 'sigarett'];
 
 var abuso_droga_cits = ['41eti) L’abuso della droga non è una malattia, ma una decisione, come quella di andare incontro ad una macchina che si muove. Questo non si chiama malattia, ma mancanza di giudizio.(Philip K. Dick) viola',
 '53eti) Se decidi di smettere di bere, fumare e fare l’amore, non è che vivi più a lungo: la vita ti sembra più lunga. (Clement Freud) verde',

@@ -571,6 +571,24 @@ var libro_cits = ['Viola 10. “I veri libri devono essere figli non della luce 
 'Rosa 12. “Scrivere non è niente più di un sogno che porta consiglio.”  Jorge Luis Borges'
 ];
 
+////// SCIENZA ISPIRAZIONE
+
+const scienza_ispirazione_keywords = ['scienz', 'scienziat','laborat', 'spazi', 'spazial', 'stell', 'costellazion', 'galassi', 'laboratori', 'esperimento scientifico', 'esperimenti scientifici', 'fenomeni naturali', 'fenomeno naturale', 'chimic', 'biolog', 'alchimi', 'astrofisic', 'fisica', 'geolog', 'navicell', 'aerospazi', 'astronav', 'astronaut'];
+
+var scienza_ispirazione_cits = ['56AA) Uno scienziato nel suo laboratorio non è soltanto un tecnico, è anche un fanciullo posto di fronte a fenomeni naturali che lo impressionano come un racconto di fate.– Marie Curie – Arancione'];
+
+///// LAVORO ISPIRAZIONE
+
+const lavoro_ispirazione_keywords = ['lavor', 'lavorar', 'lavorat', 'lavorator', 'lavorer', 'lavorav', 'uso', 'impratichirsi', 'fare pratica', 'far pratica', 'esercitarsi', 'esercitarmi', 'esercitazion', 'eserciter', 'esercitava', 'attività', 'attivarsi', 'attivarmi', 'attivarci', 'attivare', 'attiver', 'attivav', 'sperimentar', 'esperiment', 'esperienz', 'mestier', 'profession', 'tecnic', 'operativ', 'operazion'];
+
+var lavoro_ispirazione_cits = ['Blu Diffidare dell’ispirazione e confidare nel lavoro, come Baudelaire o Flaubert, non è soccombere all’orgoglio, ma sottomettersi alle condizioni della grazia. Come il mistico alla mortificazione ascetica. (Nicolás Gómez Dávila)',
+'Blu L’ispirazione viene col lavorare ogni giorno. (Charles Baudelaire)',
+'35AA) Il genio è la punta estrema del senso pratico. – Jean Cocteau – Blu',
+'26AA) Una scoperta è un misto di istinto e di metodo. – Edmund Husserl – Blu',
+'53AA) La creatività si acuisce nella misura in cui la sviluppiamo con l’uso.– Napoleon Hill – Blu',
+'33AA) Creatività è solo un altro nome delle normali attività. Qualsiasi attività diventa creativa quando chi la svolge ha cura di farla bene, o meglio. – John Updike – Verde'
+];
+
 //////// POESIA
 
 const poesia_keywords = ['poesia', 'poesi', 'poem', 'poet', 'parafras', 'vers', 'strof', 'profet', 'vate', 'leopardi', 'pascoli', 'd\'annunzio', 'sylvia plath', 'rime', 'rima', 'rimar', 'liric', 'parnaso', 'poetic'];
@@ -674,7 +692,68 @@ var cambiare_mondo_cits = ['29AA) Chi vuole cambiare il mondo cambi prima se ste
 
 ///// IDEE
 
+const idee_keywords = ['idee', 'idea', 'ideare', 'ideon', 'ideat', 'ideerò', 'ideeremo', 'ideerai', 'ideerà', 'ideeranno', 'ideavo', 'ideav', 'chiar', 'chiarezza', 'intuizion', 'intuir', 'intuit', 'intuiv', 'intuir', 'spunto', 'spunti'];
 
+var idee_cits = ['28AA) Le idee chiare e precise sono le più pericolose, perché non si osa più cambiarle.– André Gide – Rosso',
+'Arancione Un’intuizione è la creatività che cerca di dirti qualcosa. (Frank Capra)',
+'31AA) Spesso le idee si accendono l’una con l’altra, come scintille elettriche.– Friedrich Engels – Arancione',
+'25AA) Niente al mondo è così potente quanto un’idea della quale sia giunto il tempo.– Victor Hugo – Rosa',
+'57AA) Le migliori idee sono quelle nate per scherzo. Rendi il tuo modo di ragionare il più spiritoso e divertente possibile.– David Ogilvy – Arancione',
+'49AA) Fate l’amore con le idee finché vi piace; ma quanto a sposarle, andateci cauti.– Arturo Graf – Viola',
+'39AA) Le idee più grandi sono le più semplici.– William Golding – Verde'
+];
+
+////// FOLLIA
+
+const follia_keywords = ['folle', 'folli', 'follia', 'pazzia', 'pazz', 'instabilità mentale', 'problema mentale', 'non lucido', 'impazzir', 'fuori di testa'];
+
+var follia_cits = ['21AA) Adoro gli esperimenti folli. Li faccio in continuazione.– Charles Darwin – rosa',
+'22AA) Il principale nemico della creatività è il buonsenso.– Pablo Picasso – Rosso',
+'Verde La lucidità di un artista è tanto involontaria quanto la sua ispirazione. (Nicolás Gómez Dávila)'
+];
+
+////// CULTURA ISPIRAZIONE
+
+const cultura_ispirazione_keywords = ['cultur', 'conoscenz', 'colt', 'conoscer', 'conoscitor', 'sapienz', 'sapient', 'apprender', 'apprendiment', 'istruir', 'istruit', 'istruzion', 'scuol', 'scolastic', 'universit', 'saper'];
+
+var cultura_ispirazione_cits = ['31AA) La fantasia è come la marmellata, bisogna che sia spalmata su una solida fetta di pane.– Italo Calvino – Blu',
+'30AA) Il genio senza istruzione è come l’argento dentro la miniera. – Benjamin Franklin – Blu',
+'47AA) È impossibile vedere l’angelo se prima non possiedi un’idea di angelo.– James Hillman – Verde',
+'54AA) Non già conoscere molte cose, ma mettere molte cose in contatto, questo è uno dei primi gradini dello spirito creativo.– Hugo von Hofmannsthal – Verde'
+];
+
+////// GENIO ISPIRAZIONE
+
+const genio_ispirazione_keywords = ['genio', 'genialit', 'genial', 'geniett', 'geni'];
+
+var genio_ispirazione_cits = ['27AA) Nella sua grandezza, il genio disdegna le strade battute e cerca regioni ancora inesplorate. – Abraham Lincoln – Verde',
+'30AA) Il genio senza istruzione è come l’argento dentro la miniera.– Benjamin Franklin – Blu'
+];
+
+////// ORIGINALITA'
+
+const originalità_keywords = ['original', 'originalit', 'nuov', 'novit', 'innovativ', 'innovar'];
+
+var originalità_cits = ['27AA) Nella sua grandezza, il genio disdegna le strade battute e cerca regioni ancora inesplorate.– Abraham Lincoln – Verde',
+'37AA) La creatività vuole coraggio.– Henri Matisse – Rosa',
+'39AA) Le idee più grandi sono le più semplici. – William Golding – Verde',
+'48AA) La creatività non sta nel trovare nuovi paesaggi, ma nell’avere occhi nuovi. Marcel Proust – Arancione',
+'43AA) L’arte non è il bello ma vedere le cose in maniera diversa.– Virginia Woolf – Verde'
+];
+
+///// VERITA' REALTA'
+
+const verità_realtà_keywords = ['verit', 'ver', 'realt', 'real'];
+
+var verità_realtà_cits = ['55AA) La realtà non è mai come la si vede: la verità è soprattutto immaginazione.– René Magritte – Rosa'];
+
+///// PAURA FALLIRE
+
+const paura_fallire_keywords = ['paur', 'timor', 'fallir', 'fallit', 'falliment', 'fallisc', 'falliv', 'tem', 'temev', 'temer', 'terror', 'perder', 'perdit', 'vinc', 'vincit', 'trionf', 'sconfitt', 'abiss'];
+
+var paura_fallire_cits = ['52AA) Un aspetto essenziale della creatività è non avere paura di fallire.– Edwin Land – Blu',
+'50AA) La forma di scoraggiamento più dannosa alla creatività è quella che ci viene dai nostri cari.– Alex Osborn – Viola'
+];
 
 //////////////////////////////////////////// MORTE
 

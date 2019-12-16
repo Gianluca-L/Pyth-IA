@@ -1452,6 +1452,44 @@ function startPythia() {
             }
           });
         }
+        else if (scienza_ispirazione_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          var scienza_ispirazione_cit = scienza_ispirazione_cits[Math.round(Math.random() * (scienza_ispirazione_cits.length -1))];
+          audios[2].onended(function() {
+            setTimeout(playCit, 3000);
+
+            function playCit() {
+              //var scienza_ispirazione_audio = Math.round(random([4, 5]));
+              //audios[scienza_ispirazione_audio].play();
+              ispirazione_var = false;
+              //audios[scienza_ispirazione_audio].onended(farewell);
+              alert(scienza_ispirazione_cit);
+              farewell();
+              final_sentence = true;
+            }
+          });
+        }
+        else if (lavoro_ispirazione_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          var lavoro_ispirazione_cit = lavoro_ispirazione_cits[Math.round(Math.random() * (lavoro_ispirazione_cits.length -1))];
+          audios[2].onended(function() {
+            setTimeout(playCit, 3000);
+
+            function playCit() {
+              //var lavoro_ispirazione_audio = Math.round(random([4, 5]));
+              //audios[lavoro_ispirazione_audio].play();
+              ispirazione_var = false;
+              //audios[lavoro_ispirazione_audio].onended(farewell);
+              alert(lavoro_ispirazione_cit);
+              farewell();
+              final_sentence = true;
+            }
+          });
+        }
         else if (poesia_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           audios[2].play();
@@ -1642,6 +1680,140 @@ function startPythia() {
             }
           });
         }
+        else if (idee_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          var idee_cit = idee_cits[Math.round(Math.random() * (idee_cits.length -1))];
+          audios[2].onended(function() {
+            setTimeout(playCit, 3000);
+
+            function playCit() {
+              //var idee_audio = Math.round(random([4, 5]));
+              //audios[idee_audio].play();
+              ispirazione_var = false;
+              //audios[idee_audio].onended(farewell);
+              alert(idee_cit);
+              farewell();
+              final_sentence = true;
+            }
+          });
+        }
+        else if (follia_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          var follia_cit = follia_cits[Math.round(Math.random() * (follia_cits.length -1))];
+          audios[2].onended(function() {
+            setTimeout(playCit, 3000);
+
+            function playCit() {
+              //var follia_audio = Math.round(random([4, 5]));
+              //audios[follia_audio].play();
+              ispirazione_var = false;
+              //audios[follia_audio].onended(farewell);
+              alert(follia_cit);
+              farewell();
+              final_sentence = true;
+            }
+          });
+        }
+        else if (cultura_ispirazione_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          var cultura_ispirazione_cit = cultura_ispirazione_cits[Math.round(Math.random() * (cultura_ispirazione_cits.length -1))];
+          audios[2].onended(function() {
+            setTimeout(playCit, 3000);
+
+            function playCit() {
+              //var cultura_ispirazione_audio = Math.round(random([4, 5]));
+              //audios[cultura_ispirazione_audio].play();
+              ispirazione_var = false;
+              //audios[cultura_ispirazione_audio].onended(farewell);
+              alert(cultura_ispirazione_cit);
+              farewell();
+              final_sentence = true;
+            }
+          });
+        }
+        else if (genio_ispirazione_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          var genio_ispirazione_cit = genio_ispirazione_cits[Math.round(Math.random() * (genio_ispirazione_cits.length -1))];
+          audios[2].onended(function() {
+            setTimeout(playCit, 3000);
+
+            function playCit() {
+              //var genio_ispirazione_audio = Math.round(random([4, 5]));
+              //audios[genio_ispirazione_audio].play();
+              ispirazione_var = false;
+              //audios[genio_ispirazione_audio].onended(farewell);
+              alert(genio_ispirazione_cit);
+              farewell();
+              final_sentence = true;
+            }
+          });
+        }
+        else if (originalità_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          var originalità_cit = originalità_cits[Math.round(Math.random() * (originalità_cits.length -1))];
+          audios[2].onended(function() {
+            setTimeout(playCit, 3000);
+
+            function playCit() {
+              //var originalità_audio = Math.round(random([4, 5]));
+              //audios[originalità_audio].play();
+              ispirazione_var = false;
+              //audios[originalità_audio].onended(farewell);
+              alert(originalità_cit);
+              farewell();
+              final_sentence = true;
+            }
+          });
+        }
+        else if (verità_realtà_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          var verità_realtà_cit = verità_realtà_cits[Math.round(Math.random() * (verità_realtà_cits.length -1))];
+          audios[2].onended(function() {
+            setTimeout(playCit, 3000);
+
+            function playCit() {
+              //var verità_realtà_audio = Math.round(random([4, 5]));
+              //audios[verità_realtà_audio].play();
+              ispirazione_var = false;
+              //audios[verità_realtà_audio].onended(farewell);
+              alert(verità_realtà_cit);
+              farewell();
+              final_sentence = true;
+            }
+          });
+        }
+        else if (paura_fallire_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          var paura_fallire_cit = paura_fallire_cits[Math.round(Math.random() * (paura_fallire_cits.length -1))];
+          audios[2].onended(function() {
+            setTimeout(playCit, 3000);
+
+            function playCit() {
+              //var paura_fallire_audio = Math.round(random([4, 5]));
+              //audios[paura_fallire_audio].play();
+              ispirazione_var = false;
+              //audios[paura_fallire_audio].onended(farewell);
+              alert(paura_fallire_cit);
+              farewell();
+              final_sentence = true;
+            }
+          });
+        }
+
         else if (ispirazione_generico_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           audios[2].play();

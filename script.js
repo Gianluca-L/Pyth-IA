@@ -617,6 +617,14 @@ var amore_ispirazione_cits = ['Rosso Le donne ci ispirano il desiderio di creare
 'Rosso Diffidiamo del popolo, del buonsenso, del cuore, dell’ispirazione e dell’evidenza. (Charles Baudelaire)'
 ];
 
+/////// CANZONE
+
+const canzone_keywords = ['musica', 'comporre', 'compon', 'compost', 'compositor', 'compositric', 'canzon', 'music', 'melod', 'sinfon', 'armonic', 'pianof', 'chitarr', 'flaut', 'clavicembal', 'organ', 'fisarmonic', 'tambur', 'cantant', 'strumento musicale', 'strumenti musicali', 'tromba', 'batteria', 'timpan', 'note musicali', 'nota musicale', 'spartit', 'direttore d\'orchestra', 'orchestra', 'suon', 'si bemolle', 'diesis', 'chiave di violino', 'chiave di basso', 'basso', 'bassista', 'violin', 'viola', 'viole', 'violonc', 'triangol', 'microfon', 'vocal', 'voce', 'voci', 'quattro mani', 'mozart', 'beethoven', 'sciopen', 'chopin', 'arrangiament', 'musica elettronica', 'accordi', 'accordat', 'accordar', 'partitur', 'elettronic', 'acustic', 'lounge', 'jazz', 'pop', 'rock', 'soft', 'a corda', 'a fiato', 'dj', 'tastier', 'percussion', 'ottoni', 'ocarine'];
+
+var canzone_cits = ['Blu 18. “Il grande compositore non si mette al lavoro perché gli è venuta l’ispirazione, ma gli viene l’ispirazione perché è al lavoro.”Ernest Newman',
+'Verde 21. “La vera musica deve rispecchiare il pensiero e l\'ispirazione della gente e dei tempi. La mia gente sono gli Americani e il mio tempo è oggi.”George Gershwin'
+];
+
 /////// REGISTA
 
 const regista_keywords = ['regist', 'sceneggiator', 'sceneggiatric', 'sceneggiatur', 'regia', 'video', 'cinema', 'film', 'filmografi', 'cinematografic', 'inquadratur', 'camera', 'videocamera', 'fotocamer'];
@@ -948,7 +956,7 @@ var eutanasia_cits = ['20A Rosso | Ho combattuto con la morte. È la sfida meno 
 
 ////// ABORTO
 
-const aborto_keywords = ['abort', 'uccid', 'ammazz', 'omicid', 'annient', 'fare fuori', 'annient', 'bambin', 'infanticidi', 'feto', 'feti', 'interrruzione di gravidanza', 'bebè', 'lattante', 'neonat', 'pargolo', 'poppante', 'embrion', 'uccid', 'assassin'];
+const aborto_keywords = ['abort', 'uccid', 'ammazz', 'omicid', 'annient', 'fare fuori', 'annient', 'bambin', 'infanticidi', 'feto', 'feti', 'interrruzione di gravidanza', 'bebè', 'lattante', 'neonat', 'pargolo', 'poppante', 'embrion', 'uccid', 'assassin', 'delitt'];
 
 var aborto_cits = ['20eti azzurro L\'aborto viene sostenuto solo da persone che sono nate esse stesse. [Ronald Reagan]',
 '19eti viola L\'aborto è il più grande distruttore della pace perché, se una madre può uccidere il suo stesso figlio, cosa impedisce che io uccida te e tu uccida me? Non c\'è più nessun ostacolo. [Madre Teresa di Calcutta]',

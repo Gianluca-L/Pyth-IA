@@ -379,9 +379,9 @@ function startPythia() {
       sentence = allSpeech.resultString.toLowerCase();
       console.log(sentence);
 
-      const tag_keyword = ['lavoro', 'amicizia', 'relazioni interpersonali', 'amore', 'ispirazione', 'vita', 'morte', 'etica', 'morale'];
+      const tag_keyword = ['successo', 'autorealizzazione', 'amicizia', 'relazioni interpersonali', 'amore', 'ispirazione', 'vita', 'morte', 'etica'];
 
-      if (tag_keyword.some(keyword => sentence.includes('lavoro'))) {
+      if (tag_keyword.some(keyword => sentence.includes('successo') && sentence.includes('autorealizzazione'))) {
         lavoro_var = true;
         console.log('ok lavoro');
         askYourQuestion();
@@ -401,7 +401,7 @@ function startPythia() {
         vita_morte_var = true;
         console.log('ok vita_morte');
         askYourQuestion();
-      } else if (tag_keyword.some(keyword => sentence.includes('etica') && sentence.includes('morale'))) {
+      } else if (tag_keyword.some(keyword => sentence.includes('etica'))) {
         etica_morale_var = true;
         console.log('ok etica_morale');
         askYourQuestion();

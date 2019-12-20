@@ -1063,6 +1063,12 @@ const casi_limite_morte_keywords = ['crepare', 'crepat', 'creper', 'crepo', 'cre
 
 var casi_limite_morte_cits = ['7A Viola La morte è un’usanza che tutti, prima o poi, dobbiamo rispettare.Jorge Louis Borges'];
 
+
+
+//////// TERRORISMO
+
+const terrorismo_keywords = ['terrorismo', 'terroristic', 'eversione', 'sovversiv', 'massa', 'genocid'];
+
 ////// POVERO RICCO
 
 const  povero_ricco_keywords = ['giovan', 'giovin', 'pover', 'solo', 'sola', 'soli', 'solitud', 'bisognos', 'indigen', 'malagiat', 'miser', 'abbient','umil', 'al verde', 'squattrinat', 'quattrin', 'sul lastrico', 'abbient', 'agiat', 'benestant', 'provvist', 'ricco', 'danaros', 'facoltos', 'opulent', 'prosper', 'modest', 'squallid', 'spogli', 'luss', 'opulent', 'ricc', 'regal', 'sfarz', 'sontuos', 'splendid', 'caren', 'scars', 'sfornit', 'sprovvist', 'abbondan', 'fornit', 'disadorn', 'minimalist', 'scarno', 'ornat', 'prezios', 'ricercat', 'ridott', 'stentat', 'nullatenent', 'disgraziat', 'morto di fame', 'pezz', 'pitocc', 'poveracc', 'straccion', 'accatton', 'barbon', 'mendicant', 'mendic', 'miliardar', 'milionar', 'isolament', 'isolat', 'compagnia', 'soling', 'abbandonat', 'abbandon', 'cerimonia funebr', 'esequie', 'estreme onoranze', 'estremi onori', 'estremo saluto', 'funeral', 'cimiter', 'sepoltur', 'sepolt', 'seppellir', 'tomba', 'fiori', 'divertiment', 'lapid', 'sepolcr', 'tumul', 'fossa', 'fosse', 'fornett', 'locul', 'mausole', 'sotto terra', 'inumare', 'sotterr', 'tumul', 'inciner','cremar', 'cremaz', 'cremat', 'urna', 'urne', 'bara'];

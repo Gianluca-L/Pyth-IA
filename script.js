@@ -172,6 +172,22 @@ const autostima_keywords = ['te stesso', 'se stessi', 'persona', 'individuo', 'p
 'accettarsi', 'mi accetta', 'mi accettano',  'apprezzarsi', 'mi apprezza', 'mi apprezzano', 'valorizzarsi', 'mi valorizzo', 'mi valorizza', 'mi valorizzano', 'piacersi', 'mi piaccio', 'piacere agli altri', 'piacere a se stessi', 'essere se stessi',
 'essere', 'sentirti inferiore', 'sentirsi inferiore', 'inferiore', 'stim', 'apprezz', 'accett', 'valorizz', 'sottostim', 'sopravvalut', 'sottovalut',
 'preoccup', 'agitazione', 'agitarsi', 'agit', 'dubit', 'metto in discussione', 'mettere in discussione', 'in discussione', 'stim', 'support'];
+
+///////// FUTURO SUCC
+
+const futuro_succ_keywords = ['presente', 'passato', 'futuro', 'domani', 'destino', 'fato', 'avvenire', 'giovinezza', 'vecchiaia', 'gioventù',
+'succederà', 'sarà', 'accadrà', 'avverrà', 'avventuros', 'rà', 'rò','ranno', 'rai', 'remo', 'rete',
+'indietro', 'avanti', 'dietro'];
+
+////////// ECOLOGIA
+
+const ecologia_keywords = ['pianeta terra', 'terra', 'pianeta', 'eco', 'ecologia', 'ambiente', 'mondo', 'bisogni', 'risorse', 'suolo', 'terreno', 'cielo', 'diversità', 'biodiversità',
+'distruzione del pianeta', 'devastazione', 'inquinamento', 'inquin', 'smog', 'greta thumberg', 'greta tumberg', 'greta tumblr', 'sfruttamento', 'ricicla', 'salvare la terra', 'salvare il pianeta'];
+
+/////// FUT_TECNOLOGIA
+
+const fut_tecnologia_keywords = ['progress', 'tecnol', 'futuro della tecnologia', 'futuro della tecnica', 'digitale', 'risolvere', 'costruire', 'avanzament', 'motore', 'energia elettrica', 'tesla', 'iphone', 'pc', 'computer', 'smartphone', 'cellulare', 'elettricit', 'potenza', 'macchine'];
+
 ////////////////////////////////////////////// LEGAMI
 
 ////////// AMICIZIA
@@ -183,7 +199,7 @@ const vera_amicizia_keywords = ['vero', 'vera', 'vere', 'veri', 'verit', 'verame
   'signific', 'senso', 'sensi', 'valore', 'valori', 'importa',
   'capire', 'capir', 'capirsi', 'capisc', 'capito', 'comprendere', 'comprend', 'nasc',
   'fiducia', 'fidarsi', 'fid','affid', 'rispett',
-  'volersi bene', 'voler bene', 'voglio bene', 'vuoi bene', 'vuole bene', 'vogliamo bene', 'volete bene', 'vogliono bene', 'bene', 'aver caro', 'ho caro', 'caro', 'cara', 'care', 'cari', 'affezion', 'affett', 'legam', 'legat'
+  'volersi bene', 'voler bene', 'voglio bene', 'vuoi bene', 'vuole bene', 'vogliamo bene', 'volete bene', 'vogliono bene', 'bene', 'aver caro', 'ho caro', 'caro', 'cara', 'care', 'cari', 'affezion', 'affett', 'legam', 'legat', 'per sempre'
 ];
 
 var vera_amicizia_cits = ['55 L\'amicizia è la cosa più difficile al mondo da spiegare. Non è qualcosa che si impara a scuola. Ma se non hai imparato il significato dell\'amicizia, non hai davvero imparato niente. (Muhammad Ali)',
@@ -228,7 +244,7 @@ var sep_feriti_amicizia_cits = ['78 Non piangere se un amico ti ha lasciato: sol
 /// FALSA AMICIZIA/RELAZIONE NEGATIVA
 
 const falsa_amicizia_keywords = ['peggior nemico', 'peggior nemica', 'peggiore nemico', 'peggiore nemica', 'peggiori nemici', 'peggiori nemiche','nemic',
-     'falso', 'falsa','false', 'falsi', 'falsità', 'menzogn', 'illusione', 'illusor', 'illusor', 'illusio', 'sbaglia', 'fint', 'scorrett', 'fasull', 'ipocri', 'bugiard', 'bugia', 'bugie', 'sleal', 'doppiogiochista', 'doppiogioco', 'doppio', 'ingann', 'negativ',
+     'falso', 'falsa','false', 'falsi', 'falsità', 'menzogn', 'illusione', 'illusor', 'illusor', 'illusio', 'sbaglia', 'fint', 'scorrett', 'fasull', 'ipocri', 'bugiard', 'bugia', 'bugie', 'sleal', 'doppio', 'ingann', 'negativ', 'ment',
       'opportunism', 'opportunist'];
 
 var falsa_amicizia_cits = ['83 Alla fine, ci ricorderemo non le parole dei nostri nemici, ma il silenzio dei nostri amici. (Martin Luther King)',
@@ -270,7 +286,7 @@ const bravo_keywords = ['miglior', 'più bravo', 'più brava', 'più brave', 'pi
   'educazione', 'educat', 'beneducat', 'cortese', 'cortesi', 'scortes', 'maleduca',
   'buone maniere', 'gentilezza', 'gentile', 'gentili', 'per bene', 'cattiv',
   'parlare bene', 'parlo bene', 'parli bene', 'parla bene', 'parliamo bene', 'parlate bene', 'parlano bene', 'parlino bene', 'sparl', 'parlo male', 'parli male', 'parla male', 'parliamo male', 'parlate male', 'parlano male', 'parlino male',
-  'elogi', 'fare complimenti', 'complimenti', 'congratularsi', 'riconoscere', 'insult'
+  'elogi', 'fare complimenti', 'complimenti', 'congratularsi', 'riconoscere', 'insult', 'd\'accordo'
 ];
 
 var bravo_cits = ['1 Ciò che è importante è che un uomo dovrebbe vivere nell\'onestà, nell\'amore naturale per l\'umanità. (Bob Marley)',
@@ -359,7 +375,7 @@ var gelosia_rel_cits = ['33 La gelosia è l\'itterizia dell\'anima. (John Dryden
 
 /// 08 TRADIMENTO
 
-const tradimento_rel_keywords = ['tradire','tradit','tradiment','tradisc','ingannare','ingann','infedel','voltafaccia','voltagabbana','imbrogli','imbrogliare','imbrogliat','doppiezza','doppio gioco','fregare','freg'];
+const tradimento_rel_keywords = ['tradire','tradit','tradiment','tradisc','ingannare','ingann','infedel','voltafaccia','voltagabbana','imbrogli','imbrogliare','imbrogliat','doppiezza','doppio gioco', 'doppiogioc', 'fregare','freg'];
 
 var tradimento_rel_cits = ['44 Se qualcuno ti tradisce una volta, è un suo errore, se qualcuno ti tradisce due volte è un tuo errore. (Eleanor Anna Roosvelt)',
    '45 Non tradire chi ti sorride: potrebbe avere la morte nel cuore e regalarti ugualmente un po\' di vita (Jim Morrison)',
@@ -444,7 +460,7 @@ var amore_vero_cits = ['99 rosa | L\'amore è reale, la realtà è amore | l\'am
 
 /// AMORE NON CORRISPOSTO
 
-const non_corrisposto_keywords = ['non corrisposto', 'non ricambiato', 'non ricambia', 'non ricambiato', 'non mi ricambia', 'non contraccambiato', 'contracc', 'respingere', 'respin', 'rifiut', 'non mi ama'];
+const non_corrisposto_keywords = ['non corrisposto', 'non ricambiato', 'non ricambia', 'non ricambiato', 'non mi ricambia', 'non contraccambiato', 'contracc', 'respingere', 'respin', 'rifiut', 'non mi ama', 'sfiga', 'iella'];
 
 var non_corrisposto_cits = ['97 arancione | L\'amore porta molta felicità, molto più di quanto struggersi per qualcuno porti dolore. (Albert Einstein)',
        '111 azzurro | Conosce l’amore solo chi ama senza speranza. (Friedrich Schiller)',
@@ -848,7 +864,7 @@ var verità_realtà_cits = ['55AA) La realtà non è mai come la si vede: la ver
 
 ///// PAURA FALLIRE
 
-const paura_fallire_keywords = ['paur', 'timor', 'fallir', 'fallit', 'falliment', 'fallisc', 'falliv', 'tem', 'temev', 'temer', 'terror', 'perder', 'perdit', 'vinc', 'vincit', 'trionf', 'sconfitt', 'abiss'];
+const paura_fallire_keywords = ['paur', 'timor', 'fallir', 'fallit', 'falliment', 'fallisc', 'falliv', 'tem', 'temev', 'temer', 'terrore', 'perder', 'perdit', 'vinc', 'vincit', 'trionf', 'sconfitt', 'abiss'];
 
 var paura_fallire_cits = ['52AA) Un aspetto essenziale della creatività è non avere paura di fallire.– Edwin Land – Blu',
 '50AA) La forma di scoraggiamento più dannosa alla creatività è quella che ci viene dai nostri cari.– Alex Osborn – Viola'

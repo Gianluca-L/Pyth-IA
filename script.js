@@ -1106,7 +1106,7 @@ var cambiamento_cits = ['1eti) “In etica come in altri campi del pensiero uman
 
 ////// ETICA E RELIGIONE
 
-const etica_religio_keywords = ['religio', 'fede', 'valor', 'morte', 'creder', 'laic', 'credenz', 'cred', 'educaz', 'aldilà', 'culto', 'mistic', 'venera', 'adora', 'venero', 'adoro', 'devoz', 'aldilà', 'Gesù', 'Cristo', 'Madonna', 'allah akbar', 'allah akhbar', 'akhbar', 'islam', 'maometto', 'cattolic', 'ortodoss', 'musulman', 'ateo', 'atei', 'ateismo', 'monoteis', 'politeis', 'profess', 'messa', 'rito religioso', 'riti religiosi', 'educaz', 'punizion', 'post morte', 'post mortem', 'dopo la morte', 'Dio', 'dei', 'buddha', 'rastafar', 'reincarn'];
+const etica_religio_keywords = ['religio', 'fede', 'valor', 'morte', 'creder', 'laic', 'credenz', 'cred', 'educaz', 'aldilà', 'culto', 'mistic', 'venera', 'adora', 'venero', 'adoro', 'devoz', 'aldilà', 'Gesù', 'Cristo', 'Madonna', 'allah akbar', 'allah akhbar', 'akhbar', 'islam', 'maometto', 'cattolic', 'ortodoss', 'musulman', 'ateo', 'atei', 'ateismo', 'monoteis', 'politeis', 'profess', 'messa', 'rito religioso', 'riti religiosi', 'educaz', 'punizion', 'post morte', 'post mortem', 'dopo la morte', 'Dio', 'buddha', 'rastafar', 'reincarn'];
 
 var etica_religio_cits = ['3eti) “Il male assoluto del nostro tempo è di non credere nei valori. Non ha importanza che siano religiosi oppure laici. I giovani devono credere in qualcosa di positivo e la vita merita di essere vissuta solo se crediamo nei valori, perché questi rimangono anche dopo la nostra morte.” [Rita Levi Montalcini] viola',
 '4eti) “L’etica di un non credente è piú pura e disinteressata di quella di un credente che si comporta bene perché spera nella ricompensa e teme la punizione nell’aldilà.”  [Margherita Hack] azzurro',

@@ -278,7 +278,7 @@ function errorCase() {
     etica_morale_var = false;
     step_3 = false;
     audios[5].play();
-    audios[5].onended(farewell);
+    audios[5].onended(farewell2);
   }
 }
 
@@ -286,6 +286,19 @@ function farewell() {
   setTimeout(function() {
     audios[3].play();
     audios[3].onended(reset);
+  }, 1000);
+
+  redColor = false;
+  orangeColor = false;
+  greenColor = false;
+  blueColor = false;
+  violetColor = false;
+  pinkColor = false;
+}
+function farewell2() {
+  setTimeout(function() {
+    audios[4].play();
+    audios[4].onended(reset);
   }, 1000);
 
   redColor = false;

@@ -19,11 +19,6 @@ var s = 0;
 
 var errorCounter = 0;
 
-// var benvenuto;
-// var categoria;
-// var una_sola_domanda;
-// var frase_finale;
-
 ///// variables to trigger sections
 
 var lavoro_var = false;
@@ -46,14 +41,6 @@ var blueColor = false;
 var violetColor = false;
 var pinkColor = false;
 
-
-// var myFont;
-// var logoX = 2;
-// var decagon;
-// var eye;
-// var textCheckbox;
-// var textInput;
-// var voiceInput;
 var k = 0;
 var allSpeech = new p5.SpeechRec('it-IT');
 allSpeech.continuous = false;
@@ -65,12 +52,6 @@ var step_2 = false;
 
 var step_3 = false;
 
-////////// SINTESI VOCALE (PROVVISORIO)
-
-var speech;
-
-// var textFromVoice;
-
 const FOLDER = 'assets/audio/',
   EXT = '.mp3',
   INDEX_START = 0,
@@ -80,11 +61,6 @@ const FOLDER = 'assets/audio/',
 
 function preload() {
   myFont = loadFont('assets/Neoneon.otf');
-
-  // benvenuto = loadSound("./assets/audio/benvenuto.mp3");
-  // categoria = loadSound("./assets/audio/categoria.mp3");
-  // una_sola_domanda = loadSound("./assets/audio/una_sola_domanda.mp3");
-  // frase_finale = loadSound("./assets/audio/frase_finale.mp3");
 
   for (var i = 0; i < INDEX_TOTAL; ++i) {
     audios[i] = loadSound(FOLDER + (i + INDEX_START) + EXT);
@@ -97,12 +73,12 @@ function preload() {
 //   outColor = colorHex;
 //   console.log(outColor);
 // }
-function keyPressed() {
-  if (keyCode === LEFT_ARROW) {
-    var colorHex = Math.round(random(0, 6));
-    outColor = colorHex;
-  }
-}
+// function keyPressed() {
+//   if (keyCode === LEFT_ARROW) {
+//     var colorHex = Math.round(random(0, 6));
+//     outColor = colorHex;
+//   }
+// }
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -118,13 +94,6 @@ function setup() {
   for (var i = 0; i < INDEX_TOTAL; ++i) {
     analyzer.setInput(audios[i]);
   }
-
-
-  //envelope = new p5.Env();
-
-  //fft = new p5.FFT();
-  //
-  // speech = new p5.Speech();
 
   ////////////////////////////// ARDUINO
 
@@ -191,13 +160,15 @@ function draw() {
     outVolume = int(map(volume * 10, 0, 1, 0, 255));
   }
 
-
-
   stringToRead = "<" + outColor + "," + outVolume + ">";
+  serial.write(stringToRead);
+
+
+  
   //stringToRead = "<" + 'hello' + "," + outVolume + "," + outColor + ">";
   //stringToRead = "V" + outVolume.toString() + "," + "C" + outColor.toString() + ",";
   //stringToRead = outVolume.toString() + "," + outColor.toString() + "*";
-  serial.write(stringToRead);
+
   //serial.write(outByte);
   //serial.write(140, 200, 100);
   //spectrum = fft.analyze();
@@ -338,7 +309,6 @@ function Pink() {
 }
 
 function startPythia() {
-  stopArduinoLEDS = false;
   if (step_1 == true) {
     if (allSpeech.resultValue == true) {
       //console.log('step 1 ok');
@@ -370,6 +340,7 @@ function startPythia() {
         console.log('3 = ok');
       }
       if (first_keyword_got == true && second_keyword_got == true && third_keyword_got == true) {
+        stopArduinoLEDS = false;
         step_1 = false;
         //var benvenuto = Math.round(random(0,3));
         audios[0].play();
@@ -4793,56 +4764,3 @@ function startPythia() {
     }
   }
 }
-// console.log('time: ' + timer);
-// console.log(step_1);
-
-
-// function keyReleased() {
-//   k++;
-//   if (key === 'Enter') {
-//     if (k == 1) {
-//       console.log('ok');
-//       tag_speech.onResult = showResult;
-//       tag_speech.start();
-//       console.log(tag_speech);
-//     } else if (k == 2) {
-//       speech_2.onResult = showResult;
-//       speech_2.start();
-//     }
-//   }
-//   s++;
-//   if (key === 's') {
-//     if (s == 1) {
-//       // console.log('s1');
-//       // step_1 = true;
-//       startSentence.start();
-//     } else if (s == 2) {
-//       // console.log('s2');
-//       // step_1 = false;
-//       // s = 0;
-//     }
-//   }
-//   return false;
-// }
-//
-// function clickTextCheckbox() {
-//   voiceInput.hide();
-//   textInput.show();
-//   console.log(textCheckbox.value());
-// }
-//
-// function clickVoiceCheckbox() {
-//   textInput.hide();
-//   voiceInput.show();
-// }
-//
-// function showResult() {
-//   if (tag_speech.resultValue == true) {
-//
-//     var textFromVoice = select('#myVoiceInput');
-//     textFromVoice.html(tag_speech.resultString + "?");
-//     //textFromVoice.style('color: white; font-size: 20px; font-family: Verdana; position: absolute; top: 50%; left: 50%; width: 500px; transform: translate(-50%,-165%)');
-//     // console.log(tag_speech.resultString);
-//     // console.log(textFromVoice.html());
-//   }
-// }

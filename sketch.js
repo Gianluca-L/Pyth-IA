@@ -164,7 +164,7 @@ function draw() {
   serial.write(stringToRead);
 
 
-  
+
   //stringToRead = "<" + 'hello' + "," + outVolume + "," + outColor + ">";
   //stringToRead = "V" + outVolume.toString() + "," + "C" + outColor.toString() + ",";
   //stringToRead = outVolume.toString() + "," + outColor.toString() + "*";
@@ -366,29 +366,29 @@ function startPythia() {
       sentence = allSpeech.resultString.toLowerCase();
       console.log(sentence);
 
-      const tag_keyword = ['successo', 'autorealizzazione', 'amicizia', 'relazioni interpersonali', 'amore', 'ispirazione', 'vita', 'morte', 'etica'];
+      const tag_keyword = ['successo', 'amicizia', 'amore', 'ispirazione', 'vita', 'morte', 'etica'];
 
-      if (tag_keyword.some(keyword => sentence.includes('successo') && sentence.includes('autorealizzazione') && !sentence.includes('amicizia')&& !sentence.includes('relazioni interpersonali') && !sentence.includes('amore') && !sentence.includes('ispirazione')&& !sentence.includes('vita') && !sentence.includes('morte')  && !sentence.includes('etica'))) {
+      if (tag_keyword.some(keyword => sentence.includes('successo') && !sentence.includes('amicizia') && !sentence.includes('amore') && !sentence.includes('ispirazione')&& !sentence.includes('vita') && !sentence.includes('morte')  && !sentence.includes('etica'))) {
         lavoro_var = true;
         console.log('ok lavoro');
         askYourQuestion();
-      } else if (tag_keyword.some(keyword => sentence.includes('amicizia') && sentence.includes('relazioni interpersonali') && !sentence.includes('successo') && !sentence.includes('autorealizzazione') && !sentence.includes('amore') && !sentence.includes('ispirazione')&& !sentence.includes('vita') && !sentence.includes('morte')  && !sentence.includes('etica'))) {
+      } else if (tag_keyword.some(keyword => sentence.includes('amicizia') && !sentence.includes('successo') && !sentence.includes('amore') && !sentence.includes('ispirazione')&& !sentence.includes('vita') && !sentence.includes('morte')  && !sentence.includes('etica'))) {
         amicizia_relInter_var = true;
         console.log('ok amicizia_relInter');
         askYourQuestion();
-      } else if (tag_keyword.some(keyword => sentence.includes('amore') && !sentence.includes('successo') && !sentence.includes('autorealizzazione') && !sentence.includes('amicizia')&& !sentence.includes('relazioni interpersonali') && !sentence.includes('ispirazione')&& !sentence.includes('vita') && !sentence.includes('morte')  && !sentence.includes('etica'))) {
+      } else if (tag_keyword.some(keyword => sentence.includes('amore') && !sentence.includes('successo') && !sentence.includes('amicizia') && !sentence.includes('ispirazione')&& !sentence.includes('vita') && !sentence.includes('morte')  && !sentence.includes('etica'))) {
         amore_var = true;
         console.log('ok amore');
         askYourQuestion();
-      } else if (tag_keyword.some(keyword => sentence.includes('ispirazione') && !sentence.includes('successo') && !sentence.includes('autorealizzazione') && !sentence.includes('amicizia')&& !sentence.includes('relazioni interpersonali') && !sentence.includes('amore') && !sentence.includes('vita') && !sentence.includes('morte')  && !sentence.includes('etica'))) {
+      } else if (tag_keyword.some(keyword => sentence.includes('ispirazione') && !sentence.includes('successo') && !sentence.includes('amicizia') && !sentence.includes('amore') && !sentence.includes('vita') && !sentence.includes('morte')  && !sentence.includes('etica'))) {
         ispirazione_var = true;
         console.log('ok ispirazione');
         askYourQuestion();
-      } else if (tag_keyword.some(keyword => sentence.includes('vita') && sentence.includes('morte') && !sentence.includes('successo') && !sentence.includes('autorealizzazione') && !sentence.includes('amicizia')&& !sentence.includes('relazioni interpersonali') && !sentence.includes('amore') && !sentence.includes('ispirazione') && !sentence.includes('etica'))) {
+      } else if (tag_keyword.some(keyword => sentence.includes('vita') && sentence.includes('morte') && !sentence.includes('successo') && !sentence.includes('amicizia') && !sentence.includes('amore') && !sentence.includes('ispirazione') && !sentence.includes('etica'))) {
         vita_morte_var = true;
         console.log('ok vita_morte');
         askYourQuestion();
-      } else if (tag_keyword.some(keyword => sentence.includes('etica') && !sentence.includes('successo') && !sentence.includes('autorealizzazione') && !sentence.includes('amicizia')&& !sentence.includes('relazioni interpersonali') && !sentence.includes('amore') && !sentence.includes('ispirazione')&& !sentence.includes('vita') && !sentence.includes('morte')  )) {
+      } else if (tag_keyword.some(keyword => sentence.includes('etica') && !sentence.includes('successo') && !sentence.includes('amicizia') && !sentence.includes('amore') && !sentence.includes('ispirazione')&& !sentence.includes('vita') && !sentence.includes('morte')  )) {
         etica_morale_var = true;
         console.log('ok etica_morale');
         askYourQuestion();

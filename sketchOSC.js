@@ -103,7 +103,7 @@ function setup() {
 
   serial.list(); // list the serial ports
 
-  serial.on('data', serialEvent); // callback for when new data arrives
+  //serial.on('data', serialEvent); // callback for when new data arrives
   serial.on('error', serialError); // callback for errors
   serial.open(portName);
   //serial.open(portName, options);
@@ -368,29 +368,29 @@ function startPythia() {
       sentence = allSpeech.resultString.toLowerCase();
       console.log(sentence);
 
-      const tag_keyword = ['successo', 'amicizia', 'amore', 'ispirazione', 'vita', 'morte', 'morale'];
+      const tag_keyword = ['successo', 'amicizia', 'amore', 'ispirazione', 'vita', 'morte', 'etica'];
 
-      if (tag_keyword.some(keyword => sentence.includes('successo') && !sentence.includes('amicizia') && !sentence.includes('amore') && !sentence.includes('ispirazione')&& !sentence.includes('vita') && !sentence.includes('morte')  && !sentence.includes('morale'))) {
+      if (tag_keyword.some(keyword => sentence.includes('successo') && !sentence.includes('amicizia') && !sentence.includes('amore') && !sentence.includes('ispirazione')&& !sentence.includes('vita') && !sentence.includes('morte')  && !sentence.includes('etica'))) {
         lavoro_var = true;
         console.log('ok lavoro');
         askYourQuestion();
-      } else if (tag_keyword.some(keyword => sentence.includes('amicizia') && !sentence.includes('successo') && !sentence.includes('amore') && !sentence.includes('ispirazione')&& !sentence.includes('vita') && !sentence.includes('morte')  && !sentence.includes('morale'))) {
+      } else if (tag_keyword.some(keyword => sentence.includes('amicizia') && !sentence.includes('successo') && !sentence.includes('amore') && !sentence.includes('ispirazione')&& !sentence.includes('vita') && !sentence.includes('morte')  && !sentence.includes('etica'))) {
         amicizia_relInter_var = true;
         console.log('ok amicizia_relInter');
         askYourQuestion();
-      } else if (tag_keyword.some(keyword => sentence.includes('amore') && !sentence.includes('successo') && !sentence.includes('amicizia') && !sentence.includes('ispirazione')&& !sentence.includes('vita') && !sentence.includes('morte')  && !sentence.includes('morale'))) {
+      } else if (tag_keyword.some(keyword => sentence.includes('amore') && !sentence.includes('successo') && !sentence.includes('amicizia') && !sentence.includes('ispirazione')&& !sentence.includes('vita') && !sentence.includes('morte')  && !sentence.includes('etica'))) {
         amore_var = true;
         console.log('ok amore');
         askYourQuestion();
-      } else if (tag_keyword.some(keyword => sentence.includes('ispirazione') && !sentence.includes('successo') && !sentence.includes('amicizia') && !sentence.includes('amore') && !sentence.includes('vita') && !sentence.includes('morte')  && !sentence.includes('morale'))) {
+      } else if (tag_keyword.some(keyword => sentence.includes('ispirazione') && !sentence.includes('successo') && !sentence.includes('amicizia') && !sentence.includes('amore') && !sentence.includes('vita') && !sentence.includes('morte')  && !sentence.includes('etica'))) {
         ispirazione_var = true;
         console.log('ok ispirazione');
         askYourQuestion();
-      } else if (tag_keyword.some(keyword => sentence.includes('vita') && sentence.includes('morte') && !sentence.includes('successo') && !sentence.includes('amicizia') && !sentence.includes('amore') && !sentence.includes('ispirazione') && !sentence.includes('morale'))) {
+      } else if (tag_keyword.some(keyword => sentence.includes('vita') && sentence.includes('morte') && !sentence.includes('successo') && !sentence.includes('amicizia') && !sentence.includes('amore') && !sentence.includes('ispirazione') && !sentence.includes('etica'))) {
         vita_morte_var = true;
         console.log('ok vita_morte');
         askYourQuestion();
-      } else if (tag_keyword.some(keyword => sentence.includes('morale') && !sentence.includes('successo') && !sentence.includes('amicizia') && !sentence.includes('amore') && !sentence.includes('ispirazione')&& !sentence.includes('vita') && !sentence.includes('morte')  )) {
+      } else if (tag_keyword.some(keyword => sentence.includes('etica') && !sentence.includes('successo') && !sentence.includes('amicizia') && !sentence.includes('amore') && !sentence.includes('ispirazione')&& !sentence.includes('vita') && !sentence.includes('morte')  )) {
         etica_morale_var = true;
         console.log('ok etica_morale');
         askYourQuestion();
@@ -509,29 +509,6 @@ function startPythia() {
                 Blue();
               }
               else if (audios[495].isPlaying() == true) {
-                Red();
-              }
-            }
-          });
-        }
-        else if (lavoro_vergogna_keywords.some(keyword => sentence.includes(keyword))) {
-          step_3 = false;
-          audios[2].play();
-          console.log("Found");
-          //var lavoro_vergogna_cit = lavoro_vergogna_cits[Math.round(Math.random() * (lavoro_vergogna_cits.length - 1))];
-          audios[2].onended(function() {
-            loading();
-            setTimeout(playCit, 5000);
-
-            function playCit() {
-              loadEffect = false;
-              var lavoro_vergogna_audio = Math.round(random([370]));
-              audios[lavoro_vergogna_audio].play();
-              lavoro_var = false;
-              audios[lavoro_vergogna_audio].onended(farewell);
-              // alert(lavoro_vergogna_cit);
-              // farewell();
-              if (audios[370].isPlaying() == true) {
                 Red();
               }
             }

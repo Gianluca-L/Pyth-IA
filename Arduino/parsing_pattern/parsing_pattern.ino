@@ -45,27 +45,7 @@ unsigned long previousTime = 0;
 int switchState = 0;
 long interval = 5000;
 
-int colorHex = 0;
 
-void setPixel(int Pixel, byte red, byte green, byte blue) {
-  leds[Pixel].r = red;
-  leds[Pixel].g = green;
-  leds[Pixel].b = blue;
-}
-
-void setAll2(byte red, byte green, byte blue) {
-  for (int i = 0; i < NUM_LEDS; i++ ) {
-    setPixel(i, red, green, blue);
-  }
-  FastLED.show();
-}
-
-void setAll(byte red, byte green, byte blue) {
-  for (int i = 0; i < NUM_LEDS; i++ ) {
-    leds[i] = CRGB (red, green, blue);
-  }
-  FastLED.show();
-}
 
 //==============
 
@@ -76,6 +56,7 @@ void loop() {
     // this temporary copy is necessary to protect the original data
     //   because strtok() used in parseData() replaces the commas with \0
     parseData();
+    Serial.write(Color);
     //showParsedData();
     newData = false;
 
@@ -125,22 +106,15 @@ void loop() {
           leds[i] = CRGB (230, 51, 112);
         }
       }
-      else if (Color == 7) {
-        unsigned long currentTime = millis();
-        if (currentTime - previousTime > interval) {
-          previousTime = currentTime;
-          switchState++;
-        }
-        if (switchState == 4) {
-          switchState = 0;
-        }
-        switch (switchState) {
-          case 0: RGBLoop(); break;
-          case 1: CylonBounce(255, 140, 39, 15, 10, 50); break;
-          case 2: NewKITT(0, 0, 0, 15, 10, 50); break;
-          case 3: rainbowCycle(5); break;
-        }
+      else if (Color == 8) {
+//                for (int i = 0; i <= 143; i++) {
+//          leds[i] = CRGB ( 255, 0, 0);
+//        }
+        colorWipe(255, 0, 0, 10);
+        colorWipe(0x00, 0x00, 0x00, 10);
       }
+      //      else if (Color == 7) {
+      //      }
     }
 
 
@@ -238,6 +212,27 @@ void parseData() {      // split the data into its parts
 
 //=====================================================================  ANIMAZIONI
 
+int colorHex = 0;
+
+void setPixel(int Pixel, byte red, byte green, byte blue) {
+  leds[Pixel].r = red;
+  leds[Pixel].g = green;
+  leds[Pixel].b = blue;
+}
+
+void setAll2(byte red, byte green, byte blue) {
+  for (int i = 0; i < NUM_LEDS; i++ ) {
+    setPixel(i, red, green, blue);
+  }
+  FastLED.show();
+}
+
+void setAll(byte red, byte green, byte blue) {
+  for (int i = 0; i < NUM_LEDS; i++ ) {
+    leds[i] = CRGB (red, green, blue);
+  }
+  FastLED.show();
+}
 
 //////////////////// LOADING
 
@@ -245,352 +240,56 @@ void colorWipe(byte red, byte green, byte blue, int SpeedDelay) {
   for (uint16_t i = 0; i < NUM_LEDS; i++) {
     leds[i] = CRGB (red, green, blue);
     FastLED.show();
-    delay(SpeedDelay);
+    //delay(SpeedDelay);
   }
 }
 
-/////////////////// PRIMA ANIMAZIONE 
+/////////////////// PRIMA ANIMAZIONE
 
 void RGBLoop() {
-  for (int j = 0; j < 6; j++ ) {
-    // Fade IN
-    for (int k = 0; k < 256; k += 4) {
+  setAll(255, 0, 0);  //rosso
+  FastLED.show();
+  // Fade IN
+  //  for (int k = 0; k < 256; k += 4) {
+  //    setAll(255, 0, 0);  //rosso
+  //    FastLED.setBrightness(k);
+  //    FastLED.show();
+  //    delay(10);
+  //  }
+  //  // Fade OUT
+  //  for (int k = 255; k >= 0; k -= 4) {
+  //    setAll(255, 0, 0);  //rosso
+  //    FastLED.setBrightness(k);
+  //    FastLED.show();
+  //    delay(10);
+  //  }
+}
+
+//////////////////// RANDOM BLINK
+
+void randomBlink(boolean Fade) {
+  int width = 30;
+  int StartPoint  = random( 0, NUM_LEDS - width);
+  for (int i = 0; i < width; i++) {
+    leds[StartPoint + i] = CRGB (255, 140, 39);
+  }
+  if (Fade == false) {
+    FastLED.setBrightness(255);
+    FastLED.show();
+    delay(1000);
+  }
+  else {
+    for (int k = 0; k < 256; k += 1) {
       FastLED.setBrightness(k);
-      switch (j) {
-        case 0: setAll(255, 0, 0); break; //rosso
-        case 1: setAll(255, 25, 0); break; // arancio
-        case 2: setAll(0, 200, 0); break;  // verde
-        case 3: setAll(0, 35, 200); break;  // azzurro
-        case 4: setAll(160, 0, 200); break; // viola
-        case 5: setAll(230, 51, 112); break; // rosa
-      }
       FastLED.show();
-      delay(10);
     }
-    // Fade OUT
-    for (int k = 255; k >= 0; k -= 4) {
+
+    for (int k = 255; k >= 0; k -= 1) {
       FastLED.setBrightness(k);
-      switch (j) {
-        case 0: setAll(255, 0, 0); break; //rosso
-        case 1: setAll(255, 25, 0); break; // arancio
-        case 2: setAll(0, 200, 0); break;  // verde
-        case 3: setAll(0, 35, 200); break;  // azzurro
-        case 4: setAll(160, 0, 200); break; // viola
-        case 5: setAll(230, 51, 112); break; // rosa
-      }
       FastLED.show();
-      delay(10);
     }
   }
-}
+  setAll(0, 0, 0);
 
-/////////////// CYLON DIVERSI COLORI (SECONDA ANIMAZIONE)
-
-void CylonBounce(byte red, byte green, byte blue, int EyeSize, int SpeedDelay, int ReturnDelay) {
-
-  for (int i = 0; i < NUM_LEDS - EyeSize - 2; i++) {
-    setAll(0, 0, 0);
-    //leds[i] = CRGB (red, green, blue); // primo led del gruppo
-    for (int j = 1; j <= EyeSize; j++) {
-      FastLED.setBrightness(255);
-      leds[i + j] = CRGB (255, 0, 0);  // rosso
-    }
-    //leds[i+EyeSize+1] = CRGB (red, green, blue);  // ultimo led del gruppo
-    FastLED.show();
-    delay(SpeedDelay);
-  }
-
-  delay(ReturnDelay);
-
-  for (int i = NUM_LEDS - EyeSize - 2; i > 0; i--) {
-    setAll(0, 0, 0);
-    //leds[i] = CRGB (red, green, blue);
-    for (int j = 1; j <= EyeSize; j++) {
-      FastLED.setBrightness(255);
-      leds[i + j] = CRGB (255, 25, 0);  // arancio
-    }
-    //leds[i+EyeSize+1] = CRGB (red, green, blue);
-    FastLED.show();
-    delay(SpeedDelay);
-  }
-
-  delay(ReturnDelay);
-
-  for (int i = 0; i < NUM_LEDS - EyeSize - 2; i++) {
-    setAll(0, 0, 0);
-    //leds[i] = CRGB (red, green, blue);
-    for (int j = 1; j <= EyeSize; j++) {
-      FastLED.setBrightness(255);
-      leds[i + j] = CRGB (0, 200, 0); // verde
-    }
-    //leds[i+EyeSize+1] = CRGB (red, green, blue);
-    FastLED.show();
-    delay(SpeedDelay);
-  }
-
-  delay(ReturnDelay);
-
-  for (int i = NUM_LEDS - EyeSize - 2; i > 0; i--) {
-    setAll(0, 0, 0);
-    //leds[i] = CRGB (red, green, blue);
-    for (int j = 1; j <= EyeSize; j++) {
-      FastLED.setBrightness(255);
-      leds[i + j] = CRGB (0, 35, 200);  // azzurro
-    }
-    //leds[i+EyeSize+1] = CRGB (red, green, blue);
-    FastLED.show();
-    delay(SpeedDelay);
-  }
-
-  delay(ReturnDelay);
-
-  for (int i = 0; i < NUM_LEDS - EyeSize - 2; i++) {
-    setAll(0, 0, 0);
-    //leds[i] = CRGB (red, green, blue);
-    for (int j = 1; j <= EyeSize; j++) {
-      FastLED.setBrightness(255);
-      leds[i + j] = CRGB (160, 0, 200);  // viola
-    }
-    //leds[i+EyeSize+1] = CRGB (red, green, blue);
-    FastLED.show();
-    delay(SpeedDelay);
-  }
-
-  delay(ReturnDelay);
-
-
-  for (int i = NUM_LEDS - EyeSize - 2; i > 0; i--) {
-    setAll(0, 0, 0);
-    //leds[i] = CRGB (red, green, blue);
-    for (int j = 1; j <= EyeSize; j++) {
-      FastLED.setBrightness(255);
-      leds[i + j] = CRGB (230, 51, 112);  // rosa
-    }
-    //leds[i+EyeSize+1] = CRGB (red, green, blue);
-    FastLED.show();
-    delay(SpeedDelay);
-  }
-
-  delay(ReturnDelay);
-}
-
-
-////////////////////////////// TERZA ANIMAZIONE 
-
-
-void NewKITT(byte red, byte green, byte blue, int EyeSize, int SpeedDelay, int ReturnDelay) {
-  colorHex = random(0, 6);
-  OutsideToCenter(red, green, blue, EyeSize, SpeedDelay, ReturnDelay);
-  CenterToOutside(red, green, blue, EyeSize, SpeedDelay, ReturnDelay);
-  RightToLeft(red, green, blue, EyeSize, SpeedDelay, ReturnDelay);
-  colorHex = random(0, 6);
-  OutsideToCenter(red, green, blue, EyeSize, SpeedDelay, ReturnDelay);
-  CenterToOutside(red, green, blue, EyeSize, SpeedDelay, ReturnDelay);
-  LeftToRight(red, green, blue, EyeSize, SpeedDelay, ReturnDelay);
-}
-
-void CenterToOutside(byte red, byte green, byte blue, int EyeSize, int SpeedDelay, int ReturnDelay) {
-  for (int i = ((NUM_LEDS - EyeSize) / 2); i >= 0; i--) {
-    setAll(0, 0, 0);
-    for (int j = 1; j <= EyeSize; j++) {
-      FastLED.setBrightness(255);
-      if (colorHex == 0) {
-        leds[i + j] = CRGB (255, 0, 0);  // rosso
-      }
-      else if (colorHex == 1) {
-        leds[i + j] = CRGB (255, 25, 0);  // arancio
-      }
-      else if (colorHex == 2) {
-        leds[i + j] = CRGB (0, 200, 0);  // verde
-      }
-      else if (colorHex == 3) {
-        leds[i + j] = CRGB (0, 35, 200);  // azzurro
-      }
-      else if (colorHex == 4) {
-        leds[i + j] = CRGB (160, 0, 200);  // viola
-      }
-      else if (colorHex == 5) {
-        leds[i + j] = CRGB (230, 51, 112);  // rosa
-      }
-    }
-
-    for (int j = 1; j <= EyeSize; j++) {
-      FastLED.setBrightness(255);
-      //leds[NUM_LEDS - i - j] = CRGB (0, 35, 200);  // azzurro
-      if (colorHex == 0) {
-        leds[NUM_LEDS - i - j] = CRGB (255, 0, 0);  // rosso
-      }
-      else if (colorHex == 1) {
-        leds[NUM_LEDS - i - j] = CRGB (255, 25, 0);  // arancio
-      }
-      else if (colorHex == 2) {
-        leds[NUM_LEDS - i - j] = CRGB (0, 200, 0);  // verde
-      }
-      else if (colorHex == 3) {
-        leds[NUM_LEDS - i - j] = CRGB (0, 35, 200);  // azzurro
-      }
-      else if (colorHex == 4) {
-        leds[NUM_LEDS - i - j] = CRGB (160, 0, 200);  // viola
-      }
-      else if (colorHex == 5) {
-        leds[NUM_LEDS - i - j] = CRGB (230, 51, 112);  // rosa
-      }
-    }
-
-    FastLED.show();
-    delay(SpeedDelay);
-  }
-  delay(ReturnDelay);
-}
-
-void OutsideToCenter(byte red, byte green, byte blue, int EyeSize, int SpeedDelay, int ReturnDelay) {
-  for (int i = 0; i <= ((NUM_LEDS - EyeSize) / 2); i++) {
-    setAll(0, 0, 0);
-    for (int j = 1; j <= EyeSize; j++) {
-      FastLED.setBrightness(255);
-      //leds[i + j] = CRGB (0, 35, 200);  // azzurro
-      if (colorHex == 0) {
-        leds[i + j] = CRGB (255, 0, 0);  // rosso
-      }
-      else if (colorHex == 1) {
-        leds[i + j] = CRGB (255, 25, 0);  // arancio
-      }
-      else if (colorHex == 2) {
-        leds[i + j] = CRGB (0, 200, 0);  // verde
-      }
-      else if (colorHex == 3) {
-        leds[i + j] = CRGB (0, 35, 200);  // azzurro
-      }
-      else if (colorHex == 4) {
-        leds[i + j] = CRGB (160, 0, 200);  // viola
-      }
-      else if (colorHex == 5) {
-        leds[i + j] = CRGB (230, 51, 112);  // rosa
-      }
-    }
-    for (int j = 1; j <= EyeSize; j++) {
-      FastLED.setBrightness(255);
-      //leds[NUM_LEDS - i - j] = CRGB (0, 35, 200);  // azzurro
-      if (colorHex == 0) {
-        leds[NUM_LEDS - i - j] = CRGB (255, 0, 0);  // rosso
-      }
-      else if (colorHex == 1) {
-        leds[NUM_LEDS - i - j] = CRGB (255, 25, 0);  // arancio
-      }
-      else if (colorHex == 2) {
-        leds[NUM_LEDS - i - j] = CRGB (0, 200, 0);  // verde
-      }
-      else if (colorHex == 3) {
-        leds[NUM_LEDS - i - j] = CRGB (0, 35, 200);  // azzurro
-      }
-      else if (colorHex == 4) {
-        leds[NUM_LEDS - i - j] = CRGB (160, 0, 200);  // viola
-      }
-      else if (colorHex == 5) {
-        leds[NUM_LEDS - i - j] = CRGB (230, 51, 112);  // rosa
-      }
-    }
-
-    FastLED.show();
-    delay(SpeedDelay);
-  }
-  delay(ReturnDelay);
-}
-
-void LeftToRight(byte red, byte green, byte blue, int EyeSize, int SpeedDelay, int ReturnDelay) {
-  for (int i = 0; i < NUM_LEDS - EyeSize - 2; i++) {
-    setAll(0, 0, 0);
-    for (int j = 1; j <= EyeSize; j++) {
-      FastLED.setBrightness(255);
-      if (colorHex == 0) {
-        leds[i + j] = CRGB (255, 0, 0);  // rosso
-      }
-      else if (colorHex == 1) {
-        leds[i + j] = CRGB (255, 25, 0);  // arancio
-      }
-      else if (colorHex == 2) {
-        leds[i + j] = CRGB (0, 200, 0);  // verde
-      }
-      else if (colorHex == 3) {
-        leds[i + j] = CRGB (0, 35, 200);  // azzurro
-      }
-      else if (colorHex == 4) {
-        leds[i + j] = CRGB (160, 0, 200);  // viola
-      }
-      else if (colorHex == 5) {
-        leds[i + j] = CRGB (230, 51, 112);  // rosa
-      }
-    }
-    FastLED.show();
-    delay(SpeedDelay);
-  }
-  delay(ReturnDelay);
-}
-
-void RightToLeft(byte red, byte green, byte blue, int EyeSize, int SpeedDelay, int ReturnDelay) {
-  for (int i = NUM_LEDS - EyeSize - 2; i > 0; i--) {
-    setAll(0, 0, 0);
-    for (int j = 1; j <= EyeSize; j++) {
-      FastLED.setBrightness(255);
-      if (colorHex == 0) {
-        leds[i + j] = CRGB (255, 0, 0);  // rosso
-      }
-      else if (colorHex == 1) {
-        leds[i + j] = CRGB (255, 25, 0);  // arancio
-      }
-      else if (colorHex == 2) {
-        leds[i + j] = CRGB (0, 200, 0);  // verde
-      }
-      else if (colorHex == 3) {
-        leds[i + j] = CRGB (0, 35, 200);  // azzurro
-      }
-      else if (colorHex == 4) {
-        leds[i + j] = CRGB (160, 0, 200);  // viola
-      }
-      else if (colorHex == 5) {
-        leds[i + j] = CRGB (230, 51, 112);  // rosa
-      }
-    }
-    FastLED.show();
-    delay(SpeedDelay);
-  }
-  delay(ReturnDelay);
-}
-
-////////////////////////////////////////////// RAINBOW CYCLE (QUARTA ANIMAZIONE)
-
-void rainbowCycle(int SpeedDelay) {
-  byte *c;
-  uint16_t i, j;
-
-  for (j = 0; j < 256 * 5; j++) { // 5 cycles of all colors on wheel
-    for (i = 0; i < NUM_LEDS; i++) {
-      c = Wheel(((i * 256 / NUM_LEDS) + j) & 255);
-      leds[i] = CRGB(*c, *(c + 1), *(c + 2));
-    }
-    FastLED.show();
-    delay(SpeedDelay);
-  }
-}
-
-byte * Wheel(byte WheelPos) {
-  static byte c[3];
-
-  if (WheelPos < 85) {
-    c[0] = WheelPos * 3;
-    c[1] = 255 - WheelPos * 3;
-    c[2] = 0;
-  } else if (WheelPos < 170) {
-    WheelPos -= 85;
-    c[0] = 255 - WheelPos * 3;
-    c[1] = 0;
-    c[2] = WheelPos * 3;
-  } else {
-    WheelPos -= 170;
-    c[0] = 0;
-    c[1] = WheelPos * 3;
-    c[2] = 255 - WheelPos * 3;
-  }
-
-  return c;
+  delay(1000);
 }

@@ -30,10 +30,20 @@ const keywords = ["terra", "piatta", "tonda", "sfer"];
 
 const lavoro_generico_keywords = ['lavor', 'attività', 'compito', 'impegno', 'faccend', 'operazion', 'responsabilità', 'incaric', 'funzion', 'mansion', 'occupazion', 'profession', 'impieg', 'mestier', 'serviz', 'prestazion'];
 
+
+///// LAVORO_VERGOGNA
+
+const lavoro_vergogna_keywords = ['vergogn', 'sbagliat', 'errat', 'mancat', 'errat', 'fallit', 'mancat', 'eseguito male', 'calcolato male', 'commesso uno sbaglio', 'commesso un errore', 'preso una cantonata', 'fatto un passo falso', 'preso un abbaglio', 'ingannato', 'peccato', 'colpa', 'sgarr', 'essere in errore', 'stato in errore', 'giudicato erroneamente', 'pentiment', 'pentirsi', 'pentirmi', 'pentit', 'pudore', 'verecond', 'soggez', 'disonore', 'infame', 'ingnom', 'onta','turpit', 'abiez', 'scandal', 'immoral', 'oscen', 'sconc'];
+
+//// LAVORO_ENERGIA
+
+const lavoro_energia_keywords = [];
+
 //// LAVORARE BENE
 
-const lavoro_bene_keywords = ['contare', 'valut', 'consider', 'prendere in considerazione', 'mettere in conto', 'important', 'interess', 'iniz', 'cominc', 'principi', 'dare inizio', 'avviar', 'aprir', 'inaugur', 'intraprend', 'fondar', 'promuov', 'introdu', 'accing', 'intavol', 'abbozz', 'imbast', 'avere inizio', 'avrà inizio', 'ha inizio', 'fare prima', 'far prima', 'procedur', 'sistem', 'metod', 'norm', 'criteri', 'iter', 'procediment', 'lavoro perfetto', 'far perfettamente',
-'fare perfettamente', 'impar', 'conosc', 'assimil', 'assorb', 'consider', 'afferr', 'assimilare', 'assorbir', 'apprend', 'ottimament', 'con successo', 'con successi', 'alla grande', 'benissimo', 'eccellentemente', 'eccelsamente', 'magnificamente', 'meravigliosamente', 'perfettamente', 'splendidamente', 'stupendamente', 'sublimemente', 'superbamente', 'bene', 'niente male', 'malissimo', 'orrendamente', 'orribilmente', 'pessimamente', 'schifosamente', 'così e così', 'male', 'maluccio', 'mediocremente', 'mediocr', 'avere capacità', 'ho le capacità', 'avrò le capacità', 'capacità', 'essere capace', 'sono capace', 'sarò capace', 'capac', 'sono in grado di lavorare', 'sarà in grado di lavorare', 'sarai in grado di lavorare', 'essere in grado di lavorare', 'essere all\'altezza di', 'andare bene', 'andrò bene', 'andrà bene', 'andremo bene', 'cavarsela', 'cavarmela', 'cavarcela', 'me la caverò', 'ce la caveremo', 'se la caveranno', 'se la caverà', 'te la caverai', 'fare bene', 'farò bene', 'faremo bene', 'faranno bene', 'farete bene', 'farai bene', 'farà bene', 'avere esito positivo', 'avrà esito positivo', 'avranno esito positivo', 'andrà a buon fine', 'andranno a buon fine', 'avere successo', 'avrò buon esito', 'avranno buon esito', 'avrà successo', 'avranno successo', 'andare male', 'falliment', 'success', 'fare fiasco', 'buco nell\'acqua', 'fiasco', 'ottenere un buon esito', 'otterrò un buon esito', 'otterrà un buon esito', 'otterrai un buon esito', 'otterranno un buon esito', 'otterremo un buon esito', 'un successo', 'spuntarla', 'la spunterò', 'la spunteremo', 'mancare l\'obiettivo', 'mancherò l\'obiettivo', 'manco l\'obiettivo', 'mancato l\'obiettivo', 'esito positivo', 'esito negativo', 'buon esito', 'cattivo esito', 'toppare', 'topperò', 'top', 'super', 'avere successo nella professione', 'avrò successo nella professione', 'avremo successo nella professione', 'avere un certo effetto', 'avere un certo esito', 'agire', 'azion', 'part', 'prosegu', 'avanz', 'continu', 'difficil', 'facil', 'grand', 'piccol', 'poco', 'tanto', 'apparire', 'sembr', 'somigli', 'essere simile', 'essere simili', 'dare l\'impressione'];
+const lavoro_bene_keywords = ['contare', 'valut', 'consider', 'prendere in considerazione', 'iniz', 'cominc', 'principi', 'dare inizio', 'avviar', 'aprir', 'inaugur', 'intraprend', 'fondar', 'promuov', 'introdu', 'accing', 'intavol', 'abbozz', 'imbast', 'avere inizio', 'avrà inizio', 'ha inizio', 'fare prima', 'far prima', 'procedur', 'sistem', 'metod', 'norm', 'criteri', 'iter', 'procediment', 'lavoro perfetto', 'far perfettamente',
+'fare perfettamente', 'impar', 'conosc', 'assimil', 'assorb', 'consider', 'afferr', 'assimilare', 'assorbir', 'apprend', 'ottimament', 'con successo', 'con successi', 'alla grande', 'benissimo', 'eccellentemente', 'eccelsamente', 'magnificamente', 'meravigliosamente', 'perfettamente', 'splendidamente', 'stupendamente', 'sublimemente', 'superbamente', 'bene', 'niente male', 'malissimo', 'orrendamente', 'orribilmente', 'pessimamente', 'schifosamente', 'così e così', 'male', 'maluccio', 'mediocremente', 'mediocr', 'avere capacità', 'ho le capacità', 'avrò le capacità', 'capacità', 'essere capace', 'sono capace', 'sarò capace', 'capac', 'sono in grado di lavorare', 'sarà in grado di lavorare', 'sarai in grado di lavorare', 'essere in grado di lavorare', 'essere all\'altezza di', 'andare bene', 'andrò bene', 'andrà bene', 'andremo bene', 'cavarsela', 'cavarmela', 'cavarcela', 'me la caverò', 'ce la caveremo', 'se la caveranno', 'se la caverà', 'te la caverai', 'fare bene', 'farò bene', 'faremo bene', 'faranno bene', 'farete bene', 'farai bene', 'farà bene', 'avere esito positivo', 'avrà esito positivo', 'avrò esito positivo', 'avranno esito positivo', 'andrà a buon fine', 'andranno a buon fine', 'avere successo', 'avrò buon esito', 'avranno buon esito', 'avrà successo', 'avranno successo', 'andare male', 'falliment', 'successo nel lavoro', 'successo nel mio lavoro', 'il mio lavoro con successo', 'la mia professione con successo', 'con successo il mio lavoro',
+'con successo la mia professione','fare fiasco', 'buco nell\'acqua', 'fiasco', 'ottenere un buon esito', 'otterrò un buon esito', 'otterrà un buon esito', 'otterrai un buon esito', 'otterranno un buon esito', 'otterremo un buon esito', 'un successo', 'spuntarla', 'la spunterò', 'la spunteremo', 'mancare l\'obiettivo', 'mancherò l\'obiettivo', 'manco l\'obiettivo', 'esito positivo', 'esito negativo', 'buon esito', 'cattivo esito', 'toppare', 'topperò', 'top', 'super', 'avere successo nella professione', 'avrò successo nella professione', 'avremo successo nella professione', 'avere un certo effetto', 'avere un certo esito'];
 
 var lavoro_bene_cits = ['1Lav) Quando cominci un lavoro quello che conta è farlo fino in fondo e bene [Margaret Tatcher] verde',
 '2Lav) L’inizio è la parte più importante del lavoro. [Platone] verde',
@@ -43,7 +53,7 @@ var lavoro_bene_cits = ['1Lav) Quando cominci un lavoro quello che conta è farl
 ///// COSA SERVE LAVORO
 
 const cosa_serveLav_generico_keywords = ['servir', 'usare', 'obiettiv', 'utile', 'necessar', 'necessit', 'occorre', 'utilizz', 'sfrutt', 'avvalersi', 'mi avvalgo', 'ti avvali', 'si avvale', 'si avvalgono', 'bisogno', 'bisogn', 'funge', 'funzione', 'funzioni', 'assolve', 'assolv', 'impieg', 'adoperar', 'adoper', 'fornir', 'fornisc', 'impiego', 'impiegat', 'fine', 'proposito', 'intento', 'traguard', 'meta', 'finalità', 'il mezzo', 'destinazion', 'compito', 'ruol', 'obiettiv', 'proposit',
-'scopo del lavoro', 'scopo', 'umanit', 'altr', 'genere uman', 'uomini', 'genti', 'collettività', 'società', 'solidarietà', 'fratellanza', 'altruismo', 'carità', 'tolleranza', 'indulgenza', 'scopo', 'senso', 'signific', 'sensat', 'insensat', 'logic', 'illogic', 'razional', 'irrazional', 'illogic', 'incoeren', 'incongruen', 'irragionevol', 'irrazional', 'sconness', 'assurd', 'giudizios', 'logic', 'efficac', 'validità', 'valid', 'comodità', 'funzionalità', 'comod', 'funzional', 'praticità', 'pratic', 'inservibilità', 'inutil', 'inutilità', 'vantaggiosità', 'vantagg', 'opportunità', 'dannosità', 'dannos', 'nocività', 'nociv', 'obblig', 'dover', 'necessità', 'necessari', 'coercizion', 'costrizion', 'costrett', 'obbligat', 'impost', 'imposizion', 'dovere', 'vincol', 'obbligator', 'vincolat', 'limitat', 'obbligatorietà', 'forzat', 'impegno', 'impegni', 'impegnat', 'indott', 'tenut', 'esentat', 'esonerat', 'libero di', 'debitore', 'in debito', 'grato', 'grata', 'grate', 'grati', 'gratitudine', 'riconoscent', 'riconoscen', 'ingrat', 'irriconoscent', 'coatt', 'forzat', 'vincolat', 'predispost', 'prefissat', 'svincolat', 'pension'];
+'scopo del lavoro', 'scopo', 'umanit', 'genere umano', 'uomini', 'genti', 'collettività', 'società', 'solidarietà', 'fratellanza', 'altruismo', 'carità', 'scopo', 'senso', 'signific', 'sensat', 'insensat', 'logic', 'illogic', 'razional', 'irrazional', 'illogic', 'incoeren', 'incongruen', 'irragionevol', 'irrazional', 'sconness', 'assurd', 'giudizios', 'logic', 'efficac', 'validità', 'valid', 'comodità', 'funzionalità', 'comod', 'funzional', 'praticità', 'pratic', 'inservibilità', 'inutil', 'inutilità', 'vantaggiosità', 'vantagg', 'opportunità', 'dannosità', 'dannos', 'nocività', 'nociv', 'obblig', 'dover', 'necessità', 'necessari', 'coercizion', 'costrizion', 'costrett', 'obbligat', 'impost', 'imposizion', 'dovere', 'vincol', 'obbligator', 'vincolat', 'limitat', 'obbligatorietà', 'forzat', 'impegno', 'impegni', 'impegnat', 'indott', 'tenut', 'esentat', 'esonerat', 'libero di', 'debitore', 'in debito', 'grato', 'grata', 'grate', 'grati', 'gratitudine', 'riconoscent', 'riconoscen', 'ingrat', 'irriconoscent', 'coatt', 'forzat'];
 
 var cosa_serveLav_generico_cits = ['3Lav) Il lavoro allontana tre grandi male: la noia, il vizio e il bisogno [Voltaire] arancio',
 '4Lav) Il lavoro non è più rispettabile dell’alcool, e serve esattamente allo stesso scopo: distrae semplicemente la mente. [Aldous Huxley] viola',
@@ -70,35 +80,37 @@ var cosa_serveLav_2_cits = ['4Lav) Il lavoro non è più rispettabile dell’alc
 
 ////// SOLDI
 
-const soldi_keywords = ['strategi', 'vot', 'diventare ricco', 'diventare ricca', 'diventare ricche', 'diventare ricchi', 'ricc', 'soldi', 'denaro', 'danaro', 'quattrini', 'quattrino', 'bezzi', 'conquibus', 'pecunia', 'grana', 'banconot', 'spiccioli', 'spicciolo', 'contante', 'contanti', 'liquido', 'monet', 'valut', 'ricchezz', 'patrimonio', 'averi', 'capital', 'fondi', 'finanze', 'risparmi', 'rendita', 'guadagn', 'ricchezza', 'prosperità', 'agio', 'centesimi', 'milionar', 'miliardar', 'riccone', 'riccona', 'ricconi', 'pagar', 'spender'];
+const soldi_keywords = ['strategi', 'diventare ricco', 'diventare ricca', 'diventare ricche', 'diventare ricchi', 'ricc', 'soldi', 'denaro', 'danaro', 'quattrini', 'quattrino', 'bezzi', 'conquibus', 'pecunia', 'grana', 'banconot', 'spiccioli', 'spicciolo', 'contante', 'contanti', 'liquido', 'monet', 'valut', 'ricchezz', 'patrimonio', 'averi', 'capital', 'fondi', 'finanze', 'risparmi', 'rendita', 'guadagn', 'ricchezza', 'prosperità', 'agio', 'centesimi', 'milionar', 'miliardar', 'riccone', 'riccona', 'ricconi', 'pagar', 'spender', 'cash', 'fatturat', 'curriculum', 'portfolio', 'cv', 'stipend', 'salari', 'lusso', 'opulenza', 'opulen', 'indigenza', 'indigen', 'miseria', 'nullatenen', 'povertà', 'pover', 'beni', 'fortune', 'patrimonio', 'possedimenti', 'possessi', 'proprietà', 'abbondanza', 'dovizia', 'profusione', 'esigu', 'inopia', 'penuria', 'pover', 'scars', 'scarsità', 'dote', 'eredità', 'ereditare', 'ereditari', 'curriculum vitae', 'danaroso', 'dovizioso', 'facoltos', 'miliardari', 'milionari', 'ricco sfondato', 'abbiente', 'ricca sfondata', 'agiat', 'benestante', 'indigente', 'malagiat', 'non abbiente', 'miserabile', 'miser', 'nullatenente', 'prosper', 'prosperos', 'opim', 'opulent', 'pingue', 'faraonic', 'lussuos', 'dozzinale', 'scadente', 'produttivo', 'ubertos', 'fiorent', 'florid', 'lussureggiant', 'stentat', 'laut', 'lucullian', 'pantagruelic', 'mida', 'opulen', 'indigen', 'nababb', 'plutocrate', 'benestant', 'capitalist', 'bisognos'];
 
 var soldi_cits = ['12Lav) Lavora come se non avessi bisogno di soldi [Satchel Paige] verde',
 '54Lav) Quando un uomo ti dice che è diventato ricco grazie al duro lavoro, chiedigli: “di chi?”.[Don Marquis] rosso',
 '55Lav) “La ricchezza è una condizione relativa: è ricco che guadagna di più di quanto spende e, viceversa, è povero chi ha esigenze superiori al reddito.” (luciano de crescenzo) verde'
 ];
 
-////// LAVORO ESSENZIALE PER VITA
+////// LAVORO ESSENZIALE PER VITA -----> stress, tempo libero
 
-const lavoro_vita_keywords = ['scopo', 'obbligo', 'pigriz', 'fannullaggin', 'indolenza', 'inerzia', 'vacanz', 'noia', 'noios', 'ozio', 'inoperos', 'sfaticat', 'tempo libero', 'passatemp', 'divertiment', 'svago', 'spasso', 'distrazione', 'tempo', 'trovar', 'se stesso', 'se stessi', 'scorger', 'veder', 'rivelar', 'segnal', 'consegu', 'ritrov', 'nobil', 'fatic', 'frustrat', 'frustaz', 'stress', 'trovar se stessi', 'trovare se stessi', 'hobby', 'passatemp', 'passion', 'svagarmi', 'svagarsi', 'distrazion', 'distrarsi', 'distrarmi', 'diversiv', 'divertiment', 'scacciapensieri', 'prefissat', 'svincolat', 'stress', 'stressat', 'lavorat', 'scansafatic'];
+const lavoro_vita_keywords = ['obbligo', 'pigriz', 'fannullaggin', 'indolenza', 'inerzia', 'vacanz', 'noia', 'noios', 'ozio', 'inoperos', 'sfaticat', 'tempo libero', 'passatemp', 'divertiment', 'svago', 'spasso', 'distrazione', 'trovare se stesso', 'trovare se stessi', 'trovar se stesso', 'trovar se stessi', 'nobil', 'fatic', 'frustrat', 'frustraz', 'stress', 'trovar se stessi', 'trovare se stessi', 'hobby', 'passatemp', 'passion', 'svagarmi', 'svagarsi', 'distrazion', 'distrarsi', 'distrarmi', 'diversiv', 'divertiment', 'scacciapensieri', 'stress', 'stressat', 'scansafatic', 'voglia di lavorare', 'voglia di fare', 'ferie', 'feste', 'festività', 'riposo', 'riposat', 'riposar', 'ripos', 'pension'];
 
 
 ///// LAVORO GIUSTO
 
-const lavoro_giusto_keywords = ['sceglier', 'scelg', 'preferit', 'godi', 'appag', 'soddisfazion', 'benessere', 'errat', 'sbagliat', 'giust', 'esatt', 'adeguat', 'appropriat',  'convenient', 'giusto per me', 'adatt', 'il più adatto', 'vergogn', 'adott', 'adottar', 'lavoro dei miei sogni', 'desiderio', 'desideri', 'ambisc', 'sognar', 'aspiro', 'aspirar', 'studi', 'apprender', 'studiando', 'speranz', 'aspiraz', 'bram', 'università', 'studio', 'scuol', 'lezion', 'botteg', 'fare dopo',
-'farà dopo l\'università', 'far dopo', 'farò dopo gli studi', 'farò dopo il liceo', 'branc', 'campo di', 'scelg', 'soddisf', 'mi soddisf', 'appagat', 'soddisfatt', 'gratificazion', 'gratifica', 'piacere', 'godimento', 'appagament', 'compiaciment', 'allegr', 'gioia', 'aumento', 'stipend', 'guadagn'];
+const lavoro_giusto_keywords = ['sceglier', 'scelg', 'preferit', 'prefer', 'godi', 'appag', 'soddisfazion', 'soddisf', 'benessere', 'giust', 'esatt', 'adeguat', 'appropriat', 'convenient', 'giusto per me', 'adatt', 'il più adatto', 'adott', 'adottar', 'lavoro dei miei sogni', 'lavoro della mia vita', 'desiderio', 'desideri', 'desider', 'ambisc', 'sognar', 'sogno', 'sogni', 'sogniamo', 'aspiro', 'aspirar', 'aspiriamo', 'studi', 'studiando', 'speranz', 'aspiraz', 'bram', 'università', 'studio', 'scuol', 'lezion', 'botteg', 'fare dopo', 'piacerebbe', 'piace',
+'farà dopo l\'università', 'far dopo', 'farò dopo gli studi', 'farò dopo il liceo', 'branc', 'campo di', 'scelg', 'soddisf', 'mi soddisf', 'appagat', 'soddisfatt', 'gratificazion', 'gratifica', 'piacere', 'godimento', 'appagament', 'compiaciment', 'allegr', 'gioia', 'aumento', 'stipend', 'guadagn', 'sbagliar', 'lavoro migliore', 'miglior lavoro', 'occupazione migliore', 'professione migliore', 'realizzazione', 'realizzat', 'felic', 'liet', 'opportun', 'efficac', 'più buono', 'esaudimento', 'saturazione', 'esaudit', 'esaudir', 'gradimento', 'gradit', 'adempimento', 'adempier', 'assolvimento', 'ottemperamento', 'consolazion', 'lavoro che mi piace',
+'lavoro che mi piaccia', 'lavoro che mi soddisfi', 'lavoro che mi renda felice'];
 
 
 ///// COSA AMBIRE
 
 const cosa_ambire_keywords = ['obiettiv', 'traguard', 'soglia', 'livello',
 'modific', 'modalità', 'manier', 'infelic', 'felic',
-'divent', 'trasformarsi', 'farsi diverso', 'avere', 'raggiung',
-'divent', 'valore', 'perfezione', 'miglior', 'ambizios', 'ambi', 'punt', 'aspir', 'mirare', 'arrivare a',
+'trasformarsi', 'farsi diverso', 'avere', 'raggiung',
+'valore', 'perfezione', 'miglior', 'ambizios', 'ambi', 'punt', 'aspir', 'mirare', 'arrivare a',
 'sogn', 'principi', 'giudi', 'distru'];
 
 ///// AMORE PROPRIO LAVORO
 
-const amore_proprio_lav_keywords = ['proprio lavoro', 'mio lavoro', 'individ', 'mi piac', 'piacer', 'apprezz', 'quello che faccio', 'quotidinalm', 'quotidianame', 'trovare la forza', 'trovar le forze', 'reputaz', 'amo quello che faccio', 'apprezzare quello che faccio', 'apprezzo quello che faccio', 'amo quello che faccio', 'ho stima del mio lavoro', 'adoro il mio lavoro', 'adorare il mio lavoro', 'desiderare il mio lavoro', 'desiderare quello che faccio'];
+const amore_proprio_lav_keywords = ['individ', 'apprezz', 'quello che faccio', 'quotidianalm', 'quotidianame', 'trovare la forza', 'trovar le forze', 'reputaz', 'amo quello che faccio', 'apprezzare quello che faccio', 'apprezzo quello che faccio', 'amo quello che faccio', 'ho stima del mio lavoro', 'adoro il mio lavoro', 'adorare il mio lavoro', 'desiderare il mio lavoro', 'desiderare quello che faccio', 'schiavo del mio lavoro', 'schiava del mio lavoro', 'schiavi del nostro lavoro',
+'lavoro da schiavi', 'lavoro da schiavo', 'lavoro da schiava', 'servitù', 'schiavitù', 'amare il proprio lavoro', 'apprezzare il proprio lavoro', 'apprezzare la propria professione', 'amare la propria professione', 'innamorarmi del mio lavoro', 'innamorarsi del proprio lavoro', 'innamorarmi del mio lavoro', 'innamorarmi della mia professione', 'innamorarsi della propria professione', 'innamorarmi del mio mestiere', 'innamorarsi del proprio mestiere'];
 
 
 ///// CAMBIAMENTO AUDACIA
@@ -107,15 +119,16 @@ const camb_audacia_keywords = ['cambi', 'evolv', 'trasform', 'rinnov', 'vari', '
 'liberarsi', 'essere disposto', 'essere disposta','essere disposte','essere disposti', 'cambi', 'artefic',
 'process', 'strad', 'percors',
 'cerc', 'capac', 'essere in grado', 'fare', 'pens', 'puoi arrivare', 'poter arrivare', 'posso arrivare', 'possiamo arrivare', 'possono arrivare', 'puoi essere', 'poter essere', 'posso essere', 'possiamo essere', 'possono essere',
-'divent', 'costrui',
-'audacia', 'convinzion', 'reput', 'coraggio'];
+'divent', 'costrui'
+];
 
 
 ////// MOTIV
-const motiv_1_keywords = ['speriment', 'fare esperienza', 'fare esperienze', 'acquisire esperienza', 'acquisire esperienze', 'impratichirsi', 'cerc', 'individuar', 'tracciar', 'seguir', 'sopportar', 'adattar', 'rassegnar', 'rendere inutile', 'rendere utile', 'vanifica', 'delu', 'abbatt', 'scoraggia', 'demoralizz', 'deprimer', 'depress', 'avvili'];
-const motiv_2_keywords = ['opportunità', 'possibil', 'occorrenz', 'chance', 'momento', 'occorrenza', 'circostanza', 'avvenimento', 'causa', 'motivo', 'pretesto', 'modo', 'affar', 'offert', 'occasion', 'attività', 'sforz', 'energia'];
+const motiv_1_keywords = ['speriment', 'fare esperienza', 'fare esperienze', 'acquisire esperienza', 'acquisire esperienze', 'impratichirsi', 'sopportar', 'rassegnar', 'rendere inutile', 'rendere utile', 'vanifica', 'delu', 'abbatt', 'scoraggia', 'demoralizz', 'deprimer', 'depress', 'avvili', 'faccio esperienza', 'acquisisco esperienza', 'sopport', 'adattarsi', 'adattarmi', 'adattarci', 'cimentarsi', 'cimentarmi', 'cimentarci', 'impratichirmi', 'impratichirci', 'impratichisc', 'sopport', 'sostenere', 'subire', 'soffrire', 'tollerare', 'patire', 'pazientare', 'sottomissione', 'acquiescenza', 'sopportazione', 'sottomess', 'abbattut', 'sfiduciat', 'abbacchiat', 'scoraggiat', 'sconsolat', 'sconfortat', 'scorat', 'sconfort', 'coragg', 'rinunc', 'desist', 'mutar occupazione', 'mutar proposito', 'mutare occupazione', 'cambiare occupazione', 'cambiare lavoro', 'cambiare proposito', 'cambiare professione', 'mutare professione', 'cambiar lavoro', 'cambiar professione',
+'cambiar occupazione', 'perseveranz', 'persever', 'insist', 'perdur', 'persist', 'assidu', 'costanz', 'costant', 'tenac', 'accaniment', 'caparbi', 'ostinat', 'ostinaz', 'pervicac', 'incostanz', 'incostant', 'arrendevol', 'ceder', 'darsi per vinto', 'darmi per vinto', 'demorder', 'gettare la spugna', 'mollar', 'rinunc', 'soccomb', 'battersi', 'combatt', 'opporsi', 'oppormi', 'resist', 'tenere duro', 'tener duro', 'tengo duro'];
+const motiv_2_keywords = ['opportunità', 'possibil', 'occorrenz', 'chance', 'circostanza favorevole', 'circostanze favorevoli', 'momento propizio', 'momenti propizi', 'momento adatto', 'occasione adatta', 'occorrenza', 'avvenimento', 'occasion'];
 
-const occasioni_keywords = ['occasion', 'possibil', 'situazion', 'circostanz', 'opportunità', 'chance',
+const occasioni_keywords = ['occasion', 'possibilit', 'situazion', 'opportunità', 'chance', 'circostanza favorevole', 'circostanze favorevoli', 'momento propizio', 'momenti propizi', 'momento adatto', 'occasione adatta',
 'cogliere', 'colgo', 'acchiapp', 'afferr', 'prend',
 'darsi da fare', 'mi do da fare', 'ci si da fare', 'impegnarsi',  'mettersi in gioco', 'rimboccarsi le maniche',
 'gradin', 'ostacol', 'difficoltà',
@@ -133,16 +146,17 @@ const amore_per_lav_keywords = ['proprio lavoro', 'mio lavoro', 'individ', 'mi p
 
 ////// FRASI POSITIVE
 
-const frasi_posneg_keywords = ['odio', 'disprezz', 'rabbia', 'non raggiung', 'allontanars', 'divergere', 'estraniarsi', 'disaffezionar', 'straniarsi', 'capo', 'boss', 'mio superiore', 'mia superiore', 'mio dipendente', 'mia dipendente', 'miei dipendenti', 'suoi dipendenti', 'colleg', 'trovarsi bene', 'andare d\'accordo', 'andare d\'accord con gli altri', 'andare d\'accordo con', 'capirsi', 'lavorar bene insieme', 'lavorare bene insieme', 'insieme', 'team', 'gruppo', 'uffic'];
+const frasi_posneg_keywords = ['odio', 'odiar', 'disprezz', 'rabbia', 'divergere', 'divergenz', 'opinion', 'estraniarsi', 'disaffezionar', 'straniarsi', 'capo', 'boss', 'mio superiore', 'mia superiore', 'mio dipendente', 'mia dipendente', 'miei dipendenti', 'suoi dipendenti', 'colleg', 'trovarsi bene', 'andare d\'accordo', 'andare d\'accord con gli altri', 'andare d\'accordo', 'andar d\'accordo', 'mi trovo bene', 'vado d\'accordo', 'capirsi', 'lavorar bene insieme', 'lavorare bene insieme', 'insieme', 'team', 'gruppo', 'uffic', 'contrast', 'discord', 'disaccord', 'dissidio', 'armonia', 'intesa', 'contesa', 'tension', 'conflitt', 'scontr', 'discussion', 'discuter', 'discu', 'litig', 'disput', 'polemic', 'dibattit', 'controvers', 'disamina', 'alterco', 'dialogo', 'negoziar',
+'capi', 'dirigent', 'dirig', 'manager', 'superior', 'leader', 'comand', 'dirett', 'gerarca', 'boss', 'president', 'presidenz', 'burocrat', 'burocraz', 'funzionari', 'operai', 'operaie'];
 
 
 ///// FORZA ANIMO
 
-const forza_animo_keywords = ['rialzarsi', 'cadere', 'mollare', 'perdere', 'fallire', 'toccare', 'raggiungere', 'riuscire', 'vincer', 'attraversar', 'riprov', 'super', 'arriv', 'otten', 'continu', 'stando fermo', 'fermi', 'si va', 'impar', 'tent', 'gioc', 'essere pronti', 'prosegu', 'insist', 'persever', 'cessare', 'proced', 'riprend', 'abbattersi', 'abbattuto', 'risollevarsi', 'riuscirci', 'sollevarsi', 'migliorare', 'arrendersi', 'spronarsi', 'avere forza d\'animo', 'andare avanti',
+const forza_animo_keywords = ['rialzarsi', 'cadere', 'mollare', 'perdere', 'perd', 'fallire', 'falliment', 'fallisc', 'falliamo', 'fallit', 'toccare il fondo', 'raggiungere', 'raggiung', 'riuscire', 'vincer', 'attraversar', 'riprov', 'super', 'arriv', 'otten', 'continu', 'stando fermo', 'fermi', 'si va', 'impar', 'tent', 'gioc', 'essere pronti', 'prosegu', 'insist', 'persever', 'cessare', 'proced', 'riprend', 'abbattersi', 'abbattuto', 'risollevarsi', 'riuscirci', 'sollevarsi', 'migliorare', 'arrendersi', 'spronarsi', 'avere forza d\'animo', 'andare avanti',
 'andare bene', 'andare male', 'andare a rotoli', 'rotoli', 'andare in fumo', 'fiasco', 'su con la vita', 'spirito d\'iniziativa',
-'determina', 'pazienza', 'perseveranza', 'persever', 'duro lavoro', 'sudore', 'coraggio', 'entusias', 'vinc',  'ardire', 'intrepidezza', 'intraprendenza',  'ardimento', 'audacia', 'prodezza', 'temerari', 'sangue freddo', 'spavald',
+'determina', 'pazienza', 'pazient', 'perseveranza', 'persever', 'duro lavoro', 'sudore', 'coraggio', 'entusias', 'vinc',  'ardire', 'intrepidezza', 'intrepid', 'intraprendenza', 'intrapr', 'ardimento', 'audacia', 'prodezza', 'temerari', 'sangue freddo', 'spavald',
 'ottimis', 'pessimis', 'meglio', 'focalizz', 'autodisciplina', 'indulg',
-'volontà', 'ostacol', 'difficil', 'cerc', 'sacrific', 'controcorrente', 'scogli'];
+'volontà', 'ostacol', 'difficil', 'cerc', 'sacrific', 'controcorrente', 'scogli', 'audacia', 'audac', 'convinzion', 'reput', 'coraggio', 'risoluzione', 'risolut'];
 
 //// MOTIVAZIONE
 
@@ -158,8 +172,8 @@ const sport_succ_keywords = ['partit', 'punt', 'sport', 'temp', 'allenament', 'c
 
 //// FELICITA'
 
-const felicità_succ_keywords = ['felicità', 'contentezza', 'tranquillità', 'serenità', 'gioia', 'realizzazione',
-'salute', 'memoria', 'immaginazione', 'coraggio',
+const felicità_succ_keywords = ['felicità', 'contentezza', 'tranquillità', 'serenità', 'gioia',
+'salute', 'memoria', 'immaginazione',
 'felic', 'trist', 'scontent', 'risat',
 'liber', 'caten', 'oppressione', 'infelic', 'felic',
 'pass', 'salt', 'progre', 'attravers',

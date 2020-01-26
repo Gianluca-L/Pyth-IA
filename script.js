@@ -111,7 +111,7 @@ const cosa_ambire_keywords = ['obiettiv', 'traguard', 'soglia', 'livello',
 ///// AMORE PROPRIO LAVORO
 
 const amore_proprio_lav_keywords = ['apprezz', 'quello che faccio', 'quotidianalm', 'quotidianame', 'trovare la forza', 'trovar le forze', 'reputaz', 'amo quello che faccio', 'apprezzare quello che faccio', 'apprezzo quello che faccio', 'amo quello che faccio', 'ho stima del mio lavoro', 'adoro il mio lavoro', 'adorare il mio lavoro', 'desiderare il mio lavoro', 'desiderare quello che faccio', 'schiavo del mio lavoro', 'schiava del mio lavoro', 'schiavi del nostro lavoro',
-'lavoro da schiavi', 'lavoro da schiavo', 'lavoro da schiava', 'servitù', 'schiavitù', 'amare il proprio lavoro', 'apprezzare il proprio lavoro', 'apprezzare la propria professione', 'amare la propria professione', 'innamorarmi del mio lavoro', 'innamorarsi del proprio lavoro', 'innamorarmi del mio lavoro', 'innamorarmi della mia professione', 'innamorarsi della propria professione', 'innamorarmi del mio mestiere', 'innamorarsi del proprio mestiere'];
+'lavoro da schiavi', 'lavoro da schiavo', 'lavoro da schiava', 'servitù', 'schiavitù', 'amare il proprio lavoro', 'amare il mio lavoro', 'amare la mia professione', 'apprezzare il proprio lavoro', 'apprezzare il mio lavoro', 'apprezzare la propria professione', 'apprezzare la mia professione', 'amare la propria professione', 'innamorarmi del mio lavoro', 'innamorarsi del proprio lavoro', 'innamorarmi del mio lavoro', 'innamorarmi della mia professione', 'innamorarsi della propria professione', 'innamorarmi del mio mestiere', 'innamorarsi del proprio mestiere'];
 
 
 ///// CAMBIAMENTO AUDACIA

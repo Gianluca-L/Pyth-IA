@@ -106,13 +106,13 @@ void loop() {
           leds[i] = CRGB (230, 51, 112);
         }
       }
-      else if (Color == 8) {
-//                for (int i = 0; i <= 143; i++) {
-//          leds[i] = CRGB ( 255, 0, 0);
-//        }
-        colorWipe(255, 0, 0, 10);
-        colorWipe(0x00, 0x00, 0x00, 10);
-      }
+//      else if (Color == 8) {
+////                for (int i = 0; i <= 143; i++) {
+////          leds[i] = CRGB ( 255, 0, 0);
+////        }
+//        colorWipe(255, 0, 0, 10);
+//        colorWipe(0x00, 0x00, 0x00, 10);
+//      }
       //      else if (Color == 7) {
       //      }
     }

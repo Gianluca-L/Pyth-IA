@@ -28,7 +28,7 @@ const keywords = ["terra", "piatta", "tonda", "sfer"];
 
 //////////////////////////////////////////////////////////// LAVORO
 
-const lavoro_generico_keywords = ['lavor', 'attività', 'compito', 'impegno', 'faccend', 'operazion', 'responsabilità', 'incaric', 'funzion', 'mansion', 'occupazion', 'profession', 'impieg', 'mestier', 'serviz', 'prestazion'];
+const lavoro_generico_keywords = ['lavor', 'attività', 'compito', 'impegno', 'faccend', 'operazion', 'responsabilità', 'incaric', 'funzion', 'mansion', 'occupazion', 'profession', 'impieg', 'mestier', 'serviz', 'prestazion', 'colleg', 'capo', 'capi', 'dirigent', 'manager', 'superior', 'leader', 'comandant', 'dirett', 'gerarca', 'boss', 'president', 'presidenz', 'stipend', 'salari', 'burocraz', 'busta paga', 'burocrat', 'funzionario', 'commess', 'compenso', 'retribuzion', 'retribuit', 'rimunerar', 'operaio', 'operaia', 'operai', 'operaie', 'ufficio', 'azienda', 'aziende', 'uffici', 'ditta', 'imprenditor', 'ferie'];
 
 
 ///// LAVORO_VERGOGNA
@@ -37,13 +37,14 @@ const lavoro_vergogna_keywords = ['vergogn', 'sbagliat', 'errat', 'mancat', 'err
 
 //// LAVORO_ENERGIA
 
-const lavoro_energia_keywords = [];
+const lavoro_energia_keywords = ['attività', 'sforz', 'energia'];
 
 //// LAVORARE BENE
 
 const lavoro_bene_keywords = ['contare', 'valut', 'consider', 'prendere in considerazione', 'iniz', 'cominc', 'principi', 'dare inizio', 'avviar', 'aprir', 'inaugur', 'intraprend', 'fondar', 'promuov', 'introdu', 'accing', 'intavol', 'abbozz', 'imbast', 'avere inizio', 'avrà inizio', 'ha inizio', 'fare prima', 'far prima', 'procedur', 'sistem', 'metod', 'norm', 'criteri', 'iter', 'procediment', 'lavoro perfetto', 'far perfettamente',
-'fare perfettamente', 'impar', 'conosc', 'assimil', 'assorb', 'consider', 'afferr', 'assimilare', 'assorbir', 'apprend', 'ottimament', 'con successo', 'con successi', 'alla grande', 'benissimo', 'eccellentemente', 'eccelsamente', 'magnificamente', 'meravigliosamente', 'perfettamente', 'splendidamente', 'stupendamente', 'sublimemente', 'superbamente', 'bene', 'niente male', 'malissimo', 'orrendamente', 'orribilmente', 'pessimamente', 'schifosamente', 'così e così', 'male', 'maluccio', 'mediocremente', 'mediocr', 'avere capacità', 'ho le capacità', 'avrò le capacità', 'capacità', 'essere capace', 'sono capace', 'sarò capace', 'capac', 'sono in grado di lavorare', 'sarà in grado di lavorare', 'sarai in grado di lavorare', 'essere in grado di lavorare', 'essere all\'altezza di', 'andare bene', 'andrò bene', 'andrà bene', 'andremo bene', 'cavarsela', 'cavarmela', 'cavarcela', 'me la caverò', 'ce la caveremo', 'se la caveranno', 'se la caverà', 'te la caverai', 'fare bene', 'farò bene', 'faremo bene', 'faranno bene', 'farete bene', 'farai bene', 'farà bene', 'avere esito positivo', 'avrà esito positivo', 'avrò esito positivo', 'avranno esito positivo', 'andrà a buon fine', 'andranno a buon fine', 'avere successo', 'avrò buon esito', 'avranno buon esito', 'avrà successo', 'avranno successo', 'andare male', 'falliment', 'successo nel lavoro', 'successo nel mio lavoro', 'il mio lavoro con successo', 'la mia professione con successo', 'con successo il mio lavoro',
-'con successo la mia professione','fare fiasco', 'buco nell\'acqua', 'fiasco', 'ottenere un buon esito', 'otterrò un buon esito', 'otterrà un buon esito', 'otterrai un buon esito', 'otterranno un buon esito', 'otterremo un buon esito', 'un successo', 'spuntarla', 'la spunterò', 'la spunteremo', 'mancare l\'obiettivo', 'mancherò l\'obiettivo', 'manco l\'obiettivo', 'esito positivo', 'esito negativo', 'buon esito', 'cattivo esito', 'toppare', 'topperò', 'top', 'super', 'avere successo nella professione', 'avrò successo nella professione', 'avremo successo nella professione', 'avere un certo effetto', 'avere un certo esito'];
+'fare perfettamente', 'impar', 'conosc', 'assimil', 'assorb', 'consider', 'afferr', 'assimilare', 'assorbir', 'apprend', 'ottimament', 'con successo', 'con successi', 'alla grande', 'benissimo', 'eccellentemente', 'eccelsamente', 'magnificamente', 'meravigliosamente', 'perfettamente', 'splendidamente', 'stupendamente', 'sublimemente', 'superbamente', 'bene', 'niente male', 'malissimo', 'orrendamente', 'orribilmente', 'pessimamente', 'schifosamente', 'così e così', 'male', 'maluccio', 'mediocremente', 'mediocr', 'avere capacità', 'ho le capacità', 'avrò le capacità', 'capacità', 'essere capace', 'sono capace', 'sarò capace', 'capac', 'sono in grado di lavorare', 'sarà in grado di lavorare', 'sarai in grado di lavorare', 'essere in grado di lavorare', 'essere all\'altezza di', 'andare bene', 'andrò bene', 'andrà bene', 'andremo bene', 'cavarsela', 'cavarmela', 'cavarcela', 'me la caverò', 'ce la caveremo', 'se la caveranno', 'se la caverà', 'te la caverai', 'fare bene', 'farò bene', 'faremo bene', 'faranno bene', 'farete bene', 'farai bene', 'farà bene', 'avere esito positivo', 'avrà esito positivo', 'avrò esito positivo', 'avranno esito positivo', 'andrà a buon fine', 'andranno a buon fine', 'avere successo', 'avrò buon esito', 'avrà buon esito', 'avranno buon esito', 'avrà successo', 'avranno successo', 'andare male', 'falliment', 'successo nel lavoro', 'successo nel mio lavoro', 'il mio lavoro con successo', 'la mia professione con successo', 'con successo il mio lavoro',
+'con successo la mia professione','fare fiasco', 'buco nell\'acqua', 'fiasco', 'ottenere un buon esito', 'otterrò un buon esito', 'otterrà un buon esito', 'otterrai un buon esito', 'otterranno un buon esito', 'otterremo un buon esito', 'un successo', 'spuntarla', 'la spunterò', 'la spunteremo', 'mancare l\'obiettivo', 'mancherò l\'obiettivo', 'manco l\'obiettivo', 'esito positivo', 'esito negativo', 'buon esito', 'cattivo esito', 'toppare', 'topperò', 'top', 'super',
+'avere successo nella professione', 'avrò successo nella professione', 'avremo successo nella professione', 'avere un certo effetto', 'avere un certo esito'];
 
 var lavoro_bene_cits = ['1Lav) Quando cominci un lavoro quello che conta è farlo fino in fondo e bene [Margaret Tatcher] verde',
 '2Lav) L’inizio è la parte più importante del lavoro. [Platone] verde',
@@ -52,7 +53,7 @@ var lavoro_bene_cits = ['1Lav) Quando cominci un lavoro quello che conta è farl
 
 ///// COSA SERVE LAVORO
 
-const cosa_serveLav_generico_keywords = ['servir', 'usare', 'obiettiv', 'utile', 'necessar', 'necessit', 'occorre', 'utilizz', 'sfrutt', 'avvalersi', 'mi avvalgo', 'ti avvali', 'si avvale', 'si avvalgono', 'bisogno', 'bisogn', 'funge', 'funzione', 'funzioni', 'assolve', 'assolv', 'impieg', 'adoperar', 'adoper', 'fornir', 'fornisc', 'impiego', 'impiegat', 'fine', 'proposito', 'intento', 'traguard', 'meta', 'finalità', 'il mezzo', 'destinazion', 'compito', 'ruol', 'obiettiv', 'proposit',
+const cosa_serveLav_generico_keywords = ['servir', 'serve', 'usare', 'obiettiv', 'utile', 'necessar', 'necessit', 'occorre', 'utilizz', 'sfrutt', 'avvalersi', 'mi avvalgo', 'ti avvali', 'si avvale', 'si avvalgono', 'bisogno', 'bisogn', 'funge', 'funzione', 'funzioni', 'assolve', 'assolv', 'impieg', 'adoperar', 'adoper', 'fornir', 'fornisc', 'impiego', 'impiegat', 'fine', 'proposito', 'intento', 'traguard', 'meta', 'finalità', 'il mezzo', 'destinazion', 'compito', 'ruol', 'obiettiv', 'proposit',
 'scopo del lavoro', 'scopo', 'umanit', 'genere umano', 'uomini', 'genti', 'collettività', 'società', 'solidarietà', 'fratellanza', 'altruismo', 'carità', 'scopo', 'senso', 'signific', 'sensat', 'insensat', 'logic', 'illogic', 'razional', 'irrazional', 'illogic', 'incoeren', 'incongruen', 'irragionevol', 'irrazional', 'sconness', 'assurd', 'giudizios', 'logic', 'efficac', 'validità', 'valid', 'comodità', 'funzionalità', 'comod', 'funzional', 'praticità', 'pratic', 'inservibilità', 'inutil', 'inutilità', 'vantaggiosità', 'vantagg', 'opportunità', 'dannosità', 'dannos', 'nocività', 'nociv', 'obblig', 'dover', 'necessità', 'necessari', 'coercizion', 'costrizion', 'costrett', 'obbligat', 'impost', 'imposizion', 'dovere', 'vincol', 'obbligator', 'vincolat', 'limitat', 'obbligatorietà', 'forzat', 'impegno', 'impegni', 'impegnat', 'indott', 'tenut', 'esentat', 'esonerat', 'libero di', 'debitore', 'in debito', 'grato', 'grata', 'grate', 'grati', 'gratitudine', 'riconoscent', 'riconoscen', 'ingrat', 'irriconoscent', 'coatt', 'forzat'];
 
 var cosa_serveLav_generico_cits = ['3Lav) Il lavoro allontana tre grandi male: la noia, il vizio e il bisogno [Voltaire] arancio',
@@ -109,7 +110,7 @@ const cosa_ambire_keywords = ['obiettiv', 'traguard', 'soglia', 'livello',
 
 ///// AMORE PROPRIO LAVORO
 
-const amore_proprio_lav_keywords = ['individ', 'apprezz', 'quello che faccio', 'quotidianalm', 'quotidianame', 'trovare la forza', 'trovar le forze', 'reputaz', 'amo quello che faccio', 'apprezzare quello che faccio', 'apprezzo quello che faccio', 'amo quello che faccio', 'ho stima del mio lavoro', 'adoro il mio lavoro', 'adorare il mio lavoro', 'desiderare il mio lavoro', 'desiderare quello che faccio', 'schiavo del mio lavoro', 'schiava del mio lavoro', 'schiavi del nostro lavoro',
+const amore_proprio_lav_keywords = ['apprezz', 'quello che faccio', 'quotidianalm', 'quotidianame', 'trovare la forza', 'trovar le forze', 'reputaz', 'amo quello che faccio', 'apprezzare quello che faccio', 'apprezzo quello che faccio', 'amo quello che faccio', 'ho stima del mio lavoro', 'adoro il mio lavoro', 'adorare il mio lavoro', 'desiderare il mio lavoro', 'desiderare quello che faccio', 'schiavo del mio lavoro', 'schiava del mio lavoro', 'schiavi del nostro lavoro',
 'lavoro da schiavi', 'lavoro da schiavo', 'lavoro da schiava', 'servitù', 'schiavitù', 'amare il proprio lavoro', 'apprezzare il proprio lavoro', 'apprezzare la propria professione', 'amare la propria professione', 'innamorarmi del mio lavoro', 'innamorarsi del proprio lavoro', 'innamorarmi del mio lavoro', 'innamorarmi della mia professione', 'innamorarsi della propria professione', 'innamorarmi del mio mestiere', 'innamorarsi del proprio mestiere'];
 
 
@@ -140,15 +141,17 @@ const occasioni_keywords = ['occasion', 'possibilit', 'situazion', 'opportunità
 
 const lavoro_amore_keywords = ['persona amata', 'coppia', 'innamorati', 'amore della vita', 'amore della mia vita', 'la mia persona', 'la mia metà', 'la mia ragazza', 'il mio ragazzo', 'il mio amato', 'la mia amata', 'coniugi', 'coniug', 'matrimonio',
 'sposarsi', 'sposare', 'sposo', 'sposi', 'sposa', 'sposiamo', 'sposate', 'sposano', 'moglie', 'marito', 'consorte', 'consorti', 'compagno', 'compagna', 'vero amore', 'lavorare con mia moglie', 'lavorare con mio marito', 'lavorare con compagno', 'lavorare con compagna', 'relazione sul lavoro', 'essere fidanzati con',
-'avere un rapporto con'];
-
-const amore_per_lav_keywords = ['proprio lavoro', 'mio lavoro', 'individ', 'mi piac', 'piacer', 'apprezz', 'quello che faccio', 'quotidinalm', 'trovare la forza', 'trovar le forze', 'reputaz', 'amo quello che faccio', 'apprezzare quello che faccio', 'apprezzo quello che faccio', 'amo quello che faccio', 'ho stima del mio lavoro', 'adoro il mio lavoro', 'adorare il mio lavoro', 'desiderare il mio lavoro', 'desiderare quello che faccio'];
+'avere un rapporto con', 'famiglia'];
 
 ////// FRASI POSITIVE
 
 const frasi_posneg_keywords = ['odio', 'odiar', 'disprezz', 'rabbia', 'divergere', 'divergenz', 'opinion', 'estraniarsi', 'disaffezionar', 'straniarsi', 'capo', 'boss', 'mio superiore', 'mia superiore', 'mio dipendente', 'mia dipendente', 'miei dipendenti', 'suoi dipendenti', 'colleg', 'trovarsi bene', 'andare d\'accordo', 'andare d\'accord con gli altri', 'andare d\'accordo', 'andar d\'accordo', 'mi trovo bene', 'vado d\'accordo', 'capirsi', 'lavorar bene insieme', 'lavorare bene insieme', 'insieme', 'team', 'gruppo', 'uffic', 'contrast', 'discord', 'disaccord', 'dissidio', 'armonia', 'intesa', 'contesa', 'tension', 'conflitt', 'scontr', 'discussion', 'discuter', 'discu', 'litig', 'disput', 'polemic', 'dibattit', 'controvers', 'disamina', 'alterco', 'dialogo', 'negoziar',
 'capi', 'dirigent', 'dirig', 'manager', 'superior', 'leader', 'comand', 'dirett', 'gerarca', 'boss', 'president', 'presidenz', 'burocrat', 'burocraz', 'funzionari', 'operai', 'operaie'];
 
+////// LAVORO_DIFFIDA
+
+const lavoro_diffida_keywords = ['bisogna lavorare', 'assorbito dal dovere', 'assorbito dal lavoro', 'assorbiti dal lavoro', 'assorbita dal lavoro', 'assorbita dal dovere', 'assorbiti dal dovere', 'esaurit', 'estenuat', 'sfinit', ' devo lavorare', 'lavorare troppo', 'lavoro troppo', 'lavorerò troppo', 'troppi impegni', 'impegnatissimo', 'neanche un attimo libero', 'neanche un momento libero', 'troppe cose da fare', 'devo studiare', 'studiare troppo', 'fare un botto di cose',
+'fare tantissime cose', 'lavorare tantissimo', 'lavoro un botto', 'lavorare un botto', 'faticare troppo', 'faticare tantissimo', 'faticare', 'fino a sfinirmi', 'esaurirmi', 'estenuarmi', 'nervoso', 'iseric', 'isteria', 'fuori di testa', 'crollo mentale', 'impazzendo', 'impazzire', 'impazzit', 'partito di testa', 'partita di testa', 'partire di testa', 'svalvolat'];
 
 ///// FORZA ANIMO
 
@@ -942,7 +945,7 @@ var paura_cits = ['10A Blu | Qualunque sia la sua forma, la sua modalità, qualu
 
 ////// DIO
 
-const dio_keywords = ['Dio', 'salvezza', 'salv', 'dannat', 'dannazione', 'altissimo', 'creatore', 'domineddio', 'onnipotente', 'padreterno', 'signore', 'chies', 'Cristo', 'Gesù', 'Madonna', 'maria', 'confession', 'cred', 'fede', 'religion', 'santo', 'santi', 'santa', 'santif', 'sacr', 'religios', 'adorazion', 'cult', 'venerazion', 'deferenz', 'devozion', 'devot', 'ossequi', 'riverenz', 'atei', 'ateo', 'irreligios', 'miscredenz', 'sacr', 'profan', 'civil', 'laic', 'precett', 'credent', 'devot', 'fedel', 'osservant', 'pio', 'pia', 'pii', 'areligios', 'ateo', 'atei', 'irreligios', 'miscredent', 'blasfem', 'empi', 'ecclesiastic', 'esiste', 'odio', 'rifiut', 'intolleran', 'venerar', 'vener', 'veneraz', 'odiar'
+const dio_keywords = ['Dio', 'salvezza', 'salv', 'dannat', 'dannazione', 'altissimo', 'creatore', 'domineddio', 'onnipotente', 'padreterno', 'signore', 'chies', 'Cristo', 'Gesù', 'Madonna', 'maria', 'confession', 'cred', 'fede', 'religion', 'santo', 'santi', 'santa', 'santif', 'sacr', 'religios', 'adorazion', 'cult', 'venerazion', 'deferenz', 'devozion', 'devot', 'ossequi', 'riverenz', 'atei', 'ateo', 'irreligios', 'miscredenz', 'sacr', 'profan', 'civil', 'laic', 'precett', 'credent', 'devot', 'fedel', 'osservant', 'pio', 'pii', 'areligios', 'ateo', 'atei', 'irreligios', 'miscredent', 'blasfem', 'empi', 'ecclesiastic', 'esiste', 'odio', 'rifiut', 'intolleran', 'venerar', 'vener', 'veneraz', 'odiar'
 ];
 
 var dio_cits = ['31A Verde | La morte è orribile solo per colui che non crede in Dio, oppure crede in un Dio malvagio, il che è la stessa cosa. Per colui che crede in Dio, nella sua bontà e vive in questa vita secondo la sua legge ed ha sperimentato questa sua bontà, per costui la morte è solo un passaggio. (Lev Tolstoj)',
@@ -1002,7 +1005,7 @@ var morte_interiore_cits = ['6A Viola | Molte persone muoiono a venticinque anni
 ///// RICORDO
 
 const ricordo_keywords = ['ricord', 'ricordat', 'memoria', 'memorie', 'ricordare', 'ricordarsi', 'dimenticare', 'dimenticat', 'dimenticarsi', 'scordarsi', 'scordat', 'rimembrare', 'rimembro', 'rimembri', 'rimembrat', 'memorizz', 'memorizzat', 'richiamare alla mente', 'richiamato alla mente', 'richiamo alla mente', 'richiamiamo alla mente', 'richiami alla mente', 'richiama alla mente', 'richiamate alla mente', 'richiamano alla mente', 'oblio', 'obliar', 'obliterar', 'obliter', 'archiv', 'sovvenir', 'sovvenut', 'sovviene', 'rinvenir', 'rinvengo', 'rinvieni', 'rinvenite', 'rinviene', 'rinvenut', 'mi sfugge', 'sfuggit', 'resti', 'resto', 'orme', 'resterà', 'rimarrà', 'monument', 'testimonianz', 'testimone', 'testimon', 'reminescenz', 'segno', 'traccia', 'tracce', 'rimembranz', 'ricordanz', 'posteri', 'postero', 'dimenticatoio', 'farò la storia', 'rimarrà',  'rimarrò', 'resterà', 'restar', 'pensiero', 'avere a mente', 'pensar', 'giorno dei morti', 'rimaner', 'fare la storia',
-'rimanere nella storia', 'oscurità'
+'rimanere nella storia'
 ];
 
 var ricordo_cits = ['80A Rosso | Essere ricordati dopo morti non è che una magra ricompensa per essere stati trattati con disprezzo quando eravamo in vita. (William Hazlitt)',
@@ -1207,7 +1210,7 @@ var povero_ricco_cits = ['42A Rosso Perché temi il tuo ultimo giorno? Esso non 
 
 ///// MORTE TECNOLOGIA
 
-const  morte_tecnologia_keywords = ['umanit', 'morte collettiva', 'tecnolog', 'AI', 'intelligenza artificiale', 'macchina', 'conquisterà l\'umanit', 'macchine', 'robot', 'dataismo', 'dati', 'pythia', 'oracolo digitale', 'somma coscienza'];
+const  morte_tecnologia_keywords = ['umanit', 'morte collettiva', 'tecnolog', 'AI', 'intelligenza artificiale', 'macchina', 'conquisterà l\'umanit', 'macchine', 'robot', 'dataismo', 'dati', 'pythia', 'pitia', 'oracolo digitale', 'somma coscienza'];
 
 var morte_tecnologia_cits = ['88A) L\'Intelligenza Artificiale sarà la più importante conquista dell\'uomo, peccato che potrebbe essere l\'ultima.(Stephen Hawking) (Rosso)'];
 

@@ -426,7 +426,7 @@ function startPythia() {
 
               function playCit() {
                 loadEffect = false;
-                var lavoro_bene_audio = Math.round(random([347, 360, 362]));
+                var lavoro_bene_audio = Math.round(random([347, 360, 373, 375]));
                 audios[lavoro_bene_audio].play();
                 lavoro_var = false;
                 audios[lavoro_bene_audio].onended(farewell);
@@ -440,8 +440,14 @@ function startPythia() {
                 // }
                 else if (audios[360].isPlaying() == true) {
                   Blue();
-                } else if (audios[362].isPlaying() == true) {
-                  Red();
+                }
+                // else if (audios[362].isPlaying() == true) {
+                //   Red();
+                // }
+                else if (audios[373].isPlaying() == true) {
+                  Violet();
+                } else if (audios[375].isPlaying() == true) {
+                  Orange();
                 }
               }
             });
@@ -611,285 +617,321 @@ function startPythia() {
                 }
               }
             });
+          } else if (lavoro_vergogna_keywords.some(keyword => sentence.includes(keyword))) {
+            step_3 = false;
+            audios[2].play();
+            console.log("Found");
+            //var lavoro_vergogna_cit = lavoro_vergogna_cits[Math.round(Math.random() * (lavoro_vergogna_cits.length - 1))];
+            audios[2].onended(function() {
+              loading();
+              setTimeout(playCit, 5000);
+
+              function playCit() {
+                loadEffect = false;
+                var lavoro_vergogna_audio = Math.round(random([370]));
+                audios[lavoro_vergogna_audio].play();
+                lavoro_var = false;
+                audios[lavoro_vergogna_audio].onended(farewell);
+                // alert(lavoro_vergogna_cit);
+                // farewell();
+                if (audios[370].isPlaying() == true) {
+                  Red();
+                }
+              }
+            });
+          } else if (motiv_1_keywords.some(keyword => sentence.includes(keyword))) {
+            step_3 = false;
+            audios[2].play();
+            console.log("Found");
+            //var motiv_1_cit = motiv_1_cits[Math.round(Math.random() * (motiv_1_cits.length - 1))];
+            audios[2].onended(function() {
+              loading();
+              setTimeout(playCit, 5000);
+
+              function playCit() {
+                loadEffect = false;
+                var motiv_1_audio = Math.round(random([373, 374, 375]));
+                audios[motiv_1_audio].play();
+                lavoro_var = false;
+                audios[motiv_1_audio].onended(farewell);
+                // alert(motiv_1_cit);
+                // farewell();
+                if (audios[373].isPlaying() == true) {
+                  Violet();
+                } else if (audios[374].isPlaying() == true) {
+                  Orange();
+                } else if (audios[375].isPlaying() == true) {
+                  Orange();
+                }
+                // else if (audios[376].isPlaying() == true) {
+                //   Green();
+                // }
+              }
+            });
+          } else if (motiv_2_keywords.some(keyword => sentence.includes(keyword))) {
+            step_3 = false;
+            audios[2].play();
+            console.log("Found");
+            //var motiv_2_cit = motiv_2_cits[Math.round(Math.random() * (motiv_2_cits.length - 1))];
+            audios[2].onended(function() {
+              loading();
+              setTimeout(playCit, 5000);
+
+              function playCit() {
+                loadEffect = false;
+                var motiv_2_audio = Math.round(random([377]));
+                audios[motiv_2_audio].play();
+                lavoro_var = false;
+                audios[motiv_2_audio].onended(farewell);
+                // alert(motiv_2_cit);
+                // farewell();
+                if (audios[377].isPlaying() == true) {
+                  Red();
+                }
+                // else if (audios[354].isPlaying() == true) {
+                //   Violet();
+                // } else if (audios[378].isPlaying() == true) {
+                //   Blue();
+                // }
+              }
+            });
+          } else if (lavoro_energia_keywords.some(keyword => sentence.includes(keyword))) {
+            step_3 = false;
+            audios[2].play();
+            console.log("Found");
+            //var lavoro_energia_cit = lavoro_energia_cits[Math.round(Math.random() * (lavoro_energia_cits.length - 1))];
+            audios[2].onended(function() {
+              loading();
+              setTimeout(playCit, 5000);
+
+              function playCit() {
+                loadEffect = false;
+                var lavoro_energia_audio = Math.round(random([378]));
+                audios[lavoro_energia_audio].play();
+                lavoro_var = false;
+                audios[lavoro_energia_audio].onended(farewell);
+                // alert(lavoro_energia_cit);
+                // farewell();
+                if (audios[378].isPlaying() == true) {
+                  Blue();
+                }
+                // else if (audios[354].isPlaying() == true) {
+                //   Violet();
+                // } else if (audios[378].isPlaying() == true) {
+                //   Blue();
+                // }
+              }
+            });
+          } else if (lavoro_amore_keywords.some(keyword => sentence.includes(keyword))) {
+            step_3 = false;
+            audios[2].play();
+            console.log("Found");
+            //var lavoro_amore_cit = lavoro_amore_cits[Math.round(Math.random() * (lavoro_amore_cits.length - 1))];
+            audios[2].onended(function() {
+              loading();
+              setTimeout(playCit, 5000);
+
+              function playCit() {
+                loadEffect = false;
+                var lavoro_amore_audio = Math.round(random([379]));
+                audios[lavoro_amore_audio].play();
+                lavoro_var = false;
+                audios[lavoro_amore_audio].onended(farewell);
+                // alert(lavoro_amore_cit);
+                // farewell();
+                if (audios[379].isPlaying() == true) {
+                  Green();
+                }
+                // else if (audios[380].isPlaying() == true) {
+                //   Pink();
+                // } else if (audios[381].isPlaying() == true) {
+                //   Pink();
+                // }
+              }
+            });
+          } else if (amore_proprio_lav_keywords.some(keyword => sentence.includes(keyword))) {
+            step_3 = false;
+            audios[2].play();
+            console.log("Found");
+            //var amore_proprio_lav_cit = amore_proprio_lav_cits[Math.round(Math.random() * (amore_proprio_lav_cits.length - 1))];
+            audios[2].onended(function() {
+              loading();
+              setTimeout(playCit, 5000);
+
+              function playCit() {
+                loadEffect = false;
+                var amore_proprio_lav_audio = Math.round(random([359, 351]));
+                audios[amore_proprio_lav_audio].play();
+                lavoro_var = false;
+                audios[amore_proprio_lav_audio].onended(farewell);
+                // alert(amore_proprio_lav_cit);
+                // farewell();
+                // if (audios[382].isPlaying() == true) {
+                //   Red();
+                // } else if (audios[383].isPlaying() == true) {
+                //   Pink();
+                // }
+                if (audios[359].isPlaying() == true) {
+                  Orange();
+                } else if (audios[351].isPlaying() == true) {
+                  Pink();
+                }
+              }
+            });
+          } else if (frasi_posneg_keywords.some(keyword => sentence.includes(keyword))) {
+            step_3 = false;
+            audios[2].play();
+            console.log("Found");
+            //var frasi_posneg_cit = frasi_posneg_cits[Math.round(Math.random() * (frasi_posneg_cits.length - 1))];
+            audios[2].onended(function() {
+              loading();
+              setTimeout(playCit, 5000);
+
+              function playCit() {
+                loadEffect = false;
+                var frasi_posneg_audio = Math.round(random([385, 386]));
+                audios[frasi_posneg_audio].play();
+                lavoro_var = false;
+                audios[frasi_posneg_audio].onended(farewell);
+                // alert(frasi_posneg_cit);
+                // farewell();
+                // if (audios[384].isPlaying() == true) {
+                //   Red();
+                // }
+                if (audios[385].isPlaying() == true) {
+                  Orange();
+                } else if (audios[386].isPlaying() == true) {
+                  Blue();
+                }
+                //else if (audios[387].isPlaying() == true) {
+                //   Red();
+                // } else if (audios[388].isPlaying() == true) {
+                //   Red();
+                // } else if (audios[389].isPlaying() == true) {
+                //   Pink();
+                // } else if (audios[390].isPlaying() == true) {
+                //   Violet();
+                // } else if (audios[359].isPlaying() == true) {
+                //   Orange();
+                // } else if (audios[391].isPlaying() == true) {
+                //   Red();
+                // } else if (audios[392].isPlaying() == true) {
+                //   Red();
+                // }
+              }
+            });
+          } else if (lavoro_diffida_keywords.some(keyword => sentence.includes(keyword))) {
+            step_3 = false;
+            audios[2].play();
+            console.log("Found");
+            //var lavoro_diffida_cit = lavoro_diffida_cits[Math.round(Math.random() * (lavoro_diffida_cits.length - 1))];
+            audios[2].onended(function() {
+              loading();
+              setTimeout(playCit, 5000);
+
+              function playCit() {
+                loadEffect = false;
+                var lavoro_diffida_audio = Math.round(random([388, 367]));
+                audios[lavoro_diffida_audio].play();
+                lavoro_var = false;
+                audios[lavoro_diffida_audio].onended(farewell);
+                // alert(lavoro_diffida_cit);
+                // farewell();
+                // if (audios[384].isPlaying() == true) {
+                //   Red();
+                // }
+                if (audios[388].isPlaying() == true) {
+                  Red();
+                } else if (audios[367].isPlaying() == true) {
+                  Green();
+                }
+              }
+            });
+          } else {
+            step_3 = false;
+            audios[2].play();
+            console.log("Found");
+            //var lavoro_generico_cit = lavoro_generico_cits[Math.round(Math.random() * (lavoro_generico_cits.length - 1))];
+            audios[2].onended(function() {
+              loading();
+              setTimeout(playCit, 5000);
+
+              function playCit() {
+                loadEffect = false;
+                var lavoro_generico_audio = Math.round(random([373, 374, 375]));
+                audios[lavoro_generico_audio].play();
+                lavoro_var = false;
+                audios[lavoro_generico_audio].onended(farewell);
+                // alert(lavoro_generico_cit);
+                // farewell();
+                if (audios[373].isPlaying() == true) {
+                  Violet();
+                } else if (audios[374].isPlaying() == true) {
+                  Orange();
+                } else if (audios[375].isPlaying() == true) {
+                  Orange();
+                }
+                // else if (audios[376].isPlaying() == true) {
+                //   Green();
+                // } else if (audios[377].isPlaying() == true) {
+                //   Red();
+                // } else if (audios[354].isPlaying() == true) {
+                //   Violet();
+                // } else if (audios[378].isPlaying() == true) {
+                //   Blue();
+                // }
+              }
+            });
           }
-          else if (lavoro_vergogna_keywords.some(keyword => sentence.includes(keyword))) {
-           step_3 = false;
-           audios[2].play();
-           console.log("Found");
-           //var lavoro_vergogna_cit = lavoro_vergogna_cits[Math.round(Math.random() * (lavoro_vergogna_cits.length - 1))];
-           audios[2].onended(function() {
-             loading();
-             setTimeout(playCit, 5000);
-
-             function playCit() {
-               loadEffect = false;
-               var lavoro_vergogna_audio = Math.round(random([370]));
-               audios[lavoro_vergogna_audio].play();
-               lavoro_var = false;
-               audios[lavoro_vergogna_audio].onended(farewell);
-               // alert(lavoro_vergogna_cit);
-               // farewell();
-               if (audios[370].isPlaying() == true) {
-                 Red();
-               }
-             }
-           });
-         }
-         else if (motiv_1_keywords.some(keyword => sentence.includes(keyword))) {
-           step_3 = false;
-           audios[2].play();
-           console.log("Found");
-           //var motiv_1_cit = motiv_1_cits[Math.round(Math.random() * (motiv_1_cits.length - 1))];
-           audios[2].onended(function() {
-             loading();
-             setTimeout(playCit, 5000);
-
-             function playCit() {
-               loadEffect = false;
-               var motiv_1_audio = Math.round(random([373, 374, 375]));
-               audios[motiv_1_audio].play();
-               lavoro_var = false;
-               audios[motiv_1_audio].onended(farewell);
-               // alert(motiv_1_cit);
-               // farewell();
-               if (audios[373].isPlaying() == true) {
-                 Violet();
-               } else if (audios[374].isPlaying() == true) {
-                 Orange();
-               } else if (audios[375].isPlaying() == true) {
-                 Orange();
-               }
-               // else if (audios[376].isPlaying() == true) {
-               //   Green();
-               // }
-             }
-           });
-         } else if (motiv_2_keywords.some(keyword => sentence.includes(keyword))) {
-           step_3 = false;
-           audios[2].play();
-           console.log("Found");
-           //var motiv_2_cit = motiv_2_cits[Math.round(Math.random() * (motiv_2_cits.length - 1))];
-           audios[2].onended(function() {
-             loading();
-             setTimeout(playCit, 5000);
-
-             function playCit() {
-               loadEffect = false;
-               var motiv_2_audio = Math.round(random([377]));
-               audios[motiv_2_audio].play();
-               lavoro_var = false;
-               audios[motiv_2_audio].onended(farewell);
-               // alert(motiv_2_cit);
-               // farewell();
-               if (audios[377].isPlaying() == true) {
-                 Red();
-               }
-               // else if (audios[354].isPlaying() == true) {
-               //   Violet();
-               // } else if (audios[378].isPlaying() == true) {
-               //   Blue();
-               // }
-             }
-           });
-         }
-         else if (lavoro_energia_keywords.some(keyword => sentence.includes(keyword))) {
-           step_3 = false;
-           audios[2].play();
-           console.log("Found");
-           //var lavoro_energia_cit = lavoro_energia_cits[Math.round(Math.random() * (lavoro_energia_cits.length - 1))];
-           audios[2].onended(function() {
-             loading();
-             setTimeout(playCit, 5000);
-
-             function playCit() {
-               loadEffect = false;
-               var lavoro_energia_audio = Math.round(random([378]));
-               audios[lavoro_energia_audio].play();
-               lavoro_var = false;
-               audios[lavoro_energia_audio].onended(farewell);
-               // alert(lavoro_energia_cit);
-               // farewell();
-               if (audios[378].isPlaying() == true) {
-                 Blue();
-               }
-               // else if (audios[354].isPlaying() == true) {
-               //   Violet();
-               // } else if (audios[378].isPlaying() == true) {
-               //   Blue();
-               // }
-             }
-           });
-         }
-         else if (lavoro_amore_keywords.some(keyword => sentence.includes(keyword))) {
-           step_3 = false;
-           audios[2].play();
-           console.log("Found");
-           //var lavoro_amore_cit = lavoro_amore_cits[Math.round(Math.random() * (lavoro_amore_cits.length - 1))];
-           audios[2].onended(function() {
-             loading();
-             setTimeout(playCit, 5000);
-
-             function playCit() {
-               loadEffect = false;
-               var lavoro_amore_audio = Math.round(random([379]));
-               audios[lavoro_amore_audio].play();
-               lavoro_var = false;
-               audios[lavoro_amore_audio].onended(farewell);
-               // alert(lavoro_amore_cit);
-               // farewell();
-               if (audios[379].isPlaying() == true) {
-                 Green();
-               }
-               // else if (audios[380].isPlaying() == true) {
-               //   Pink();
-               // } else if (audios[381].isPlaying() == true) {
-               //   Pink();
-               // }
-             }
-           });
-         }
-         else if (amore_proprio_lav_keywords.some(keyword => sentence.includes(keyword))) {
-           step_3 = false;
-           audios[2].play();
-           console.log("Found");
-           //var amore_proprio_lav_cit = amore_proprio_lav_cits[Math.round(Math.random() * (amore_proprio_lav_cits.length - 1))];
-           audios[2].onended(function() {
-             loading();
-             setTimeout(playCit, 5000);
-
-             function playCit() {
-               loadEffect = false;
-               var amore_proprio_lav_audio = Math.round(random([359, 351]));
-               audios[amore_proprio_lav_audio].play();
-               lavoro_var = false;
-               audios[amore_proprio_lav_audio].onended(farewell);
-               // alert(amore_proprio_lav_cit);
-               // farewell();
-               // if (audios[382].isPlaying() == true) {
-               //   Red();
-               // } else if (audios[383].isPlaying() == true) {
-               //   Pink();
-               // }
-               if (audios[359].isPlaying() == true) {
-                 Orange();
-               }
-               else if (audios[351].isPlaying() == true) {
-                 Pink();
-               }
-             }
-           });
-         }
-         else if (frasi_posneg_keywords.some(keyword => sentence.includes(keyword))) {
-           step_3 = false;
-           audios[2].play();
-           console.log("Found");
-           //var frasi_posneg_cit = frasi_posneg_cits[Math.round(Math.random() * (frasi_posneg_cits.length - 1))];
-           audios[2].onended(function() {
-             loading();
-             setTimeout(playCit, 5000);
-
-             function playCit() {
-               loadEffect = false;
-               var frasi_posneg_audio = Math.round(random([385,386]));
-               audios[frasi_posneg_audio].play();
-               lavoro_var = false;
-               audios[frasi_posneg_audio].onended(farewell);
-               // alert(frasi_posneg_cit);
-               // farewell();
-               // if (audios[384].isPlaying() == true) {
-               //   Red();
-               // }
-               if (audios[385].isPlaying() == true) {
-                 Orange();
-               } else if (audios[386].isPlaying() == true) {
-                 Blue();
-               }
-               //else if (audios[387].isPlaying() == true) {
-               //   Red();
-               // } else if (audios[388].isPlaying() == true) {
-               //   Red();
-               // } else if (audios[389].isPlaying() == true) {
-               //   Pink();
-               // } else if (audios[390].isPlaying() == true) {
-               //   Violet();
-               // } else if (audios[359].isPlaying() == true) {
-               //   Orange();
-               // } else if (audios[391].isPlaying() == true) {
-               //   Red();
-               // } else if (audios[392].isPlaying() == true) {
-               //   Red();
-               // }
-             }
-           });
-         }
-         else if (lavoro_diffida_keywords.some(keyword => sentence.includes(keyword))) {
-           step_3 = false;
-           audios[2].play();
-           console.log("Found");
-           //var lavoro_diffida_cit = lavoro_diffida_cits[Math.round(Math.random() * (lavoro_diffida_cits.length - 1))];
-           audios[2].onended(function() {
-             loading();
-             setTimeout(playCit, 5000);
-
-             function playCit() {
-               loadEffect = false;
-               var lavoro_diffida_audio = Math.round(random([388, 367]));
-               audios[lavoro_diffida_audio].play();
-               lavoro_var = false;
-               audios[lavoro_diffida_audio].onended(farewell);
-               // alert(lavoro_diffida_cit);
-               // farewell();
-               // if (audios[384].isPlaying() == true) {
-               //   Red();
-               // }
-               if (audios[388].isPlaying() == true) {
-                 Red();
-               }
-               else if (audios[367].isPlaying() == true) {
-                 Green();
-               }
-             }
-           });
-         }
-         else {
-           step_3 = false;
-           audios[2].play();
-           console.log("Found");
-           //var lavoro_generico_cit = lavoro_generico_cits[Math.round(Math.random() * (lavoro_generico_cits.length - 1))];
-           audios[2].onended(function() {
-             loading();
-             setTimeout(playCit, 5000);
-
-             function playCit() {
-               loadEffect = false;
-               var lavoro_generico_audio = Math.round(random([373, 374, 375]));
-               audios[lavoro_generico_audio].play();
-               lavoro_var = false;
-               audios[lavoro_generico_audio].onended(farewell);
-               // alert(lavoro_generico_cit);
-               // farewell();
-               if (audios[373].isPlaying() == true) {
-                 Violet();
-               } else if (audios[374].isPlaying() == true) {
-                 Orange();
-               } else if (audios[375].isPlaying() == true) {
-                 Orange();
-               }
-               // else if (audios[376].isPlaying() == true) {
-               //   Green();
-               // } else if (audios[377].isPlaying() == true) {
-               //   Red();
-               // } else if (audios[354].isPlaying() == true) {
-               //   Violet();
-               // } else if (audios[378].isPlaying() == true) {
-               //   Blue();
-               // }
-             }
-           });
-         }
         }
-//////////////////// SUCCESSO
-        else if (sport_succ_keywords.some(keyword => sentence.includes(keyword))) {
+        //////////////////// SUCCESSO
+        else if (lavoro_vita_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          //var lavoro_vita_cit = lavoro_vita_cits[Math.round(Math.random() * (lavoro_vita_cits.length - 1))];
+          audios[2].onended(function() {
+            loading();
+            setTimeout(playCit, 5000);
+
+            function playCit() {
+              loadEffect = false;
+              var lavoro_vita_audio = Math.round(random([361, 362, 351, 355, 363, 364, 365, 366, 354, 367, 368]));
+              audios[lavoro_vita_audio].play();
+              lavoro_var = false;
+              audios[lavoro_vita_audio].onended(farewell);
+              // alert(lavoro_vita_cit);
+              // farewell();
+              if (audios[361].isPlaying() == true) {
+                Violet();
+              } else if (audios[362].isPlaying() == true) {
+                Red();
+              } else if (audios[351].isPlaying() == true) {
+                Pink();
+              } else if (audios[355].isPlaying() == true) {
+                Blue();
+              } else if (audios[363].isPlaying() == true) {
+                Blue();
+              } else if (audios[364].isPlaying() == true) {
+                Orange();
+              } else if (audios[365].isPlaying() == true) {
+                Green();
+              } else if (audios[366].isPlaying() == true) {
+                Pink();
+              } else if (audios[354].isPlaying() == true) {
+                Orange();
+              } else if (audios[367].isPlaying() == true) {
+                Green();
+              }
+              // else if (audios[356].isPlaying() == true) {
+              //   Green();
+              // }
+              else if (audios[368].isPlaying() == true) {
+                Violet();
+              }
+            }
+          });
+        } else if (sport_succ_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           audios[2].play();
           console.log("Found");
@@ -921,7 +963,7 @@ function startPythia() {
               }
             }
           });
-        }  else if (camb_audacia_keywords.some(keyword => sentence.includes(keyword))) {
+        } else if (camb_audacia_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           audios[2].play();
           console.log("Found");
@@ -1057,7 +1099,7 @@ function startPythia() {
               }
             }
           });
-        }   else if (forza_animo_keywords.some(keyword => sentence.includes(keyword))) {
+        } else if (forza_animo_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           audios[2].play();
           console.log("Found");
@@ -1405,7 +1447,7 @@ function startPythia() {
               }
             }
           });
-        }  else {
+        } else {
           errorCase();
         }
       }

@@ -896,11 +896,11 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var lavoro_vita_audio = Math.round(random([361, 362, 351, 355, 363, 364, 365, 366, 354, 367, 368]));
-              audios[lavoro_vita_audio].play();
+              var lavoro_vita2_audio = Math.round(random([361, 362, 351, 355, 363, 364, 365, 366, 354, 367, 368]));
+              audios[lavoro_vita2_audio].play();
               lavoro_var = false;
-              audios[lavoro_vita_audio].onended(farewell);
-              // alert(lavoro_vita_cit);
+              audios[lavoro_vita2_audio].onended(farewell);
+              // alert(lavoro_vita2_cit);
               // farewell();
               if (audios[361].isPlaying() == true) {
                 Violet();
@@ -942,7 +942,7 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var sport_succ_audio = Math.round(random([431, 432, 433, 434, 435, 436]));
+              var sport_succ_audio = Math.round(random([431, 435, 436]));
               audios[sport_succ_audio].play();
               lavoro_var = false;
               audios[sport_succ_audio].onended(farewell);
@@ -950,268 +950,18 @@ function startPythia() {
               // farewell();
               if (audios[431].isPlaying() == true) {
                 Blue();
-              } else if (audios[432].isPlaying() == true) {
-                Orange();
-              } else if (audios[433].isPlaying() == true) {
-                Blue();
-              } else if (audios[434].isPlaying() == true) {
-                Orange();
-              } else if (audios[435].isPlaying() == true) {
+              }
+              // else if (audios[432].isPlaying() == true) {
+              //   Orange();
+              // } else if (audios[433].isPlaying() == true) {
+              //   Blue();
+              // } else if (audios[434].isPlaying() == true) {
+              //   Orange();
+              // }
+              else if (audios[435].isPlaying() == true) {
                 Green();
               } else if (audios[436].isPlaying() == true) {
                 Orange();
-              }
-            }
-          });
-        } else if (camb_audacia_keywords.some(keyword => sentence.includes(keyword))) {
-          step_3 = false;
-          audios[2].play();
-          console.log("Found");
-          //var camb_audacia_cit = camb_audacia_cits[Math.round(Math.random() * (camb_audacia_cits.length - 1))];
-          audios[2].onended(function() {
-            loading();
-            setTimeout(playCit, 5000);
-
-            function playCit() {
-              loadEffect = false;
-              var camb_audacia_audio = Math.round(random([446, 447, 448, 449, 450, 451, 452, 453, 454, 455, 456, 457, 458, 459, 460]));
-              audios[camb_audacia_audio].play();
-              lavoro_var = false;
-              audios[camb_audacia_audio].onended(farewell);
-              // alert(camb_audacia_cit);
-              // farewell();
-              if (audios[446].isPlaying() == true) {
-                Blue();
-              } else if (audios[447].isPlaying() == true) {
-                Orange();
-              } else if (audios[448].isPlaying() == true) {
-                Orange();
-              } else if (audios[449].isPlaying() == true) {
-                Blue();
-              } else if (audios[450].isPlaying() == true) {
-                Green();
-              } else if (audios[451].isPlaying() == true) {
-                Pink();
-              } else if (audios[452].isPlaying() == true) {
-                Pink();
-              } else if (audios[453].isPlaying() == true) {
-                Blue();
-              } else if (audios[454].isPlaying() == true) {
-                Orange();
-              } else if (audios[455].isPlaying() == true) {
-                Blue();
-              } else if (audios[456].isPlaying() == true) {
-                Green();
-              } else if (audios[457].isPlaying() == true) {
-                Orange();
-              } else if (audios[458].isPlaying() == true) {
-                Blue();
-              } else if (audios[459].isPlaying() == true) {
-                Pink();
-              } else if (audios[460].isPlaying() == true) {
-                Orange();
-              }
-            }
-          });
-        } else if (cosa_ambire_keywords.some(keyword => sentence.includes(keyword))) {
-          step_3 = false;
-          audios[2].play();
-          console.log("Found");
-          //var cosa_ambire_cit = cosa_ambire_cits[Math.round(Math.random() * (cosa_ambire_cits.length - 1))];
-          audios[2].onended(function() {
-            loading();
-            setTimeout(playCit, 5000);
-
-            function playCit() {
-              loadEffect = false;
-              var cosa_ambire_audio = Math.round(random([437, 438, 439, 440, 441, 442, 443, 444, 445]));
-              audios[cosa_ambire_audio].play();
-              lavoro_var = false;
-              audios[cosa_ambire_audio].onended(farewell);
-              // alert(cosa_ambire_cit);
-              // farewell();
-              if (audios[437].isPlaying() == true) {
-                Blue();
-              } else if (audios[438].isPlaying() == true) {
-                Violet();
-              } else if (audios[439].isPlaying() == true) {
-                Orange();
-              } else if (audios[440].isPlaying() == true) {
-                Pink();
-              } else if (audios[441].isPlaying() == true) {
-                Blue();
-              } else if (audios[442].isPlaying() == true) {
-                Blue();
-              } else if (audios[443].isPlaying() == true) {
-                Pink();
-              } else if (audios[444].isPlaying() == true) {
-                Pink();
-              } else if (audios[445].isPlaying() == true) {
-                Orange();
-              }
-            }
-          });
-        } else if (occasioni_keywords.some(keyword => sentence.includes(keyword))) {
-          step_3 = false;
-          audios[2].play();
-          console.log("Found");
-          //var occasioni_cit = occasioni_cits[Math.round(Math.random() * (occasioni_cits.length - 1))];
-          audios[2].onended(function() {
-            loading();
-            setTimeout(playCit, 5000);
-
-            function playCit() {
-              loadEffect = false;
-              var occasioni_audio = Math.round(random([471, 472, 473, 474, 475, 476, 477, 478, 479, 480, 481, 482, 483, 484]));
-              audios[occasioni_audio].play();
-              lavoro_var = false;
-              audios[occasioni_audio].onended(farewell);
-              // alert(occasioni_cit);
-              // farewell();
-              if (audios[471].isPlaying() == true) {
-                Orange();
-              } else if (audios[472].isPlaying() == true) {
-                Green();
-              } else if (audios[473].isPlaying() == true) {
-                Violet();
-              } else if (audios[474].isPlaying() == true) {
-                Violet();
-              } else if (audios[475].isPlaying() == true) {
-                Green();
-              } else if (audios[476].isPlaying() == true) {
-                Blue();
-              } else if (audios[477].isPlaying() == true) {
-                Blue();
-              } else if (audios[478].isPlaying() == true) {
-                Blue();
-              } else if (audios[479].isPlaying() == true) {
-                Blue();
-              } else if (audios[480].isPlaying() == true) {
-                Orange();
-              } else if (audios[481].isPlaying() == true) {
-                Green();
-              } else if (audios[482].isPlaying() == true) {
-                Blue();
-              } else if (audios[483].isPlaying() == true) {
-                Violet();
-              } else if (audios[484].isPlaying() == true) {
-                Orange();
-              }
-            }
-          });
-        } else if (forza_animo_keywords.some(keyword => sentence.includes(keyword))) {
-          step_3 = false;
-          audios[2].play();
-          console.log("Found");
-          //var forza_animo_cit = forza_animo_cits[Math.round(Math.random() * (forza_animo_cits.length - 1))];
-          audios[2].onended(function() {
-            loading();
-            setTimeout(playCit, 5000);
-
-            function playCit() {
-              loadEffect = false;
-              var forza_animo_audio = Math.round(random([394, 395, 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416]));
-              audios[forza_animo_audio].play();
-              lavoro_var = false;
-              audios[forza_animo_audio].onended(farewell);
-              // alert(forza_animo_cit);
-              // farewell();
-              if (audios[394].isPlaying() == true) {
-                Green();
-              } else if (audios[395].isPlaying() == true) {
-                Pink();
-              } else if (audios[396].isPlaying() == true) {
-                Green();
-              } else if (audios[397].isPlaying() == true) {
-                Blue();
-              } else if (audios[398].isPlaying() == true) {
-                Orange();
-              } else if (audios[399].isPlaying() == true) {
-                Orange();
-              } else if (audios[400].isPlaying() == true) {
-                Blue();
-              } else if (audios[401].isPlaying() == true) {
-                Blue();
-              } else if (audios[402].isPlaying() == true) {
-                Green();
-              } else if (audios[403].isPlaying() == true) {
-                Orange();
-              } else if (audios[404].isPlaying() == true) {
-                Blue();
-              } else if (audios[405].isPlaying() == true) {
-                Blue();
-              } else if (audios[406].isPlaying() == true) {
-                Blue();
-              } else if (audios[407].isPlaying() == true) {
-                Orange();
-              } else if (audios[408].isPlaying() == true) {
-                Blue();
-              } else if (audios[409].isPlaying() == true) {
-                Blue();
-              } else if (audios[410].isPlaying() == true) {
-                Orange();
-              } else if (audios[411].isPlaying() == true) {
-                Orange();
-              } else if (audios[412].isPlaying() == true) {
-                Orange0();
-              } else if (audios[413].isPlaying() == true) {
-                Orange();
-              } else if (audios[414].isPlaying() == true) {
-                Blue();
-              } else if (audios[415].isPlaying() == true) {
-                Blue();
-              } else if (audios[416].isPlaying() == true) {
-                Green();
-              }
-            }
-          });
-        } else if (motivazione_succ_keywords.some(keyword => sentence.includes(keyword))) {
-          step_3 = false;
-          audios[2].play();
-          console.log("Found");
-          //var motivazione_succ_cit = motivazione_succ_cits[Math.round(Math.random() * (motivazione_succ_cits.length - 1))];
-          audios[2].onended(function() {
-            loading();
-            setTimeout(playCit, 5000);
-
-            function playCit() {
-              loadEffect = false;
-              var motivazione_succ_audio = Math.round(random([417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 283]));
-              audios[motivazione_succ_audio].play();
-              lavoro_var = false;
-              audios[motivazione_succ_audio].onended(farewell);
-              // alert(motivazione_succ_cit);
-              // farewell();
-              if (audios[417].isPlaying() == true) {
-                Pink();
-              } else if (audios[418].isPlaying() == true) {
-                Green();
-              } else if (audios[419].isPlaying() == true) {
-                Blue();
-              } else if (audios[420].isPlaying() == true) {
-                Orange();
-              } else if (audios[421].isPlaying() == true) {
-                Pink();
-              } else if (audios[422].isPlaying() == true) {
-                Green();
-              } else if (audios[423].isPlaying() == true) {
-                Green();
-              } else if (audios[424].isPlaying() == true) {
-                Blue();
-              } else if (audios[425].isPlaying() == true) {
-                Orange();
-              } else if (audios[426].isPlaying() == true) {
-                Blue();
-              } else if (audios[427].isPlaying() == true) {
-                Blue();
-              } else if (audios[428].isPlaying() == true) {
-                Blue();
-              } else if (audios[429].isPlaying() == true) {
-                Blue();
-              } else if (audios[430].isPlaying() == true) {
-                Orange();
-              } else if (audios[283].isPlaying() == true) {
-                Pink();
               }
             }
           });
@@ -1226,7 +976,7 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var felicità_succ_audio = Math.round(random([444, 461, 462, 463, 464, 465, 466, 467, 468, 469, 470]));
+              var felicità_succ_audio = Math.round(random([444, 461, 462, 463, 464, 465, 466, 467, 468, 469]));
               audios[felicità_succ_audio].play();
               lavoro_var = false;
               audios[felicità_succ_audio].onended(farewell);
@@ -1252,8 +1002,284 @@ function startPythia() {
                 Violet();
               } else if (audios[469].isPlaying() == true) {
                 Blue();
-              } else if (audios[470].isPlaying() == true) {
+              }
+              // else if (audios[470].isPlaying() == true) {
+              //   Blue();
+              // }
+            }
+          });
+        } else if (camb_audacia_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          //var camb_audacia_cit = camb_audacia_cits[Math.round(Math.random() * (camb_audacia_cits.length - 1))];
+          audios[2].onended(function() {
+            loading();
+            setTimeout(playCit, 5000);
+
+            function playCit() {
+              loadEffect = false;
+              var camb_audacia_audio = Math.round(random([446, 447, 448, 449, 452, 453, 454, 457, 458, 459, 460, 418, 419]));
+              audios[camb_audacia_audio].play();
+              lavoro_var = false;
+              audios[camb_audacia_audio].onended(farewell);
+              // alert(camb_audacia_cit);
+              // farewell();
+              if (audios[446].isPlaying() == true) {
                 Blue();
+              } else if (audios[447].isPlaying() == true) {
+                Orange();
+              } else if (audios[448].isPlaying() == true) {
+                Orange();
+              } else if (audios[449].isPlaying() == true) {
+                Blue();
+              }
+              // else if (audios[450].isPlaying() == true) {
+              //   Green();
+              // } else if (audios[451].isPlaying() == true) {
+              //   Pink();
+              // }
+              else if (audios[452].isPlaying() == true) {
+                Pink();
+              } else if (audios[453].isPlaying() == true) {
+                Blue();
+              } else if (audios[454].isPlaying() == true) {
+                Orange();
+              }
+              // else if (audios[455].isPlaying() == true) {
+              //   Blue();
+              // } else if (audios[456].isPlaying() == true) {
+              //   Green();
+              // }
+              else if (audios[457].isPlaying() == true) {
+                Orange();
+              } else if (audios[458].isPlaying() == true) {
+                Blue();
+              } else if (audios[459].isPlaying() == true) {
+                Pink();
+              }
+              // else if (audios[460].isPlaying() == true) {
+              //   Orange();
+              // }
+              else if (audios[418].isPlaying() == true) {
+                Green();
+              } else if (audios[419].isPlaying() == true) {
+                Blue();
+              }
+            }
+          });
+        } else if (cosa_ambire_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          //var cosa_ambire_cit = cosa_ambire_cits[Math.round(Math.random() * (cosa_ambire_cits.length - 1))];
+          audios[2].onended(function() {
+            loading();
+            setTimeout(playCit, 5000);
+
+            function playCit() {
+              loadEffect = false;
+              var cosa_ambire_audio = Math.round(random([437, 439, 440, 441, 442]));
+              audios[cosa_ambire_audio].play();
+              lavoro_var = false;
+              audios[cosa_ambire_audio].onended(farewell);
+              // alert(cosa_ambire_cit);
+              // farewell();
+              if (audios[437].isPlaying() == true) {
+                Blue();
+              }
+              // else if (audios[438].isPlaying() == true) {
+              //   Violet();
+              // }
+              else if (audios[439].isPlaying() == true) {
+                Orange();
+              } else if (audios[440].isPlaying() == true) {
+                Pink();
+              } else if (audios[441].isPlaying() == true) {
+                Blue();
+              } else if (audios[442].isPlaying() == true) {
+                Blue();
+              }
+              // else if (audios[443].isPlaying() == true) {
+              //   Pink();
+              // } else if (audios[444].isPlaying() == true) {
+              //   Pink();
+              // } else if (audios[445].isPlaying() == true) {
+              //   Orange();
+              // }
+            }
+          });
+        } else if (forza_animo_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          //var forza_animo_cit = forza_animo_cits[Math.round(Math.random() * (forza_animo_cits.length - 1))];
+          audios[2].onended(function() {
+            loading();
+            setTimeout(playCit, 5000);
+
+            function playCit() {
+              loadEffect = false;
+              var forza_animo_audio = Math.round(random([394, 395, 396, 397, 398, 399, 400, 402, 404, 405, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416]));
+              audios[forza_animo_audio].play();
+              lavoro_var = false;
+              audios[forza_animo_audio].onended(farewell);
+              // alert(forza_animo_cit);
+              // farewell();
+              if (audios[394].isPlaying() == true) {
+                Green();
+              } else if (audios[395].isPlaying() == true) {
+                Pink();
+              } else if (audios[396].isPlaying() == true) {
+                Green();
+              } else if (audios[397].isPlaying() == true) {
+                Blue();
+              } else if (audios[398].isPlaying() == true) {
+                Orange();
+              } else if (audios[399].isPlaying() == true) {
+                Orange();
+              } else if (audios[400].isPlaying() == true) {
+                Blue();
+              }
+              // else if (audios[401].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[402].isPlaying() == true) {
+                Green();
+              }
+              // else if (audios[403].isPlaying() == true) {
+              //   Orange();
+              // }
+              else if (audios[404].isPlaying() == true) {
+                Blue();
+              } else if (audios[405].isPlaying() == true) {
+                Blue();
+              }
+              // else if (audios[406].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[407].isPlaying() == true) {
+                Orange();
+              } else if (audios[408].isPlaying() == true) {
+                Blue();
+              } else if (audios[409].isPlaying() == true) {
+                Blue();
+              } else if (audios[410].isPlaying() == true) {
+                Orange();
+              } else if (audios[411].isPlaying() == true) {
+                Orange();
+              } else if (audios[412].isPlaying() == true) {
+                Orange0();
+              } else if (audios[413].isPlaying() == true) {
+                Orange();
+              } else if (audios[414].isPlaying() == true) {
+                Blue();
+              } else if (audios[415].isPlaying() == true) {
+                Blue();
+              } else if (audios[416].isPlaying() == true) {
+                Green();
+              }
+            }
+          });
+        } else if (occasioni_succ_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          //var occasioni_succ_cit = occasioni_succ_cits[Math.round(Math.random() * (occasioni_succ_cits.length - 1))];
+          audios[2].onended(function() {
+            loading();
+            setTimeout(playCit, 5000);
+
+            function playCit() {
+              loadEffect = false;
+              var occasioni_succ_audio = Math.round(random([471, 472, 473, 474, 475, 476, 477, 478, 479, 480, 482, 483]));
+              audios[occasioni_succ_audio].play();
+              lavoro_var = false;
+              audios[occasioni_succ_audio].onended(farewell);
+              // alert(occasioni_succ_cit);
+              // farewell();
+              if (audios[471].isPlaying() == true) {
+                Orange();
+              } else if (audios[472].isPlaying() == true) {
+                Green();
+              } else if (audios[473].isPlaying() == true) {
+                Violet();
+              } else if (audios[474].isPlaying() == true) {
+                Violet();
+              } else if (audios[475].isPlaying() == true) {
+                Green();
+              } else if (audios[476].isPlaying() == true) {
+                Blue();
+              } else if (audios[477].isPlaying() == true) {
+                Blue();
+              } else if (audios[478].isPlaying() == true) {
+                Blue();
+              } else if (audios[479].isPlaying() == true) {
+                Blue();
+              } else if (audios[480].isPlaying() == true) {
+                Orange();
+              }
+              // else if (audios[481].isPlaying() == true) {
+              //   Green();
+              // }
+              else if (audios[482].isPlaying() == true) {
+                Blue();
+              } else if (audios[483].isPlaying() == true) {
+                Violet();
+              }
+              // else if (audios[484].isPlaying() == true) {
+              //   Orange();
+              // }
+            }
+          });
+        } else if (motivazione_succ_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          //var motivazione_succ_cit = motivazione_succ_cits[Math.round(Math.random() * (motivazione_succ_cits.length - 1))];
+          audios[2].onended(function() {
+            loading();
+            setTimeout(playCit, 5000);
+
+            function playCit() {
+              loadEffect = false;
+              var motivazione_succ_audio = Math.round(random([421, 422, 423, 425, 426, 427, 428, 430, 283]));
+              audios[motivazione_succ_audio].play();
+              lavoro_var = false;
+              audios[motivazione_succ_audio].onended(farewell);
+              // alert(motivazione_succ_cit);
+              // farewell();
+              // if (audios[417].isPlaying() == true) {
+              //   Pink();
+              // } else if (audios[420].isPlaying() == true) {
+              //   Orange();
+              // }
+              if (audios[421].isPlaying() == true) {
+                Pink();
+              } else if (audios[422].isPlaying() == true) {
+                Green();
+              } else if (audios[423].isPlaying() == true) {
+                Green();
+              }
+              // else if (audios[424].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[425].isPlaying() == true) {
+                Orange();
+              } else if (audios[426].isPlaying() == true) {
+                Blue();
+              } else if (audios[427].isPlaying() == true) {
+                Blue();
+              } else if (audios[428].isPlaying() == true) {
+                Blue();
+              }
+              // else if (audios[429].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[430].isPlaying() == true) {
+                Orange();
+              } else if (audios[283].isPlaying() == true) {
+                Pink();
               }
             }
           });
@@ -1268,15 +1294,16 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var autostima_audio = Math.round(random([444, 496, 497, 498, 499, 500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511]));
+              var autostima_audio = Math.round(random([496, 497, 498, 499, 500, 501, 502, 503, 504, 505, 506, 507, 508, 511]));
               audios[autostima_audio].play();
               lavoro_var = false;
               audios[autostima_audio].onended(farewell);
               // alert(autostima_cit);
               // farewell();
-              if (audios[444].isPlaying() == true) {
-                Pink();
-              } else if (audios[496].isPlaying() == true) {
+              // if (audios[444].isPlaying() == true) {
+              //   Pink();
+              // }
+              if (audios[496].isPlaying() == true) {
                 Red();
               } else if (audios[497].isPlaying() == true) {
                 Pink();
@@ -1302,12 +1329,78 @@ function startPythia() {
                 Pink();
               } else if (audios[508].isPlaying() == true) {
                 Orange();
-              } else if (audios[509].isPlaying() == true) {
-                Orange();
-              } else if (audios[510].isPlaying() == true) {
+              }
+              // else if (audios[509].isPlaying() == true) {
+              //   Orange();
+              // } else if (audios[510].isPlaying() == true) {
+              //   Pink();
+              // }
+              else if (audios[511].isPlaying() == true) {
                 Pink();
-              } else if (audios[511].isPlaying() == true) {
+              }
+            }
+          });
+        } else if (problemi_succ_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          //var problemi_succ_cit = problemi_succ_cits[Math.round(Math.random() * (problemi_succ_cits.length - 1))];
+          audios[2].onended(function() {
+            loading();
+            setTimeout(playCit, 5000);
+
+            function playCit() {
+              loadEffect = false;
+              var problemi_succ_audio = Math.round(random([482, 483, 494]));
+              audios[problemi_succ_audio].play();
+              lavoro_var = false;
+              audios[problemi_succ_audio].onended(farewell);
+              // alert(problemi_succ_cit);
+              // farewell();
+              if (audios[482].isPlaying() == true) {
+                Blue();
+              } else if (audios[483].isPlaying() == true) {
+                Violet();
+              } else if (audios[494].isPlaying() == true) {
+                Blue();
+              }
+            }
+          });
+        } else if (come_fare_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          //var come_fare_cit = come_fare_cits[Math.round(Math.random() * (come_fare_cits.length - 1))];
+          audios[2].onended(function() {
+            loading();
+            setTimeout(playCit, 5000);
+
+            function playCit() {
+              loadEffect = false;
+              var come_fare_audio = Math.round(random([485, 486, 487, 488, 489, 490, 492, 493, 494]));
+              audios[come_fare_audio].play();
+              lavoro_var = false;
+              audios[come_fare_audio].onended(farewell);
+              // alert(come_fare_cit);
+              // farewell();
+              if (audios[485].isPlaying() == true) {
                 Pink();
+              } else if (audios[486].isPlaying() == true) {
+                Blue();
+              } else if (audios[487].isPlaying() == true) {
+                Blue();
+              } else if (audios[488].isPlaying() == true) {
+                Blue();
+              } else if (audios[489].isPlaying() == true) {
+                Blue();
+              } else if (audios[490].isPlaying() == true) {
+                Blue();
+              } else if (audios[492].isPlaying() == true) {
+                Blue();
+              } else if (audios[493].isPlaying() == true) {
+                Blue();
+              } else if (audios[494].isPlaying() == true) {
+                Blue();
               }
             }
           });
@@ -1384,7 +1477,7 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var futuro_succ_audio = Math.round(random([165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191]));
+              var futuro_succ_audio = Math.round(random([165, 166, 167, 169, 170, 171, 172, 173, 175, 176, 177, 180, 182, 184, 185, 186, 187, 188]));
               audios[futuro_succ_audio].play();
               lavoro_var = false;
               audios[futuro_succ_audio].onended(farewell);
@@ -1396,9 +1489,11 @@ function startPythia() {
                 Blue();
               } else if (audios[167].isPlaying() == true) {
                 Orange();
-              } else if (audios[168].isPlaying() == true) {
-                Blue();
-              } else if (audios[169].isPlaying() == true) {
+              }
+              // else if (audios[168].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[169].isPlaying() == true) {
                 Green();
               } else if (audios[170].isPlaying() == true) {
                 Violet();
@@ -1408,27 +1503,35 @@ function startPythia() {
                 Orange();
               } else if (audios[173].isPlaying() == true) {
                 Green();
-              } else if (audios[174].isPlaying() == true) {
-                Orange();
-              } else if (audios[175].isPlaying() == true) {
+              }
+              // else if (audios[174].isPlaying() == true) {
+              //   Orange();
+              // }
+              else if (audios[175].isPlaying() == true) {
                 Blue();
               } else if (audios[176].isPlaying() == true) {
                 Green();
               } else if (audios[177].isPlaying() == true) {
                 Green();
-              } else if (audios[178].isPlaying() == true) {
+              }
+              // else if (audios[178].isPlaying() == true) {
+              //   Orange();
+              // } else if (audios[179].isPlaying() == true) {
+              //   Violet();
+              // }
+              else if (audios[180].isPlaying() == true) {
+                Violet();
+              }
+              // else if (audios[181].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[182].isPlaying() == true) {
                 Orange();
-              } else if (audios[179].isPlaying() == true) {
-                Violet();
-              } else if (audios[180].isPlaying() == true) {
-                Violet();
-              } else if (audios[181].isPlaying() == true) {
-                Blue();
-              } else if (audios[182].isPlaying() == true) {
-                Orange();
-              } else if (audios[183].isPlaying() == true) {
-                Violet();
-              } else if (audios[184].isPlaying() == true) {
+              }
+              // else if (audios[183].isPlaying() == true) {
+              //   Violet();
+              // }
+              else if (audios[184].isPlaying() == true) {
                 Blue();
               } else if (audios[185].isPlaying() == true) {
                 Pink();
@@ -1438,13 +1541,14 @@ function startPythia() {
                 Blue();
               } else if (audios[188].isPlaying() == true) {
                 Blue();
-              } else if (audios[189].isPlaying() == true) {
-                Violet();
-              } else if (audios[190].isPlaying() == true) {
-                Violet();
-              } else if (audios[191].isPlaying() == true) {
-                Violet();
               }
+              // else if (audios[189].isPlaying() == true) {
+              //   Violet();
+              // } else if (audios[190].isPlaying() == true) {
+              //   Violet();
+              // } else if (audios[191].isPlaying() == true) {
+              //   Violet();
+              // }
             }
           });
         } else {
@@ -3378,7 +3482,41 @@ function startPythia() {
       }
       ////////////////////////////////////////////////////////////////////////////////////// VITA E MORTE
       else if (vita_morte_var == true) {
-        if (paura_keywords.some(keyword => sentence.includes(keyword))) {
+        if (ecologia_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          //var ecologia_cit = ecologia_cits[Math.round(Math.random() * (ecologia_cits.length - 1))];
+          audios[2].onended(function() {
+            loading();
+            setTimeout(playCit, 5000);
+
+            function playCit() {
+              loadEffect = false;
+              var ecologia_morte_audio = Math.round(random([516, 517, 518, 519, 520, 521, 522]));
+              audios[ecologia_morte_audio].play();
+              lavoro_var = false;
+              audios[ecologia_morte_audio].onended(farewell);
+              // alert(ecologia_cit);
+              // farewell();
+              if (audios[516].isPlaying() == true) {
+                Red();
+              } else if (audios[517].isPlaying() == true) {
+                Red();
+              } else if (audios[518].isPlaying() == true) {
+                Pink();
+              } else if (audios[519].isPlaying() == true) {
+                Violet();
+              } else if (audios[520].isPlaying() == true) {
+                Pink();
+              } else if (audios[521].isPlaying() == true) {
+                Green();
+              } else if (audios[522].isPlaying() == true) {
+                Green();
+              }
+            }
+          });
+        } else if (paura_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           audios[2].play();
           console.log("Found");

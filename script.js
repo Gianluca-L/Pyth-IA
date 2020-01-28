@@ -99,29 +99,10 @@ const lavoro_giusto_keywords = ['sceglier', 'scelg', 'preferit', 'prefer', 'godi
 'farà dopo l\'università', 'far dopo', 'farò dopo gli studi', 'farò dopo il liceo', 'branc', 'campo di', 'scelg', 'soddisf', 'mi soddisf', 'appagat', 'soddisfatt', 'gratificazion', 'gratifica', 'piacere', 'godimento', 'appagament', 'compiaciment', 'allegr', 'gioia', 'aumento', 'stipend', 'guadagn', 'sbagliar', 'lavoro migliore', 'miglior lavoro', 'occupazione migliore', 'professione migliore', 'realizzazione', 'realizzat', 'felic', 'liet', 'opportun', 'efficac', 'più buono', 'esaudimento', 'saturazione', 'esaudit', 'esaudir', 'gradimento', 'gradit', 'adempimento', 'adempier', 'assolvimento', 'ottemperamento', 'consolazion', 'lavoro che mi piace',
 'lavoro che mi piaccia', 'lavoro che mi soddisfi', 'lavoro che mi renda felice'];
 
-
-///// COSA AMBIRE
-
-const cosa_ambire_keywords = ['obiettiv', 'traguard', 'soglia', 'livello',
-'modific', 'modalità', 'manier', 'infelic', 'felic',
-'trasformarsi', 'farsi diverso', 'avere', 'raggiung',
-'valore', 'perfezione', 'miglior', 'ambizios', 'ambi', 'punt', 'aspir', 'mirare', 'arrivare a',
-'sogn', 'principi', 'giudi', 'distru'];
-
 ///// AMORE PROPRIO LAVORO
 
 const amore_proprio_lav_keywords = ['apprezz', 'quello che faccio', 'quotidianalm', 'quotidianame', 'trovare la forza', 'trovar le forze', 'reputaz', 'amo quello che faccio', 'apprezzare quello che faccio', 'apprezzo quello che faccio', 'amo quello che faccio', 'ho stima del mio lavoro', 'adoro il mio lavoro', 'adorare il mio lavoro', 'desiderare il mio lavoro', 'desiderare quello che faccio', 'schiavo del mio lavoro', 'schiava del mio lavoro', 'schiavi del nostro lavoro',
 'lavoro da schiavi', 'lavoro da schiavo', 'lavoro da schiava', 'servitù', 'schiavitù', 'amare il proprio lavoro', 'amare il mio lavoro', 'amare la mia professione', 'apprezzare il proprio lavoro', 'apprezzare il mio lavoro', 'apprezzare la propria professione', 'apprezzare la mia professione', 'amare la propria professione', 'innamorarmi del mio lavoro', 'innamorarsi del proprio lavoro', 'innamorarmi del mio lavoro', 'innamorarmi della mia professione', 'innamorarsi della propria professione', 'innamorarmi del mio mestiere', 'innamorarsi del proprio mestiere'];
-
-
-///// CAMBIAMENTO AUDACIA
-
-const camb_audacia_keywords = ['cambi', 'evolv', 'trasform', 'rinnov', 'vari', 'variazion', 'modific',
-'liberarsi', 'essere disposto', 'essere disposta','essere disposte','essere disposti', 'cambi', 'artefic',
-'process', 'strad', 'percors',
-'cerc', 'capac', 'essere in grado', 'fare', 'pens', 'puoi arrivare', 'poter arrivare', 'posso arrivare', 'possiamo arrivare', 'possono arrivare', 'puoi essere', 'poter essere', 'posso essere', 'possiamo essere', 'possono essere',
-'divent', 'costrui'
-];
 
 
 ////// MOTIV
@@ -129,7 +110,7 @@ const motiv_1_keywords = ['speriment', 'fare esperienza', 'fare esperienze', 'ac
 'cambiar occupazione', 'perseveranz', 'persever', 'insist', 'perdur', 'persist', 'assidu', 'costanz', 'costant', 'tenac', 'accaniment', 'caparbi', 'ostinat', 'ostinaz', 'pervicac', 'incostanz', 'incostant', 'arrendevol', 'ceder', 'darsi per vinto', 'darmi per vinto', 'demorder', 'gettare la spugna', 'mollar', 'rinunc', 'soccomb', 'battersi', 'combatt', 'opporsi', 'oppormi', 'resist', 'tenere duro', 'tener duro', 'tengo duro'];
 const motiv_2_keywords = ['opportunità', 'possibil', 'occorrenz', 'chance', 'circostanza favorevole', 'circostanze favorevoli', 'momento propizio', 'momenti propizi', 'momento adatto', 'occasione adatta', 'occorrenza', 'avvenimento', 'occasion'];
 
-const occasioni_keywords = ['occasion', 'possibilit', 'situazion', 'opportunità', 'chance', 'circostanza favorevole', 'circostanze favorevoli', 'momento propizio', 'momenti propizi', 'momento adatto', 'occasione adatta',
+const occasioni_keywords = ['occasion', 'possibil', 'situazion', 'opportunità', 'chance', 'circostanza favorevole', 'circostanze favorevoli', 'momento propizio', 'momenti propizi', 'momento adatto', 'occasione adatta',
 'cogliere', 'colgo', 'acchiapp', 'afferr', 'prend',
 'darsi da fare', 'mi do da fare', 'ci si da fare', 'impegnarsi',  'mettersi in gioco', 'rimboccarsi le maniche',
 'gradin', 'ostacol', 'difficoltà',
@@ -155,55 +136,88 @@ const lavoro_diffida_keywords = ['bisogna lavorare', 'assorbito dal dovere', 'as
 
 ///// FORZA ANIMO
 
-const forza_animo_keywords = ['rialzarsi', 'cadere', 'mollare', 'perdere', 'perd', 'fallire', 'falliment', 'fallisc', 'falliamo', 'fallit', 'toccare il fondo', 'raggiungere', 'raggiung', 'riuscire', 'vincer', 'attraversar', 'riprov', 'super', 'arriv', 'otten', 'continu', 'stando fermo', 'fermi', 'si va', 'impar', 'tent', 'gioc', 'essere pronti', 'prosegu', 'insist', 'persever', 'cessare', 'proced', 'riprend', 'abbattersi', 'abbattuto', 'risollevarsi', 'riuscirci', 'sollevarsi', 'migliorare', 'arrendersi', 'spronarsi', 'avere forza d\'animo', 'andare avanti',
-'andare bene', 'andare male', 'andare a rotoli', 'rotoli', 'andare in fumo', 'fiasco', 'su con la vita', 'spirito d\'iniziativa',
-'determina', 'pazienza', 'pazient', 'perseveranza', 'persever', 'duro lavoro', 'sudore', 'coraggio', 'entusias', 'vinc',  'ardire', 'intrepidezza', 'intrepid', 'intraprendenza', 'intrapr', 'ardimento', 'audacia', 'prodezza', 'temerari', 'sangue freddo', 'spavald',
-'ottimis', 'pessimis', 'meglio', 'focalizz', 'autodisciplina', 'indulg',
-'volontà', 'ostacol', 'difficil', 'cerc', 'sacrific', 'controcorrente', 'scogli', 'audacia', 'audac', 'convinzion', 'reput', 'coraggio', 'risoluzione', 'risolut'];
+const forza_animo_keywords = ['success', 'falliment', 'insuccess', 'vittori', 'risultat', 'fortuna', 'ascesa', 'conquist', 'vetta', 'sconfitta', 'caduta', 'perdita', 'rialzarsi', 'cadere', 'mollare', 'perdere', 'fallire', 'toccare', 'raggiungere', 'riuscire', 'vincere', 'attraversare', 'riprov', 'super', 'arriv', 'si va', 'essere pronti', 'prosegu',  'insist', 'persever', 'proced', 'riprend', 'abbattersi', 'abbattuto', 'risollevarsi', 'riuscirci', 'sollevarsi', 'arrendersi', 'spronarsi', 'avere forza d\'animo', 'andare avanti', 'andare bene', 'andare male', 'andrà bene', 'andranno bene', 'andrà male', 'andranno male', 'andare a rotoli', 'rotoli', 'andare in fumo', 'fiasco', 'su con la vita', 'spirito d\'iniziativa', 'risoluzione', 'risolut', 'temerari',
+'determina', 'pazienza', 'pazient', 'perseverant', 'perseveranza', 'persever', 'duro lavoro', 'sudore', 'coraggio', 'entusias', 'vinc',  'ardire', 'intrepid', 'intraprendenza', 'intraprend',  'ardimento', 'audacia', 'audac', 'prodezza', 'temerarietà', 'sangue freddo', 'spavalderia',
+'pessimis', 'focalizz', 'autodisciplina', 'indulg',
+'volontà', 'ostacol', 'difficil', 'cerc', 'sacrific', 'controcorrente', 'scogli', 'forza d\'animo', 'fallisc'];
 
 //// MOTIVAZIONE
 
-const motivazione_succ_keywords = ['realizz', 'rendere possibile', 'raggiung', 'miglior', 'dedic', 'ripet', 'approd', 'contin',
-'credere in me', 'essere abbastanza', 'all\'altezza', 'segr',
-'volontà', 'forza d’animo', 'impegn', 'passione', 'convin', 'scettic', 'orgogli', 'demoralizz', 'spint', 'spron', 'carica', 'sicur', 'insicur'];
+const motivazione_succ_keywords = ['realizz', 'rendere possibile', 'render possibile', 'raggiung', 'dedic', 'approd',
+'credere in me', 'essere abbastanza', 'all\'altezza',
+'volontà', 'impegn', 'passione', 'convin', 'scettic', 'orgogli', 'demoralizz', 'spint', 'spron', 'carica', 'energia', 'energic'];
 
 
 //// SUCC SPORT
 
-const sport_succ_keywords = ['partit', 'punt', 'sport', 'temp', 'allenament', 'corsa', 'calcio', 'nuoto', 'basket', 'pallacanestro', 'pallavolo', 'volley', 'tennis', 'atletica', 'scherma', 'danza', 'ginnastica', 'palestra', 'maratona', 'gar', 'compet', 'scudett', 'ballo', 'esibizion',
-'soddisfazion', 'batt', 'allen', 'avvers'];
+const sport_succ_keywords = ['partit', 'sport', 'temp', 'allenament', 'corsa', 'calcio', 'nuoto', 'basket', 'pallacanestro', 'pallavolo', 'volley', 'tennis', 'atletica', 'scherma', 'danza', 'ginnastica', 'palestra', 'maratona', 'gar', 'compet', 'scudett', 'ballo', 'esibizion',
+'allen', 'avversari', 'calciator', 'pallavol', 'basket', 'atlet', 'scherm', 'danz', 'ballerin', 'ginnast', 'giocator', 'maraton', 'corridor'];
+
+///// COSA AMBIRE
+
+const cosa_ambire_keywords = ['obiettiv', 'traguard', 'soglia', 'livello',
+'trasformarsi', 'farsi diverso', 'avere', 'raggiung',
+'perfezione', 'ambizios', 'ambi', 'punt', 'aspir', 'mirare', 'arrivare a',
+'sogn', 'principi', 'desider', 'bram'];
+
+///// CAMBIAMENTO AUDACIA
+
+const camb_audacia_keywords = ['cambi', 'evolv', 'trasform', 'rinnov', 'vari', 'variazion', 'modific',
+'liberarsi', 'essere disposto', 'essere disposta','essere disposte','essere disposti', 'cambi', 'artefic',
+'process', 'strad', 'percors',
+'cerc', 'capac', 'essere in grado', 'fare', 'pens', 'puoi arrivare', 'poter arrivare', 'posso arrivare', 'possiamo arrivare', 'possono arrivare', 'puoi essere', 'poter essere', 'posso essere', 'possiamo essere', 'possono essere',
+'divent', 'costrui', 'essere', 'cavarsela', 'cavarmela', 'cavarcela', 'me la caverò', 'ce la caveremo', 'se la caveranno', 'se la caverà', 'te la caverai', 'fare bene', 'farò bene', 'faremo bene', 'faranno bene', 'farete bene', 'farai bene', 'farà bene', 'avere esito positivo', 'avrà esito positivo', 'avranno esito positivo', 'andrà a buon fine', 'andranno a buon fine', 'avrà buon esito', 'avrò buon esito', 'avranno buon esito',
+'andare male', 'andar male', 'fare fiasco', 'buco nell\'acqua', 'fiasco', 'ottenere un buon esito', 'otterrò un buon esito', 'otterrà un buon esito', 'otterrai un buon esito', 'otterranno un buon esito', 'otterremo un buon esito', 'spuntarla', 'la spunterò', 'la spunteremo', 'mancare l\'obiettivo', 'mancherò l\'obiettivo', 'manco l\'obiettivo', 'mancato l\'obiettivo', 'esito positivo', 'esito negativo', 'buon esito', 'cattivo esito', 'toppare', 'topperò', 'top', 'super',
+'avere un certo effetto', 'avere un certo esito', 'brav', 'miglior', 'soluz', 'risolv', 'rimedi', 'esito positivo', 'esito negativo', 'positiv', 'negativ', 'concret', 'effettiv', 'efficac', 'favorevol', 'propizi', 'vantagg', 'buon', 'cert', 'rialzarmi', 'riprendermi', 'risolvermi', 'resistere', 'resist'
+];
 
 //// FELICITA'
 
 const felicità_succ_keywords = ['felicità', 'contentezza', 'tranquillità', 'serenità', 'gioia',
-'salute', 'memoria', 'immaginazione',
+'realizzazione', 'salute',
 'felic', 'trist', 'scontent', 'risat',
-'liber', 'caten', 'oppressione', 'infelic', 'felic',
-'pass', 'salt', 'progre', 'attravers',
-'facoltà', 'abilità', 'doti', 'eccellenza'];
+'caten', 'oppressione', 'infelic', 'felic',
+'salt', 'progre', 'appagat', 'soddisfatt', 'seren', 'content', 'realizzat', 'tranquillo', 'tranquilla', 'gioios', 'soddisfaz', 'appagam', 'liet', 'allegr'];
+
+///// OCCASIONI SUCCESSO
+
+const occasioni_succ_keywords = ['occasion', 'possibil', 'situazion', 'circostanz', 'opportunità', 'chance',
+'cogliere', 'colgo', 'acchiapp', 'afferr',
+'darsi da fare', 'mi do da fare', 'ci si da fare', 'mettersi in gioco', 'rimboccarsi le maniche', 'rimboccarmi le maniche',
+'vita', 'esistenza', 'vissuto',
+'preparazione'];
+
+////// PROBLEMI
+
+const problemi_succ_keywords = ['darmi da fare', 'avvers', 'pericol', 'problem', 'gradin', 'ostacol', 'difficoltà'];
+
+///// COME FARE
+
+const come_fare_keywords = ['come fare', 'meglio', 'come agire', 'iniz', 'cominc', 'principi', 'dare inizio', 'avviar', 'aprir', 'inaugur', 'intraprend', 'fondar', 'promuov', 'introdu', 'accing', 'intavol', 'abbozz', 'imbast', 'avere inizio', 'avrà inizio', 'ha inizio', 'fare prima', 'far prima', 'procedur', 'sistem', 'metod', 'norm', 'criteri', 'iter', 'procediment', 'far perfettamente', 'fare perfettamente', 'impar', 'conosc', 'assimil', 'assorb', 'consider', 'afferr', 'assimilare', 'assorbir', 'apprend', 'ottimament',
+'alla grande', 'benissimo', 'eccelsamente', 'magnificamente', 'meravigliosamente', 'perfettamente', 'splendidamente', 'stupendamente', 'sublimemente', 'superbamente', 'bene', 'niente male', 'malissimo', 'orrendamente', 'orribilmente', 'pessimamente', 'schifosamente', 'così e così', 'male', 'maluccio', 'mediocremente', 'capac', 'essere capace', 'sono capace', 'sarò capace', 'essere all\'altezza di', 'avere capacità', 'ho le capacità', 'avrò le capacità', 'capacità', 'decid', 'decis', 'agir', 'azion', 'scelt', 'scegl', 'scelg', 'decid', 'decis', 'ottim', 'curriculum'];
 
 ///// AUTOSTIMA
 
-const autostima_keywords = ['te stesso', 'se stessi', 'persona', 'individuo', 'personalità', 'individualità',
-'fiducia', 'diffidenza', 'sfiducia', 'sospett', 'fede', 'assegnamento', 'affidamento', 'diffidare', 'fidarsi', 'autostima', 'sicuro di sè', 'sicura di sè', 'sicuri di sè', 'sicure di se',
-'accettarsi', 'mi accetta', 'mi accettano',  'apprezzarsi', 'mi apprezza', 'mi apprezzano', 'valorizzarsi', 'mi valorizzo', 'mi valorizza', 'mi valorizzano', 'piacersi', 'mi piaccio', 'piacere agli altri', 'piacere a se stessi', 'essere se stessi',
-'essere', 'sentirti inferiore', 'sentirsi inferiore', 'inferiore', 'stim', 'apprezz', 'accett', 'valorizz', 'sottostim', 'sopravvalut', 'sottovalut',
-'preoccup', 'agitazione', 'agitarsi', 'agit', 'dubit', 'metto in discussione', 'mettere in discussione', 'in discussione', 'stim', 'support'];
+const autostima_keywords = ['te stesso', 'se stessi', 'me stesso', 'me stessa', 'noi stessi', 'persona', 'individuo', 'personalità', 'individualità',
+'fiducia', 'diffidenza', 'sfiducia', 'sospett', 'fede', 'assegnamento', 'affidamento', 'diffidare', 'fidarsi', 'autostima', 'sicuro di sè', 'sicura di sè', 'sicuri di sè', 'sicure di se', 'sicuro di me', 'sicura di me',
+'accettarsi', 'accettarmi', 'mi accetta', 'mi accettano',  'apprezzarsi', 'apprezzarmi', 'mi apprezza', 'mi apprezzano', 'valorizzarsi', 'mi valorizzo', 'mi valorizza', 'mi valorizzano', 'piacersi', 'piacermi', 'mi piaccio', 'piacere agli altri', 'piacere a se stessi', 'piacere a me stesso', 'piacere a me stessa', 'essere se stessi',
+'a piacere', 'sentirti inferiore', 'sentirsi inferiore', 'sentirmi inferiore', 'inferiore', 'stim', 'apprezz', 'accett', 'valorizz', 'sottostim', 'sopravvalut', 'sottovalut',
+'agitarsi', 'agitarmi', 'agit', 'agitazione', 'ansia', 'ansios', 'dubitare delle mie scelte', 'dubitare delle mie decisioni', 'dubitare di me stesso','dubitare di me stessa', 'dubito di me stesso', 'dubito di me stessa', 'dubitare di se stessi', 'dubitare di noi stessi', 'dubitare di noi', 'dubitare di me', 'dubito di me', 'dubitare di sé', 'metto in discussione', 'mettere in discussione','mettersi in discussione', 'mettermi in discussione', 'in discussione', 'me stesso', 'noi stessi'];
 
 ///////// FUTURO SUCC
 
-const futuro_succ_keywords = ['presente', 'passato', 'futuro', 'domani', 'destino', 'fato', 'avvenire', 'giovinezza', 'vecchiaia', 'gioventù',
+const futuro_succ_keywords = ['presente', 'passato', 'futuro', 'domani', 'destino', 'fato', 'avvenire', 'vecchiaia',
 'succederà', 'sarà', 'accadrà', 'avverrà', 'avventuros', 'rà', 'rò','ranno', 'rai', 'remo', 'rete',
-'indietro', 'avanti', 'dietro'];
+'avanti', 'present', 'futur', 'destin', 'anzianità', 'sorte', 'fatalità'];
 
 ////////// ECOLOGIA
 
-const ecologia_keywords = ['pianeta terra', 'terra', 'pianeta', 'eco', 'ecologia', 'ambiente', 'mondo', 'bisogni', 'risorse', 'suolo', 'terreno', 'cielo', 'diversità', 'biodiversità',
-'distruzione del pianeta', 'devastazione', 'inquinamento', 'inquin', 'smog', 'greta thumberg', 'greta tumberg', 'greta tumblr', 'sfruttamento', 'ricicla', 'salvare la terra', 'salvare il pianeta'];
+const ecologia_keywords = ['pianeta terra', 'terra', 'pianeta', 'eco', 'ecologia', 'ambiente', 'mondo', 'risorse', 'suolo', 'terreno', 'cielo', 'biodiversità',
+'distruzione del pianeta', 'devastazione', 'inquinamento', 'inquin', 'smog', 'greta thumberg', 'greta tumberg', 'greta tumblr', 'sfruttamento', 'ricicla', 'salvare la terra', 'salvare il pianeta', 'apocalisse', 'ricicl', 'differenziat', 'ambient', 'devast', 'apocalisse', 'fine del mondo', 'pianeta terra', 'pianeta', 'finirà il mondo', 'fine del mondo', 'collasso del mondo', 'mondo collasserà', 'mondo finirà', 'collasserà il mondo', 'terminerà il mondo', 'mondo terminerà', 'mondo avrà una fine', 'finirà', 'avrà fine', 'genere umano', 'essere umano', 'esseri umani', 'genere animale', 'regno animale', 'mondo animale', 'regno vegetale', 'mondo vegetale', 'mondo finirà', 'mondo collasserà', 'mondo'];
 
 /////// FUT_TECNOLOGIA
 
-const fut_tecnologia_keywords = ['progress', 'tecnol', 'futuro della tecnologia', 'futuro della tecnica', 'digitale', 'risolvere', 'costruire', 'avanzament', 'motore', 'energia elettrica', 'tesla', 'iphone', 'pc', 'computer', 'smartphone', 'cellulare', 'elettricit', 'potenza', 'macchine'];
+const fut_tecnologia_keywords = ['progress', 'tecnol', 'futuro della tecnologia', 'futuro della tecnica', 'digitale', 'avanzament', 'motore', 'energia elettrica', 'tesla', 'iphone', 'pc', 'computer', 'smartphone', 'cellulare', 'elettricit', 'potenza', 'macchine', 'digital', 'elettric', 'macchine ibride', 'guida autonoma', 'intelligenza artificiale', 'big data', '5g', 'motori irbidi', 'motore ibrido', 'internet of things', 'apple', 'computer', 'cellular', 'macchin'];
 
 ////////////////////////////////////////////// LEGAMI
 

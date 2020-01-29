@@ -678,7 +678,7 @@ const forza_animo_fallimento_keywords = ['successo', 'success', 'insuccess', 'vi
         'fatale', 'mortal', 'inevitabil'];
 //////////////////////////////////////////////// ISPIRAZIONE
 
-const ispirazione_generico_keywords = ['ispirazion', 'progett', 'progettar', 'progettist', 'design', 'designer', 'prototipar', 'user experience', 'experience', 'utent', 'digital', 'service design', 'prodott', 'servizi', 'creativ', 'creativit', 'crear', 'creer', 'creav', 'creazion', 'oper', 'manufatt', 'divin', 'estro', 'fervor', 'inspiraz', 'inspirar', 'inspirat', 'inspirarsi', 'capac', 'incapac', 'capacit', 'incapacità', 'maestria', 'abilità', 'abil', 'abilmente', 'brav', 'bravura', 'male', 'pessimamente', 'ottimamente', 'con successo', 'perfettamente', 'alla perfezione', 'a meraviglia', 'con i piedi', 'virtù', 'talento', 'talentuos', 'inett', 'inettitud', 'mediocrità', 'mediocr', 'astuzi', 'astut', 'stratagemm', 'mezzo', 'modo', 'sistema'];
+const ispirazione_generico_keywords = ['ispirazion', 'progett', 'progettar', 'progettist', 'design', 'designer', 'prototipar', 'user experience', 'experience', 'utent', 'digital', 'service design', 'prodott', 'servizi', 'creativ', 'creativit', 'crear', 'creer', 'creav', 'creazion', 'oper', 'manufatt', 'divin', 'estro', 'fervor', 'inspiraz', 'inspirar', 'inspirat', 'inspirarsi', 'capac', 'incapac', 'capacit', 'incapacità', 'maestria', 'abilità', 'abil', 'abilmente', 'brav', 'bravura', 'male', 'pessimamente', 'ottimamente', 'con successo', 'perfettamente', 'alla perfezione', 'a meraviglia', 'con i piedi', 'virtù', 'talento', 'talentuos', 'inett', 'inettitud', 'mediocrità', 'mediocr', 'astuzi', 'astut', 'stratagemm', 'mezzo', 'modo', 'sistema', 'espedient', 'trucco', 'artifici'];
 
 var ispirazione_generico_cits = ['Rosa 1. “Non ho mai fatto una delle mie scoperte attraverso il processo del pensiero razionale.”Albert Einstein',
 'Rosa 2. ”Il processo creativo è un cocktail di istinto, abilità, cultura e inventiva febbrile. Non è come una droga; è quel particolare stato in cui tutto accade velocemente, un miscuglio di coscienza e incoscienza, di paura e piacere; è un po’ come amare, l’atto fisico dell’amare.” Francis Bacon',
@@ -711,7 +711,7 @@ var libro_cits = ['Viola 10. “I veri libri devono essere figli non della luce 
 
 ////// SCIENZA ISPIRAZIONE
 
-const scienza_ispirazione_keywords = ['scienz', 'scienziat','laborat', 'spazi', 'spazial', 'stell', 'costellazion', 'galassi', 'laboratori', 'esperimento scientifico', 'esperimenti scientifici', 'fenomeni naturali', 'fenomeno naturale', 'chimic', 'biolog', 'alchimi', 'astrofisic', 'fisica', 'geolog', 'navicell', 'aerospazi', 'astronav', 'astronaut'];
+const scienza_ispirazione_keywords = ['scienz', 'scienziat','laborat', 'spazi', 'spazial', 'stell', 'costellazion', 'galassi', 'laboratori', 'esperimento scientifico', 'esperimenti scientifici', 'fenomeni naturali', 'fenomeno naturale', 'chimic', 'biolog', 'alchimi', 'astrofisic', 'fisica', 'geolog', 'navicell', 'aerospazi', 'astronav', 'astronaut', 'astronomo'];
 
 var scienza_ispirazione_cits = ['56AA) Uno scienziato nel suo laboratorio non è soltanto un tecnico, è anche un fanciullo posto di fronte a fenomeni naturali che lo impressionano come un racconto di fate.– Marie Curie – Arancione'];
 
@@ -740,7 +740,7 @@ var poesia_cits = ['Rosso 13. “L’ispirazione è una farsa che i poeti hanno 
 
 //////// ISOLAMENTO
 
-const isolamento_keywords = ['silenzio', 'solitud', 'sol', 'isolam', 'isolat', 'isolare', 'isolarmi', 'isolarci', 'isolarsi', 'isolarvi', 'isolarti', 'compagnia', 'insieme', 'quiete', 'rumore', 'rumoro', 'taciturnità', 'pace', 'folla', 'frastuon', 'disturb', 'casin', 'chiasso', 'baccano', 'cagnara', 'zitt', 'mutism', 'mut', 'clamore', 'fracasso', 'gazzarra', 'pandemonio', 'schiamazzo', 'strepito', 'emarginat', 'emarginazion', 'emarginar', 'isolant'];
+const isolamento_keywords = ['silenzio', 'solitud', 'sol', 'isolam', 'isolat', 'isolare', 'isolarmi', 'isolarci', 'isolarsi', 'isolarvi', 'isolarti', 'compagnia', 'insieme', 'quiete', 'rumore', 'rumoro', 'taciturnità', 'pace', 'folla', 'frastuon', 'disturb', 'casin', 'chiasso', 'baccano', 'cagnara', 'zitt', 'mutism', 'mut', 'clamore', 'fracasso', 'gazzarra', 'pandemonio', 'schiamazzo', 'strepito', 'emarginat', 'emarginazion', 'emarginar', 'isolant', 'calca'];
 
 var isolamento_cits = ['Viola 10. “I veri libri devono essere figli non della luce e delle chiacchiere ma dell’oscurità e del silenzio.” Marcel Proust',
 'Viola 6. “Quell’istinto ispirato dall\'alto che costituisce il genio non vive che nella indipendenza e nella solitudine.” Ugo Foscolo'
@@ -765,7 +765,7 @@ var canzone_cits = ['Blu 18. “Il grande compositore non si mette al lavoro per
 
 /////// REGISTA
 
-const regista_keywords = ['regist', 'sceneggiator', 'sceneggiatric', 'sceneggiatur', 'regia', 'video', 'cinema', 'film', 'filmografi', 'cinematografic', 'inquadratur', 'camera', 'videocamera', 'fotocamer'];
+const regista_keywords = ['regist', 'sceneggiator', 'sceneggiatric', 'sceneggiatur', 'regia', 'video', 'cinema', 'film', 'filmografi', 'cinematografic', 'inquadratur', 'camera', 'videocamera', 'fotocamer', 'girare', 'girat', 'telecamer', 'riflettor', 'video maker', 'video making', 'video editing'];
 
 var regista_cits = ['32AA) Per fare un film di successo non basta avere un mucchio di idee: è indispensabile presentarle con cura e avere una totale consapevolezza della forma. – Alfred Hitchock – Blu'];
 
@@ -784,7 +784,7 @@ var artista_cits = ['Verde 3. “L’ispirazione non è un privilegio dei poeti 
 
 ////// PITTORE
 
-const pittore_keywords = ['pittor', 'pittric', 'pittur', 'pitturar', 'quadr', 'acrilic', 'olio', 'colori a olio', 'acrilici', 'tempere', 'macchi', 'macchiaiol', 'impressionismo', 'impressionist', 'pittoric', 'astratt', 'astrattism'];
+const pittore_keywords = ['pittor', 'pittric', 'pittur', 'pitturar', 'quadr', 'acrilic', 'olio', 'colori a olio', 'acrilici', 'tempere', 'macchi', 'macchiaiol', 'impressionismo', 'impressionist', 'pittoric', 'astratt', 'astrattism', 'avanguardie artistiche', 'dipinger', 'dipint', 'color'];
 
 var pittore_cits = ['Rosso 7. “Non soffocare la tua ispirazione e la tua immaginazione, non diventare lo schiavo del tuo modello.”Van Gogh',
 'Arancione 16. “Tutti i pittori ispirati sono impressionisti, anche se è vero che alcuni impressionisti non sono ispirati.” Joaquin Sorolla'
@@ -798,7 +798,8 @@ var disegnatore_cits = ['40AA) In un altro tempo ero un grande disegnatore, ma h
 
 ////// RAZIOCINIO
 
-const raziocinio_keywords = ['raziocinio', 'ragione', 'ragionar', 'ragionato', 'razionalizzar', 'razionalizz', 'razional', 'disciplin', 'disciplinat', 'norma', 'norme', 'normat', 'rigidit', 'mente', 'buonsenso', 'metod', 'metodic', 'metodocità', 'istint', 'lucid', 'lucidità', 'schiav', 'repression', 'repress', 'reprimer', 'senso pratico', 'sensat', 'oggettiv', 'praticità', 'pratic', 'pragmatic', 'folgoraz', 'illuminaz', 'illuminat', 'folgorat', 'infervorat', 'infervorar'];
+const raziocinio_keywords = ['raziocinio', 'ragione', 'ragionar', 'ragionato', 'razionalizzar', 'razionalizz', 'razional', 'disciplin', 'disciplinat', 'norma', 'norme', 'normat', 'rigidit', 'mente', 'buonsenso', 'metod', 'metodic', 'metodocità', 'istint', 'lucid', 'lucidità', 'schiav', 'repression', 'repress', 'reprimer', 'senso pratico', 'sensat', 'oggettiv', 'praticità', 'pratic', 'pragmatic', 'folgoraz', 'illuminaz', 'illuminat', 'folgorat', 'infervorat', 'infervorar',
+'droghe', 'droga', 'stupefacent', 'funghetti allucinogeni', 'marijuana'];
 
 var raziocinio_cits = ['Rosa 1. “Non ho mai fatto una delle mie scoperte attraverso il processo del pensiero razionale.” Albert Einstein',
 'Verde La lucidità di un artista è tanto involontaria quanto la sua ispirazione. (Nicolás Gómez Dávila)',
@@ -823,7 +824,7 @@ var architettura_cits = ['Arancione 8. “Volete sapere dove ho trovato la mia i
 ////// SOFFERENZA ISPIRAZIONE
 
 const sofferenza_ispirazione_keywords = ['inferno', 'infernal', 'disperazion', 'disperat', 'dolor', 'doloros', 'dolorant', 'addolorat', 'addolorarmi', 'disperat', 'disperar', 'disperat', 'disperarmi', 'disperarsi', 'disper', 'struggersi', 'struggermi', 'strugg', 'salvezz', 'salvarmi', 'salvarsi', 'salver', 'salvav', 'salvat', 'salv', 'insoddisfaz', 'insoddisfatt', 'soddisfatt', 'soddisfazion', 'tristezz', 'trist', 'malinconic', 'malinconi',
-'mestizia', 'mest', 'sofferent', 'soffert', 'soffer', 'soffrir', 'soffro', 'soffri', 'soffriv', 'soffrir', 'soffr'];
+'mestizia', 'mest', 'sofferent', 'soffert', 'soffer', 'soffrir', 'soffro', 'soffri', 'soffriv', 'soffrir', 'soffr', 'stare male', 'star male', 'stato male', 'stata male', 'afflizion', 'afflitt', 'affligg'];
 
 var sofferenza_ispirazione_cits = ['41AA) Nessuno ha mai scritto, dipinto, scolpito, modellato, costruito o inventato se non per uscire letteralmente dall’inferno.– Antonin Artaud – Rosso',
 '51AA) La salvezza umana giace nelle mani dei creativi insoddisfatti. – Martin Luther King – Viola',
@@ -851,7 +852,7 @@ var idee_cits = ['28AA) Le idee chiare e precise sono le più pericolose, perch�
 
 ////// FOLLIA
 
-const follia_keywords = ['folle', 'folli', 'follia', 'pazzia', 'pazz', 'instabilità mentale', 'problema mentale', 'non lucido', 'impazzir', 'fuori di testa'];
+const follia_keywords = ['folle', 'folli', 'follia', 'pazzia', 'pazz', 'instabilità mentale', 'problema mentale', 'non lucido', 'impazzir', 'fuori di testa', 'non lucidità'];
 
 var follia_cits = ['21AA) Adoro gli esperimenti folli. Li faccio in continuazione.– Charles Darwin – rosa',
 '22AA) Il principale nemico della creatività è il buonsenso.– Pablo Picasso – Rosso',
@@ -860,7 +861,7 @@ var follia_cits = ['21AA) Adoro gli esperimenti folli. Li faccio in continuazion
 
 ////// CULTURA ISPIRAZIONE
 
-const cultura_ispirazione_keywords = ['cultur', 'conoscenz', 'colt', 'conoscer', 'conoscitor', 'sapienz', 'sapient', 'apprender', 'apprendiment', 'istruir', 'istruit', 'istruzion', 'scuol', 'scolastic', 'universit', 'saper'];
+const cultura_ispirazione_keywords = ['cultur', 'conoscenz', 'colt', 'conoscer', 'conoscitor', 'sapienz', 'sapient', 'apprender', 'apprendiment', 'istruir', 'istruit', 'istruzion', 'scuol', 'scolastic', 'universit', 'saper', 'intellettual'];
 
 var cultura_ispirazione_cits = ['31AA) La fantasia è come la marmellata, bisogna che sia spalmata su una solida fetta di pane.– Italo Calvino – Blu',
 '30AA) Il genio senza istruzione è come l’argento dentro la miniera. – Benjamin Franklin – Blu',
@@ -870,7 +871,7 @@ var cultura_ispirazione_cits = ['31AA) La fantasia è come la marmellata, bisogn
 
 ////// GENIO ISPIRAZIONE
 
-const genio_ispirazione_keywords = ['genio', 'genialit', 'genial', 'geniett', 'geni'];
+const genio_ispirazione_keywords = ['genio', 'genialit', 'genial', 'geniett', 'demon', 'daimon', 'vocaz'];
 
 var genio_ispirazione_cits = ['27AA) Nella sua grandezza, il genio disdegna le strade battute e cerca regioni ancora inesplorate. – Abraham Lincoln – Verde',
 '30AA) Il genio senza istruzione è come l’argento dentro la miniera.– Benjamin Franklin – Blu'
@@ -878,7 +879,7 @@ var genio_ispirazione_cits = ['27AA) Nella sua grandezza, il genio disdegna le s
 
 ////// ORIGINALITA'
 
-const originalità_keywords = ['original', 'originalit', 'nuov', 'novit', 'innovativ', 'innovar'];
+const originalità_keywords = ['original', 'originalit', 'nuov', 'novit', 'innovativ', 'innovar', 'innovator', 'innovatric', 'rinnovar', 'ammodern', 'modernizz', 'riform', 'rimodern', 'rinnov', 'svecchiar', 'svecch', 'modern'];
 
 var originalità_cits = ['27AA) Nella sua grandezza, il genio disdegna le strade battute e cerca regioni ancora inesplorate.– Abraham Lincoln – Verde',
 '37AA) La creatività vuole coraggio.– Henri Matisse – Rosa',
@@ -895,7 +896,7 @@ var verità_realtà_cits = ['55AA) La realtà non è mai come la si vede: la ver
 
 ///// PAURA FALLIRE
 
-const paura_fallire_keywords = ['paur', 'timor', 'fallir', 'fallit', 'falliment', 'fallisc', 'falliv', 'tem', 'temev', 'temer', 'terrore', 'perder', 'perdit', 'vinc', 'vincit', 'trionf', 'sconfitt', 'abiss'];
+const paura_fallire_keywords = ['paur', 'timor', 'fallir', 'fallit', 'falliment', 'fallisc', 'falliv', 'tem', 'temev', 'temer', 'terrore', 'perder', 'perdit', 'vinc', 'vincit', 'trionf', 'sconfitt', 'abiss', 'vada male', 'andare male', 'andrà male', 'scoragg'];
 
 var paura_fallire_cits = ['52AA) Un aspetto essenziale della creatività è non avere paura di fallire.– Edwin Land – Blu',
 '50AA) La forma di scoraggiamento più dannosa alla creatività è quella che ci viene dai nostri cari.– Alex Osborn – Viola'

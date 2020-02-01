@@ -1351,7 +1351,7 @@ var etica_omosessuale_cits = ['26eti) C\'è un\'associazione in Francia [...] ch
 
 const violenza_fisica_keywords = ['abusata', 'abusate', 'picchiata', 'picchiate', 'violenza carnale', 'abuso sessuale', 'violenza sessuale', 'stupr', 'violentata', 'violentate', 'non consenziente'];
 
-const violenza_fisica_gen_keywords = ['picchia', 'percuotere', 'percossa', 'dare botte', 'prendere a schiaffi', 'prendere a pugni', 'malmen', 'menare', 'menat', 'bastonare', 'pestare', 'pestat', 'colpire', 'abus', 'prevaric', 'sopraff'];
+const violenza_fisica_gen_keywords = ['picchia', 'percuotere', 'percossa', 'dare botte', 'prendere a schiaffi', 'prendere a pugni', 'malmen', 'menare', 'menat', 'bastonare', 'pestare', 'pestat', 'colpire', 'abus', 'prevaric', 'sopraff', 'soprus', 'maltratt', 'forza', 'aggress', 'violenz', 'prepotenz'];
 
 const donna_gen_keywords = ['donna', 'donne', 'femmin', 'gentil sesso', 'bel sesso', 'sesso debole', 'signora', 'signorina', 'bambina', 'bambine', 'ragazza', 'ragazze', 'ragazzina', 'ragazzine', 'mogli', 'fidanzata', 'fidanzate'];
 
@@ -1371,7 +1371,12 @@ var violenza_cits = ['33eti) La violenza è l’ultimo rifugio degli incapaci. (
 
 //////// ABUSI DI POTERE
 
-const abuso_potere_keywords = ['eccesso', 'smodatezz', 'uso smodato', 'illecito', 'disordin', 'scandal', 'prepotenz', 'media', 'social', 'tv', 'televisione', 'telegiornale', 'deputat', 'president', 'capo', 'prendere la decisione', 'prendere le decisioni', 'discorso', 'carismatic', 'convincer', 'abuso di potere', 'abuso di poteri'];
+const abuso_normale_keywords = ['abus','eccess', 'smodatezz', 'uso smodato', 'vizio'];
+
+const abuso_potere_keywords = ['abus','eccess', 'smodatezz', 'uso smodato', 'vizio'];
+
+const stato_keywords = ['stato', 'governo', 'potere', 'deputat', 'parlament', 'politic', 'amministraz'];
+
 
 var abuso_potere_cits = ['38eti) Usate, non abusate… né l’astinenza né l’eccesso hanno mai reso l’uomo felice. (Voltaire) verde',
 '39eti) Abbiamo bisogno della libertà per evitare gli abusi del potere dello Stato e abbiamo bisogno dello Stato per evitare l’abuso della libertà (Karl Popper) rosso',
@@ -1380,7 +1385,11 @@ var abuso_potere_cits = ['38eti) Usate, non abusate… né l’astinenza né l�
 
 //////// ABUSO DROGA
 
-const abuso_droga_keywords = ['tossic', 'eroin', 'erba', 'drog', 'vizi', 'illegal', 'dipendenz', 'marijuana', 'maria', 'gangia', 'stupefacenti', 'bere', 'bev', 'alcool', 'alcolici', 'vino', 'vini', 'liquor', 'fumo', 'fumi', 'fuma', 'sigarett'];
+const abuso_droga_keywords = ['tossic', 'eroin', 'erba', 'drog', 'marijuana', 'maria', 'gangia', 'stupefacenti'];
+
+const abuso_alcool_keywords = ['bere', 'bev', 'alcool', 'alcol', 'alcolici', 'vino', 'vini', 'liquor'];
+
+const abuso_fumo_keywords = ['fumo', 'fumi', 'fuma', 'sigarett'];
 
 var abuso_droga_cits = ['41eti) L’abuso della droga non è una malattia, ma una decisione, come quella di andare incontro ad una macchina che si muove. Questo non si chiama malattia, ma mancanza di giudizio.(Philip K. Dick) viola',
 '53eti) Se decidi di smettere di bere, fumare e fare l’amore, non è che vivi più a lungo: la vita ti sembra più lunga. (Clement Freud) verde',
@@ -1389,7 +1398,7 @@ var abuso_droga_cits = ['41eti) L’abuso della droga non è una malattia, ma un
 
 //////// RAZZISMO
 
-const razzismo_keywords = ['bianc', 'ner',  'negr', 'cines', 'razz', 'discrimin', 'segreg', 'apartheid', 'intolleranz', 'pregiudizi', 'tradiz', 'immigr', 'altre culture', 'culture diverse', 'insult', 'cori razzisti', 'coro razzista', 'venire da', 'proven', 'color', 'essere diver', 'xenof'];
+const razzismo_keywords = ['bianc', 'ner',  'negr', 'cines', 'razz', 'discrimin', 'apartheid', 'intolleranz', 'pregiudizi', 'immigr', 'altre culture', 'culture diverse', 'cori razzisti', 'coro razzista', 'di colore', 'essere diver', 'xenof'];
 
 var razzismo_cits = ['42eti) “Se dici la tua sul Vaticano, sulla Chiesa Cattolica, sui Papa, sulla Madonna, su Gesù, sui Santi, non ti succede nulla. Ma se fai lo stesso con l\'Islam, col Corano, con Maometto, coi figli di Allah, diventi razzista e xenofobo e blasfemo e compi una discriminazione razziale.” (Oriana Fallaci) azzurro',
 '43eti) “Ci sono state occasioni nelle quali l’aggressione fisica non è stata così grave quanto l’oppressione psicologica sofferta dalla popolazione nera durante l’apartheid. È una tortura psicologica impossibile da descrivere a parole.” (Nelson Mandela) viola',

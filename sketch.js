@@ -29,8 +29,6 @@ var ispirazione_var = false;
 var vita_morte_var = false;
 var etica_morale_var = false;
 
-var final_sentence = false;
-
 var stopArduinoLEDS = true;
 
 var loadEffect = false
@@ -225,7 +223,6 @@ function reset() {
   setTimeout(function() {
     step_1 = true;
   }, 2000);
-  final_sentence = false;
   stopArduinoLEDS = true;
   errorCounter = 0;
   //createSpeechRec_1();
@@ -1570,7 +1567,7 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var sep_feriti_amicizia_audio = Math.round(random([84, 85, 86, 87, 88]));
+              var sep_feriti_amicizia_audio = Math.round(random([84, 85, 86]));
               audios[sep_feriti_amicizia_audio].play();
               amicizia_relInter_var = false;
               audios[sep_feriti_amicizia_audio].onended(farewell);
@@ -1582,11 +1579,12 @@ function startPythia() {
                 Pink();
               } else if (audios[86].isPlaying() == true) {
                 Violet();
-              } else if (audios[87].isPlaying() == true) {
-                Blue();
-              } else if (audios[88].isPlaying() == true) {
-                Violet();
               }
+              // else if (audios[87].isPlaying() == true) {
+              //   Blue();
+              // } else if (audios[88].isPlaying() == true) {
+              //   Violet();
+              // }
             }
           });
         } else if (vera_amicizia_keywords.some(keyword => sentence.includes(keyword))) {
@@ -1600,7 +1598,7 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var vera_amicizia_audio = Math.round(random([62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83]));
+              var vera_amicizia_audio = Math.round(random([62, 63, 65, 68, 70, 71, 72, 74, 76, 79, 80, 82, 83]));
               audios[vera_amicizia_audio].play();
               amicizia_relInter_var = false;
               audios[vera_amicizia_audio].onended(farewell);
@@ -1610,43 +1608,57 @@ function startPythia() {
                 Red();
               } else if (audios[63].isPlaying() == true) {
                 Violet();
-              } else if (audios[64].isPlaying() == true) {
+              }
+              // else if (audios[64].isPlaying() == true) {
+              //   Pink();
+              // }
+              else if (audios[65].isPlaying() == true) {
                 Pink();
-              } else if (audios[65].isPlaying() == true) {
-                Pink();
-              } else if (audios[66].isPlaying() == true) {
-                Green();
-              } else if (audios[67].isPlaying() == true) {
+              }
+              // else if (audios[66].isPlaying() == true) {
+              //   Green();
+              // } else if (audios[67].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[68].isPlaying() == true) {
                 Blue();
-              } else if (audios[68].isPlaying() == true) {
-                Blue();
-              } else if (audios[69].isPlaying() == true) {
-                Blue();
-              } else if (audios[70].isPlaying() == true) {
+              }
+              // else if (audios[69].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[70].isPlaying() == true) {
                 Blue();
               } else if (audios[71].isPlaying() == true) {
                 Pink();
               } else if (audios[72].isPlaying() == true) {
                 Blue();
-              } else if (audios[73].isPlaying() == true) {
-                Green();
-              } else if (audios[74].isPlaying() == true) {
+              }
+              // else if (audios[73].isPlaying() == true) {
+              //   Green();
+              // }
+              else if (audios[74].isPlaying() == true) {
                 Blue();
-              } else if (audios[75].isPlaying() == true) {
-                Blue();
-              } else if (audios[76].isPlaying() == true) {
+              }
+              // else if (audios[75].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[76].isPlaying() == true) {
                 Violet();
-              } else if (audios[77].isPlaying() == true) {
-                Blue();
-              } else if (audios[78].isPlaying() == true) {
-                Red();
-              } else if (audios[79].isPlaying() == true) {
+              }
+              // else if (audios[77].isPlaying() == true) {
+              //   Blue();
+              // } else if (audios[78].isPlaying() == true) {
+              //   Red();
+              // }
+              else if (audios[79].isPlaying() == true) {
                 Pink();
               } else if (audios[80].isPlaying() == true) {
                 Pink();
-              } else if (audios[81].isPlaying() == true) {
-                Blue();
-              } else if (audios[82].isPlaying() == true) {
+              }
+              // else if (audios[81].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[82].isPlaying() == true) {
                 Red();
               } else if (audios[83].isPlaying() == true) {
                 Pink();
@@ -1664,21 +1676,22 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var falsa_amicizia_audio = Math.round(random([89, 21, 90, 78, 91, 92, 25])); // 82
+              var falsa_amicizia_audio = Math.round(random([91, 92, 25])); // 82
               audios[falsa_amicizia_audio].play();
               amicizia_relInter_var = false;
               audios[falsa_amicizia_audio].onended(farewell);
               // alert(falsa_amicizia_cit);
               // farewell();
-              if (audios[89].isPlaying() == true) {
-                Red();
-              } else if (audios[21].isPlaying() == true) {
-                Violet();
-              } else if (audios[90].isPlaying() == true) {
-                Blue();
-              } else if (audios[78].isPlaying() == true) {
-                Red();
-              } else if (audios[91].isPlaying() == true) {
+              // if (audios[89].isPlaying() == true) {
+              //   Red();
+              // } else if (audios[21].isPlaying() == true) {
+              //   Violet();
+              // } else if (audios[90].isPlaying() == true) {
+              //   Blue();
+              // } else if (audios[78].isPlaying() == true) {
+              //   Red();
+              // }
+              if (audios[91].isPlaying() == true) {
                 Red();
               } else if (audios[82].isPlaying() == true) {
                 Red();
@@ -1700,26 +1713,29 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var odio_audio = Math.round(random([7, 8, 9, 10, 11, 12, 13]));
+              var odio_audio = Math.round(random([7, 8, 9, 11, 13]));
               audios[odio_audio].play();
               amicizia_relInter_var = false;
               audios[odio_audio].onended(farewell);
               //alert(paura_cit);
               //farewell();
-              final_sentence = true;
               if (audios[7].isPlaying() == true) {
                 Green();
               } else if (audios[8].isPlaying() == true) {
                 Red();
               } else if (audios[9].isPlaying() == true) {
                 Red();
-              } else if (audios[10].isPlaying() == true) {
-                Green();
-              } else if (audios[11].isPlaying() == true) {
+              }
+              // else if (audios[10].isPlaying() == true) {
+              //   Green();
+              // }
+              else if (audios[11].isPlaying() == true) {
                 Blue();
-              } else if (audios[12].isPlaying() == true) {
-                Orange();
-              } else if (audios[13].isPlaying() == true) {
+              }
+              // else if (audios[12].isPlaying() == true) {
+              //   Orange();
+              // }
+              else if (audios[13].isPlaying() == true) {
                 Pink();
               }
             }
@@ -1735,7 +1751,7 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var bravo_audio = Math.round(random([7, 11, 12, 13, 15]));
+              var bravo_audio = Math.round(random([7, 11, 15]));
               audios[bravo_audio].play();
               amicizia_relInter_var = false;
               audios[bravo_audio].onended(farewell);
@@ -1745,11 +1761,13 @@ function startPythia() {
                 Green();
               } else if (audios[11].isPlaying() == true) {
                 Blue();
-              } else if (audios[12].isPlaying() == true) {
-                Orange();
-              } else if (audios[13].isPlaying() == true) {
-                Pink();
-              } else if (audios[15].isPlaying() == true) {
+              }
+              // else if (audios[12].isPlaying() == true) {
+              //   Orange();
+              // } else if (audios[13].isPlaying() == true) {
+              //   Pink();
+              // }
+              else if (audios[15].isPlaying() == true) {
                 Blue();
               }
             }
@@ -1765,7 +1783,7 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var aiuto_supp_audio = Math.round(random([16, 17, 18]));
+              var aiuto_supp_audio = Math.round(random([16, 18]));
               audios[aiuto_supp_audio].play();
               amicizia_relInter_var = false;
               audios[aiuto_supp_audio].onended(farewell);
@@ -1773,9 +1791,11 @@ function startPythia() {
               // farewell();
               if (audios[16].isPlaying() == true) {
                 Pink();
-              } else if (audios[17].isPlaying() == true) {
-                Orange();
-              } else if (audios[18].isPlaying() == true) {
+              }
+              // else if (audios[17].isPlaying() == true) {
+              //   Orange();
+              // }
+              else if (audios[18].isPlaying() == true) {
                 Blue();
               }
             }
@@ -1791,7 +1811,7 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var solitudine_audio = Math.round(random([19, 20, 21]));
+              var solitudine_audio = Math.round(random([19, 21]));
               audios[solitudine_audio].play();
               amicizia_relInter_var = false;
               audios[solitudine_audio].onended(farewell);
@@ -1799,9 +1819,11 @@ function startPythia() {
               // farewell();
               if (audios[19].isPlaying() == true) {
                 Violet();
-              } else if (audios[20].isPlaying() == true) {
-                Violet();
-              } else if (audios[21].isPlaying() == true) {
+              }
+              // else if (audios[20].isPlaying() == true) {
+              //   Violet();
+              // }
+              else if (audios[21].isPlaying() == true) {
                 Violet();
               }
             }
@@ -1865,15 +1887,16 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var perdono_rel_audio = Math.round(random([26, 27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39])); // 29
+              var perdono_rel_audio = Math.round(random([27, 28, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39])); // 29
               audios[perdono_rel_audio].play();
               amicizia_relInter_var = false;
               audios[perdono_rel_audio].onended(farewell);
               // alert(perdono_rel_cit);
               // farewell();
-              if (audios[26].isPlaying() == true) {
-                Blue();
-              } else if (audios[27].isPlaying() == true) {
+              // if (audios[26].isPlaying() == true) {
+              //   Blue();
+              // }
+              if (audios[27].isPlaying() == true) {
                 Green();
               } else if (audios[28].isPlaying() == true) {
                 Pink();
@@ -1913,7 +1936,7 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var gelosia_rel_audio = Math.round(random([40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50]));
+              var gelosia_rel_audio = Math.round(random([40, 41, 42, 43, 44, 46, 47, 48, 49]));
               audios[gelosia_rel_audio].play();
               amicizia_relInter_var = false;
               audios[gelosia_rel_audio].onended(farewell);
@@ -1929,9 +1952,11 @@ function startPythia() {
                 Violet();
               } else if (audios[44].isPlaying() == true) {
                 Blue();
-              } else if (audios[45].isPlaying() == true) {
-                Red();
-              } else if (audios[46].isPlaying() == true) {
+              }
+              // else if (audios[45].isPlaying() == true) {
+              //   Red();
+              // }
+              else if (audios[46].isPlaying() == true) {
                 Blue();
               } else if (audios[47].isPlaying() == true) {
                 Red();
@@ -1939,9 +1964,10 @@ function startPythia() {
                 Blue();
               } else if (audios[49].isPlaying() == true) {
                 Red();
-              } else if (audios[50].isPlaying() == true) {
-                Blue();
               }
+              // else if (audios[50].isPlaying() == true) {
+              //   Blue();
+              // }
             }
           });
         } else if (tradimento_rel_keywords.some(keyword => sentence.includes(keyword))) {
@@ -1955,7 +1981,7 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var tradimento_rel_audio = Math.round(random([51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61]));
+              var tradimento_rel_audio = Math.round(random([51, 53, 55, 56, 57, 60, 61]));
               audios[tradimento_rel_audio].play();
               amicizia_relInter_var = false;
               audios[tradimento_rel_audio].onended(farewell);
@@ -1963,23 +1989,29 @@ function startPythia() {
               // farewell();
               if (audios[51].isPlaying() == true) {
                 Red();
-              } else if (audios[52].isPlaying() == true) {
-                Violet();
-              } else if (audios[53].isPlaying() == true) {
+              }
+              // else if (audios[52].isPlaying() == true) {
+              //   Violet();
+              // }
+              else if (audios[53].isPlaying() == true) {
                 Red();
-              } else if (audios[54].isPlaying() == true) {
-                Blue();
-              } else if (audios[55].isPlaying() == true) {
+              }
+              // else if (audios[54].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[55].isPlaying() == true) {
                 Red();
               } else if (audios[56].isPlaying() == true) {
                 Blue();
               } else if (audios[57].isPlaying() == true) {
                 Blue();
-              } else if (audios[58].isPlaying() == true) {
-                Red();
-              } else if (audios[59].isPlaying() == true) {
-                Green();
-              } else if (audios[60].isPlaying() == true) {
+              }
+              // else if (audios[58].isPlaying() == true) {
+              //   Red();
+              // } else if (audios[59].isPlaying() == true) {
+              //   Green();
+              // }
+              else if (audios[60].isPlaying() == true) {
                 Red();
               } else if (audios[61].isPlaying() == true) {
                 Blue();
@@ -1997,7 +2029,7 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var famiglia_amicizia_rel_audio = Math.round(random([156, 157, 158, 160, 161, 162]));
+              var famiglia_amicizia_rel_audio = Math.round(random([156, 157, 161, 162]));
               audios[famiglia_amicizia_rel_audio].play();
               amicizia_relInter_var = false;
               audios[famiglia_amicizia_rel_audio].onended(farewell);
@@ -2007,11 +2039,13 @@ function startPythia() {
                 Red();
               } else if (audios[157].isPlaying() == true) {
                 Orange();
-              } else if (audios[158].isPlaying() == true) {
-                Blue();
-              } else if (audios[160].isPlaying() == true) {
-                Pink();
-              } else if (audios[161].isPlaying() == true) {
+              }
+              // else if (audios[158].isPlaying() == true) {
+              //   Blue();
+              // } else if (audios[160].isPlaying() == true) {
+              //   Pink();
+              // }
+              else if (audios[161].isPlaying() == true) {
                 Blue();
               } else if (audios[162].isPlaying() == true) {
                 Blue();
@@ -2073,23 +2107,26 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var futuro_amicizia_rel_audio = Math.round(random([165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191]));
+              var futuro_amicizia_rel_audio = Math.round(random([167, 170, 171, 172, 173, 176, 180, 182, 187]));
               audios[futuro_amicizia_rel_audio].play();
               amicizia_relInter_var = false;
               audios[futuro_amicizia_rel_audio].onended(farewell);
               // alert(futuro_amicizia_rel_cit);
               // farewell();
-              if (audios[165].isPlaying() == true) {
-                Green();
-              } else if (audios[166].isPlaying() == true) {
-                Blue();
-              } else if (audios[167].isPlaying() == true) {
+              // if (audios[165].isPlaying() == true) {
+              //   Green();
+              // } else if (audios[166].isPlaying() == true) {
+              //   Blue();
+              // }
+              if (audios[167].isPlaying() == true) {
                 Orange();
-              } else if (audios[168].isPlaying() == true) {
-                Blue();
-              } else if (audios[169].isPlaying() == true) {
-                Green();
-              } else if (audios[170].isPlaying() == true) {
+              }
+              // else if (audios[168].isPlaying() == true) {
+              //   Blue();
+              // } else if (audios[169].isPlaying() == true) {
+              //   Green();
+              // }
+              else if (audios[170].isPlaying() == true) {
                 Violet();
               } else if (audios[171].isPlaying() == true) {
                 Blue();
@@ -2097,43 +2134,52 @@ function startPythia() {
                 Orange();
               } else if (audios[173].isPlaying() == true) {
                 Green();
-              } else if (audios[174].isPlaying() == true) {
-                Orange();
-              } else if (audios[175].isPlaying() == true) {
-                Blue();
-              } else if (audios[176].isPlaying() == true) {
+              }
+              // else if (audios[174].isPlaying() == true) {
+              //   Orange();
+              // } else if (audios[175].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[176].isPlaying() == true) {
                 Green();
-              } else if (audios[177].isPlaying() == true) {
-                Green();
-              } else if (audios[178].isPlaying() == true) {
-                Orange();
-              } else if (audios[179].isPlaying() == true) {
-                Violet();
-              } else if (audios[180].isPlaying() == true) {
-                Violet();
-              } else if (audios[181].isPlaying() == true) {
-                Blue();
-              } else if (audios[182].isPlaying() == true) {
-                Orange();
-              } else if (audios[183].isPlaying() == true) {
-                Violet();
-              } else if (audios[184].isPlaying() == true) {
-                Blue();
-              } else if (audios[185].isPlaying() == true) {
-                Pink();
-              } else if (audios[186].isPlaying() == true) {
-                Blue();
-              } else if (audios[187].isPlaying() == true) {
-                Blue();
-              } else if (audios[188].isPlaying() == true) {
-                Blue();
-              } else if (audios[189].isPlaying() == true) {
-                Violet();
-              } else if (audios[190].isPlaying() == true) {
-                Violet();
-              } else if (audios[191].isPlaying() == true) {
+              }
+              // else if (audios[177].isPlaying() == true) {
+              //   Green();
+              // } else if (audios[178].isPlaying() == true) {
+              //   Orange();
+              // } else if (audios[179].isPlaying() == true) {
+              //   Violet();
+              // }
+              else if (audios[180].isPlaying() == true) {
                 Violet();
               }
+              // else if (audios[181].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[182].isPlaying() == true) {
+                Orange();
+              }
+              // else if (audios[183].isPlaying() == true) {
+              //   Violet();
+              // } else if (audios[184].isPlaying() == true) {
+              //   Blue();
+              // } else if (audios[185].isPlaying() == true) {
+              //   Pink();
+              // } else if (audios[186].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[187].isPlaying() == true) {
+                Blue();
+              }
+              // else if (audios[188].isPlaying() == true) {
+              //   Blue();
+              // } else if (audios[189].isPlaying() == true) {
+              //   Violet();
+              // } else if (audios[190].isPlaying() == true) {
+              //   Violet();
+              // } else if (audios[191].isPlaying() == true) {
+              //   Violet();
+              // }
             }
           });
         } else if (amicizia_generico_keywords.some(keyword => sentence.includes(keyword))) {
@@ -2147,7 +2193,7 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var amicizia_generico_audio = Math.round(random([62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83]));
+              var amicizia_generico_audio = Math.round(random([62, 63, 65, 68, 70, 71, 72, 74, 76, 79, 80, 82, 83]));
               audios[amicizia_generico_audio].play();
               amicizia_relInter_var = false;
               audios[amicizia_generico_audio].onended(farewell);
@@ -2157,43 +2203,57 @@ function startPythia() {
                 Red();
               } else if (audios[63].isPlaying() == true) {
                 Violet();
-              } else if (audios[64].isPlaying() == true) {
+              }
+              // else if (audios[64].isPlaying() == true) {
+              //   Pink();
+              // }
+              else if (audios[65].isPlaying() == true) {
                 Pink();
-              } else if (audios[65].isPlaying() == true) {
-                Pink();
-              } else if (audios[66].isPlaying() == true) {
-                Green();
-              } else if (audios[67].isPlaying() == true) {
+              }
+              // else if (audios[66].isPlaying() == true) {
+              //   Green();
+              // } else if (audios[67].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[68].isPlaying() == true) {
                 Blue();
-              } else if (audios[68].isPlaying() == true) {
-                Blue();
-              } else if (audios[69].isPlaying() == true) {
-                Blue();
-              } else if (audios[70].isPlaying() == true) {
+              }
+              // else if (audios[69].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[70].isPlaying() == true) {
                 Blue();
               } else if (audios[71].isPlaying() == true) {
                 Pink();
               } else if (audios[72].isPlaying() == true) {
                 Blue();
-              } else if (audios[73].isPlaying() == true) {
-                Green();
-              } else if (audios[74].isPlaying() == true) {
+              }
+              // else if (audios[73].isPlaying() == true) {
+              //   Green();
+              // }
+              else if (audios[74].isPlaying() == true) {
                 Blue();
-              } else if (audios[75].isPlaying() == true) {
-                Blue();
-              } else if (audios[76].isPlaying() == true) {
+              }
+              // else if (audios[75].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[76].isPlaying() == true) {
                 Violet();
-              } else if (audios[77].isPlaying() == true) {
-                Blue();
-              } else if (audios[78].isPlaying() == true) {
-                Red();
-              } else if (audios[79].isPlaying() == true) {
+              }
+              // else if (audios[77].isPlaying() == true) {
+              //   Blue();
+              // } else if (audios[78].isPlaying() == true) {
+              //   Red();
+              // }
+              else if (audios[79].isPlaying() == true) {
                 Pink();
               } else if (audios[80].isPlaying() == true) {
                 Pink();
-              } else if (audios[81].isPlaying() == true) {
-                Blue();
-              } else if (audios[82].isPlaying() == true) {
+              }
+              // else if (audios[81].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[82].isPlaying() == true) {
                 Red();
               } else if (audios[83].isPlaying() == true) {
                 Pink();
@@ -2271,7 +2331,7 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var lasciare_audio = Math.round(random([93, 94, 95, 96, 97, 87, 98, 88, 25, 99]));
+              var lasciare_audio = Math.round(random([93, 94, 96, 97, 87, 98, 88, 25, 99]));
               audios[lasciare_audio].play();
               amore_var = false;
               audios[lasciare_audio].onended(farewell);
@@ -2281,9 +2341,11 @@ function startPythia() {
                 Orange();
               } else if (audios[94].isPlaying() == true) {
                 Blue();
-              } else if (audios[95].isPlaying() == true) {
-                Pink();
-              } else if (audios[96].isPlaying() == true) {
+              }
+              // else if (audios[95].isPlaying() == true) {
+              //   Pink();
+              // }
+              else if (audios[96].isPlaying() == true) {
                 Green();
               } else if (audios[97].isPlaying() == true) {
                 Violet();
@@ -2311,25 +2373,29 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var falso_amore_audio = Math.round(random([100, 101, 102, 103, 97, 25]));
+              var falso_amore_audio = Math.round(random([101, 97]));
               audios[falso_amore_audio].play();
               amore_var = false;
               audios[falso_amore_audio].onended(farewell);
               // alert(falso_amore_cit);
               // farewell();
-              if (audios[100].isPlaying() == true) {
-                Red();
-              } else if (audios[101].isPlaying() == true) {
+              // if (audios[100].isPlaying() == true) {
+              //   Red();
+              // }
+              if (audios[101].isPlaying() == true) {
                 Green();
-              } else if (audios[102].isPlaying() == true) {
-                Orange();
-              } else if (audios[103].isPlaying() == true) {
-                Pink();
-              } else if (audios[97].isPlaying() == true) {
-                Violet();
-              } else if (audios[25].isPlaying() == true) {
-                Red();
               }
+              // else if (audios[102].isPlaying() == true) {
+              //   Orange();
+              // } else if (audios[103].isPlaying() == true) {
+              //   Pink();
+              // }
+              else if (audios[97].isPlaying() == true) {
+                Violet();
+              }
+              // else if (audios[25].isPlaying() == true) {
+              //   Red();
+              // }
             }
           });
         } else if (amore_vero_keywords.some(keyword => sentence.includes(keyword))) {
@@ -2343,7 +2409,7 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var amore_vero_audio = Math.round(random([104, 105, 106, 107, 108, 109, 110, 111, 83, 112, 113, 114, 115, 103]));
+              var amore_vero_audio = Math.round(random([104, 106, 107, 109, 110, 111, 83, 113, 114, 115, 103]));
               audios[amore_vero_audio].play();
               amore_var = false;
               audios[amore_vero_audio].onended(farewell);
@@ -2351,15 +2417,19 @@ function startPythia() {
               // farewell();
               if (audios[104].isPlaying() == true) {
                 Pink();
-              } else if (audios[105].isPlaying() == true) {
-                Blue();
-              } else if (audios[106].isPlaying() == true) {
+              }
+              // else if (audios[105].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[106].isPlaying() == true) {
                 Blue();
               } else if (audios[107].isPlaying() == true) {
                 Blue();
-              } else if (audios[108].isPlaying() == true) {
-                Violet();
-              } else if (audios[109].isPlaying() == true) {
+              }
+              // else if (audios[108].isPlaying() == true) {
+              //   Violet();
+              // }
+              else if (audios[109].isPlaying() == true) {
                 Pink();
               } else if (audios[110].isPlaying() == true) {
                 Blue();
@@ -2367,9 +2437,11 @@ function startPythia() {
                 Orange();
               } else if (audios[83].isPlaying() == true) {
                 Pink();
-              } else if (audios[112].isPlaying() == true) {
-                Blue();
-              } else if (audios[113].isPlaying() == true) {
+              }
+              // else if (audios[112].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[113].isPlaying() == true) {
                 Blue();
               } else if (audios[114].isPlaying() == true) {
                 Pink();
@@ -2391,25 +2463,30 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var non_corrisposto_audio = Math.round(random([102, 116, 117, 118, 119, 120, 99, 121, 122, 123, 124]));
+              var non_corrisposto_audio = Math.round(random([116, 118, 119, 99, 121, 122, 123]));
               audios[non_corrisposto_audio].play();
               amore_var = false;
               audios[non_corrisposto_audio].onended(farewell);
               // alert(non_corrisposto_cit);
               // farewell();
-              if (audios[102].isPlaying() == true) {
-                Red();
-              } else if (audios[116].isPlaying() == true) {
+              // if (audios[102].isPlaying() == true) {
+              //   Red();
+              // }
+              if (audios[116].isPlaying() == true) {
                 Blue();
-              } else if (audios[117].isPlaying() == true) {
-                Blue();
-              } else if (audios[118].isPlaying() == true) {
+              }
+              // else if (audios[117].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[118].isPlaying() == true) {
                 Blue();
               } else if (audios[119].isPlaying() == true) {
                 Blue();
-              } else if (audios[120].isPlaying() == true) {
-                Blue();
-              } else if (audios[99].isPlaying() == true) {
+              }
+              // else if (audios[120].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[99].isPlaying() == true) {
                 Blue();
               } else if (audios[121].isPlaying() == true) {
                 Blue();
@@ -2417,9 +2494,10 @@ function startPythia() {
                 Blue();
               } else if (audios[123].isPlaying() == true) {
                 Blue();
-              } else if (audios[124].isPlaying() == true) {
-                Blue();
               }
+              // else if (audios[124].isPlaying() == true) {
+              //   Blue();
+              // }
             }
           });
         } else if (gelosia_amore_keywords.some(keyword => sentence.includes(keyword))) {
@@ -2461,7 +2539,7 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var matrimonio_divorzio_audio = Math.round(random([128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144]));
+              var matrimonio_divorzio_audio = Math.round(random([128, 129, 133, 135, 136, 137, 138, 139, 140, 144]));
               audios[matrimonio_divorzio_audio].play();
               amore_var = false;
               audios[matrimonio_divorzio_audio].onended(farewell);
@@ -2471,17 +2549,21 @@ function startPythia() {
                 Blue();
               } else if (audios[129].isPlaying() == true) {
                 Blue();
-              } else if (audios[130].isPlaying() == true) {
+              }
+              // else if (audios[130].isPlaying() == true) {
+              //   Blue();
+              // } else if (audios[131].isPlaying() == true) {
+              //   Blue();
+              // } else if (audios[132].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[133].isPlaying() == true) {
                 Blue();
-              } else if (audios[131].isPlaying() == true) {
-                Blue();
-              } else if (audios[132].isPlaying() == true) {
-                Blue();
-              } else if (audios[133].isPlaying() == true) {
-                Blue();
-              } else if (audios[134].isPlaying() == true) {
-                Blue();
-              } else if (audios[135].isPlaying() == true) {
+              }
+              // else if (audios[134].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[135].isPlaying() == true) {
                 Red();
               } else if (audios[136].isPlaying() == true) {
                 Violet();
@@ -2493,13 +2575,15 @@ function startPythia() {
                 Blue();
               } else if (audios[140].isPlaying() == true) {
                 Blue();
-              } else if (audios[141].isPlaying() == true) {
-                Blue();
-              } else if (audios[142].isPlaying() == true) {
-                Blue();
-              } else if (audios[143].isPlaying() == true) {
-                Red();
-              } else if (audios[144].isPlaying() == true) {
+              }
+              // else if (audios[141].isPlaying() == true) {
+              //   Blue();
+              // } else if (audios[142].isPlaying() == true) {
+              //   Blue();
+              // } else if (audios[143].isPlaying() == true) {
+              //   Red();
+              // }
+              else if (audios[144].isPlaying() == true) {
                 Blue();
               }
             }
@@ -2515,15 +2599,16 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var perdono_amore_audio = Math.round(random([26, 27, 28, 30, 31, 32, 34, 35, 36, 37, 38, 39]));
+              var perdono_amore_audio = Math.round(random([27, 28, 30, 31, 32, 34, 35, 36, 37, 38, 39]));
               audios[perdono_amore_audio].play();
               amore_var = false;
               audios[perdono_amore_audio].onended(farewell);
               // alert(perdono_amore_cit);
               // farewell();
-              if (audios[26].isPlaying() == true) {
-                Blue();
-              } else if (audios[27].isPlaying() == true) {
+              // if (audios[26].isPlaying() == true) {
+              //   Blue();
+              // }
+              if (audios[27].isPlaying() == true) {
                 Green();
               } else if (audios[28].isPlaying() == true) {
                 Pink();
@@ -2561,7 +2646,7 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var tradimento_amore_audio = Math.round(random([51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 145, 146, 147, 148, 149]));
+              var tradimento_amore_audio = Math.round(random([51, 53, 55, 56, 57, 60, 61, 145, 146, 147, 149]));
               audios[tradimento_amore_audio].play();
               amore_var = false;
               audios[tradimento_amore_audio].onended(farewell);
@@ -2569,23 +2654,29 @@ function startPythia() {
               // farewell();
               if (audios[51].isPlaying() == true) {
                 Red();
-              } else if (audios[52].isPlaying() == true) {
-                Violet();
-              } else if (audios[53].isPlaying() == true) {
+              }
+              // else if (audios[52].isPlaying() == true) {
+              //   Violet();
+              // }
+              else if (audios[53].isPlaying() == true) {
                 Red();
-              } else if (audios[54].isPlaying() == true) {
-                Blue();
-              } else if (audios[55].isPlaying() == true) {
+              }
+              // else if (audios[54].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[55].isPlaying() == true) {
                 Red();
               } else if (audios[56].isPlaying() == true) {
                 Blue();
               } else if (audios[57].isPlaying() == true) {
                 Blue();
-              } else if (audios[58].isPlaying() == true) {
-                Red();
-              } else if (audios[59].isPlaying() == true) {
-                Green();
-              } else if (audios[60].isPlaying() == true) {
+              }
+              // else if (audios[58].isPlaying() == true) {
+              //   Red();
+              // } else if (audios[59].isPlaying() == true) {
+              //   Green();
+              // }
+              else if (audios[60].isPlaying() == true) {
                 Red();
               } else if (audios[61].isPlaying() == true) {
                 Blue();
@@ -2595,9 +2686,11 @@ function startPythia() {
                 Red();
               } else if (audios[147].isPlaying() == true) {
                 Blue();
-              } else if (audios[148].isPlaying() == true) {
-                Blue();
-              } else if (audios[149].isPlaying() == true) {
+              }
+              // else if (audios[148].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[149].isPlaying() == true) {
                 Violet();
               }
             }
@@ -2689,7 +2782,7 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var famiglia_amore_audio = Math.round(random([156, 157, 158, 160, 161, 162]));
+              var famiglia_amore_audio = Math.round(random([156, 157, 161, 162]));
               audios[famiglia_amore_audio].play();
               amore_var = false;
               audios[famiglia_amore_audio].onended(farewell);
@@ -2699,11 +2792,13 @@ function startPythia() {
                 Red();
               } else if (audios[157].isPlaying() == true) {
                 Orange();
-              } else if (audios[158].isPlaying() == true) {
-                Blue();
-              } else if (audios[160].isPlaying() == true) {
-                Pink();
-              } else if (audios[161].isPlaying() == true) {
+              }
+              // else if (audios[158].isPlaying() == true) {
+              //   Blue();
+              // } else if (audios[160].isPlaying() == true) {
+              //   Pink();
+              // }
+              else if (audios[161].isPlaying() == true) {
                 Blue();
               } else if (audios[162].isPlaying() == true) {
                 Blue();
@@ -2765,23 +2860,26 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var futuro_amore_audio = Math.round(random([165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191]));
+              var futuro_amore_audio = Math.round(random([167, 170, 171, 172, 173, 176, 180, 182, 187]));
               audios[futuro_amore_audio].play();
               amore_var = false;
               audios[futuro_amore_audio].onended(farewell);
               // alert(futuro_amore_cit);
               // farewell();
-              if (audios[165].isPlaying() == true) {
-                Green();
-              } else if (audios[166].isPlaying() == true) {
-                Blue();
-              } else if (audios[167].isPlaying() == true) {
+              // if (audios[165].isPlaying() == true) {
+              //   Green();
+              // } else if (audios[166].isPlaying() == true) {
+              //   Blue();
+              // }
+              if (audios[167].isPlaying() == true) {
                 Orange();
-              } else if (audios[168].isPlaying() == true) {
-                Blue();
-              } else if (audios[169].isPlaying() == true) {
-                Green();
-              } else if (audios[170].isPlaying() == true) {
+              }
+              // else if (audios[168].isPlaying() == true) {
+              //   Blue();
+              // } else if (audios[169].isPlaying() == true) {
+              //   Green();
+              // }
+              else if (audios[170].isPlaying() == true) {
                 Violet();
               } else if (audios[171].isPlaying() == true) {
                 Blue();
@@ -2789,43 +2887,52 @@ function startPythia() {
                 Orange();
               } else if (audios[173].isPlaying() == true) {
                 Green();
-              } else if (audios[174].isPlaying() == true) {
-                Orange();
-              } else if (audios[175].isPlaying() == true) {
-                Blue();
-              } else if (audios[176].isPlaying() == true) {
+              }
+              // else if (audios[174].isPlaying() == true) {
+              //   Orange();
+              // } else if (audios[175].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[176].isPlaying() == true) {
                 Green();
-              } else if (audios[177].isPlaying() == true) {
-                Green();
-              } else if (audios[178].isPlaying() == true) {
-                Orange();
-              } else if (audios[179].isPlaying() == true) {
-                Violet();
-              } else if (audios[180].isPlaying() == true) {
-                Violet();
-              } else if (audios[181].isPlaying() == true) {
-                Blue();
-              } else if (audios[182].isPlaying() == true) {
-                Orange();
-              } else if (audios[183].isPlaying() == true) {
-                Violet();
-              } else if (audios[184].isPlaying() == true) {
-                Blue();
-              } else if (audios[185].isPlaying() == true) {
-                Pink();
-              } else if (audios[186].isPlaying() == true) {
-                Blue();
-              } else if (audios[187].isPlaying() == true) {
-                Blue();
-              } else if (audios[188].isPlaying() == true) {
-                Blue();
-              } else if (audios[189].isPlaying() == true) {
-                Violet();
-              } else if (audios[190].isPlaying() == true) {
-                Violet();
-              } else if (audios[191].isPlaying() == true) {
+              }
+              // else if (audios[177].isPlaying() == true) {
+              //   Green();
+              // } else if (audios[178].isPlaying() == true) {
+              //   Orange();
+              // } else if (audios[179].isPlaying() == true) {
+              //   Violet();
+              // }
+              else if (audios[180].isPlaying() == true) {
                 Violet();
               }
+              // else if (audios[181].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[182].isPlaying() == true) {
+                Orange();
+              }
+              // else if (audios[183].isPlaying() == true) {
+              //   Violet();
+              // } else if (audios[184].isPlaying() == true) {
+              //   Blue();
+              // } else if (audios[185].isPlaying() == true) {
+              //   Pink();
+              // } else if (audios[186].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[187].isPlaying() == true) {
+                Blue();
+              }
+              // else if (audios[188].isPlaying() == true) {
+              //   Blue();
+              // } else if (audios[189].isPlaying() == true) {
+              //   Violet();
+              // } else if (audios[190].isPlaying() == true) {
+              //   Violet();
+              // } else if (audios[191].isPlaying() == true) {
+              //   Violet();
+              // }
             }
           });
         } else if (amore_generico_keywords.some(keyword => sentence.includes(keyword))) {
@@ -2839,7 +2946,7 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var amore_generico_audio = Math.round(random([104, 105, 106, 107, 108, 109, 110, 111, 83, 112, 113, 114, 115, 103]));
+              var amore_generico_audio = Math.round(random([104, 106, 107, 109, 110, 111, 83, 113, 114, 115, 103]));
               audios[amore_generico_audio].play();
               amore_var = false;
               audios[amore_generico_audio].onended(farewell);
@@ -2847,15 +2954,19 @@ function startPythia() {
               // farewell();
               if (audios[104].isPlaying() == true) {
                 Pink();
-              } else if (audios[105].isPlaying() == true) {
-                Blue();
-              } else if (audios[106].isPlaying() == true) {
+              }
+              // else if (audios[105].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[106].isPlaying() == true) {
                 Blue();
               } else if (audios[107].isPlaying() == true) {
                 Blue();
-              } else if (audios[108].isPlaying() == true) {
-                Violet();
-              } else if (audios[109].isPlaying() == true) {
+              }
+              // else if (audios[108].isPlaying() == true) {
+              //   Violet();
+              // }
+              else if (audios[109].isPlaying() == true) {
                 Pink();
               } else if (audios[110].isPlaying() == true) {
                 Blue();
@@ -2863,9 +2974,11 @@ function startPythia() {
                 Orange();
               } else if (audios[83].isPlaying() == true) {
                 Pink();
-              } else if (audios[112].isPlaying() == true) {
-                Blue();
-              } else if (audios[113].isPlaying() == true) {
+              }
+              // else if (audios[112].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[113].isPlaying() == true) {
                 Blue();
               } else if (audios[114].isPlaying() == true) {
                 Pink();
@@ -2888,9 +3001,11 @@ function startPythia() {
           console.log("Found");
           //var libro_cit = libro_cits[Math.round(Math.random() * (libro_cits.length -1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var libro_audio = Math.round(random([532, 534]));
               audios[libro_audio].play();
               ispirazione_var = false;
@@ -2902,7 +3017,6 @@ function startPythia() {
               } else if (audios[534].isPlaying() == true) {
                 Pink();
               }
-              final_sentence = true;
             }
           });
         } else if (scienza_ispirazione_keywords.some(keyword => sentence.includes(keyword))) {
@@ -2911,9 +3025,11 @@ function startPythia() {
           console.log("Found");
           //var scienza_ispirazione_cit = scienza_ispirazione_cits[Math.round(Math.random() * (scienza_ispirazione_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var scienza_ispirazione_audio = Math.round(random([578]));
               audios[scienza_ispirazione_audio].play();
               ispirazione_var = false;
@@ -2931,9 +3047,11 @@ function startPythia() {
           console.log("Found");
           //var lavoro_ispirazione_cit = lavoro_ispirazione_cits[Math.round(Math.random() * (lavoro_ispirazione_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var lavoro_ispirazione_audio = Math.round(random([584, 582, 575, 556]));
               audios[lavoro_ispirazione_audio].play();
               ispirazione_var = false;
@@ -2963,9 +3081,11 @@ function startPythia() {
           console.log("Found");
           //var poesia_cit = poesia_cits[Math.round(Math.random() * (poesia_cits.length -1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var poesia_audio = Math.round(random([535, 536, 537, 539, 559]));
               audios[poesia_audio].play();
               ispirazione_var = false;
@@ -2991,9 +3111,11 @@ function startPythia() {
           console.log("Found");
           //var isolamento_cit = isolamento_cits[Math.round(Math.random() * (isolamento_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var isolamento_audio = Math.round(random([532, 528]));
               audios[isolamento_audio].play();
               ispirazione_var = false;
@@ -3013,9 +3135,11 @@ function startPythia() {
           console.log("Found");
           //var amore_ispirazione_cit = amore_ispirazione_cits[Math.round(Math.random() * (amore_ispirazione_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var amore_ispirazione_audio = Math.round(random([567, 568]));
               audios[amore_ispirazione_audio].play();
               ispirazione_var = false;
@@ -3035,9 +3159,11 @@ function startPythia() {
           console.log("Found");
           //var canzone_cit = canzone_cits[Math.round(Math.random() * (canzone_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var canzone_audio = Math.round(random([540, 541]));
               audios[canzone_audio].play();
               ispirazione_var = false;
@@ -3057,9 +3183,11 @@ function startPythia() {
           console.log("Found");
           //var regista_cit = regista_cits[Math.round(Math.random() * (regista_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var regista_audio = Math.round(random([555]));
               audios[regista_audio].play();
               ispirazione_var = false;
@@ -3077,9 +3205,11 @@ function startPythia() {
           console.log("Found");
           //var artista_cit = artista_cits[Math.round(Math.random() * (artista_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var artista_audio = Math.round(random([525, 529, 531, 585, 559, 542, 565]));
               audios[artista_audio].play();
               ispirazione_var = false;
@@ -3109,9 +3239,11 @@ function startPythia() {
           console.log("Found");
           //var pittore_cit = pittore_cits[Math.round(Math.random() * (pittore_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var pittore_audio = Math.round(random([529, 538]));
               audios[pittore_audio].play();
               ispirazione_var = false;
@@ -3131,9 +3263,11 @@ function startPythia() {
           console.log("Found");
           //var disegnatore_cit = disegnatore_cits[Math.round(Math.random() * (disegnatore_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var disegnatore_audio = Math.round(random([563]));
               audios[disegnatore_audio].play();
               ispirazione_var = false;
@@ -3151,9 +3285,11 @@ function startPythia() {
           console.log("Found");
           //var raziocinio_cit = raziocinio_cits[Math.round(Math.random() * (raziocinio_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var raziocinio_audio = Math.round(random([523, 585, 529, 557, 542, 546, 561, 558, 548, 568]));
               audios[raziocinio_audio].play();
               ispirazione_var = false;
@@ -3189,9 +3325,11 @@ function startPythia() {
           console.log("Found");
           //var architettura_cit = architettura_cits[Math.round(Math.random() * (architettura_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var architettura_audio = Math.round(random([530, 533]));
               audios[architettura_audio].play();
               ispirazione_var = false;
@@ -3211,9 +3349,11 @@ function startPythia() {
           console.log("Found");
           //var sofferenza_ispirazione_cit = sofferenza_ispirazione_cits[Math.round(Math.random() * (sofferenza_ispirazione_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var sofferenza_ispirazione_audio = Math.round(random([564, 573, 581]));
               audios[sofferenza_ispirazione_audio].play();
               ispirazione_var = false;
@@ -3235,9 +3375,11 @@ function startPythia() {
           console.log("Found");
           //var cambiare_mondo_cit = cambiare_mondo_cits[Math.round(Math.random() * (cambiare_mondo_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var cambiare_mondo_audio = Math.round(random([551]));
               audios[cambiare_mondo_audio].play();
               ispirazione_var = false;
@@ -3255,9 +3397,11 @@ function startPythia() {
           console.log("Found");
           //var idee_cit = idee_cits[Math.round(Math.random() * (idee_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var idee_audio = Math.round(random([550, 554, 547, 579, 571, 562]));
               audios[idee_audio].play();
               ispirazione_var = false;
@@ -3289,9 +3433,11 @@ function startPythia() {
           console.log("Found");
           //var follia_cit = follia_cits[Math.round(Math.random() * (follia_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var follia_audio = Math.round(random([543, 544, 585]));
               audios[follia_audio].play();
               ispirazione_var = false;
@@ -3313,9 +3459,11 @@ function startPythia() {
           console.log("Found");
           //var cultura_ispirazione_cit = cultura_ispirazione_cits[Math.round(Math.random() * (cultura_ispirazione_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var cultura_ispirazione_audio = Math.round(random([553, 552, 569, 576]));
               audios[cultura_ispirazione_audio].play();
               ispirazione_var = false;
@@ -3339,9 +3487,11 @@ function startPythia() {
           console.log("Found");
           //var genio_ispirazione_cit = genio_ispirazione_cits[Math.round(Math.random() * (genio_ispirazione_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var genio_ispirazione_audio = Math.round(random([549, 552]));
               audios[genio_ispirazione_audio].play();
               ispirazione_var = false;
@@ -3361,9 +3511,11 @@ function startPythia() {
           console.log("Found");
           //var originalità_cit = originalità_cits[Math.round(Math.random() * (originalità_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var originalità_audio = Math.round(random([560, 562, 570, 565]));
               audios[originalità_audio].play();
               ispirazione_var = false;
@@ -3390,9 +3542,11 @@ function startPythia() {
           console.log("Found");
           //var verità_realtà_cit = verità_realtà_cits[Math.round(Math.random() * (verità_realtà_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var verità_realtà_audio = Math.round(random([577]));
               audios[verità_realtà_audio].play();
               ispirazione_var = false;
@@ -3410,9 +3564,11 @@ function startPythia() {
           console.log("Found");
           //var paura_fallire_cit = paura_fallire_cits[Math.round(Math.random() * (paura_fallire_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var paura_fallire_audio = Math.round(random([574]));
               audios[paura_fallire_audio].play();
               ispirazione_var = false;
@@ -3433,16 +3589,17 @@ function startPythia() {
           console.log("Found");
           //var ispirazione_generico_cit = ispirazione_generico_cits[Math.round(Math.random() * (ispirazione_generico_cits.length -1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var ispirazione_generico_audio = Math.round(random([523, 524, 525, 526, 527, 531, 535, 580, 582, 564, 559, 584, 545, 544, 561, 579]));
               audios[ispirazione_generico_audio].play();
               ispirazione_var = false;
               audios[ispirazione_generico_audio].onended(farewell);
               // alert(ispirazione_generico_cit);
               // farewell();
-              final_sentence = true;
               if (audios[523].isPlaying() == true) {
                 Pink();
               } else if (audios[524].isPlaying() == true) {
@@ -3558,9 +3715,11 @@ function startPythia() {
           console.log("Found");
           //var vita_e_morte_cit = vita_e_morte_cits[Math.round(Math.random() * (vita_e_morte_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var vita_e_morte_audio = Math.round(random([205, 253, 221, 198, 211, 206, 205, 231, 254]));
               audios[vita_e_morte_audio].play();
               vita_morte_var = false;
@@ -3672,9 +3831,11 @@ function startPythia() {
           console.log("Found");
           //var dio_cit = dio_cits[Math.round(Math.random() * (dio_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var dio_audio = Math.round(random([219, 222]));
               audios[dio_audio].play();
               vita_morte_var = false;
@@ -3697,9 +3858,11 @@ function startPythia() {
           console.log("Found");
           //var ddio_cit = dio_cits[Math.round(Math.random() * (dio_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var ddio_audio = Math.round(random([219, 222]));
               audios[ddio_audio].play();
               vita_morte_var = false;
@@ -3762,9 +3925,11 @@ function startPythia() {
           console.log("Found");
           //var morte_interiore_cit = morte_interiore_cits[Math.round(Math.random() * (morte_interiore_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var morte_interiore_audio = Math.round(random([196]));
               audios[morte_interiore_audio].play();
               vita_morte_var = false;
@@ -3782,9 +3947,11 @@ function startPythia() {
           console.log("Found");
           //var ricordo_cit = ricordo_cits[Math.round(Math.random() * (ricordo_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var ricordo_audio = Math.round(random([261, 213]));
               audios[ricordo_audio].play();
               vita_morte_var = false;
@@ -3809,9 +3976,11 @@ function startPythia() {
           console.log("Found");
           //var lutto_cit = lutto_cits[Math.round(Math.random() * (lutto_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var lutto_audio = Math.round(random([219, 215, 212, 194])); // 210 troppo lunga
               audios[lutto_audio].play();
               vita_morte_var = false;
@@ -3847,9 +4016,11 @@ function startPythia() {
           console.log("Found");
           //var quando_morirò_cit = quando_morirò_cits[Math.round(Math.random() * (quando_morirò_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var quando_morirò_audio = Math.round(random([234, 240, 263]));
               audios[quando_morirò_audio].play();
               vita_morte_var = false;
@@ -3875,9 +4046,11 @@ function startPythia() {
           console.log("Found");
           //var immortalità_cit = immortalità_cits[Math.round(Math.random() * (immortalità_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var immortalità_audio = Math.round(random([223, 235, 230, 258, 245, 249, 220])); // 233 mancante
               audios[immortalità_audio].play();
               vita_morte_var = false;
@@ -3925,9 +4098,11 @@ function startPythia() {
           console.log("Found");
           //var aldilà_cit = aldilà_cits[Math.round(Math.random() * (aldilà_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var aldilà_audio = Math.round(random([213, 233, 247, 199, 262])); // 233 mancante
               audios[aldilà_audio].play();
               vita_morte_var = false;
@@ -3956,9 +4131,11 @@ function startPythia() {
           console.log("Found");
           //var aldilà_cit = aldilà_cits[Math.round(Math.random() * (aldilà_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var aaldilà_audio = Math.round(random([213, 233, 247, 199, 262])); // 233 mancante
               audios[aaldilà_audio].play();
               vita_morte_var = false;
@@ -3987,9 +4164,11 @@ function startPythia() {
           console.log("Found");
           //var dobbiamo_morire_cit = dobbiamo_morire_cits[Math.round(Math.random() * (dobbiamo_morire_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var dobbiamo_morire_audio = Math.round(random([205,259,240,198]));
               audios[dobbiamo_morire_audio].play();
               vita_morte_var = false;
@@ -4017,9 +4196,11 @@ function startPythia() {
           console.log("Found");
           //var dobbiamo_morire_cit = dobbiamo_morire_cits[Math.round(Math.random() * (dobbiamo_morire_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var dobbiamo_morire_audio = Math.round(random([271,272,275,278,284,282,288,236]));
               audios[dobbiamo_morire_audio].play();
               vita_morte_var = false;
@@ -4059,9 +4240,11 @@ function startPythia() {
           console.log("Found");
           //var morte_oggetti_cit = morte_oggetti_cits[Math.round(Math.random() * (morte_oggetti_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var morte_oggetti_audio = Math.round(random([195]));
               audios[morte_oggetti_audio].play();
               vita_morte_var = false;
@@ -4079,9 +4262,11 @@ function startPythia() {
           console.log("Found");
           //var morte_noia_cit = morte_noia_cits[Math.round(Math.random() * (morte_noia_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var morte_noia_audio = Math.round(random([209]));
               audios[morte_noia_audio].play();
               vita_morte_var = false;
@@ -4099,9 +4284,11 @@ function startPythia() {
           console.log("Found");
           //var eutanasia_cit = eutanasia_cits[Math.round(Math.random() * (eutanasia_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var eutanasia_audio = Math.round(random([259, 215, 313, 314, 315, 316]));
               audios[eutanasia_audio].play();
               vita_morte_var = false;
@@ -4142,9 +4329,11 @@ function startPythia() {
           console.log("Found");
           //var aborto_cit = aborto_cits[Math.round(Math.random() * (aborto_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var aborto_audio = Math.round(random([312, 311, 310, 309, 308, 307]));
               audios[aborto_audio].play();
               vita_morte_var = false;
@@ -4172,9 +4361,11 @@ function startPythia() {
           console.log("Found");
           //var suicidio_cit = suicidio_cits[Math.round(Math.random() * (suicidio_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var suicidio_audio = Math.round(random([197, 243, 240, 215, 313, 314, 315, 316, 241, 263]));
               audios[suicidio_audio].play();
               vita_morte_var = false;
@@ -4220,9 +4411,11 @@ function startPythia() {
           console.log("Found");
           //var fallimento_morte_cit = fallimento_morte_cits[Math.round(Math.random() * (fallimento_morte_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var fallimento_morte_audio = Math.round(random([265, 266, 267, 271, 274, 273, 277, 279, 287, 288, 289, 292, 236]));
               audios[fallimento_morte_audio].play();
               vita_morte_var = false;
@@ -4264,9 +4457,11 @@ function startPythia() {
           console.log("Found");
           //var sogni_morte_cit = sogni_morte_cits[Math.round(Math.random() * (sogni_morte_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var sogni_morte_audio = Math.round(random([290, 246, 270, 291, 242, 228, 268, 283, 286, 246]));
               audios[sogni_morte_audio].play();
               vita_morte_var = false;
@@ -4306,9 +4501,11 @@ function startPythia() {
           console.log("Found");
           //var felicità_morte_cit = felicità_morte_cits[Math.round(Math.random() * (felicità_morte_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var felicità_morte_audio = Math.round(random([270, 280, 291, 256])); // 285, 257 mancante
               audios[felicità_morte_audio].play();
               vita_morte_var = false;
@@ -4344,9 +4541,11 @@ function startPythia() {
           console.log("Found");
           //var morte_tecnologia_cit = morte_tecnologia_cits[Math.round(Math.random() * (morte_tecnologia_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var morte_tecnologia_audio = Math.round(random([269]));
               audios[morte_tecnologia_audio].play();
               vita_morte_var = false;
@@ -4365,9 +4564,11 @@ function startPythia() {
           console.log("Found");
           //var povero_ricco_cit = povero_ricco_cits[Math.round(Math.random() * (povero_ricco_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var povero_ricco_audio = Math.round(random([229, 461, 166, 175, 182, 186]));
               audios[povero_ricco_audio].play();
               vita_morte_var = false;
@@ -4407,9 +4608,11 @@ function startPythia() {
           console.log("Found");
           //var morte_generico_cit = morte_generico_cits[Math.round(Math.random() * (morte_generico_cits.length - 1))];
           audios[2].onended(function() {
+            loading();
             setTimeout(playCit, 5000);
 
             function playCit() {
+              loadEffect = false;
               var morte_generico_audio = Math.round(random([193, 237, 192, 214, 208, 240, 206, 205]));
               audios[morte_generico_audio].play();
               vita_morte_var = false;
@@ -4759,7 +4962,7 @@ function startPythia() {
               }
             }
           });
-        } else if (violenza_fisica_keywords.some(keyword => sentence.includes(keyword))) {
+        } else if (violenza_fisica_keywords.some(keyword => sentence.includes(keyword)) || (violenza_fisica_gen_keywords.some(keyword => sentence.includes(keyword)) && donna_gen_keywords.some(keyword => sentence.includes(keyword)))) {
           step_3 = false;
           audios[2].play();
           console.log("Found");
@@ -4822,13 +5025,12 @@ function startPythia() {
 
             function playCit() {
               loadEffect = false;
-              var razzismo_audio = Math.round(random([334, 335, 336, 337, 338, 339]));
+              var razzismo_audio = Math.round(random([334, 335, 336, 337, 338, 339, 12, 73]));
               audios[razzismo_audio].play();
               etica_morale_var = false;
               audios[razzismo_audio].onended(farewell);
               // alert(razzismo_cit);
               // farewell();
-              final_sentence = true;
               if (audios[334].isPlaying() == true) {
                 Blue();
               } else if (audios[335].isPlaying() == true) {
@@ -4841,6 +5043,12 @@ function startPythia() {
                 Red();
               } else if (audios[339].isPlaying() == true) {
                 Blue();
+              }
+              else if (audios[12].isPlaying() == true) {
+                Orange();
+              }
+              else if (audios[73].isPlaying() == true) {
+                Green();
               }
             }
           });

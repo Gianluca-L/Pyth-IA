@@ -228,7 +228,7 @@ const amicizia_generico_keywords = ['amicizia', 'amico', 'amica', 'amiche', 'ami
 
 const vera_amicizia_keywords = ['vero', 'vera', 'vere', 'veri', 'verit', 'veramente', 'genuin', 'sincer', 'autentic', 'schiett', 'dissimul', 'miglior', 'puro', 'pura', 'pure', 'puri', 'purezza', 'saldo', 'salda', 'salde', 'saldi', 'degn', 'solid', 'spontan',
   'signific', 'senso', 'sensi', 'valore', 'valori', 'importa',
-  'capire', 'capir', 'capirsi', 'capisc', 'capito', 'comprendere', 'comprend', 'nasc',
+  'capire', 'capir', 'capirsi', 'capisc', 'capito', 'comprendere', 'comprend', 'nascere',
   'fiducia', 'fidarsi', 'fid','affid', 'rispett',
   'volersi bene', 'voler bene', 'voglio bene', 'vuoi bene', 'vuole bene', 'vogliamo bene', 'volete bene', 'vogliono bene', 'bene', 'aver caro', 'ho caro', 'caro', 'cara', 'care', 'cari', 'affezion', 'affett', 'legam', 'legat', 'per sempre'
 ];
@@ -275,7 +275,7 @@ var sep_feriti_amicizia_cits = ['78 Non piangere se un amico ti ha lasciato: sol
 /// FALSA AMICIZIA/RELAZIONE NEGATIVA
 
 const falsa_amicizia_keywords = ['peggior nemico', 'peggior nemica', 'peggiore nemico', 'peggiore nemica', 'peggiori nemici', 'peggiori nemiche','nemic',
-     'falso', 'falsa','false', 'falsi', 'falsità', 'menzogn', 'illusione', 'illusor', 'illusor', 'illusio', 'sbaglia', 'fint', 'scorrett', 'fasull', 'ipocri', 'bugiard', 'bugia', 'bugie', 'sleal', 'doppio', 'ingann', 'negativ', 'ment',
+     'falso', 'falsa','false', 'falsi', 'falsità', 'menzogn', 'illusione', 'illusor', 'illusor', 'illusio', 'sbaglia', 'fint', 'scorrett', 'fasull', 'ipocri', 'bugiard', 'bugia', 'bugie', 'sleal', 'doppio', 'ingann', 'negativ', 'mentir', 'mentit',
       'opportunism', 'opportunist'];
 
 var falsa_amicizia_cits = ['83 Alla fine, ci ricorderemo non le parole dei nostri nemici, ma il silenzio dei nostri amici. (Martin Luther King)',
@@ -368,9 +368,9 @@ var separazione_cits = ['16 La verità è che tutto il mondo ti ferirà. L\'idea
 
 /// 06 PERDONO
 
-const perdono_rel_keywords = ['perdono', 'perdonare', 'perdon', 'chiedere scusa', 'scusa', 'scuse', 'scusarsi', 'chiedere perdono', 'dimenticare', 'passare oltre', 'lasciar correre', 'tollerare', 'toller', 'assolvere', 'riconciliarsi',
+const perdono_rel_keywords = ['perdono', 'perdonare', 'perdon', 'chiedere scusa', 'scusa', 'scuse', 'scusarsi', 'chiedere perdono', 'dimenticare', 'passare oltre', 'lasciar correre', 'tollerare', 'toller',
    'punire', 'castigare', 'castig', 'punizione', 'punit', 'vendetta', 'vendicare', 'vendicarsi', 'vendic',
-   'dispiacere', 'dispiacersi', 'mi dispiace', 'sentirsi in colpa'
+   'dispiacere', 'dispiacersi', 'mi dispiace'
  ];
 
 var perdono_rel_cits = ['20 Il perdono libera l\'anima, rimuove la paura. È per questo che il perdono è un\'arma potente. (Nelson Mandela)',
@@ -440,7 +440,7 @@ const amore_generico_keywords = ['amore', 'amor', 'amare', 'amo', 'ami','ama','a
 
 const lasciare_keywords = ['lasciare', 'lasciat', 'abband', 'finire', 'fine', 'finit', 'finire', 'separ', 'perder', 'perso', 'persa', 'perse', 'persi', 'rompere', 'rotto', 'rotta', 'rotte', 'rotti', 'mollare', 'mollo', 'mollat', 'smett', 'smess',
        'dimenticare', 'dimentic', 'scordare', 'scordarsi', 'scord', 'mettere una pietra sopra', 'metterci una pietra sopra', 'scomp',
-       'ferit', 'ferir', 'fare male', 'far male', 'fa male', 'male', 'offend', 'offes', 'delus', 'soffr', 'soffer', 'dolor', 'fallimentare', 'senza successo'];
+       'ferit', 'ferir', 'fare male', 'far male', 'fa male', 'male', 'offend', 'offes', 'delus', 'soffr', 'soffer', 'dolor', 'fallimentare', 'senza successo', 'fallisc', 'fallim', 'fallit'];
 
 var lasciare_cits = ['88 arancione | I venti che a volte portano via qualcosa che amiamo sono gli stessi che ci portano qualcosa da imparare ad amare. Quindi non dovremmo piangere per qualcosa che ci è stato portato via ma, sì, amare ciò che ci è stato offerto. Perché ciò che è veramente nostro ci appartiene per sempre. (Bob Marley)',
        '89 azzurro | Non ci può essere profonda delusione dove non c\'è un amore profondo. (Martin Luther King)',
@@ -457,7 +457,7 @@ var lasciare_cits = ['88 arancione | I venti che a volte portano via qualcosa ch
 /// FALSO AMORE/RELAZIONE NEGATIVA
 
 const falso_amore_keywords = ['falso', 'falsa', 'false','falsi', 'menzogn', 'illus', 'sbagl', 'fint', 'fing', 'finz', 'scorrett', 'fasull', 'ipocri', 'bugiard', 'bugi', 'sleal', 'doppiogiochista', 'doppio', 'doppi', 'ingann', 'negat', 'inadatt',
-       'infelic', 'triste', 'tristezza', 'possess', 'possi', 'opprim', 'soffoc'];
+       'infelic', 'triste', 'tristezza', 'possess', 'possi', 'opprim', 'soffocant', 'error', 'erra', 'sciocch'];
 
 var falso_amore_cits = ['95 rosso | Un codardo è un uomo che risveglia l’amore di una donna senza l’intenzione di amarla. (Bob Marley)',
        '96 verde | Se riesci ad amare così tanto la persona sbagliata, immagina quanto puoi amare quella giusta. (Bob Marley)',
@@ -586,7 +586,7 @@ var tradimento_amore_cits = ['44 rosso | “Se qualcuno ti tradisce una volta, �
 //////// SUCCESSO IN AMORE
 
 const successo_amore_keywords = ['conquistare', 'conquisto', 'conquist', 'sedurre', 'seduc', 'seduttiv', 'sedutt', 'seducent', 'seduzion', 'attrarre',
-'attrae', 'attraggo', 'attraent', 'affascin', 'affascinant', 'fascino', 'fascini', 'rubacuore', 'rubacuori', 'sex appeal', 'playboy', 'latin lover', 'femme fatale'];
+'attrae', 'attraggo', 'attraent', 'attraz', 'corteggiar', 'corteggiam', 'cortegg', 'fare la corte', 'lusing', 'amoregg', 'fare gli occhi dolci', 'fare la corte', 'fare il filo', 'flirt', 'affascin', 'affascinant', 'fascino', 'fascini', 'rubacuore', 'rubacuori', 'sex appeal', 'playboy', 'latin lover', 'femme fatale'];
 
 var successo_amore_cits = ['146 azzurro | Conquistare l’anima di una donna è un’arte, sapersene liberare è un capolavoro. (Sören Kierkegaard)',
 '147 azzurro | Non è abbastanza conquistare; uno deve imparare a sedurre. (Voltaire)',
@@ -635,9 +635,9 @@ var sorella_cits = ['157 rosa | “Essere sorelle è probabilmente la parentela 
 
 ////// FUTURO AMORE
 
-const futuro_keywords = ['presente', 'passato', 'futuro', 'domani', 'ieri', 'oggi', 'destino', 'fato', 'avvenire', 'giovinezza', 'vecchiaia', 'gioventù',
+const futuro_keywords = ['presente', 'passato', 'futuro', 'domani', 'ieri', 'oggi', 'destino', 'fato', 'avvenire', 'giovinezza', 'vecchiaia',
 'succederà', 'sarà', 'accadrà', 'avverrà', 'avventuros', 'rà', 'rò', 'ranno', 'rai', 'remo', 'rete',
-'indietro', 'avanti', 'dietro'];
+'avanti'];
 
 var futuro_cits = ['1fut verde Il futuro entra in noi, per trasformarsi in noi, molto prima che accada. Rainer Maria Rilke',
 '2fut azzurro Non lasciare che il futuro ti disturbi. Lo incontrerai, se necessario, con le stesse armi della ragione che oggi ti armano contro il presente. Marco Aurelio',
@@ -1265,7 +1265,7 @@ const  esisti_keywords = ['tu esisti', 'tu sei viva', 'vivrai', 'sei immortale',
 
 ////// CAMBIAMETO
 
-const cambiamento_keywords = ['moral', 'comportament', 'condotta', 'principi', 'pens', 'opinion', 'etic', 'uman', 'spiegaz', 'scienz', 'a livello morale'];
+const cambiamento_keywords = ['moral', 'comportament', 'condotta', 'principi', 'pens', 'opinion', 'etic', 'uman', 'spiegaz', 'scienz', 'a livello morale', 'in generale', 'tradizion', 'relativ', 'abitual', 'consuet', 'ritual', 'sacrament', 'solit', 'inconsuet', 'insolit', 'normal', 'negativ', 'positiv', 'sbagliat', 'giust', 'buon', 'corrett', 'equilibr', 'moral', 'onest', 'prob', 'rett', 'cattiv', 'disonest', 'immoral', 'improb', 'ingiust', 'scorrett', 'equanim', 'equidistant', 'equo', 'imparzial', 'obiettiv', 'equi', 'super partes', 'condizionam', 'fazios', 'iniqu', 'partigian', 'parzial', 'tendenzios', 'giust', 'adeguat', 'appropriat', 'esemplar', 'legittim', 'meritat', 'opportun', 'proporzionat', 'illegittim', 'immeritat', 'inadeguat', 'ingiust', 'iniqu', 'inopportun', 'sproporzionat', 'ragionevol', 'giustificabil', 'giustificat', 'fondat',  'sensat', 'erroneo', 'falso', 'impreciso', 'infondato', 'insensato', 'sbagliato', 'sbagl', 'idon', 'regolar', 'esager', 'va bene', 'perbene', 'costum', 'colpa', 'colpe', 'peccat', 'peccar', 'pecc'];
 
 var cambiamento_cits = ['1eti) “In etica come in altri campi del pensiero umano ci sono due tipi di opinioni: da una parte quelle rette sulla tradizione, dall\'altra quelle che hanno qualche probabilità di essere giuste.”[Bertrand Russell]',
 '2eti) Il mondo così come l’abbiamo creato è un risultato del nostro pensiero. Non possiamo cambiarlo se non cambiamo il nostro modo di pensare [Albert Einstein] arancio',
@@ -1326,7 +1326,7 @@ var etica_morale_aborto_cits = ['15eti) “Se gli uomini potessero restare incin
 
 /////// EUTANASIA
 
-const etica_morale_eutanasia_keywords = ['eutanas', 'dolce morte', 'suicidio assistito', 'ospedale', 'fin di vita', 'malato terminale', 'malati terminali', 'malat', 'guarig', 'morte', 'morir', 'star male', 'stare male', 'soffrir', 'mettere fine', 'metter fine', 'suicid', 'vita', 'vivere', 'viv', 'morente', 'muoio', 'muori', 'muor', 'moriv', 'moriamo', 'morite', 'muoiono', 'porre fine', 'scegliere di morire'];
+const etica_morale_eutanasia_keywords = ['eutanas', 'dolce morte', 'suicidio assistito', 'suicid', 'ospedale', 'fin di vita', 'malato terminale', 'malati terminali', 'malat', 'guarig', 'morte', 'morir', 'star male', 'stare male', 'soffrir', 'mettere fine', 'metter fine', 'suicid', 'vita', 'vivere', 'viv', 'morente', 'muoio', 'muori', 'muor', 'moriv', 'moriamo', 'morite', 'muoiono', 'porre fine', 'scegliere di morire'];
 
 var etica_morale_eutanasia_cits = ['21eti) “Proprio come sceglierò la mia nave quando mi accingerò ad un viaggio, o la mia casa quando intenderò prendere una residenza, così sceglierò la mia morte quando mi accingerò ad abbandonare la vita.” [Lucio Anneo Seneca] viola',
 '22eti) “Non sempre la vita va conservata: il bene non consiste nel vivere, ma nel vivere bene.”  [Lucio Anneo Seneca] rosa',
@@ -1337,7 +1337,7 @@ var etica_morale_eutanasia_cits = ['21eti) “Proprio come sceglierò la mia nav
 
 /////// OMOSESSUALE
 
-const etica_omosessuale_keywords = ['omosess', 'gay', 'amare un altro uomo', 'lesbic', 'amare un altra donna', 'froc', 'mentalità chiusa', 'amare alla luce', 'nascondersi', 'giudizio degli altri', 'guardati male', 'guardato male', 'effusioni in pubblico', 'baciar', 'eterosess', 'esprimersi liberamente', 'confessar', 'dichiarar', 'manifestar', 'amme', 'esternar', 'coppie gay', 'coppie gay nei film', 'coppie gay in giro', 'omofob'];
+const etica_omosessuale_keywords = ['omosess', 'gay', 'lesbic', 'froc', 'eterosess', 'coppie gay', 'coppie gay nei film', 'coppie gay in giro', 'omofob'];
 
 var etica_omosessuale_cits = ['26eti) C\'è un\'associazione in Francia [...] che auspica, per gli omosessuali, l\'abolizione del ridicolo, e il riconoscimento della "parità dei diritti". Forse hanno ragione, chi lo sa. E forse, un giorno, la spunteranno. Ma vedrete, non ci sarà più nessun gusto a peccare di questo peccato. E non dovendo più nascondersi, tutti capiranno che tanto vale amare le donne. (Mario Soldati) azzurro',
 '27eti) C\'è un\'ultima cosa che vorrei dire: gli omosessuali non trovano un posto nell\'intera società, che possa dar loro una struttura nella quale collocarsi. Non hanno la struttura del matrimonio, o quella della famiglia. La storia può servire per offrire agli omosessuali quelle strutture che non hanno. (George Mosse) azzurro',
@@ -1349,7 +1349,11 @@ var etica_omosessuale_cits = ['26eti) C\'è un\'associazione in Francia [...] ch
 
 /////// VIOLENZA FISICA
 
-const violenza_fisica_keywords = ['picchiar', 'donna', 'donne', 'sesso debole', 'femm', 'ragazz', 'casa', 'marciapied', 'bambina', 'abus', 'prevaricazio', 'sopraffazion', 'violenza carnale', 'stupr', 'violent', 'non consenziente'];
+const violenza_fisica_keywords = ['abusata', 'abusate', 'picchiata', 'picchiate', 'violenza carnale', 'abuso sessuale', 'violenza sessuale', 'stupr', 'violentata', 'violentate', 'non consenziente'];
+
+const violenza_fisica_gen_keywords = ['picchia', 'percuotere', 'percossa', 'dare botte', 'prendere a schiaffi', 'prendere a pugni', 'malmen', 'menare', 'menat', 'bastonare', 'pestare', 'pestat', 'colpire', 'abus', 'prevaric', 'sopraff'];
+
+const donna_gen_keywords = ['donna', 'donne', 'femmin', 'gentil sesso', 'bel sesso', 'sesso debole', 'signora', 'signorina', 'bambina', 'bambine', 'ragazza', 'ragazze', 'ragazzina', 'ragazzine', 'mogli', 'fidanzata', 'fidanzate'];
 
 var violenza_fisica_cits = ['32eti) La violenza contro le donne è una delle più vergognose violazioni dei diritti umani.(Kofi Annan) rosso',
 '37eti) Il genere umano tende a ricordare gli abusi a cui è stato sottoposto, piuttosto che le tenerezze. Che cosa resta dei baci? Solo le ferite lasciano cicatrici. (Bertolt Brecht) viola'

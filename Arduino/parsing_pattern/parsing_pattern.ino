@@ -74,7 +74,7 @@ void loop() {
           leds[i] = CRGB ( 255, 140, 39);
           //leds[i] = CRGB ( 210, 210, 210);
           }*/
-        setAll(255, 140, 39);
+        setAll(230, 140, 39);
       }
       else if (Color == 1) {
         for (int i = 0; i <= 143; i++) {
@@ -120,13 +120,13 @@ void loop() {
 
     else {
       if (inByte > lastRead) {
-        for (int i = lastRead; i <= inByte; i += 9) {  // i += 6
+        for (int i = lastRead; i <= inByte; i += 6) {  // i += 6
           FastLED.setBrightness(i);
           FastLED.show();
         }
       }
       else {
-        for (int i = lastRead; i >= inByte; i -= 9) {  // i -= 6
+        for (int i = lastRead; i >= inByte; i -= 6) {  // i -= 6
           FastLED.setBrightness(i);
           FastLED.show();
 
@@ -206,7 +206,7 @@ void parseData() {      // split the data into its parts
 
   strtokIndx = strtok(NULL, ",");
   Volume = atoi(strtokIndx);   // convert this part to a float
-  inByte = map(Volume, 0, 255, 10, 200);
+  inByte = map(Volume, 0, 255, 40, 150);
 
 }
 

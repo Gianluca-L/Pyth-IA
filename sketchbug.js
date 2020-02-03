@@ -254,7 +254,7 @@ function createAllSpeech() {
 function restartAllSpeech() {
   if (step_1 == true || step_2 == true || step_3 == true) {
     allSpeech.start();
-    console.log('start');
+    //console.log('start');
   }
 }
 
@@ -476,12 +476,12 @@ function startPythia() {
             //var lavoro_bene_cit = lavoro_bene_cits[Math.round(Math.random() * (lavoro_bene_cits.length - 1))];
             audios[2].onended(function() {
               loading();
-              setTimeout(playCit, 5000);
+              setTimeout(playCit, 8200);
 
               function playCit() {
                 loadEffect = false;
                 var lavoro_bene_audio = Math.round(random([347, 360, 373, 375]));
-                audios[lavoro_bene_audio].play();
+                  audios[lavoro_bene_audio].play();
                 lavoro_var = false;
                 audios[lavoro_bene_audio].onended(farewell);
                 // alert(lavoro_bene_cit);
@@ -512,7 +512,7 @@ function startPythia() {
             //var cosa_serveLav_2_cit = cosa_serveLav_2_cits[Math.round(Math.random() * (cosa_serveLav_2_cits.length - 1))];
             audios[2].onended(function() {
               loading();
-              setTimeout(playCit, 5000);
+              setTimeout(playCit, 8200);
               ////////////////////////////////// alcool
               function playCit() {
                 loadEffect = false;
@@ -534,7 +534,7 @@ function startPythia() {
             //var cosa_serveLav_generico_cit = cosa_serveLav_generico_cits[Math.round(Math.random() * (cosa_serveLav_generico_cits.length - 1))];
             audios[2].onended(function() {
               loading();
-              setTimeout(playCit, 5000);
+              setTimeout(playCit, 8200);
 
               function playCit() {
                 loadEffect = false;
@@ -574,7 +574,7 @@ function startPythia() {
             //var soldi_cit = soldi_cits[Math.round(Math.random() * (soldi_cits.length - 1))];
             audios[2].onended(function() {
               loading();
-              setTimeout(playCit, 5000);
+              setTimeout(playCit, 8200);
 
               function playCit() {
                 loadEffect = false;
@@ -600,7 +600,7 @@ function startPythia() {
             //var lavoro_vita_cit = lavoro_vita_cits[Math.round(Math.random() * (lavoro_vita_cits.length - 1))];
             audios[2].onended(function() {
               loading();
-              setTimeout(playCit, 5000);
+              setTimeout(playCit, 8200);
 
               function playCit() {
                 loadEffect = false;
@@ -646,7 +646,7 @@ function startPythia() {
             //var lavoro_giusto_cit = lavoro_giusto_cits[Math.round(Math.random() * (lavoro_giusto_cits.length - 1))];
             audios[2].onended(function() {
               loading();
-              setTimeout(playCit, 5000);
+              setTimeout(playCit, 8200);
 
               function playCit() {
                 loadEffect = false;
@@ -678,7 +678,7 @@ function startPythia() {
             //var lavoro_vergogna_cit = lavoro_vergogna_cits[Math.round(Math.random() * (lavoro_vergogna_cits.length - 1))];
             audios[2].onended(function() {
               loading();
-              setTimeout(playCit, 5000);
+              setTimeout(playCit, 8200);
 
               function playCit() {
                 loadEffect = false;
@@ -700,7 +700,7 @@ function startPythia() {
             //var motiv_1_cit = motiv_1_cits[Math.round(Math.random() * (motiv_1_cits.length - 1))];
             audios[2].onended(function() {
               loading();
-              setTimeout(playCit, 5000);
+              setTimeout(playCit, 8200);
 
               function playCit() {
                 loadEffect = false;
@@ -729,7 +729,7 @@ function startPythia() {
             //var motiv_2_cit = motiv_2_cits[Math.round(Math.random() * (motiv_2_cits.length - 1))];
             audios[2].onended(function() {
               loading();
-              setTimeout(playCit, 5000);
+              setTimeout(playCit, 8200);
 
               function playCit() {
                 loadEffect = false;
@@ -756,7 +756,7 @@ function startPythia() {
             //var lavoro_energia_cit = lavoro_energia_cits[Math.round(Math.random() * (lavoro_energia_cits.length - 1))];
             audios[2].onended(function() {
               loading();
-              setTimeout(playCit, 5000);
+              setTimeout(playCit, 8200);
 
               function playCit() {
                 loadEffect = false;
@@ -783,7 +783,7 @@ function startPythia() {
             //var lavoro_amore_cit = lavoro_amore_cits[Math.round(Math.random() * (lavoro_amore_cits.length - 1))];
             audios[2].onended(function() {
               loading();
-              setTimeout(playCit, 5000);
+              setTimeout(playCit, 8200);
 
               function playCit() {
                 loadEffect = false;
@@ -810,7 +810,7 @@ function startPythia() {
             //var amore_proprio_lav_cit = amore_proprio_lav_cits[Math.round(Math.random() * (amore_proprio_lav_cits.length - 1))];
             audios[2].onended(function() {
               loading();
-              setTimeout(playCit, 5000);
+              setTimeout(playCit, 8200);
 
               function playCit() {
                 loadEffect = false;
@@ -839,7 +839,7 @@ function startPythia() {
             //var frasi_posneg_cit = frasi_posneg_cits[Math.round(Math.random() * (frasi_posneg_cits.length - 1))];
             audios[2].onended(function() {
               loading();
-              setTimeout(playCit, 5000);
+              setTimeout(playCit, 8200);
 
               function playCit() {
                 loadEffect = false;
@@ -881,7 +881,7 @@ function startPythia() {
             //var lavoro_diffida_cit = lavoro_diffida_cits[Math.round(Math.random() * (lavoro_diffida_cits.length - 1))];
             audios[2].onended(function() {
               loading();
-              setTimeout(playCit, 5000);
+              setTimeout(playCit, 8200);
 
               function playCit() {
                 loadEffect = false;
@@ -908,7 +908,7 @@ function startPythia() {
             //var lavoro_generico_cit = lavoro_generico_cits[Math.round(Math.random() * (lavoro_generico_cits.length - 1))];
             audios[2].onended(function() {
               loading();
-              setTimeout(playCit, 5000);
+              setTimeout(playCit, 8200);
 
               function playCit() {
                 loadEffect = false;
@@ -946,7 +946,7 @@ function startPythia() {
           //var lavoro_vita_cit = lavoro_vita_cits[Math.round(Math.random() * (lavoro_vita_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -992,7 +992,7 @@ function startPythia() {
           //var sport_succ_cit = sport_succ_cits[Math.round(Math.random() * (sport_succ_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -1026,7 +1026,7 @@ function startPythia() {
           //var felicità_succ_cit = felicità_succ_cits[Math.round(Math.random() * (felicità_succ_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -1069,7 +1069,7 @@ function startPythia() {
           //var camb_audacia_cit = camb_audacia_cits[Math.round(Math.random() * (camb_audacia_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -1129,7 +1129,7 @@ function startPythia() {
           //var cosa_ambire_cit = cosa_ambire_cits[Math.round(Math.random() * (cosa_ambire_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -1170,7 +1170,7 @@ function startPythia() {
           //var occasioni_succ_cit = occasioni_succ_cits[Math.round(Math.random() * (occasioni_succ_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -1221,7 +1221,7 @@ function startPythia() {
           //var motivazione_succ_cit = motivazione_succ_cits[Math.round(Math.random() * (motivazione_succ_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -1272,7 +1272,7 @@ function startPythia() {
           //var autostima_cit = autostima_cits[Math.round(Math.random() * (autostima_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -1329,7 +1329,7 @@ function startPythia() {
           //var problemi_succ_cit = problemi_succ_cits[Math.round(Math.random() * (problemi_succ_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -1355,7 +1355,7 @@ function startPythia() {
           //var come_fare_cit = come_fare_cits[Math.round(Math.random() * (come_fare_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -1393,7 +1393,7 @@ function startPythia() {
           //var ecologia_cit = ecologia_cits[Math.round(Math.random() * (ecologia_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -1427,7 +1427,7 @@ function startPythia() {
           //var fut_tecnologia_cit = fut_tecnologia_cits[Math.round(Math.random() * (fut_tecnologia_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -1455,7 +1455,7 @@ function startPythia() {
           //var futuro_succ_cit = futuro_cits[Math.round(Math.random() * (futuro_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -1540,7 +1540,7 @@ function startPythia() {
           //var forza_animo_cit = forza_animo_cits[Math.round(Math.random() * (forza_animo_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -1618,7 +1618,7 @@ function startPythia() {
           //var sep_feriti_amicizia_cit = sep_feriti_amicizia_cits[Math.round(Math.random() * (sep_feriti_amicizia_cits.length -1))];  // Math.random() *
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -1649,7 +1649,7 @@ function startPythia() {
           //var vera_amicizia_cit = vera_amicizia_cits[Math.round(Math.random() * (vera_amicizia_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -1727,7 +1727,7 @@ function startPythia() {
           //var falsa_amicizia_cit = falsa_amicizia_cits[Math.round(Math.random() * (falsa_amicizia_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -1764,7 +1764,7 @@ function startPythia() {
           var odio_cit = odio_cits[Math.round(Math.random() * (odio_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -1802,7 +1802,7 @@ function startPythia() {
           var bravo_cit = bravo_cits[Math.round(Math.random() * (bravo_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -1834,7 +1834,7 @@ function startPythia() {
           var aiuto_supp_cit = aiuto_supp_cits[Math.round(Math.random() * (aiuto_supp_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -1862,7 +1862,7 @@ function startPythia() {
           // var solitudine_cit = solitudine_cits[Math.round(Math.random() * (solitudine_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -1890,7 +1890,7 @@ function startPythia() {
           //var emp_emoz_cit = emp_emoz_cits[Math.round(Math.random() * (emp_emoz_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -1912,7 +1912,7 @@ function startPythia() {
           //var separazione_cit = separazione_cits[Math.round(Math.random() * (separazione_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -1938,7 +1938,7 @@ function startPythia() {
           //var perdono_rel_cit = perdono_rel_cits[Math.round(Math.random() * (perdono_rel_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -1987,7 +1987,7 @@ function startPythia() {
           //var gelosia_rel_cit = gelosia_rel_cits[Math.round(Math.random() * (gelosia_rel_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -2032,7 +2032,7 @@ function startPythia() {
           //var tradimento_rel_cit = tradimento_rel_cits[Math.round(Math.random() * (tradimento_rel_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -2080,7 +2080,7 @@ function startPythia() {
           //var famiglia_amicizia_rel_cit = famiglia_cits[Math.round(Math.random() * (famiglia_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -2114,7 +2114,7 @@ function startPythia() {
           //var fratello_amicizia_rel_cit = fratello_cits[Math.round(Math.random() * (fratello_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -2136,7 +2136,7 @@ function startPythia() {
           //var sorella_amicizia_rel_cit = sorella_cits[Math.round(Math.random() * (sorella_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -2158,7 +2158,7 @@ function startPythia() {
           //var futuro_amicizia_rel_cit = futuro_cits[Math.round(Math.random() * (futuro_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -2244,7 +2244,7 @@ function startPythia() {
           //var amicizia_generico_cit = vera_amicizia_cits[Math.round(Math.random() * (vera_amicizia_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -2328,7 +2328,7 @@ function startPythia() {
           var matrimonio_divorzio_cit = matrimonio_divorzio_cits[Math.round(Math.random() * (matrimonio_divorzio_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -2382,7 +2382,7 @@ function startPythia() {
           //var lasciare_cit = lasciare_cits[Math.round(Math.random() * (lasciare_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -2424,7 +2424,7 @@ function startPythia() {
           //var falso_amore_cit = falso_amore_cits[Math.round(Math.random() * (falso_amore_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -2460,7 +2460,7 @@ function startPythia() {
           //var amore_vero_cit = amore_vero_cits[Math.round(Math.random() * (amore_vero_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -2514,7 +2514,7 @@ function startPythia() {
           //var non_corrisposto_cit = non_corrisposto_cits[Math.round(Math.random() * (non_corrisposto_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -2562,7 +2562,7 @@ function startPythia() {
           //var gelosia_amore_cit = gelosia_amore_cits[Math.round(Math.random() * (gelosia_amore_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -2590,7 +2590,7 @@ function startPythia() {
           //var matrimonio_divorzio_cit = matrimonio_divorzio_cits[Math.round(Math.random() * (matrimonio_divorzio_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -2650,7 +2650,7 @@ function startPythia() {
           //var perdono_amore_cit = perdono_amore_cits[Math.round(Math.random() * (perdono_amore_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -2697,7 +2697,7 @@ function startPythia() {
           var tradimento_amore_cit = tradimento_amore_cits[Math.round(Math.random() * (tradimento_amore_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -2757,7 +2757,7 @@ function startPythia() {
           //var successo_amore_cit = successo_amore_cits[Math.round(Math.random() * (successo_amore_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -2789,7 +2789,7 @@ function startPythia() {
           //var single_cit = single_cits[Math.round(Math.random() * (single_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -2811,7 +2811,7 @@ function startPythia() {
           //var cuore_testa_cit = cuore_testa_cits[Math.round(Math.random() * (cuore_testa_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -2833,7 +2833,7 @@ function startPythia() {
           //var famiglia_amore_cit = famiglia_cits[Math.round(Math.random() * (famiglia_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -2867,7 +2867,7 @@ function startPythia() {
           //var fratello_amore_cit = fratello_cits[Math.round(Math.random() * (fratello_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -2889,7 +2889,7 @@ function startPythia() {
           //var sorella_amore_cit = sorella_cits[Math.round(Math.random() * (sorella_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -2911,7 +2911,7 @@ function startPythia() {
           //var futuro_amore_cit = futuro_cits[Math.round(Math.random() * (futuro_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -2997,7 +2997,7 @@ function startPythia() {
           //var amore_generico_cit = amore_vero_cits[Math.round(Math.random() * (amore_vero_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3057,7 +3057,7 @@ function startPythia() {
           //var libro_cit = libro_cits[Math.round(Math.random() * (libro_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3081,7 +3081,7 @@ function startPythia() {
           //var scienza_ispirazione_cit = scienza_ispirazione_cits[Math.round(Math.random() * (scienza_ispirazione_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3103,7 +3103,7 @@ function startPythia() {
           //var lavoro_ispirazione_cit = lavoro_ispirazione_cits[Math.round(Math.random() * (lavoro_ispirazione_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3137,7 +3137,7 @@ function startPythia() {
           //var poesia_cit = poesia_cits[Math.round(Math.random() * (poesia_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3167,7 +3167,7 @@ function startPythia() {
           //var isolamento_cit = isolamento_cits[Math.round(Math.random() * (isolamento_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3191,7 +3191,7 @@ function startPythia() {
           //var amore_ispirazione_cit = amore_ispirazione_cits[Math.round(Math.random() * (amore_ispirazione_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3215,7 +3215,7 @@ function startPythia() {
           //var canzone_cit = canzone_cits[Math.round(Math.random() * (canzone_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3239,7 +3239,7 @@ function startPythia() {
           //var regista_cit = regista_cits[Math.round(Math.random() * (regista_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3261,7 +3261,7 @@ function startPythia() {
           //var artista_cit = artista_cits[Math.round(Math.random() * (artista_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3295,7 +3295,7 @@ function startPythia() {
           //var pittore_cit = pittore_cits[Math.round(Math.random() * (pittore_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3319,7 +3319,7 @@ function startPythia() {
           //var disegnatore_cit = disegnatore_cits[Math.round(Math.random() * (disegnatore_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3341,7 +3341,7 @@ function startPythia() {
           //var raziocinio_cit = raziocinio_cits[Math.round(Math.random() * (raziocinio_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3381,7 +3381,7 @@ function startPythia() {
           //var architettura_cit = architettura_cits[Math.round(Math.random() * (architettura_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3405,7 +3405,7 @@ function startPythia() {
           //var sofferenza_ispirazione_cit = sofferenza_ispirazione_cits[Math.round(Math.random() * (sofferenza_ispirazione_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3431,7 +3431,7 @@ function startPythia() {
           //var cambiare_mondo_cit = cambiare_mondo_cits[Math.round(Math.random() * (cambiare_mondo_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3453,7 +3453,7 @@ function startPythia() {
           //var idee_cit = idee_cits[Math.round(Math.random() * (idee_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3489,7 +3489,7 @@ function startPythia() {
           //var follia_cit = follia_cits[Math.round(Math.random() * (follia_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3515,7 +3515,7 @@ function startPythia() {
           //var cultura_ispirazione_cit = cultura_ispirazione_cits[Math.round(Math.random() * (cultura_ispirazione_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3543,7 +3543,7 @@ function startPythia() {
           //var genio_ispirazione_cit = genio_ispirazione_cits[Math.round(Math.random() * (genio_ispirazione_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3567,7 +3567,7 @@ function startPythia() {
           //var originalità_cit = originalità_cits[Math.round(Math.random() * (originalità_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3598,7 +3598,7 @@ function startPythia() {
           //var verità_realtà_cit = verità_realtà_cits[Math.round(Math.random() * (verità_realtà_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3620,7 +3620,7 @@ function startPythia() {
           //var paura_fallire_cit = paura_fallire_cits[Math.round(Math.random() * (paura_fallire_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3645,7 +3645,7 @@ function startPythia() {
           //var ispirazione_generico_cit = ispirazione_generico_cits[Math.round(Math.random() * (ispirazione_generico_cits.length -1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3713,7 +3713,7 @@ function startPythia() {
           //var esisti_cit = esisti_cits[Math.round(Math.random() * (esisti_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3735,7 +3735,7 @@ function startPythia() {
           //var ecologia_cit = ecologia_cits[Math.round(Math.random() * (ecologia_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3769,7 +3769,7 @@ function startPythia() {
           //var vita_e_morte_cit = vita_e_morte_cits[Math.round(Math.random() * (vita_e_morte_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3807,7 +3807,7 @@ function startPythia() {
           //var paura_cit = paura_cits[Math.round(Math.random() * (paura_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3877,14 +3877,80 @@ function startPythia() {
               // }
             }
           });
-        } else if (dio_keywords.some(keyword => sentence.includes(keyword))) {
+        }
+        else if (dobbiamo_morire_keywords.some(keyword => sentence.includes(keyword)) || (scopo_generico_keywords.some(keyword => sentence.includes(keyword)) && scopo_morte_keywords.some(keyword => sentence.includes(keyword)))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          //var dobbiamo_morire_cit = dobbiamo_morire_cits[Math.round(Math.random() * (dobbiamo_morire_cits.length - 1))];
+          audios[2].onended(function() {
+            loading();
+            setTimeout(playCit, 8200);
+
+            function playCit() {
+              loadEffect = false;
+              var dobbiamo_morire_audio = Math.round(random([205, 259, 240, 198]));
+              audios[dobbiamo_morire_audio].play();
+              vita_morte_var = false;
+              audios[dobbiamo_morire_audio].onended(farewell);
+              // alert(dobbiamo_morire_cit);
+              // farewell();
+              if (audios[205].isPlaying() == true) {
+                Violet();
+              } else if (audios[259].isPlaying() == true) {
+                Red();
+              } else if (audios[240].isPlaying() == true) {
+                Blue();
+              } else if (audios[198].isPlaying() == true) {
+                Orange();
+              }
+            }
+          });
+        } else if (scopo_vita_specifico_keywords.some(keyword => sentence.includes(keyword)) || (scopo_generico_keywords.some(keyword => sentence.includes(keyword)) && scopo_vita_keywords.some(keyword => sentence.includes(keyword)))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          //var dobbiamo_morire_cit = dobbiamo_morire_cits[Math.round(Math.random() * (dobbiamo_morire_cits.length - 1))];
+          audios[2].onended(function() {
+            loading();
+            setTimeout(playCit, 8200);
+
+            function playCit() {
+              loadEffect = false;
+              var dobbiamo_morire_audio = Math.round(random([271, 272, 275, 278, 284, 282, 288, 236]));
+              audios[dobbiamo_morire_audio].play();
+              vita_morte_var = false;
+              audios[dobbiamo_morire_audio].onended(farewell);
+              // alert(dobbiamo_morire_cit);
+              // farewell();
+              if (audios[271].isPlaying() == true) {
+                Pink();
+              } else if (audios[272].isPlaying() == true) {
+                Pink();
+              } else if (audios[275].isPlaying() == true) {
+                Orange();
+              } else if (audios[278].isPlaying() == true) {
+                Green();
+              } else if (audios[284].isPlaying() == true) {
+                Green();
+              } else if (audios[282].isPlaying() == true) {
+                Red();
+              } else if (audios[288].isPlaying() == true) {
+                Violet();
+              } else if (audios[236].isPlaying() == true) {
+                Orange();
+              }
+            }
+          });
+        }
+        else if (dio_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           audios[2].play();
           console.log("Found");
           //var dio_cit = dio_cits[Math.round(Math.random() * (dio_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3911,7 +3977,7 @@ function startPythia() {
           //var ddio_cit = dio_cits[Math.round(Math.random() * (dio_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -3938,7 +4004,7 @@ function startPythia() {
         //   console.log("Found");
         //   //var senso_vita_cit = senso_vita_cits[Math.round(Math.random() * (senso_vita_cits.length - 1))];
         //   audios[2].onended(function() {
-        //     setTimeout(playCit, 5000);
+        //     setTimeout(playCit, 8200);
         //
         //     function playCit() {
         //       var senso_vita_audio = Math.round(random([195, 205, 253, 221, 198, 211, 206, 205, 231, 254]));
@@ -3978,7 +4044,7 @@ function startPythia() {
           //var morte_interiore_cit = morte_interiore_cits[Math.round(Math.random() * (morte_interiore_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4000,7 +4066,7 @@ function startPythia() {
           //var ricordo_cit = ricordo_cits[Math.round(Math.random() * (ricordo_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4029,7 +4095,7 @@ function startPythia() {
           //var lutto_cit = lutto_cits[Math.round(Math.random() * (lutto_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4069,7 +4135,7 @@ function startPythia() {
           //var quando_morirò_cit = quando_morirò_cits[Math.round(Math.random() * (quando_morirò_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4091,14 +4157,15 @@ function startPythia() {
               }
             }
           });
-        } else if (immortalità_keywords.some(keyword => sentence.includes(keyword))) {
+        }
+        else if (immortalità_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           audios[2].play();
           console.log("Found");
           //var immortalità_cit = immortalità_cits[Math.round(Math.random() * (immortalità_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4149,7 +4216,7 @@ function startPythia() {
           //var aldilà_cit = aldilà_cits[Math.round(Math.random() * (aldilà_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4179,7 +4246,7 @@ function startPythia() {
           //var aldilà_cit = aldilà_cits[Math.round(Math.random() * (aldilà_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4202,78 +4269,14 @@ function startPythia() {
               }
             }
           });
-        } else if (dobbiamo_morire_keywords.some(keyword => sentence.includes(keyword)) || (scopo_generico_keywords.some(keyword => sentence.includes(keyword)) && scopo_morte_keywords.some(keyword => sentence.includes(keyword)))) {
-          step_3 = false;
-          audios[2].play();
-          console.log("Found");
-          //var dobbiamo_morire_cit = dobbiamo_morire_cits[Math.round(Math.random() * (dobbiamo_morire_cits.length - 1))];
-          audios[2].onended(function() {
-            loading();
-            setTimeout(playCit, 5000);
-
-            function playCit() {
-              loadEffect = false;
-              var dobbiamo_morire_audio = Math.round(random([205, 259, 240, 198]));
-              audios[dobbiamo_morire_audio].play();
-              vita_morte_var = false;
-              audios[dobbiamo_morire_audio].onended(farewell);
-              // alert(dobbiamo_morire_cit);
-              // farewell();
-              if (audios[205].isPlaying() == true) {
-                Violet();
-              } else if (audios[259].isPlaying() == true) {
-                Red();
-              } else if (audios[240].isPlaying() == true) {
-                Blue();
-              } else if (audios[198].isPlaying() == true) {
-                Orange();
-              }
-            }
-          });
-        } else if (scopo_vita_specifico_keywords.some(keyword => sentence.includes(keyword)) || (scopo_generico_keywords.some(keyword => sentence.includes(keyword)) && scopo_vita_keywords.some(keyword => sentence.includes(keyword)))) {
-          step_3 = false;
-          audios[2].play();
-          console.log("Found");
-          //var dobbiamo_morire_cit = dobbiamo_morire_cits[Math.round(Math.random() * (dobbiamo_morire_cits.length - 1))];
-          audios[2].onended(function() {
-            loading();
-            setTimeout(playCit, 5000);
-
-            function playCit() {
-              loadEffect = false;
-              var dobbiamo_morire_audio = Math.round(random([271, 272, 275, 278, 284, 282, 288, 236]));
-              audios[dobbiamo_morire_audio].play();
-              vita_morte_var = false;
-              audios[dobbiamo_morire_audio].onended(farewell);
-              // alert(dobbiamo_morire_cit);
-              // farewell();
-              if (audios[271].isPlaying() == true) {
-                Pink();
-              } else if (audios[272].isPlaying() == true) {
-                Pink();
-              } else if (audios[275].isPlaying() == true) {
-                Orange();
-              } else if (audios[278].isPlaying() == true) {
-                Green();
-              } else if (audios[284].isPlaying() == true) {
-                Green();
-              } else if (audios[282].isPlaying() == true) {
-                Red();
-              } else if (audios[288].isPlaying() == true) {
-                Violet();
-              } else if (audios[236].isPlaying() == true) {
-                Orange();
-              }
-            }
-          });
-        } else if (morte_oggetti_keywords.some(keyword => sentence.includes(keyword))) {
+        }  else if (morte_oggetti_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           audios[2].play();
           console.log("Found");
           //var morte_oggetti_cit = morte_oggetti_cits[Math.round(Math.random() * (morte_oggetti_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4295,7 +4298,7 @@ function startPythia() {
           //var morte_noia_cit = morte_noia_cits[Math.round(Math.random() * (morte_noia_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4317,7 +4320,7 @@ function startPythia() {
           //var eutanasia_cit = eutanasia_cits[Math.round(Math.random() * (eutanasia_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4362,7 +4365,7 @@ function startPythia() {
           //var aborto_cit = aborto_cits[Math.round(Math.random() * (aborto_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4394,7 +4397,7 @@ function startPythia() {
           //var suicidio_cit = suicidio_cits[Math.round(Math.random() * (suicidio_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4442,7 +4445,7 @@ function startPythia() {
           //var fallimento_morte_cit = fallimento_morte_cits[Math.round(Math.random() * (fallimento_morte_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4488,7 +4491,7 @@ function startPythia() {
           //var sogni_morte_cit = sogni_morte_cits[Math.round(Math.random() * (sogni_morte_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4532,7 +4535,7 @@ function startPythia() {
           //var felicità_morte_cit = felicità_morte_cits[Math.round(Math.random() * (felicità_morte_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4572,7 +4575,7 @@ function startPythia() {
           //var morte_tecnologia_cit = morte_tecnologia_cits[Math.round(Math.random() * (morte_tecnologia_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4594,27 +4597,28 @@ function startPythia() {
           //var povero_ricco_cit = povero_ricco_cits[Math.round(Math.random() * (povero_ricco_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
-              var povero_ricco_audio = Math.round(random([229, 461, 166, 175, 182, 186]));
+              var povero_ricco_audio = Math.round(random([461, 175, 182, 186]));
               audios[povero_ricco_audio].play();
               vita_morte_var = false;
               audios[povero_ricco_audio].onended(farewell);
               // alert(povero_ricco_cit);
               // farewell();
-              if (audios[229].isPlaying() == true) {
-                Red();
-              }
+              // if (audios[229].isPlaying() == true) {
+              //   Red();
+              // }
               // else if (audios[268].isPlaying() == true) {
               //   Violet();
               // }
-              else if (audios[461].isPlaying() == true) {
+              if (audios[461].isPlaying() == true) {
                 Pink();
-              } else if (audios[166].isPlaying() == true) {
-                Blue();
               }
+              // else if (audios[166].isPlaying() == true) {
+              //   Blue();
+              // }
               // else if (audios[171].isPlaying() == true) {
               //   Blue();
               // }
@@ -4630,14 +4634,41 @@ function startPythia() {
               // }
             }
           });
-        } else if (morte_generico_keywords.some(keyword => sentence.includes(keyword))) {
+        }
+        else if (morirò_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          //var quando_morirò_cit = quando_morirò_cits[Math.round(Math.random() * (quando_morirò_cits.length - 1))];
+          audios[2].onended(function() {
+            loading();
+            setTimeout(playCit, 8200);
+
+            function playCit() {
+              loadEffect = false;
+              var morirò_audio = Math.round(random([229, 461]));
+              audios[morirò_audio].play();
+              vita_morte_var = false;
+              audios[morirò_audio].onended(farewell);
+              // alert(quando_morirò_cit);
+              // farewell();
+              if (audios[229].isPlaying() == true) {
+                Red();
+              }
+              else if (audios[461].isPlaying() == true) {
+                Pink();
+              }
+            }
+          });
+        }
+        else if (morte_generico_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           audios[2].play();
           console.log("Found");
           //var morte_generico_cit = morte_generico_cits[Math.round(Math.random() * (morte_generico_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4702,7 +4733,7 @@ function startPythia() {
           //var etica_religio_Dio_cit = etica_religio_cits[Math.round(Math.random() * (etica_religio_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4728,7 +4759,7 @@ function startPythia() {
           //var etica_religio_cit = etica_religio_cits[Math.round(Math.random() * (etica_religio_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4754,7 +4785,7 @@ function startPythia() {
           //var quanto_valgo_cit = quanto_valgo_cits[Math.round(Math.random() * (quanto_valgo_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4778,7 +4809,7 @@ function startPythia() {
           //var etica_economia_cit = etica_economia_cits[Math.round(Math.random() * (etica_economia_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4800,7 +4831,7 @@ function startPythia() {
           //var etica_politica_cit = etica_politica_cits[Math.round(Math.random() * (etica_politica_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4823,7 +4854,7 @@ function startPythia() {
           //var etica_cultura_cit = etica_cultura_cits[Math.round(Math.random() * (etica_cultura_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4848,7 +4879,7 @@ function startPythia() {
           //var etica_morale_aborto_cit = etica_morale_aborto_cits[Math.round(Math.random() * (etica_morale_aborto_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4883,7 +4914,7 @@ function startPythia() {
           //var etica_morale_eutanasia_cit = etica_morale_eutanasia_cits[Math.round(Math.random() * (etica_morale_eutanasia_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4914,7 +4945,7 @@ function startPythia() {
           //var etica_omosessuale_cit = etica_omosessuale_cits[Math.round(Math.random() * (etica_omosessuale_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4948,7 +4979,7 @@ function startPythia() {
           //var violenza_fisica_cit = violenza_fisica_cits[Math.round(Math.random() * (violenza_fisica_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -4973,7 +5004,7 @@ function startPythia() {
           //var violenza_cit = violenza_cits[Math.round(Math.random() * (violenza_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -5001,7 +5032,7 @@ function startPythia() {
           //var abuso_droga_cit = abuso_droga_cits[Math.round(Math.random() * (abuso_droga_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -5030,7 +5061,7 @@ function startPythia() {
           //var abuso_droga_cit = abuso_droga_cits[Math.round(Math.random() * (abuso_droga_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -5059,7 +5090,7 @@ function startPythia() {
           //var abuso_droga_cit = abuso_droga_cits[Math.round(Math.random() * (abuso_droga_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -5082,7 +5113,7 @@ function startPythia() {
           //var abuso_potere_cit = abuso_potere_cits[Math.round(Math.random() * (abuso_potere_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -5111,7 +5142,7 @@ function startPythia() {
           //var abuso_potere_cit = abuso_potere_cits[Math.round(Math.random() * (abuso_potere_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -5137,7 +5168,7 @@ function startPythia() {
           //var razzismo_cit = razzismo_cits[Math.round(Math.random() * (razzismo_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -5176,7 +5207,7 @@ function startPythia() {
           //var bellezza_cit = bellezza_cits[Math.round(Math.random() * (bellezza_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -5198,7 +5229,7 @@ function startPythia() {
           //var vegetariani_cit = vegetariani_cits[Math.round(Math.random() * (vegetariani_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -5220,7 +5251,7 @@ function startPythia() {
           //var privacy_cit = privacy_cits[Math.round(Math.random() * (privacy_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;
@@ -5248,7 +5279,7 @@ function startPythia() {
           //var cambiamento_cit = cambiamento_cits[Math.round(Math.random() * (cambiamento_cits.length - 1))];
           audios[2].onended(function() {
             loading();
-            setTimeout(playCit, 5000);
+            setTimeout(playCit, 8200);
 
             function playCit() {
               loadEffect = false;

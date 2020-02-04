@@ -47,7 +47,7 @@ void loop() {
     //Serial.println(inColor_State);
     //Serial.print("Vol: ");
     //Serial.println(inByte);
-  Serial.write(carica);
+  //Serial.write(carica);
 
   }
 
@@ -121,7 +121,7 @@ void setLed_Color() {
   }
   else if (inColor_State == 2) {
     for (int i = 0; i < NUM_LEDS; i++) {
-      leds[i] = CRGB (255, 25, 0);
+      leds[i] = CRGB (190, 25, 0);
     }
   }
   else if (inColor_State == 3) {
@@ -144,11 +144,11 @@ void setLed_Color() {
       leds[i] = CRGB (230, 51, 112);
     }
   }
-    else if (inColor_State == 7) {
-    for (int i = 0; i < NUM_LEDS; i++) {
-      leds[i] = CRGB (0, 0, 0);
-    }
-  }
+//    else if (inColor_State == 7) {
+//    for (int i = 0; i < NUM_LEDS; i++) {
+//      leds[i] = CRGB (0, 0, 0);
+//    }
+//  }
   /////////////////////////////////////// dato che ho cambiato le variabili dello switch, ho dovuto mettere un for qui altrimenti non dava il colore base quando il colore = 0
   else {  
     for (int i = 0; i < NUM_LEDS; i++) {

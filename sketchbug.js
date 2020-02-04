@@ -1448,7 +1448,81 @@ function startPythia() {
               }
             }
           });
-        } else if (futuro_succ_keywords.some(keyword => sentence.includes(keyword))) {
+        }
+        else if (forza_animo_keywords.some(keyword => sentence.includes(keyword))) {
+          step_3 = false;
+          audios[2].play();
+          console.log("Found");
+          //var forza_animo_cit = forza_animo_cits[Math.round(Math.random() * (forza_animo_cits.length - 1))];
+          audios[2].onended(function() {
+            loading();
+            setTimeout(playCit, 8200);
+
+            function playCit() {
+              loadEffect = false;
+              var forza_animo_audio = Math.round(random([394, 395, 396, 397, 398, 399, 400, 402, 404, 405, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416]));
+              audios[forza_animo_audio].play();
+              lavoro_var = false;
+              audios[forza_animo_audio].onended(farewell);
+              // alert(forza_animo_cit);
+              // farewell();
+              if (audios[394].isPlaying() == true) {
+                Green();
+              } else if (audios[395].isPlaying() == true) {
+                Pink();
+              } else if (audios[396].isPlaying() == true) {
+                Green();
+              } else if (audios[397].isPlaying() == true) {
+                Blue();
+              } else if (audios[398].isPlaying() == true) {
+                Orange();
+              } else if (audios[399].isPlaying() == true) {
+                Orange();
+              } else if (audios[400].isPlaying() == true) {
+                Blue();
+              }
+              // else if (audios[401].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[402].isPlaying() == true) {
+                Green();
+              }
+              // else if (audios[403].isPlaying() == true) {
+              //   Orange();
+              // }
+              else if (audios[404].isPlaying() == true) {
+                Blue();
+              } else if (audios[405].isPlaying() == true) {
+                Blue();
+              }
+              // else if (audios[406].isPlaying() == true) {
+              //   Blue();
+              // }
+              else if (audios[407].isPlaying() == true) {
+                Orange();
+              } else if (audios[408].isPlaying() == true) {
+                Blue();
+              } else if (audios[409].isPlaying() == true) {
+                Blue();
+              } else if (audios[410].isPlaying() == true) {
+                Orange();
+              } else if (audios[411].isPlaying() == true) {
+                Orange();
+              } else if (audios[412].isPlaying() == true) {
+                Orange0();
+              } else if (audios[413].isPlaying() == true) {
+                Orange();
+              } else if (audios[414].isPlaying() == true) {
+                Blue();
+              } else if (audios[415].isPlaying() == true) {
+                Blue();
+              } else if (audios[416].isPlaying() == true) {
+                Green();
+              }
+            }
+          });
+        }
+        else if (futuro_succ_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           audios[2].play();
           console.log("Found");
@@ -1533,79 +1607,7 @@ function startPythia() {
               // }
             }
           });
-        } else if (forza_animo_keywords.some(keyword => sentence.includes(keyword))) {
-          step_3 = false;
-          audios[2].play();
-          console.log("Found");
-          //var forza_animo_cit = forza_animo_cits[Math.round(Math.random() * (forza_animo_cits.length - 1))];
-          audios[2].onended(function() {
-            loading();
-            setTimeout(playCit, 8200);
-
-            function playCit() {
-              loadEffect = false;
-              var forza_animo_audio = Math.round(random([394, 395, 396, 397, 398, 399, 400, 402, 404, 405, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416]));
-              audios[forza_animo_audio].play();
-              lavoro_var = false;
-              audios[forza_animo_audio].onended(farewell);
-              // alert(forza_animo_cit);
-              // farewell();
-              if (audios[394].isPlaying() == true) {
-                Green();
-              } else if (audios[395].isPlaying() == true) {
-                Pink();
-              } else if (audios[396].isPlaying() == true) {
-                Green();
-              } else if (audios[397].isPlaying() == true) {
-                Blue();
-              } else if (audios[398].isPlaying() == true) {
-                Orange();
-              } else if (audios[399].isPlaying() == true) {
-                Orange();
-              } else if (audios[400].isPlaying() == true) {
-                Blue();
-              }
-              // else if (audios[401].isPlaying() == true) {
-              //   Blue();
-              // }
-              else if (audios[402].isPlaying() == true) {
-                Green();
-              }
-              // else if (audios[403].isPlaying() == true) {
-              //   Orange();
-              // }
-              else if (audios[404].isPlaying() == true) {
-                Blue();
-              } else if (audios[405].isPlaying() == true) {
-                Blue();
-              }
-              // else if (audios[406].isPlaying() == true) {
-              //   Blue();
-              // }
-              else if (audios[407].isPlaying() == true) {
-                Orange();
-              } else if (audios[408].isPlaying() == true) {
-                Blue();
-              } else if (audios[409].isPlaying() == true) {
-                Blue();
-              } else if (audios[410].isPlaying() == true) {
-                Orange();
-              } else if (audios[411].isPlaying() == true) {
-                Orange();
-              } else if (audios[412].isPlaying() == true) {
-                Orange0();
-              } else if (audios[413].isPlaying() == true) {
-                Orange();
-              } else if (audios[414].isPlaying() == true) {
-                Blue();
-              } else if (audios[415].isPlaying() == true) {
-                Blue();
-              } else if (audios[416].isPlaying() == true) {
-                Green();
-              }
-            }
-          });
-        } else {
+        }  else {
           errorCase();
         }
       }

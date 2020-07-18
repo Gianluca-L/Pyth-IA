@@ -1,11 +1,14 @@
 @font-face {
-  font-family: 'BLADRMF_';
-  src: url('assets/BLADRMF_.ttf')  format('opentype');
+  font-family: 'Maax';
+  src: url('assets/Maax.otf')  format('opentype');
 ;
 }
 @font-face {
-  font-family: 'Neoneon';
-  src: url('assets/Neoneon.otf')  format('opentype');
+  font-family: 'Maax_italic';
+  src: url('assets/Maax_italic.otf')  format('opentype');
+}
+body {
+  color: #b38422;
 }
 #checkboxesContainer {
   position: absolute;
@@ -83,11 +86,57 @@ canvas {
 /* DISCO */
 
 #disco {
-  width: 50vw;
-  height: 50vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30vw;
+  height: 30vw;
   background-color: #b38422;
+  /* border-style: solid;
+  border-width: 0.15vw; */
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+}
+.transition {
+  transition: opacity 0.5s;
+}
+.opacity_0 {
+  opacity: 0;
+}
+.opacity_1 {
+  opacity: 1;
+}
+/* .disco_animation {
+    animation: opacity 0.5s infinite;
+}
+@keyframes opacity {
+  from {opacity: 0}
+    to {opacity: 1}
+}
+.disco_animation_inverse {
+    animation: opacity_inverse 0.5s infinite;
+}
+@keyframes opacity_inverse {
+  from {opacity: 1}
+    to {opacity: 0}
+} */
+
+
+/* Access Button */
+
+#access_button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 17vw;
+  height: 5vw;
+  /* padding-left: 0.5vw;
+  padding-right: 0.5vw; */
+  background-color: #ffffff;
   border-style: solid;
   border-width: 0.15vw;
-  border-radius: 50%;
+  border-color: #b38422;
+  color: #b38422;
+  font-size: 1.1vw;
   transform: translate(-50%,-50%);
 }

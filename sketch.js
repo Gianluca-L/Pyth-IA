@@ -1,7 +1,7 @@
 ///////////////////////////////////////// Pyth-IA PC
 
 /////////////////////////////// DISCO
-// var disco;
+var disco;
 
 ///////////////////////////// ARDUINO
 var serial; // variable to hold an instance of the serialport library
@@ -111,8 +111,8 @@ function setup() {
 
 
   /////////DISCO
-  // disco = createDiv();
-  // disco.id('disco');
+  disco = createDiv();
+  disco.id('disco');
   // balls[i].addClass('scaling');
 
 

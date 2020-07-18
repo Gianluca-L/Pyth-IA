@@ -1,4 +1,10 @@
+// Open the console (Ctrl + Shift + I) (Alt + Cmd + I on MacOS)
+// run atom.config.set('core.editor.multiCursorOnClick', true);
 ///////////////////////////////////////// Pyth-IA PC
+
+/////////////////////////////// DISCO
+var disco;
+var frase_avvio_container;
 
 ///////////////////////////// ARDUINO
 var serial; // variable to hold an instance of the serialport library
@@ -13,7 +19,6 @@ var stringToRead = 0;
 var fft;
 var spectrum;
 var envelope;
-var step_1 = true;
 
 var timer = 1;
 var s = 0;
@@ -49,6 +54,8 @@ var stopRecord = false;
 
 var sentence;
 
+var step_1 = false;
+
 var step_2 = false;
 
 var step_3 = false;
@@ -61,7 +68,8 @@ const FOLDER = 'assets/audio/',
   audios = Array(INDEX_TOTAL);
 
 function preload() {
-  myFont = loadFont('assets/Neoneon.otf');
+  myFont = loadFont('assets/Maax.otf');
+  myFont = loadFont('assets/Maax_italic.otf');
 
   for (var i = 0; i < INDEX_TOTAL; ++i) {
     audios[i] = loadSound(FOLDER + (i + INDEX_START) + EXT);
@@ -86,8 +94,7 @@ function setup() {
   background(0);
   frameRate(60);
 
-  createAllSpeech();
-  //createSpeechRec_1();
+  // createAllSpeech();
 
   /// AUDIO
 
@@ -108,6 +115,32 @@ function setup() {
   serial.open(portName);
   //serial.open(portName, options);
 
+  /////////FRASE D'AVVIO
+
+  frase_avvio_container = createDiv()
+  .class('opacity_0')
+  .style("position: absolute; top: 20%; left: 50%; transform: translate(-50%,-50%)");
+  var titolo_frase_avvio = createP("PRONUNCIA LA FRASE DI AVVIO")
+  .style("font-size: 0.7vw; padding-bottom: 0.7vw; text-align: center")
+  .parent(frase_avvio_container);
+  var frase_avvio = createP("\"pyth-IA donami la sapienza dei tuoi dati\"")
+  .style("font-size: 0.7; width: 20vw; text-align: center")
+  .parent(frase_avvio_container);
+
+  ///////// KEYWORDS
+  keywords_container = createDiv()
+  .style("position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 75vw; height: 25vw; background-color: red");
+
+  /////////DISCO
+  disco = createDiv();
+  disco.id('disco');
+  disco.class('opacity_0');
+  // disco.hide();
+
+  ////////// Access_button
+  access_button = createButton('ACCEDI ALL\'ORACOLO');
+  access_button.id('access_button');
+  access_button.mousePressed(activate_pythIA);
 
 }
 // get the list of ports:
@@ -173,17 +206,6 @@ function draw() {
   serial.write(stringToRead);
 
 
-
-  //stringToRead = "<" + 'hello' + "," + outVolume + "," + outColor + ">";
-  //stringToRead = "V" + outVolume.toString() + "," + "C" + outColor.toString() + ",";
-  //stringToRead = outVolume.toString() + "," + outColor.toString() + "*";
-
-  //serial.write(outByte);
-  //serial.write(140, 200, 100);
-  //spectrum = fft.analyze();
-
-
-
   //console.log('step_1: ' + step_1 + ',', 'step_2: ' + step_2 + ',', 'step_3: ' + step_3, 'outByte: ' + outByte);
   console.log('step_1: ' + step_1 + ',', 'step_2: ' + step_2 + ',', 'step_3: ' + step_3, 'loadEffect: ' + loadEffect);
   fill(0);
@@ -192,14 +214,14 @@ function draw() {
   text("stringToRead: " + stringToRead, 30, 60);
   text("outByte: " + outByte, 30, 90);
   push();
-  fill(212, 175, 55);
-  stroke(255, 248, 184);
-  strokeWeight(5);
-  ellipseMode(RADIUS);
-  ellipse(width / 2, height / 2, width / 6);
-  fill(212, 175, 55, 50);
-  noStroke();
-  ellipse(width / 2, height / 2, width / 5 * volume);
+  // fill(212, 175, 55);
+  // stroke(255, 248, 184);
+  // strokeWeight(5);
+  // ellipseMode(RADIUS);
+  // ellipse(width / 2, height / 2, width / 6);
+  // fill(212, 175, 55, 50);
+  // noStroke();
+  // ellipse(width / 2, height / 2, width / 5 * volume);
 
   pop();
 }
@@ -242,6 +264,21 @@ function keyPressed() {
   }
 }
 
+function activate_pythIA() {
+  access_button.hide();
+  disco.addClass('transition');
+  // disco.show();
+  disco.addClass('opacity_1');
+
+  frase_avvio_container.addClass('transition');
+  setTimeout(function() {
+    frase_avvio_container.addClass('opacity_1');
+  }, 600);
+
+  createAllSpeech();
+  step_1 = true;
+}
+
 function createAllSpeech() {
 
   allSpeech.onResult = startPythia;
@@ -272,14 +309,17 @@ function createSpeechRec_3() {
 }
 
 function reset() {
-  //frase_finale.stop();
+  // setTimeout(function() {
+  //   step_1 = true;
+  // }, 0);
+  // createAllSpeech();
+  disco.removeClass('opacity_1');
+  disco.addClass('opacity_0');
   setTimeout(function() {
-    step_1 = true;
-  }, 0);
-  createAllSpeech();
+    access_button.show();
+  }, 600);
   stopArduinoLEDS = true;
   errorCounter = 0;
-  //createSpeechRec_1();
 }
 
 function errorCase() {
@@ -396,6 +436,8 @@ function startPythia() {
       if (first_keyword_got == true && second_keyword_got == true && third_keyword_got == true) {
         stopArduinoLEDS = false;
         step_1 = false;
+        frase_avvio_container.removeClass('opacity_1');
+        frase_avvio_container.addClass('opacity_0');
         //var benvenuto = Math.round(random(0,3));
         audios[0].play();
         // if (audios[0].isPlaying() == true) {

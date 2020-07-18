@@ -79,3 +79,15 @@
 canvas {
   display: block;
 }
+
+/* DISCO */
+
+#disco {
+  width: 50vw;
+  height: 50vw;
+  background-color: #b38422;
+  border-style: solid;
+  border-width: 0.15vw;
+  border-radius: 50%;
+  transform: translate(-50%,-50%);
+}

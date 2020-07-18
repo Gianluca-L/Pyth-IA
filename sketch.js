@@ -1,5 +1,8 @@
 ///////////////////////////////////////// Pyth-IA PC
 
+/////////////////////////////// DISCO
+// var disco;
+
 ///////////////////////////// ARDUINO
 var serial; // variable to hold an instance of the serialport library
 var portName = 'COM5'; // fill in your serial port name here
@@ -107,6 +110,12 @@ function setup() {
   //serial.open(portName, options);
 
 
+  /////////DISCO
+  // disco = createDiv();
+  // disco.id('disco');
+  // balls[i].addClass('scaling');
+
+
 }
 // get the list of ports:
 function printList(portList) {
@@ -182,14 +191,14 @@ function draw() {
   text("stringToRead: " + stringToRead, 30, 60);
   text("outByte: " + outByte, 30, 90);
   push();
-  fill(212, 175, 55);
-  stroke(255, 248, 184);
-  strokeWeight(5);
-  ellipseMode(RADIUS);
-  ellipse(width / 2, height / 2, width / 6);
-  fill(212, 175, 55, 50);
-  noStroke();
-  ellipse(width / 2, height / 2, width / 5 * volume);
+  // fill(212, 175, 55);
+  // stroke(255, 248, 184);
+  // strokeWeight(5);
+  // ellipseMode(RADIUS);
+  // ellipse(width / 2, height / 2, width / 6);
+  // fill(212, 175, 55, 50);
+  // noStroke();
+  // ellipse(width / 2, height / 2, width / 5 * volume);
 
   pop();
 }

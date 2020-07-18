@@ -5,6 +5,7 @@
 /////////////////////////////// DISCO
 var disco;
 var frase_avvio_container;
+var keywords_container;
 
 ///////////////////////////// ARDUINO
 var serial; // variable to hold an instance of the serialport library
@@ -119,7 +120,7 @@ function setup() {
 
   frase_avvio_container = createDiv()
   .class('opacity_0')
-  .style("position: absolute; top: 20%; left: 50%; transform: translate(-50%,-50%)");
+  .style("position: absolute; top: 10%; left: 50%; transform: translate(-50%,-50%)");
   var titolo_frase_avvio = createP("PRONUNCIA LA FRASE DI AVVIO")
   .style("font-size: 0.7vw; padding-bottom: 0.7vw; text-align: center")
   .parent(frase_avvio_container);
@@ -129,7 +130,43 @@ function setup() {
 
   ///////// KEYWORDS
   keywords_container = createDiv()
-  .style("position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 75vw; height: 25vw; background-color: red");
+  .class('opacity_0')
+  .style("position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 75vw; height: 25vw");
+
+  var keywords_left = createDiv()
+  .style("position: absolute; width: 20vw; height: 25vw")
+  .parent(keywords_container);
+
+  var morale_keyword = createP("MORALE")
+  .class('keywords')
+  .style("position: absolute; top: 0%; left: 0%")
+  .parent(keywords_left);
+  var vita_morte_keyword = createP("VITA E MORTE")
+  .class('keywords')
+  .style("position: absolute; top: 50%; left: 0%; transform: translateY(-50%)")
+  .parent(keywords_left);
+  var ispirazione_keyword = createP("ISPIRAZIONE")
+  .class('keywords')
+  .style("position: absolute; top: 100%; left: 0%; transform: translateY(-100%)")
+  .parent(keywords_left);
+
+
+  var keywords_right = createDiv()
+  .style("position: absolute; width: 20vw; right: 0%; height: 25vw")
+  .parent(keywords_container);
+
+  var successo_keyword = createP("SUCCESSO")
+  .class('keywords')
+  .style("position: absolute; top: 0%; right: 0%")
+  .parent(keywords_right);
+  var amore_keyword = createP("AMORE")
+  .class('keywords')
+  .style("position: absolute; top: 50%; right: 0%; transform: translateY(-50%)")
+  .parent(keywords_right);
+  var amicizia_keyword = createP("AMICIZIA")
+  .class('keywords')
+  .style("position: absolute; top: 100%; right: 0%; transform: translateY(-100%)")
+  .parent(keywords_right);
 
   /////////DISCO
   disco = createDiv();
@@ -297,6 +334,8 @@ function restartAllSpeech() {
 
 function askYourQuestion() {
   step_2 = false;
+  keywords_container.removeClass('opacity_1');
+  keywords_container.addClass('opacity_0');
   audios[1].play();
   audios[1].onended(createSpeechRec_3);
 }
@@ -309,15 +348,18 @@ function createSpeechRec_3() {
 }
 
 function reset() {
-  // setTimeout(function() {
-  //   step_1 = true;
-  // }, 0);
-  // createAllSpeech();
-  disco.removeClass('opacity_1');
-  disco.addClass('opacity_0');
   setTimeout(function() {
-    access_button.show();
+    step_1 = true;
+  }, 0);
+  createAllSpeech();
+  setTimeout(function() {
+    frase_avvio_container.addClass('opacity_1');
   }, 600);
+  // disco.removeClass('opacity_1');
+  // disco.addClass('opacity_0');
+  // setTimeout(function() {
+  //   access_button.show();
+  // }, 600);
   stopArduinoLEDS = true;
   errorCounter = 0;
 }
@@ -451,6 +493,8 @@ function startPythia() {
 
         function createSpeechRec_2() {
           step_2 = true;
+          keywords_container.addClass('transition');
+          keywords_container.addClass('opacity_1');
           createAllSpeech();
 
         }

@@ -140,3 +140,7 @@ canvas {
   font-size: 1.1vw;
   transform: translate(-50%,-50%);
 }
+.keywords {
+  font-size: 1.1vw;
+  margin: 0px;
+}

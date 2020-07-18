@@ -8,6 +8,7 @@
   src: url('assets/Maax_italic.otf')  format('opentype');
 }
 body {
+  font-family: 'Maax';
   color: #b38422;
 }
 #checkboxesContainer {

@@ -3,6 +3,7 @@
 ///////////////////////////////////////// Pyth-IA PC
 
 /////////////////////////////// DISCO
+var logo;
 var disco;
 var frase_avvio_container;
 var keywords_container;
@@ -179,6 +180,11 @@ function setup() {
   access_button.id('access_button');
   access_button.mousePressed(activate_pythIA);
 
+  ////////// LOGO
+  logo = createImg('assets/logo.png')
+  .style('position: absolute; top: 2.5%; left: 2.5%; width: 10vw')
+
+
 }
 // get the list of ports:
 function printList(portList) {
@@ -245,11 +251,11 @@ function draw() {
 
   //console.log('step_1: ' + step_1 + ',', 'step_2: ' + step_2 + ',', 'step_3: ' + step_3, 'outByte: ' + outByte);
   console.log('step_1: ' + step_1 + ',', 'step_2: ' + step_2 + ',', 'step_3: ' + step_3, 'loadEffect: ' + loadEffect);
-  fill(0);
-  // display the incoming serial data as a string:
-  text("incoming value: " + inData, 30, 30);
-  text("stringToRead: " + stringToRead, 30, 60);
-  text("outByte: " + outByte, 30, 90);
+  // fill(0);
+  // // display the incoming serial data as a string:
+  // text("incoming value: " + inData, 30, 30);
+  // text("stringToRead: " + stringToRead, 30, 60);
+  // text("outByte: " + outByte, 30, 90);
   push();
   // fill(212, 175, 55);
   // stroke(255, 248, 184);

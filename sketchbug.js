@@ -7,6 +7,8 @@ var logo;
 var disco;
 var frase_avvio_container;
 var keywords_container;
+var volume_read = 0;
+var last_volume_read = 0;
 
 ///////////////////////////// ARDUINO
 var serial; // variable to hold an instance of the serialport library
@@ -217,6 +219,7 @@ function draw() {
 
   volume = analyzer.getLevel();
   volumeRemap = map(volume, 0, 1, 0, 255);
+  volume_read = map(volume, 0, 1, width/6.5, width/3);
 
   if (stopArduinoLEDS == true) {
     //outByte = 25500 / 100;
@@ -226,20 +229,28 @@ function draw() {
   } else if (step_1 == false || step_2 == false || step_3 == false) {
     if (redColor == true) {
       outColor = 1;
+      fill(255, 0, 0);
     } else if (orangeColor == true) {
       outColor = 2;
+      fill(190, 25, 0);
     } else if (greenColor == true) {
       outColor = 3;
+      fill(0, 200, 0);
     } else if (blueColor == true) {
       outColor = 4;
+      fill(0, 35, 200);
     } else if (violetColor == true) {
       outColor = 5;
+      fill(160, 0, 200);
     } else if (pinkColor == true) {
       outColor = 6;
+      fill(230, 51, 112);
     } else if (loadEffect == true) {
       outColor = 8;
+      fill(245, 237, 181);
     } else {
       outColor = 0;
+      fill(245, 237, 181);
     }
     //outByte = int(map(volume * 10, 0, 1, 0, 255));
     outVolume = int(map(volume * 10, 0, 1, 0, 255));
@@ -260,13 +271,30 @@ function draw() {
   // fill(212, 175, 55);
   // stroke(255, 248, 184);
   // strokeWeight(5);
-  // ellipseMode(RADIUS);
   // ellipse(width / 2, height / 2, width / 6);
-  // fill(212, 175, 55, 50);
-  // noStroke();
-  // ellipse(width / 2, height / 2, width / 5 * volume);
+  ellipseMode(RADIUS);
+  // ellipse(width / 2, height / 2, width / 6);
+
+  noStroke();
+
+  if (volume_read > last_volume_read) {
+    for (var i = last_volume_read; i <= volume_read; i += 1) {  // i += 6
+      ellipse(width / 2, height / 2, i);
+    }
+  }
+
+  else {
+    for (var i = last_volume_read; i >= volume_read; i -= 1) {  // i -= 6
+      ellipse(width / 2, height / 2, i);
+    }
+  }
+    last_volume_read = volume_read;
 
   pop();
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 function keyPressed() {

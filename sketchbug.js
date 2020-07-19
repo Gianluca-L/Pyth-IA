@@ -222,7 +222,7 @@ function draw() {
   volumeRemap = map(volume, 0, 1, 0, 255);
   volume_read = map(volume, 0, 1.4, width / 5.5, width/3);
 
-  var inner = color(179, 132, 34);
+  var inner = color(255,255,255);
   const outer = color(255);
 
   if (stopArduinoLEDS == true) {

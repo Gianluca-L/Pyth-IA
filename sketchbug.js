@@ -10,6 +10,7 @@ var keywords_container;
 var volume_read = 0;
 var last_volume_read = 0;
 
+
 ///////////////////////////// ARDUINO
 var serial; // variable to hold an instance of the serialport library
 var portName = 'COM5'; // fill in your serial port name here
@@ -122,54 +123,54 @@ function setup() {
   /////////FRASE D'AVVIO
 
   frase_avvio_container = createDiv()
-  .class('opacity_0')
-  .style("position: absolute; top: 10%; left: 50%; transform: translate(-50%,-50%)");
+    .class('opacity_0')
+    .style("position: absolute; top: 10%; left: 50%; transform: translate(-50%,-50%)");
   var titolo_frase_avvio = createP("PRONUNCIA LA FRASE DI AVVIO")
-  .style("font-size: 0.7vw; padding-bottom: 0.7vw; text-align: center")
-  .parent(frase_avvio_container);
+    .style("font-size: 0.7vw; padding-bottom: 0.7vw; text-align: center")
+    .parent(frase_avvio_container);
   var frase_avvio = createP("\"pyth-IA donami la sapienza dei tuoi dati\"")
-  .style("font-size: 0.7; width: 20vw; text-align: center")
-  .parent(frase_avvio_container);
+    .style("font-size: 0.7; width: 20vw; text-align: center")
+    .parent(frase_avvio_container);
 
   ///////// KEYWORDS
   keywords_container = createDiv()
-  .class('opacity_0')
-  .style("position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 75vw; height: 25vw");
+    .class('opacity_0')
+    .style("position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 75vw; height: 25vw");
 
   var keywords_left = createDiv()
-  .style("position: absolute; width: 20vw; height: 25vw")
-  .parent(keywords_container);
+    .style("position: absolute; width: 20vw; height: 25vw")
+    .parent(keywords_container);
 
   var morale_keyword = createP("MORALE")
-  .class('keywords')
-  .style("position: absolute; top: 0%; left: 0%")
-  .parent(keywords_left);
+    .class('keywords')
+    .style("position: absolute; top: 0%; left: 0%")
+    .parent(keywords_left);
   var vita_morte_keyword = createP("VITA E MORTE")
-  .class('keywords')
-  .style("position: absolute; top: 50%; left: 0%; transform: translateY(-50%)")
-  .parent(keywords_left);
+    .class('keywords')
+    .style("position: absolute; top: 50%; left: 0%; transform: translateY(-50%)")
+    .parent(keywords_left);
   var ispirazione_keyword = createP("ISPIRAZIONE")
-  .class('keywords')
-  .style("position: absolute; top: 100%; left: 0%; transform: translateY(-100%)")
-  .parent(keywords_left);
+    .class('keywords')
+    .style("position: absolute; top: 100%; left: 0%; transform: translateY(-100%)")
+    .parent(keywords_left);
 
 
   var keywords_right = createDiv()
-  .style("position: absolute; width: 20vw; right: 0%; height: 25vw")
-  .parent(keywords_container);
+    .style("position: absolute; width: 20vw; right: 0%; height: 25vw")
+    .parent(keywords_container);
 
   var successo_keyword = createP("SUCCESSO")
-  .class('keywords')
-  .style("position: absolute; top: 0%; right: 0%")
-  .parent(keywords_right);
+    .class('keywords')
+    .style("position: absolute; top: 0%; right: 0%")
+    .parent(keywords_right);
   var amore_keyword = createP("AMORE")
-  .class('keywords')
-  .style("position: absolute; top: 50%; right: 0%; transform: translateY(-50%)")
-  .parent(keywords_right);
+    .class('keywords')
+    .style("position: absolute; top: 50%; right: 0%; transform: translateY(-50%)")
+    .parent(keywords_right);
   var amicizia_keyword = createP("AMICIZIA")
-  .class('keywords')
-  .style("position: absolute; top: 100%; right: 0%; transform: translateY(-100%)")
-  .parent(keywords_right);
+    .class('keywords')
+    .style("position: absolute; top: 100%; right: 0%; transform: translateY(-100%)")
+    .parent(keywords_right);
 
   /////////DISCO
   disco = createDiv();
@@ -184,7 +185,7 @@ function setup() {
 
   ////////// LOGO
   logo = createImg('assets/logo.png')
-  .style('position: absolute; top: 2.5%; left: 2.5%; width: 10vw')
+    .style('position: absolute; top: 2.5%; left: 2.5%; width: 10vw')
 
 
 }
@@ -209,17 +210,20 @@ function serialError(err) {}
 function draw() {
   background(255);
 
-//   if (audios[0].isPlaying() == true || audios[1].isPlaying() == true || audios[2].isPlaying() == true || audios[3].isPlaying() == true || audios[4].isPlaying() == true || audios[5].isPlaying() == true || audios[6].isPlaying() == true) {
-//   stopRecord = true;
-// } else {
-//   stopRecord = false;
-//   allSpeech.onEnd = restartAllSpeech;
-// }
+  //   if (audios[0].isPlaying() == true || audios[1].isPlaying() == true || audios[2].isPlaying() == true || audios[3].isPlaying() == true || audios[4].isPlaying() == true || audios[5].isPlaying() == true || audios[6].isPlaying() == true) {
+  //   stopRecord = true;
+  // } else {
+  //   stopRecord = false;
+  //   allSpeech.onEnd = restartAllSpeech;
+  // }
 
 
   volume = analyzer.getLevel();
   volumeRemap = map(volume, 0, 1, 0, 255);
-  volume_read = map(volume, 0, 1, width/6.5, width/3);
+  volume_read = map(volume, 0, 1.4, width / 5.5, width/3);
+
+  var inner = color(179, 132, 34);
+  const outer = color(255);
 
   if (stopArduinoLEDS == true) {
     //outByte = 25500 / 100;
@@ -229,28 +233,37 @@ function draw() {
   } else if (step_1 == false || step_2 == false || step_3 == false) {
     if (redColor == true) {
       outColor = 1;
-      fill(255, 0, 0);
+      // fill(255, 0, 0, 200);
+      inner = color(255, 0, 0);
     } else if (orangeColor == true) {
       outColor = 2;
-      fill(190, 25, 0);
+      // fill(190, 25, 0, 200);
+      inner = color(190, 25, 0);
     } else if (greenColor == true) {
       outColor = 3;
-      fill(0, 200, 0);
+      // fill(0, 200, 0, 200);
+      inner = color(0, 200, 0);
     } else if (blueColor == true) {
       outColor = 4;
-      fill(0, 35, 200);
+      // fill(0, 35, 200, 200);
+      inner = color(0, 35, 200);
     } else if (violetColor == true) {
       outColor = 5;
-      fill(160, 0, 200);
+      // fill(160, 0, 200, 200);
+      inner = color(160, 0, 200);
     } else if (pinkColor == true) {
       outColor = 6;
-      fill(230, 51, 112);
+      // fill(230, 51, 112, 200);
+      inner = color(230, 51, 112);
     } else if (loadEffect == true) {
       outColor = 8;
-      fill(245, 237, 181);
+      // fill(245, 237, 181, 200);
+      inner = color(179, 132, 34);
     } else {
       outColor = 0;
-      fill(245, 237, 181);
+
+      // fill(245, 237, 181, 200);
+      inner = color(179, 132, 34);
     }
     //outByte = int(map(volume * 10, 0, 1, 0, 255));
     outVolume = int(map(volume * 10, 0, 1, 0, 255));
@@ -261,7 +274,7 @@ function draw() {
 
 
   //console.log('step_1: ' + step_1 + ',', 'step_2: ' + step_2 + ',', 'step_3: ' + step_3, 'outByte: ' + outByte);
-  console.log('step_1: ' + step_1 + ',', 'step_2: ' + step_2 + ',', 'step_3: ' + step_3, 'loadEffect: ' + loadEffect);
+
   // fill(0);
   // // display the incoming serial data as a string:
   // text("incoming value: " + inData, 30, 30);
@@ -276,21 +289,32 @@ function draw() {
   // ellipse(width / 2, height / 2, width / 6);
 
   noStroke();
-
   if (volume_read > last_volume_read) {
-    for (var i = last_volume_read; i <= volume_read; i += 1) {  // i += 6
-      ellipse(width / 2, height / 2, i);
+    for (var i = last_volume_read; i <= volume_read; i += 1) { // i += 6
+      for (let j = i; j > 100; j-= 6) {
+        const step = j / i;
+        const colour = lerpColor(inner, outer, step);
+        fill(colour);
+        ellipse(width / 2, height / 2, step * i);
+      }
+      // ellipse(width / 2, height / 2, i);
+    }
+  } else {
+    for (var i = last_volume_read; i >= volume_read; i -= 1) { // i -= 6
+      for (let j = i; j > 100; j-= 6) {
+        const step = j / i;
+        const colour = lerpColor(inner, outer, step);
+        fill(colour);
+        ellipse(width / 2, height / 2, step * i);
+      }
+      // ellipse(width / 2, height / 2, i);
     }
   }
-
-  else {
-    for (var i = last_volume_read; i >= volume_read; i -= 1) {  // i -= 6
-      ellipse(width / 2, height / 2, i);
-    }
-  }
-    last_volume_read = volume_read;
+  last_volume_read = volume_read;
 
   pop();
+
+  console.log('step_1: ' + step_1 + ',', 'step_2: ' + step_2 + ',', 'step_3: ' + step_3, 'loadEffect: ' + loadEffect);
 }
 
 function windowResized() {
@@ -338,8 +362,8 @@ function keyPressed() {
 function activate_pythIA() {
   access_button.hide();
   disco.addClass('transition');
-  // disco.show();
   disco.addClass('opacity_1');
+    // disco.show();
 
   frase_avvio_container.addClass('transition');
   setTimeout(function() {
@@ -601,7 +625,7 @@ function startPythia() {
               function playCit() {
                 loadEffect = false;
                 var lavoro_bene_audio = Math.round(random([347, 360, 373, 375]));
-                  audios[lavoro_bene_audio].play();
+                audios[lavoro_bene_audio].play();
                 lavoro_var = false;
                 audios[lavoro_bene_audio].onended(farewell);
                 // alert(lavoro_bene_cit);
@@ -1568,8 +1592,7 @@ function startPythia() {
               }
             }
           });
-        }
-        else if (forza_animo_keywords.some(keyword => sentence.includes(keyword))) {
+        } else if (forza_animo_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           audios[2].play();
           console.log("Found");
@@ -1641,8 +1664,7 @@ function startPythia() {
               }
             }
           });
-        }
-        else if (futuro_succ_keywords.some(keyword => sentence.includes(keyword))) {
+        } else if (futuro_succ_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           audios[2].play();
           console.log("Found");
@@ -1727,7 +1749,7 @@ function startPythia() {
               // }
             }
           });
-        }  else {
+        } else {
           errorCase();
         }
       }
@@ -3999,8 +4021,7 @@ function startPythia() {
               // }
             }
           });
-        }
-        else if (dobbiamo_morire_keywords.some(keyword => sentence.includes(keyword)) || (scopo_generico_keywords.some(keyword => sentence.includes(keyword)) && scopo_morte_keywords.some(keyword => sentence.includes(keyword)))) {
+        } else if (dobbiamo_morire_keywords.some(keyword => sentence.includes(keyword)) || (scopo_generico_keywords.some(keyword => sentence.includes(keyword)) && scopo_morte_keywords.some(keyword => sentence.includes(keyword)))) {
           step_3 = false;
           audios[2].play();
           console.log("Found");
@@ -4064,8 +4085,7 @@ function startPythia() {
               }
             }
           });
-        }
-        else if (dio_keywords.some(keyword => sentence.includes(keyword))) {
+        } else if (dio_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           audios[2].play();
           console.log("Found");
@@ -4279,8 +4299,7 @@ function startPythia() {
               }
             }
           });
-        }
-        else if (immortalità_keywords.some(keyword => sentence.includes(keyword))) {
+        } else if (immortalità_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           audios[2].play();
           console.log("Found");
@@ -4391,7 +4410,7 @@ function startPythia() {
               }
             }
           });
-        }  else if (morte_oggetti_keywords.some(keyword => sentence.includes(keyword))) {
+        } else if (morte_oggetti_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           audios[2].play();
           console.log("Found");
@@ -4756,8 +4775,7 @@ function startPythia() {
               // }
             }
           });
-        }
-        else if (morirò_keywords.some(keyword => sentence.includes(keyword))) {
+        } else if (morirò_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           audios[2].play();
           console.log("Found");
@@ -4776,14 +4794,12 @@ function startPythia() {
               // farewell();
               if (audios[229].isPlaying() == true) {
                 Red();
-              }
-              else if (audios[461].isPlaying() == true) {
+              } else if (audios[461].isPlaying() == true) {
                 Pink();
               }
             }
           });
-        }
-        else if (morte_generico_keywords.some(keyword => sentence.includes(keyword))) {
+        } else if (morte_generico_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           audios[2].play();
           console.log("Found");
@@ -5175,8 +5191,7 @@ function startPythia() {
               // }
             }
           });
-        }
-        else if (abuso_alcool_keywords.some(keyword => sentence.includes(keyword))) {
+        } else if (abuso_alcool_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           audios[2].play();
           console.log("Found");
@@ -5204,8 +5219,7 @@ function startPythia() {
               }
             }
           });
-        }
-        else if (abuso_fumo_keywords.some(keyword => sentence.includes(keyword))) {
+        } else if (abuso_fumo_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           audios[2].play();
           console.log("Found");
@@ -5227,8 +5241,7 @@ function startPythia() {
               }
             }
           });
-        }
-        else if (abuso_potere_keywords.some(keyword => sentence.includes(keyword)) && stato_keywords.some(keyword => sentence.includes(keyword))) {
+        } else if (abuso_potere_keywords.some(keyword => sentence.includes(keyword)) && stato_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           audios[2].play();
           console.log("Found");
@@ -5256,8 +5269,7 @@ function startPythia() {
               // }
             }
           });
-        }
-        else if (abuso_normale_keywords.some(keyword => sentence.includes(keyword))) {
+        } else if (abuso_normale_keywords.some(keyword => sentence.includes(keyword))) {
           step_3 = false;
           audios[2].play();
           console.log("Found");

@@ -139,7 +139,7 @@ function setup() {
   frase_utente = createP('ciao')
     .class('opacity_0')
     .html('')
-    .style("position: absolute; bottom: 7%; left: 50%; transform: translate(-50%,-50%); width: 50vw; width: 10vw; font-size: 0.7; padding-bottom: 0.7vw; text-align: center");
+    .style("position: absolute; bottom: 7%; left: 50%; transform: translate(-50%,-50%); width: 50vw; height: 2vh; font-size: 0.7; text-align: center");
 
 
   ///////// KEYWORDS
@@ -153,15 +153,15 @@ function setup() {
 
   var morale_keyword = createP("MORALE")
     .class('keywords')
-    .style("position: absolute; top: 0%; left: 0%")
+    .style("position: absolute; top: 0%; left: 0%; width: 20vw; text-align: center")
     .parent(keywords_left);
   var vita_morte_keyword = createP("VITA E MORTE")
     .class('keywords')
-    .style("position: absolute; top: 50%; left: 0%; transform: translateY(-50%)")
+    .style("position: absolute; top: 50%; left: 0%; transform: translateY(-50%); width: 20vw; text-align: center")
     .parent(keywords_left);
   var ispirazione_keyword = createP("ISPIRAZIONE")
     .class('keywords')
-    .style("position: absolute; top: 100%; left: 0%; transform: translateY(-100%)")
+    .style("position: absolute; top: 100%; left: 0%; transform: translateY(-100%); width: 20vw; text-align: center")
     .parent(keywords_left);
 
 
@@ -171,15 +171,15 @@ function setup() {
 
   var successo_keyword = createP("SUCCESSO")
     .class('keywords')
-    .style("position: absolute; top: 0%; right: 0%")
+    .style("position: absolute; top: 0%; right: 0%; width: 20vw; text-align: center")
     .parent(keywords_right);
   var amore_keyword = createP("AMORE")
     .class('keywords')
-    .style("position: absolute; top: 50%; right: 0%; transform: translateY(-50%)")
+    .style("position: absolute; top: 50%; right: 0%; transform: translateY(-50%); width: 20vw; text-align: center")
     .parent(keywords_right);
   var amicizia_keyword = createP("AMICIZIA")
     .class('keywords')
-    .style("position: absolute; top: 100%; right: 0%; transform: translateY(-100%)")
+    .style("position: absolute; top: 100%; right: 0%; transform: translateY(-100%); width: 20vw; text-align: center")
     .parent(keywords_right);
 
   /////////DISCO
@@ -4094,7 +4094,7 @@ function startPythia() {
               }
             }
           });
-        } else if (scopo_vita_specifico_keywords.some(keyword => sentence.includes(keyword)) || (scopo_generico_keywords.some(keyword => sentence.includes(keyword)) && scopo_vita_keywords.some(keyword => sentence.includes(keyword)))) {
+        } else if (scopo_vita_specifico_keywords.some(keyword => sentence.includes(keyword)) || scopo_generico_keywords.some(keyword => sentence.includes(keyword)) || (scopo_generico_keywords.some(keyword => sentence.includes(keyword)) && scopo_vita_keywords.some(keyword => sentence.includes(keyword)))) {
           step_3 = false;
           audios[2].play();
           console.log("Found"); frase_utente.html('');

@@ -96,8 +96,10 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(0);
   frameRate(60);
+
+  a = 0;
+  b = 0;
 
   // createAllSpeech();
 
@@ -257,8 +259,6 @@ function draw() {
       inner = color(230, 51, 112);
     } else if (loadEffect == true) {
       outColor = 8;
-      // fill(245, 237, 181, 200);
-      inner = color(179, 132, 34);
     } else {
       outColor = 0;
 
@@ -271,6 +271,8 @@ function draw() {
 
   stringToRead = "<" + outColor + "," + outVolume + ">";
   serial.write(stringToRead);
+
+
 
 
   //console.log('step_1: ' + step_1 + ',', 'step_2: ' + step_2 + ',', 'step_3: ' + step_3, 'outByte: ' + outByte);
@@ -314,8 +316,33 @@ function draw() {
 
   pop();
 
+  if (loadEffect == true) {
+    //////// LOAD EFFECT PC
+    console.log('ciao');
+    push();
+    // translate(2*width/3, height/2);
+    // ellipseMode(RADIUS);
+    a += 0.07;
+    r = width/6.58;
+    strokeWeight(15);
+    stroke(179, 132, 34, 100);
+    arc(width/2, height/2, 2*r, 2*r, a + PI + HALF_PI, a); // 3*pi/2 = 270°
+    if (a > 1) {
+      b += 0.07;
+      strokeWeight(17);
+      stroke(255);
+      arc(width/2, height/2, 2*r, 2*r, b + PI + HALF_PI, b); // 3*pi/2 = 270°
+    }
+    pop();
+  }
+
+
+
+
   console.log('step_1: ' + step_1 + ',', 'step_2: ' + step_2 + ',', 'step_3: ' + step_3, 'loadEffect: ' + loadEffect);
 }
+
+
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);

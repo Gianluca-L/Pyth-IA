@@ -201,7 +201,7 @@ function setup() {
 
   ////////// CHI SIAMO
 
-  about = createDiv('CHI SIAMO')
+  about = createDiv('IL PROGETTO')
     .style('position: absolute; top: 4.5%; right: 0.5%; width: 20vw; height: 65vh; font-size: 0.7; text-align: center');
   about_content_container = createDiv()
     .class('opacity_0')

@@ -233,10 +233,10 @@ function hideAboutContent() {
   about_content_container.removeClass('opacity_1');
   about_content_container.addClass('opacity_0');
 }
-function vidLoad() {
-  vid.play();
-
-}
+// function vidLoad() {
+//   vid.play();
+//
+// }
 // get the list of ports:
 function printList(portList) {
   // portList is an array of serial port names
@@ -258,7 +258,7 @@ function serialError(err) {}
 function draw() {
   background(255);
 
-  vid.onended(vidLoad);
+  // vid.onended(vidLoad);
 
   volume = analyzer.getLevel();
   volumeRemap = map(volume, 0, 1, 0, 255);

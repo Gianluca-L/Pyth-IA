@@ -211,7 +211,10 @@ function setup() {
     .class('keywords')
     .style("width: 100%; font-size: 0.7vw; text-align: center; padding-bottom: 2vh")
     .parent(about_content_container);
-  vid = createVideo('assets/video_sito.mp4', vidLoad)
+  // vid = createVideo('assets/video_sito.mp4', vidLoad)
+  // .style("display: block; width: 100%; height: 100%")
+  // .parent(about_content_container);
+  vid = createImg('assets/pyth-IA_fronte.png', vidLoad)
   .style("display: block; width: 100%; height: 100%")
   .parent(about_content_container);
   about_hover = createDiv()

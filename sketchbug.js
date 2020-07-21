@@ -207,7 +207,7 @@ function setup() {
     .class('opacity_0')
     .style('position: absolute; top: 200%; left: 50%; transform: translateX(-50%); width: 15.5vw')
     .parent(about);
-  createP("Questo sito è la versione online di un'installazione realizzata come progetto di laurea alla facoltà del Design della Comunicazione, Politecnico di Milano. <br> È tempo che parlino i dati. <br> pyth-IA è la loro voce e darà una risposta <br> ad ogni vostra domanda")
+  createP("Questo sito è la versione online di un'installazione realizzata come progetto di laurea alla facoltà del Design della Comunicazione, Politecnico di Milano. <br> È tempo che parlino i dati. <br> pyth-IA è la loro voce e darà una risposta <br> ad ogni vostra domanda.")
     .class('keywords')
     .style("width: 100%; font-size: 0.7vw; text-align: center; padding-bottom: 2vh")
     .parent(about_content_container);

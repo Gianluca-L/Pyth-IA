@@ -10,7 +10,7 @@ var keywords_container;
 var volume_read = 0;
 var last_volume_read = 0;
 var frase_utente;
-var vid;
+// var vid;
 var about_hover;
 
 
@@ -214,7 +214,7 @@ function setup() {
   // vid = createVideo('assets/video_sito.mp4', vidLoad)
   // .style("display: block; width: 100%; height: 100%")
   // .parent(about_content_container);
-  vid = createImg('assets/pyth-IA_fronte.png', vidLoad)
+  vid = createImg('assets/pyth-IA_fronte.png')
   .style("display: block; width: 100%; height: 100%")
   .parent(about_content_container);
   about_hover = createDiv()

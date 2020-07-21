@@ -209,10 +209,10 @@ function setup() {
     .parent(about);
   createP("Questo sito è la versione online di un'installazione realizzata come progetto di laurea alla facoltà del Design della Comunicazione, Politecnico di Milano. <br> È tempo che parlino i dati. <br> pyth-IA è la loro voce e darà una risposta <br> ad ogni vostra domanda")
     .class('keywords')
-    .style("font-size: 14px; text-align: center; padding-bottom: 2vh")
+    .style("position: absolute; top: 0%; left: 50%; transform: translateX(-50%); width: 100%; font-size: 14px; text-align: center")
     .parent(about_content_container);
-  vid = createVideo(['assets/video_sito.mp4'])
-  .style("width: 100%")
+  vid = createVideo(['assets/video_sito.mp4'], vidLoad)
+  .style("position: absolute; top: 20%; left: 50%; transform: translateX(-50%); width: 100%")
   .parent(about_content_container);
   about_hover = createDiv()
     .style('position: absolute; top: 2.7%; right: 5.5%; width: 10vw; height: 5vh')
@@ -225,7 +225,6 @@ function setup() {
 function showAboutContent() {
   about_content_container.addClass('transition');
   about_content_container.addClass('opacity_1');
-  vidLoad();
 }
 function hideAboutContent() {
   about_content_container.removeClass('opacity_1');
@@ -233,7 +232,6 @@ function hideAboutContent() {
 }
 function vidLoad() {
   vid.loop();
-  console.log(vid.duration());
 }
 // get the list of ports:
 function printList(portList) {

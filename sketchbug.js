@@ -231,7 +231,8 @@ function hideAboutContent() {
   about_content_container.addClass('opacity_0');
 }
 function vidLoad() {
-  vid.loop();
+  vid.play();
+
 }
 // get the list of ports:
 function printList(portList) {
@@ -253,6 +254,8 @@ function serialError(err) {}
 
 function draw() {
   background(255);
+
+  vid.onended(vidLoad);
 
   volume = analyzer.getLevel();
   volumeRemap = map(volume, 0, 1, 0, 255);

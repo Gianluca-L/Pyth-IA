@@ -327,7 +327,7 @@ function draw() {
   noStroke();
   if (volume_read > last_volume_read) {
     for (var i = last_volume_read; i <= volume_read; i += 1) { // i += 6
-      for (let j = i; j > width / 19.2; j -= 6) {
+      for (let j = i; j > width / 6; j -= 6) {  //19.2
         const step = j / i;
         const colour = lerpColor(inner, outer, step);
         fill(colour);
@@ -337,7 +337,7 @@ function draw() {
     }
   } else {
     for (var i = last_volume_read; i >= volume_read; i -= 1) { // i -= 6
-      for (let j = i; j > width / 19.2; j -= 6) {
+      for (let j = i; j > width / 6; j -= 6) {  //19.2
         const step = j / i;
         const colour = lerpColor(inner, outer, step);
         fill(colour);
@@ -352,7 +352,7 @@ function draw() {
 
   if (loadEffect == true) {
     //////// LOAD EFFECT PC
-    console.log('ciao');
+    // console.log('ciao');
     push();
     // translate(2*width/3, height/2);
     // ellipseMode(RADIUS);
